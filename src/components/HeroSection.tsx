@@ -1,97 +1,251 @@
 "use client";
-import { openQuoteModal } from "@/components/QuoteModal";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-const backgroundImages = [
-  "/kpnroofingshed/images/morning-bg.png",
-  "/kpnroofingshed/images/night-bg.png",
-  "/kpnroofingshed/images/service-bg.png"
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+
+// Foreground cutout assets that slide while background stays fixed
+const slides = [
+  {
+    id: 1,
+    frontImage: "/kpnroofingshed/images/roofing2.png",
+    title: "Industrial",
+    color: "#062088", // KPN Blue
+    pathPercent: 0.15,
+    label: "Assemble 10",
+  },
+  {
+    id: 2,
+    frontImage: "/kpnroofingshed/images/roofing.png",
+    title: "Agricultural",
+    color: "#ee0000", // KPN Red
+    pathPercent: 0.45,
+    label: "Refuelling 125",
+  },
+  {
+    id: 3,
+    frontImage: "/kpnroofingshed/images/roofing3.png",
+    title: "Home Roofing",
+    color: "#ffe600", // KPN Yellow
+    pathPercent: 0.65,
+    label: "Station 80",
+  },
+  {
+    id: 4,
+    frontImage: "/kpnroofingshed/images/roofing.png",
+    title: "Sports Turf",
+    color: "#00a3e0", // KPN Cyan
+    pathPercent: 0.85,
+    label: "Shelter 144",
+  }
 ];
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const pathRef = useRef<SVGPathElement>(null);
+  const frontImageRef = useRef<HTMLDivElement>(null);
+  const [nodePositions, setNodePositions] = useState<{ x: number; y: number }[]>([]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
+    if (!pathRef.current) return;
+
+    const updatePositions = () => {
+      const totalLength = pathRef.current!.getTotalLength();
+      const positions = slides.map((slide) => {
+        const point = pathRef.current!.getPointAtLength(totalLength * slide.pathPercent);
+        return { x: point.x, y: point.y };
+      });
+      setNodePositions(positions);
+    };
+
+    setTimeout(updatePositions, 50);
+
+    window.addEventListener("resize", updatePositions);
+    return () => window.removeEventListener("resize", updatePositions);
   }, []);
 
+  const changeSlide = async (nextIdx: number) => {
+    if (isAnimating || nextIdx === currentSlide) return;
+    setIsAnimating(true);
+
+    const gsapModule = await import("gsap");
+    const gsap = gsapModule.default;
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setIsAnimating(false);
+      },
+    });
+
+    tl.to(frontImageRef.current, {
+      x: -150,
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.4,
+      ease: "power2.in",
+      onComplete: () => {
+        setCurrentSlide(nextIdx);
+      },
+    })
+      .set(frontImageRef.current, { x: 150, opacity: 0, scale: 1.05 })
+      .to(frontImageRef.current, {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+  };
+
+  const handleNext = () => {
+    const nextIdx = (currentSlide + 1) % slides.length;
+    changeSlide(nextIdx);
+  };
+
   return (
-    <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
-      
-      {/* Background Slider */}
-      {backgroundImages.map((img, index) => (
-        <div
-          key={img}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+    <section id="home" className="relative min-h-[100dvh] w-full overflow-hidden bg-slate-200 flex flex-col font-sans select-none">
+
+      {/* 1. Static Background */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/kpnroofingshed/images/hero-bg.png"
+          alt="KPN Hero Background"
+          fill
+          className="object-cover opacity-80"
+          priority
+        />
+        {/* Soft fog overlay to blend the bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/30 to-transparent" />
+      </div>
+
+      {/* Side Vertical Texts */}
+
+
+
+
+      {/* 2. Huge Background Text (Category Title) */}
+      <div className="absolute top-[10%] md:top-[12%] w-full flex justify-center z-10 pointer-events-none px-4">
+        <h1
+          key={currentSlide}
+          className="text-[clamp(60px,12vw,220px)] font-black text-white tracking-tighter leading-none whitespace-nowrap drop-shadow-xl animate-fade-in-up"
         >
+          {slides[currentSlide].title}
+        </h1>
+      </div>
+
+      {/* 3. Center Front Image Runner */}
+      <div className="absolute top-[45%] md:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[65%] max-w-[900px] aspect-[16/9] z-20 pointer-events-none transition-transform duration-700">
+        <div ref={frontImageRef} className="relative w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
           <Image
-            src={img}
-            alt={`KPN Roofing Shed Background ${index + 1}`}
+            src={slides[currentSlide].frontImage}
+            alt="Roofing Structure Runner"
             fill
-            priority={index === 0}
-            sizes="100vw"
-            className="object-cover object-center"
+            className="object-contain"
           />
         </div>
-      ))}
-
-      {/* Dark Overlay for Readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10" />
-      <div className="absolute inset-0 bg-black/20 z-10" />
-
-      {/* Content Container */}
-      <div className="max-w-[1400px] mx-auto px-6 w-full relative z-20" data-reveal="stagger">
-        
-        <div className="max-w-[700px]">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
-            <div className="w-2 h-2 rounded-full bg-[#ffcc00] animate-pulse" />
-            <span className="text-white text-sm font-black tracking-widest uppercase">PAN INDIA EXPERTISE</span>
-          </div>
-
-          {/* Heading (Smaller Size) */}
-          <h1 
-            className="text-white text-4xl font-bold leading-[1.1] tracking-tight font-heading drop-shadow-xl mb-4"
-          >
-            India&apos;s Trusted Roofing Shed Construction Company for Industrial, Agricultural & Home Projects
-          </h1>
-
-          {/* Paragraph */}
-          <p className="text-white text-md md:text-md leading-relaxed max-w-[600px] mb-6 font-medium drop-shadow-lg">
-            KPN Roofing Shed designs and builds steel roofing sheds for industrial, agricultural, home, and recreational projects across India, using Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a 10-year guarantee.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <button 
-              onClick={() => openQuoteModal()}
-              className="bg-[#ee0000] hover:bg-[#cc0000] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-xl"
-            >
-              Get Free Quote
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <a 
-              href="https://wa.me/911234567890" 
-              target="_blank"
-              rel="noreferrer"
-              className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-
-         
-          
-
-        </div>
       </div>
+
+      {/* 4. Curved Path and Interactive Nodes */}
+      <div className="absolute bottom-0 left-0 w-full h-[60vh] z-30 pointer-events-none">
+
+        {/* The SVG Track (Perspective 3D Curve) */}
+        {/* Adjusted to mimic the exact way the reference line hangs */}
+        <svg
+          className="w-full h-full absolute inset-0"
+          viewBox="0 0 1200 420"
+          fill="none"
+          preserveAspectRatio="none"
+        >
+          <path
+            ref={pathRef}
+            d="M 0 120 Q 300 480 600 380 T 1200 20"
+            stroke="#16131980"
+            strokeWidth="7.5"
+            strokeLinecap="round"
+          />
+        </svg>
+
+        {/* Static Node Markers (Clickable dots on path) */}
+        <div className="absolute inset-0 pointer-events-auto">
+          {nodePositions.map((pos, idx) => (
+            <div
+              key={`static-${idx}`}
+              onClick={() => changeSlide(idx)}
+              className="absolute flex flex-col items-center cursor-pointer group -translate-x-1/2 -translate-y-1/2"
+              style={{ left: `${(pos.x / 1200) * 100}%`, top: `${(pos.y / 420) * 100}%` }}
+            >
+              {/* Fixed dot on path */}
+              <div
+                className={`w-4 h-4 rounded-full border-[3px] transition-all duration-300 z-0 ${currentSlide === idx ? "opacity-0" : "bg-white border-[#16131980] group-hover:scale-125"
+                  }`}
+              />
+
+              {/* Labels for inactive nodes - hidden on xs, visible on sm+ */}
+              <div className={`absolute top-6 hidden sm:flex flex-col items-center whitespace-nowrap transition-opacity duration-300 ${currentSlide === idx ? "opacity-0" : "opacity-100"}`}>
+                <span className="text-[10px] sm:text-[12px] font-bold tracking-wide text-slate-800">
+                  {slides[idx].title}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* The Traveling Active Node */}
+        {nodePositions.length > 0 && (
+          <div
+            className="absolute z-40 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] -translate-x-1/2 -translate-y-[28px] pointer-events-none"
+            style={{
+              left: `${(nodePositions[currentSlide].x / 1200) * 100}%`,
+              top: `${(nodePositions[currentSlide].y / 420) * 100}%`
+            }}
+          >
+            <div className="relative flex flex-col items-center justify-center">
+              {/* Pulse effect */}
+              <span
+                className="absolute w-20 h-20 rounded-full animate-ping opacity-40"
+                style={{ backgroundColor: slides[currentSlide].color }}
+              />
+
+              {/* Solid Circle */}
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)] z-10 transition-colors duration-500"
+                style={{ backgroundColor: slides[currentSlide].color }}
+              >
+                {/* Inner Icon Detail (resembling a lantern/beacon) */}
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="w-1 h-1.5 bg-white rounded-sm" />
+                  <div className="w-5 h-5 border-2 border-white rounded-full flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                  </div>
+                  <div className="w-3 h-0.5 bg-white rounded-sm mt-0.5" />
+                </div>
+              </div>
+
+              {/* Active Node Text below - hidden on xs, visible on sm+ */}
+              <div className="absolute top-[68px] sm:top-[80px] hidden sm:flex flex-col items-center whitespace-nowrap">
+                <span className="text-[12px] sm:text-[15px] font-bold tracking-wide text-slate-900 drop-shadow-md">
+                  {slides[currentSlide].title}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
+      </div>
+
+      {/* Floating Action Button - Performs as Navigation */}
+      <div className="absolute bottom-10 right-10 z-40 pointer-events-auto">
+        <button
+          onClick={handleNext}
+          disabled={isAnimating}
+          aria-label="Next Slide"
+          className="w-14 h-14 bg-[#ffcc00] border-none rounded-[1rem] flex items-center justify-center cursor-pointer shadow-xl hover:scale-110 active:scale-95 transition-transform"
+        >
+          <ArrowRight size={22} className="text-slate-900" />
+        </button>
+      </div>
+
     </section>
   );
 }

@@ -29,7 +29,11 @@ const Card = ({ icon: Icon, title, desc}: { icon: any, title: string, desc: stri
 export default function WhyKPNSection() {
 
   return (
-    <section id="about" className="bg-[#f5fbfe] py-24 relative overflow-hidden min-h-[100dvh] flex flex-col justify-center">
+    <section id="about" className="relative py-24 overflow-hidden min-h-[100dvh] flex flex-col justify-center">
+      {/* Roofing background - night-bg for a dark blue atmospheric effect */}
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/night-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundAttachment: 'fixed' }}>
+        <div className="absolute inset-0 bg-[#f5fbfe]/92" />
+      </div>
       
       <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
         

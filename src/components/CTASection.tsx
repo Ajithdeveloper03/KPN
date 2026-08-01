@@ -7,49 +7,53 @@ export default function CTASection() {
   return (
     <section id="contact" className="bg-white py-20">
       <div className="max-w-[1400px] w-full mx-auto px-6">
-        <div className="bg-[#ee0000] rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center min-h-[420px] shadow-2xl">
-
-          {/* Concentric Circles Background (Right Side) */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 pointer-events-none z-0">
-            <div className="w-[600px] h-[600px] rounded-full border-[40px] border-[#f22020] opacity-80 flex items-center justify-center">
-              <div className="w-[450px] h-[450px] rounded-full border-[40px] border-[#f22020] opacity-80 flex items-center justify-center">
-                <div className="w-[300px] h-[300px] rounded-full bg-[#f22020] opacity-80" />
-              </div>
-            </div>
-          </div>
+        <div className="bg-[#ee0000] rounded-[2.5rem] relative overflow-hidden flex flex-col md:flex-row items-center min-h-[460px] shadow-[0_25px_60px_rgba(238,0,0,0.25)]">
 
           {/* Left Content (Text & Buttons) */}
-          <div className="relative z-10 p-10 md:p-16 md:w-[60%] flex flex-col justify-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6 font-heading tracking-tight">
-              Get in Touch with Our Roofing Experts Today
+          <div className="relative z-10 p-10 md:p-14 lg:p-20 md:w-[55%] flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5 font-heading tracking-tight drop-shadow-sm">
+              Planning a shed for your farm, factory, or home?
             </h2>
-            <p className="text-white/90 text-base md:text-lg leading-relaxed mb-10 max-w-[500px]">
-              Ready to protect your home with a strong, reliable roof? Whether you&apos;re in need of a complete roof replacement.
+            <p className="text-white/95 text-base md:text-lg leading-relaxed mb-10 max-w-[500px] font-medium drop-shadow-sm">
+              Talk to India&apos;s award-winning roofing shed contractors &mdash; get a free site visit and a transparent quote within 24 hours.
             </p>
-            <div className="flex flex-wrap gap-4">
+            
+            <div className="flex flex-wrap items-center gap-4 mb-6">
               <button
                 onClick={() => openQuoteModal()}
-                className="bg-white text-[#ee0000] font-bold text-sm px-8 py-3.5 rounded transition-all duration-300 hover:bg-gray-100"
+                className="bg-white text-[#ee0000] font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-xl"
               >
-                START YOUR JOURNEY
+                Get Free Quote
               </button>
-              <button
-                onClick={() => openQuoteModal()}
-                className="bg-transparent text-white border border-white font-bold text-sm px-8 py-3.5 rounded transition-all duration-300 hover:bg-white/10"
+              <a
+                href="https://wa.me/911234567890"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#25D366] text-white font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#20bd5a] hover:scale-105 shadow-xl no-underline"
               >
-                CONTACT US
-              </button>
+                Chat on WhatsApp
+              </a>
+              <a
+                href="tel:+919876543210"
+                className="bg-transparent text-white border-2 border-white font-bold text-sm md:text-base px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:scale-105 no-underline"
+              >
+                Call Now
+              </a>
             </div>
+
+            <p className="text-white/80 text-xs md:text-sm font-medium tracking-wide">
+              * 50% advance to start &mdash; no hidden costs. Projects completed in as little as 20 days.
+            </p>
           </div>
 
-          {/* Floating Image (Right side) */}
-          <div className="absolute right-[-10%] bottom-[-10%] w-[50%] h-[120%] opacity-20 hidden md:block mix-blend-overlay pointer-events-none">
+          {/* Right Image (Clear and visible) */}
+          <div className="relative w-full md:w-[45%] h-[300px] md:h-[500px] md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 overflow-hidden shadow-[-20px_0_50px_rgba(0,0,0,0.15)] md:rounded-l-[4rem]">
             <Image
-              src="/kpnroofingshed/images/morning-bg.png"
-              alt="CTA Background Texture"
+              src="/kpnroofingshed/images/image1.png"
+              alt="KPN Roofing Shed Construction Experts"
               fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover object-center [clip-path:polygon(20%_0%,100%_0%,100%_100%,0%_100%)]"
+              className="object-cover object-center transition-transform duration-1000 hover:scale-110"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 

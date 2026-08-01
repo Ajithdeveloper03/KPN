@@ -21,14 +21,14 @@ export default function AreasWeServeSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-[1.2fr_1fr] gap-16 items-stretch">
-          <div className="relative w-full h-full min-h-[350px] md:min-h-full rounded-2xl overflow-hidden shadow-2xl" data-reveal="image">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-stretch">
+          <div className="relative w-full h-[280px] sm:h-[350px] lg:h-full min-h-[350px] rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1" data-reveal="image">
             <Image
               src="/kpnroofingshed/images/service-bg.png"
               alt="Pan India Roofing Services"
               style={{ objectFit: "cover" }}
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,75,135,0.6)] to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
@@ -37,18 +37,18 @@ export default function AreasWeServeSection() {
             </div>
           </div>
 
-          <div>
+          <div className="order-1 lg:order-2">
             <div className="flex flex-wrap gap-3">
               {["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Pan-India Delivery"].map((r) => (
                 <span
                   key={r}
-                  className="px-6 py-3 rounded-full bg-gradient-to-br from-slate-50 to-slate-200 border border-slate-300 font-bold text-[#1e2229] text-lg hover:border-[#004b87] hover:text-[#004b87] transition-colors duration-200"
+                  className="px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-br from-slate-50 to-slate-200 border border-slate-300 font-bold text-[#1e2229] text-base md:text-lg hover:border-[#004b87] hover:text-[#004b87] transition-colors duration-200"
                 >
                   {r}
                 </span>
               ))}
             </div>
-            <p className="mt-8 text-slate-500 text-md leading-relaxed font-medium">
+            <p className="mt-8 text-slate-500 text-base leading-relaxed font-medium">
               From Tamil Nadu to Maharashtra — our in-house engineers and installation crew travel to your site. Same quality, same accountability, every state.
             </p>
             <button

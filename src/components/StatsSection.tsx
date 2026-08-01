@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
 
@@ -63,11 +63,31 @@ const statsCards = [
 
 export default function StatsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
+    setScrollLeft(scrollRef.current?.scrollLeft || 0);
+  };
+
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - (scrollRef.current.offsetLeft || 0);
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   // Automatic slider effect using native scroll
   useEffect(() => {
     const timer = setInterval(() => {
-      if (scrollRef.current) {
+      if (scrollRef.current && !isDragging) {
         const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
         // If we reached the end, scroll back to start
         if (scrollLeft + clientWidth >= scrollWidth - 20) {
@@ -80,10 +100,14 @@ export default function StatsSection() {
       }
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isDragging]);
 
   return (
-    <section id="stats" className="bg-[#f0f2f5] py-24 min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+    <section id="stats" className="relative py-24 min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+      {/* Fixed Background Image with light overlay */}
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/service-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+        <div className="absolute inset-0 bg-white/88" />
+      </div>
       
       {/* Hide Webkit Scrollbar globally for this section */}
       <style dangerouslySetInnerHTML={{__html: `
@@ -91,13 +115,13 @@ export default function StatsSection() {
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
       `}} />
 
-      <div className="max-w-[1500px] w-full mx-auto px-6">
+      <div className="max-w-[1500px] w-full mx-auto px-6 relative z-10">
 
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
           {/* Left Content */}
-          <div className="w-full lg:w-[30%] flex flex-col items-start text-center lg:text-left" data-reveal="stagger">
-            <h2 className="text-4xl font-bold text-[#1e2229] leading-[1.2] tracking-tight mb-6">
+          <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left" data-reveal="stagger">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1e2229] leading-[1.2] tracking-tight mb-6">
               Experience the new KPN
             </h2>
             <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed mb-8">
@@ -105,7 +129,7 @@ export default function StatsSection() {
             </p>
             <a
               href="#services"
-              className="bg-[#9b51e0] hover:bg-[#8640c8] text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(155,81,224,0.3)] mx-auto lg:mx-0"
+              className="bg-[#9b51e0] hover:bg-[#8640c8] text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(155,81,224,0.3)]"
             >
               Learn More
             </a>
@@ -117,7 +141,11 @@ export default function StatsSection() {
             {/* Slider Track */}
             <div
               ref={scrollRef}
-              className="flex overflow-x-auto snap-x snap-mandatory hide-scroll"
+              onMouseDown={handleMouseDown}
+              onMouseLeave={handleMouseLeave}
+              onMouseUp={handleMouseUp}
+              onMouseMove={handleMouseMove}
+              className={`flex overflow-x-auto hide-scroll ${isDragging ? 'cursor-grabbing snap-none' : 'cursor-grab snap-x snap-mandatory'}`}
             >
 
               {statsCards.map((card, idx) => (

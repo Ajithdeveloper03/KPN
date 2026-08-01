@@ -6,8 +6,12 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about-us" className="bg-[#fcfdfd] pt-24 pb-12 overflow-hidden relative">
-      <div className="max-w-[1400px] w-full mx-auto relative flex flex-col items-center justify-center">
+    <section id="about-us" className="relative pt-24 pb-12 overflow-hidden">
+      {/* Roofing background — image2 with very light overlay */}
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/image2.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+        <div className="absolute inset-0 bg-[#fcfdfd]/94" />
+      </div>
+      <div className="max-w-[1400px] w-full mx-auto relative flex flex-col items-center justify-center z-10">
         
         {/* Arch Image Gallery (Desktop) */}
         <div className="hidden lg:flex justify-center items-start gap-5 xl:gap-8 w-full px-6 pt-12 pb-4 relative z-10" data-reveal="stagger">

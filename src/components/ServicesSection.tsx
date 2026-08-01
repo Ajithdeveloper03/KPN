@@ -106,13 +106,13 @@ export default function ServicesSection() {
           </div>
 
           {/* Right: Clean Image */}
-          <div className="relative h-full min-h-[400px] w-full" data-reveal="image">
-            <div className="relative  z-10 w-full h-full shadow-2xl overflow-hidden rounded-md">
+          <div className="relative h-full min-h-[400px] w-full group" data-reveal="image">
+            <div className="relative z-10 w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden rounded-3xl border-4 border-white/20 backdrop-blur-md transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
               <Image
                 src={activeService.image}
                 alt={activeService.alt}
                 fill
-                className="object-cover rounded-3xl"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>

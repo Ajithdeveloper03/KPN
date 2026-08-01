@@ -21,12 +21,12 @@ export default function Header() {
 
         <nav className="hidden md:block">
           <ul className="flex gap-8 list-none m-0 p-0 items-center">
-            <li><a href="#" className="text-slate-200 no-underline text-[15px] font-semibold transition-colors duration-300 hover:text-white">Home</a></li>
-            <li><a href="#about" className="text-slate-200 no-underline text-[15px] font-semibold transition-colors duration-300 hover:text-white">About Us</a></li>
+            <li><a href="#" className="text-slate-900 no-underline text-[15px] font-bold transition-colors duration-300 hover:text-black">Home</a></li>
+            <li><a href="#about" className="text-slate-900 no-underline text-[15px] font-bold transition-colors duration-300 hover:text-black">About Us</a></li>
             
             {/* Services Dropdown */}
             <li className="relative group">
-              <a href="#services" className="text-slate-200 no-underline text-[15px] font-semibold transition-colors duration-300 hover:text-white flex items-center gap-1 pb-6 -mb-6">
+              <a href="#services" className="text-slate-900 no-underline text-[15px] font-bold transition-colors duration-300 hover:text-black flex items-center gap-1 pb-6 -mb-6">
                 Services
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </a>
@@ -39,9 +39,9 @@ export default function Header() {
               </div>
             </li>
 
-            <li><a href="#gallery" className="text-slate-200 no-underline text-[15px] font-semibold transition-colors duration-300 hover:text-white">Gallery</a></li>
-            <li><a href="#blog" className="text-slate-200 no-underline text-[15px] font-semibold transition-colors duration-300 hover:text-white">Blog</a></li>
-            <li><a href="#contact" className="text-slate-200 no-underline text-[15px] font-semibold transition-colors duration-300 hover:text-white">Contact</a></li>
+            <li><a href="#gallery" className="text-slate-900 no-underline text-[15px] font-bold transition-colors duration-300 hover:text-black">Gallery</a></li>
+            <li><a href="#blog" className="text-slate-900 no-underline text-[15px] font-bold transition-colors duration-300 hover:text-black">Blog</a></li>
+            <li><a href="#contact" className="text-slate-900 no-underline text-[15px] font-bold transition-colors duration-300 hover:text-black">Contact</a></li>
           </ul>
         </nav>
 

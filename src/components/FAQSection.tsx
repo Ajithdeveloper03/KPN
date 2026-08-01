@@ -35,7 +35,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faqs" className="bg-[#fbfdfa] py-24 relative overflow-hidden">
+    <section id="faqs" className="relative py-24 overflow-hidden">
+      {/* Roofing background — morning-bg for warm earthy light */}
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/morning-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+        <div className="absolute inset-0 bg-[#fbfdfa]/93" />
+      </div>
       <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
         
         {/* Top Header */}
