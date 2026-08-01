@@ -7,7 +7,7 @@ export default function CTASection() {
   return (
     <section id="contact" className="bg-white py-20">
       <div className="max-w-[1400px] w-full mx-auto px-6">
-        <div className="bg-[#ee0000] rounded-[2.5rem] relative overflow-hidden flex flex-col md:flex-row items-center min-h-[460px] shadow-[0_25px_60px_rgba(238,0,0,0.25)]">
+        <div className="bg-gradient-to-br from-[#19191c] to-[#0a0a0f] border border-white/5 rounded-[2.5rem] relative overflow-hidden flex flex-col md:flex-row items-center min-h-[460px] shadow-2xl">
 
           {/* Left Content (Text & Buttons) */}
           <div className="relative z-10 p-10 md:p-14 lg:p-20 md:w-[55%] flex flex-col justify-center">
@@ -21,7 +21,7 @@ export default function CTASection() {
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <button
                 onClick={() => openQuoteModal()}
-                className="bg-white text-[#ee0000] font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-xl"
+                className="bg-white text-[#19191c] font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-gray-200 hover:scale-105 shadow-xl"
               >
                 Get Free Quote
               </button>

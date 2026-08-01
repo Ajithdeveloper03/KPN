@@ -38,7 +38,7 @@ export default function ServicesSection() {
   const activeService = services[activeIndex];
 
   return (
-    <section id="services" className="bg-[#19191c] text-white py-24 relative overflow-hidden">
+    <section id="services" className="bg-[#19191c] text-white py-12 md:py-16 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 opacity-50">
         <Image
@@ -107,7 +107,7 @@ export default function ServicesSection() {
 
           {/* Right: Clean Image */}
           <div className="relative h-full min-h-[400px] w-full group" data-reveal="image">
-            <div className="relative z-10 w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden rounded-3xl border-4 border-white/20 backdrop-blur-md transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
+            <div className="relative z-10 w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden rounded-3xl border-10 border-white/20 backdrop-blur-md transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
               <Image
                 src={activeService.image}
                 alt={activeService.alt}

@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
   const activeTestimonial = testimonials[activeIndex];
 
   return (
-    <section id="testimonials" className="bg-[#0a0a0f] py-12 md:py-24 min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+    <section id="testimonials" className="bg-[#0a0a0f] py-12 md:py-16 flex flex-col justify-center overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10">
         
         {/* Top Header Area */}

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AreasWeServeSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-12 md:py-16">
       <div className="max-w-[1400px] w-full mx-auto px-6">
         <div className="text-center mb-14" data-reveal="stagger">
           <span className="inline-block px-5 py-1.5 rounded-full bg-[rgba(0,163,224,0.1)] text-[#00a3e0] border border-[rgba(0,163,224,0.3)] font-bold text-sm">
@@ -24,7 +24,7 @@ export default function AreasWeServeSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-stretch">
           <div className="relative w-full h-[280px] sm:h-[350px] lg:h-full min-h-[350px] rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1" data-reveal="image">
             <Image
-              src="/kpnroofingshed/images/service-bg.png"
+              src="/kpnroofingshed/images/roofing.png"
               alt="Pan India Roofing Services"
               style={{ objectFit: "cover" }}
               fill
@@ -39,7 +39,7 @@ export default function AreasWeServeSection() {
 
           <div className="order-1 lg:order-2">
             <div className="flex flex-wrap gap-3">
-              {["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Pan-India Delivery"].map((r) => (
+              {["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Uttar Pradesh", "Pan-India"].map((r) => (
                 <span
                   key={r}
                   className="px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-br from-slate-50 to-slate-200 border border-slate-300 font-bold text-[#1e2229] text-base md:text-lg hover:border-[#004b87] hover:text-[#004b87] transition-colors duration-200"

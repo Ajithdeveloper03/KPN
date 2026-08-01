@@ -43,8 +43,9 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
-      <StatsSection />
       <ServicesSection />
+      <StatsSection />
+      
       <WhyKPNSection />
       <ComparisonSection />
       <ProcessSection />

@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Dark Gradient for readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#121316] to-transparent pointer-events-none" />
 
-        <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-[2fr_1fr_1.5fr] gap-12 mb-12">
+        <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr] gap-10 md:gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="max-w-[1400px] w-full mx-auto px-6 pt-6 border-t border-white/10 flex justify-center items-center flex-wrap gap-4 text-center">
-          <span className="text-slate-500 text-sm font-medium">© {new Date().getFullYear()} KPN Roofing Shed. All Rights Reserved.</span>
+          <span className="text-white text-sm font-medium">© {new Date().getFullYear()} KPN Roofing Shed. All Rights Reserved.</span>
         </div>
       </footer>
 

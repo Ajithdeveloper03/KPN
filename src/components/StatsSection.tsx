@@ -103,19 +103,20 @@ export default function StatsSection() {
   }, [isDragging]);
 
   return (
-    <section id="stats" className="relative py-24 min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+    <section id="stats" className="relative py-14  flex flex-col justify-center overflow-hidden">
       {/* Fixed Background Image with light overlay */}
       <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/service-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
-        <div className="absolute inset-0 bg-white/88" />
+        <div className="absolute inset-0 bg-gray-100" />
       </div>
-      
+
       {/* Hide Webkit Scrollbar globally for this section */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
       `}} />
 
-      <div className="max-w-[1500px] w-full mx-auto px-6 relative z-10">
+      <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
 
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
@@ -129,7 +130,7 @@ export default function StatsSection() {
             </p>
             <a
               href="#services"
-              className="bg-[#9b51e0] hover:bg-[#8640c8] text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(155,81,224,0.3)]"
+              className="bg-[#062088] hover:bg-[#8640c8] text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(155,81,224,0.3)]"
             >
               Learn More
             </a>

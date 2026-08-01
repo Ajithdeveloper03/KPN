@@ -43,51 +43,50 @@ export default function ProcessSection() {
 
   useEffect(() => {
     let ctx: any;
-    const isMobile = window.innerWidth < 768;
 
-    if (!isMobile) {
-      const initGSAP = async () => {
-        const gsapModule = await import("gsap");
-        const scrollTriggerModule = await import("gsap/ScrollTrigger");
-        const gsap = gsapModule.default;
-        const ScrollTrigger = scrollTriggerModule.ScrollTrigger;
-        gsap.registerPlugin(ScrollTrigger);
+    const initGSAP = async () => {
+      const gsapModule = await import("gsap");
+      const scrollTriggerModule = await import("gsap/ScrollTrigger");
+      const gsap = gsapModule.default;
+      const ScrollTrigger = scrollTriggerModule.ScrollTrigger;
+      gsap.registerPlugin(ScrollTrigger);
 
-        ctx = gsap.context(() => {
-          const slider = sliderRef.current;
-          if (!slider) return;
+      ctx = gsap.context(() => {
+        const slider = sliderRef.current;
+        if (!slider) return;
 
-          const scrollAmount = slider.scrollWidth - window.innerWidth;
+        const scrollAmount = slider.scrollWidth - window.innerWidth;
 
-          gsap.to(slider, {
-            x: -scrollAmount,
+        gsap.to(slider, {
+          x: -scrollAmount,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            pin: true,
+            scrub: 1,
+            end: () => `+=${scrollAmount}`,
+          }
+        });
+
+        if (pathRef.current) {
+          const pathLength = pathRef.current.getTotalLength();
+          gsap.set(pathRef.current, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
+          gsap.to(pathRef.current, {
+            strokeDashoffset: 0,
             ease: "none",
             scrollTrigger: {
               trigger: sectionRef.current,
-              pin: true,
-              scrub: 1,
+              start: "top top",
               end: () => `+=${scrollAmount}`,
+              scrub: 1,
             }
           });
+        }
+      }, sectionRef);
+    };
+    
+    initGSAP();
 
-          if (pathRef.current) {
-            const pathLength = pathRef.current.getTotalLength();
-            gsap.set(pathRef.current, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
-            gsap.to(pathRef.current, {
-              strokeDashoffset: 0,
-              ease: "none",
-              scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "top top",
-                end: () => `+=${slider.scrollWidth - window.innerWidth}`,
-                scrub: 1,
-              }
-            });
-          }
-        }, sectionRef);
-      };
-      initGSAP();
-    }
     return () => ctx && ctx.revert();
   }, []);
 
@@ -101,6 +100,10 @@ export default function ProcessSection() {
       {/* Fixed Header */}
       <div className="absolute top-20 left-0 w-full z-10 pointer-events-none">
         <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
+          <div className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full font-bold text-sm tracking-wide mb-4 border transition-colors duration-700 bg-[#ccecfb] text-[#00a3e0] border-[#00a3e0]/20`}>
+            <span className={`w-2 h-2 rounded-full bg-white`}></span>
+           Our Process
+          </div>
           <div className="overflow-hidden">
             <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading" data-reveal="text">
               Our Shed Construction Process

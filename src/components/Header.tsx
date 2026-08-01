@@ -1,9 +1,12 @@
 "use client";
 import { openQuoteModal } from "@/components/QuoteModal";
-import React from "react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="absolute top-0 left-0 w-full z-[100] py-6 bg-transparent border-b border-transparent">
       <div className="max-w-[1400px] w-full mx-auto px-6 flex justify-between items-center">
@@ -46,11 +49,32 @@ export default function Header() {
         </nav>
 
         <div className="flex gap-4 items-center">
-          <a href="tel:+919876543210" className="hidden md:inline-flex items-center bg-transparent border-2 border-white text-white px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 hover:bg-white hover:text-slate-900">
+          <a href="tel:+919876543210" className="hidden md:inline-flex items-center bg-white border-2 border-white text-slate-900 px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 hover:bg-transparent hover:text-slate-900">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1.5 align-middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call Now
           </a>
-          <button onClick={() => openQuoteModal()} className="bg-[#ee0000] text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 hover:bg-[#cc0000] hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(249,92,25,0.3)] shadow-[0_4px_14px_rgba(249,92,25,0.4)]">
+          <button onClick={() => openQuoteModal()} className="hidden sm:block bg-[#ee0000] text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 hover:bg-[#cc0000] hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(249,92,25,0.3)] shadow-[0_4px_14px_rgba(249,92,25,0.4)]">
+            Get Free Quote
+          </button>
+          
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden text-slate-900 relative z-[110] p-1">
+             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 bg-white/95 backdrop-blur-md z-[105] transition-transform duration-300 flex flex-col pt-28 px-8 md:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <ul className="flex flex-col gap-6 list-none m-0 p-0">
+          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Home</a></li>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</a></li>
+          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Services</a></li>
+          <li><a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Gallery</a></li>
+          <li><a href="#blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Blog</a></li>
+          <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Contact</a></li>
+        </ul>
+        <div className="mt-10">
+          <button onClick={() => { openQuoteModal(); setIsMobileMenuOpen(false); }} className="w-full bg-[#ee0000] text-white px-5 py-4 rounded-full text-lg font-bold">
             Get Free Quote
           </button>
         </div>
