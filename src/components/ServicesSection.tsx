@@ -55,8 +55,9 @@ export default function ServicesSection() {
 
         {/* Header Section */}
         <div className="text-center mb-16" data-reveal="stagger">
-          <div className="flex items-center justify-center gap-2 text-[#ee0000] font-bold text-sm tracking-widest uppercase mb-4">
-            SERVICES
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#fecbc3] text-[#ee0000] font-bold text-sm tracking-wide mb-4 border border-[#00a3e0]/20">
+            <span className="w-2 h-2 rounded-full bg-[#ee0000]"></span>
+           Services
           </div>
           <h2 className="text-[clamp(40px,5vw,56px)] font-extrabold font-heading tracking-tight" data-reveal="text">
             Shed Construction
@@ -89,12 +90,12 @@ export default function ServicesSection() {
 
           {/* Left: Text Content */}
           <div data-reveal="stagger" className="flex flex-col items-start text-left max-w-[600px]">
-            <h3 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold mb-6 font-heading leading-tight tracking-tight">{activeService.title}</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold mb-2 font-heading leading-tight tracking-tight">{activeService.title}</h3>
             <p className="text-slate-300 leading-[1.8] mb-10 text-base md:text-lg">
               {activeService.desc}
             </p>
 
-            <div className="h-px bg-white/10 w-full mb-10" />
+            
 
             <button
               onClick={openQuoteModal}
@@ -106,12 +107,12 @@ export default function ServicesSection() {
 
           {/* Right: Clean Image */}
           <div className="relative h-full min-h-[400px] w-full" data-reveal="image">
-            <div className="relative z-10 w-full h-full shadow-2xl overflow-hidden rounded-md">
+            <div className="relative  z-10 w-full h-full shadow-2xl overflow-hidden rounded-md">
               <Image
                 src={activeService.image}
                 alt={activeService.alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-3xl"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>

@@ -135,7 +135,7 @@ export default function ProcessSection() {
             d="M 0,250 C 100,250 150,150 250,150 S 600,350 750,350 S 1100,150 1250,150 S 1600,350 1750,350 S 2100,150 2250,150 S 2400,250 2500,250"
             fill="none"
             stroke="#004b87"
-            strokeWidth="5"
+            strokeWidth="8"
             strokeLinecap="round"
             style={{ filter: "drop-shadow(0px 25px 6px rgba(100, 116, 139, 0.5))" }}
           />
