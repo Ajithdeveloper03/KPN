@@ -1,16 +1,6 @@
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
+import LenisScrollProvider from "@/components/LenisScrollProvider";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
   title: "Roofing Shed Construction Company in India | KPN Roofing Shed",
@@ -23,11 +13,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${playfair.variable}`}>
+    <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/kpnroofingshed/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning className="font-sans antialiased">
+        <LenisScrollProvider>
+          <ScrollReveal />
+          {children}
+        </LenisScrollProvider>
+      </body>
     </html>
   );
 }

@@ -65,7 +65,7 @@ export default function IntegrationSection() {
 
         {/* Buttons */}
         <div className="flex flex-col items-center gap-4 z-20 mb-20 md:mb-32">
-          <button className="bg-[#f95c19] hover:bg-[#e04b0c] text-white font-bold px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-orange-500/20">
+          <button className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-orange-500/20">
             Start for free
           </button>
           <a href="#contact" className="text-slate-500 text-sm font-medium hover:text-[#1e2229] transition-colors no-underline inline-flex items-center gap-1 group">
@@ -93,22 +93,22 @@ export default function IntegrationSection() {
               </style>
               
               {/* Left Side Lines converging to center (500, 200) */}
-              <path className="animated-line" d={generatePath(0, 50, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="1" />
-              <path className="animated-line" d={generatePath(0, 150, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="1.5" />
-              <path className="animated-line" d={generatePath(0, 250, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="1" />
-              <path className="animated-line" d={generatePath(0, 350, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="0.5" />
+              <path className="animated-line" d={generatePath(0, 50, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="1" />
+              <path className="animated-line" d={generatePath(0, 150, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="1.5" />
+              <path className="animated-line" d={generatePath(0, 250, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="1" />
+              <path className="animated-line" d={generatePath(0, 350, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="0.5" />
               
               {/* Right Side Lines converging to center (500, 200) */}
-              <path className="animated-line" d={generatePath(1000, 50, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="1" />
-              <path className="animated-line" d={generatePath(1000, 150, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="0.5" />
-              <path className="animated-line" d={generatePath(1000, 250, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="1.5" />
-              <path className="animated-line" d={generatePath(1000, 350, 500, 200)} fill="none" stroke="#f95c19" strokeWidth="1" />
+              <path className="animated-line" d={generatePath(1000, 50, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="1" />
+              <path className="animated-line" d={generatePath(1000, 150, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="0.5" />
+              <path className="animated-line" d={generatePath(1000, 250, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="1.5" />
+              <path className="animated-line" d={generatePath(1000, 350, 500, 200)} fill="none" stroke="#ee0000" strokeWidth="1" />
             </svg>
           </div>
 
           {/* Central Main Icon */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="w-20 h-20 bg-[#f95c19] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(249,92,25,0.4)]">
+            <div className="w-20 h-20 bg-[#ee0000] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(249,92,25,0.4)]">
               <Box size={40} className="text-white" strokeWidth={2} />
             </div>
           </div>

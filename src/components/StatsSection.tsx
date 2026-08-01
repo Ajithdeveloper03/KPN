@@ -1,125 +1,183 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import { ArrowRight, Star } from "lucide-react";
 
 const statsCards = [
   {
-    title: "INDUSTRIAL",
-    color: "#8b5cf6", // Purple
-    desc: "Heavy-duty factory sheds designed for massive load-bearing capacities and optimal workflows.",
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600"
+    title: "13+ Years",
+    desc: "Experience in shed and roofing construction.",
+    color: "#062088", // Blue
+    img: "/kpnroofingshed/images/image2.png"
   },
   {
-    title: "AGRICULTURAL",
-    color: "#f59e0b", // Orange/Yellow
-    desc: "Well-ventilated, hygienic animal sheds and storage facilities tailored for modern farming.",
-    img: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600"
+    title: "600+ Projects",
+    desc: "Successfully completed across India.",
+    color: "#ee0000", // Red
+    img: "/kpnroofingshed/images/service-bg.png"
   },
   {
-    title: "COMMERCIAL",
-    color: "#06b6d4", // Cyan
-    desc: "Recreational sports turfs and commercial warehouses built for aesthetics and durability.",
-    img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600"
+    title: "All Services",
+    desc: "Industrial, agricultural, home, turf & badminton sheds.",
+    color: "#ffe600", // Yellow
+    img: "/kpnroofingshed/images/morning-bg.png"
+  },
+  {
+    title: "₹599/sq.ft",
+    desc: "Goat farm shed pricing starts at ₹599/sq.ft.",
+    color: "#062088", // Blue
+    img: "/kpnroofingshed/images/image1.png"
+  },
+  {
+    title: "Min. Size",
+    desc: "1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states.",
+    color: "#ee0000", // Red
+    img: "/kpnroofingshed/images/night-bg.png"
+  },
+  {
+    title: "Fast Timeline",
+    desc: "20 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
+    color: "#ffe600", // Yellow
+    img: "/kpnroofingshed/images/image2.png"
+  },
+  {
+    title: "10-Yr Warranty",
+    desc: "10-year guarantee, 3-year replacement on flooring.",
+    color: "#062088", // Blue
+    img: "/kpnroofingshed/images/service-bg.png"
+  },
+  {
+    title: "50% Advance",
+    desc: "Remainder in installments as materials arrive.",
+    color: "#ee0000", // Red
+    img: "/kpnroofingshed/images/morning-bg.png"
+  },
+  {
+    title: "Award Winning",
+    desc: "Best Entrepreneur Award by Tamilan Channel.",
+    color: "#ffe600", // Yellow
+    img: "/kpnroofingshed/images/image1.png"
   }
 ];
 
 export default function StatsSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Automatic slider effect
+  // Automatic slider effect using native scroll
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % statsCards.length);
-    }, 3000); // Slide every 3 seconds
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        // If we reached the end, scroll back to start
+        if (scrollLeft + clientWidth >= scrollWidth - 20) {
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          // Scroll by exactly one card width
+          const cardWidth = scrollRef.current.children[0].clientWidth;
+          scrollRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
+        }
+      }
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section id="stats" className="bg-[#f2f4f8] py-24 min-h-[100dvh] flex flex-col justify-center">
-      <div className="max-w-[1400px] w-full mx-auto px-6">
-        
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          
+    <section id="stats" className="bg-[#f0f2f5] py-24 min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+      
+      {/* Hide Webkit Scrollbar globally for this section */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+      `}} />
+
+      <div className="max-w-[1500px] w-full mx-auto px-6">
+
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
           {/* Left Content */}
-          <div className="w-full lg:w-[35%] flex flex-col items-start text-center lg:text-left">
-            <h2 className="text-[clamp(40px,5vw,56px)] font-bold text-[#1e2229] font-heading leading-[1.1] mb-6">
-              KPN at a glance
+          <div className="w-full lg:w-[30%] flex flex-col items-start text-center lg:text-left" data-reveal="stagger">
+            <h2 className="text-4xl font-bold text-[#1e2229] leading-[1.2] tracking-tight mb-6">
+              Experience the new KPN
             </h2>
-            <p className="text-slate-600 text-lg md:text-xl font-medium leading-relaxed mb-8 max-w-[500px]">
-              Get the best construction experience that's built on the three pillars of Quality, Speed, and Reliability.
+            <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed mb-8">
+              Get the best construction experience built on the three pillars of Quality, Durability and Transparent Pricing.
             </p>
-            <a 
+            <a
               href="#services"
-              className="bg-[#9c3ce7] hover:bg-[#8629cc] text-white font-bold text-base px-8 py-4 rounded-full shadow-lg shadow-[#9c3ce7]/30 transition-all duration-300 mx-auto lg:mx-0"
+              className="bg-[#9b51e0] hover:bg-[#8640c8] text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(155,81,224,0.3)] mx-auto lg:mx-0"
             >
               Learn More
             </a>
           </div>
 
-          {/* Right Content: Automatic Slider Container */}
-          <div className="w-full lg:w-[65%] bg-white rounded-[2rem] p-4 md:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] overflow-hidden">
-            
-            {/* Carousel Track */}
-            <div 
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          {/* Right Content: Seamless Slider Container */}
+          <div className="w-full lg:w-[72%] bg-white rounded-[2rem] shadow-[0_15px_50px_rgba(0,0,0,0.06)] overflow-hidden relative" data-reveal="stagger">
+
+            {/* Slider Track */}
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto snap-x snap-mandatory hide-scroll"
             >
+
               {statsCards.map((card, idx) => (
-                <div key={idx} className="min-w-full flex flex-col sm:flex-row items-center gap-8 px-4">
-                  
-                  {/* Left: Image with vibrant circle graphic style from screenshot */}
-                  <div className="w-full sm:w-1/2 relative flex justify-center">
+                <div
+                  key={idx}
+                  className={`snap-start shrink-0 w-full sm:w-[50%] lg:w-[33.333%] p-8 md:p-10 flex flex-col items-center text-center group ${idx !== statsCards.length - 1 ? 'border-r border-slate-100' : ''}`}
+                >
+
+                  {/* Image Graphic */}
+                  <div className="relative w-40 h-40 mb-8 mt-2">
                     {/* Decorative colored rings */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border-[16px] border-t-transparent border-l-transparent -rotate-45" style={{ borderColor: card.color, borderTopColor: "transparent", borderLeftColor: "transparent" }}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border-[16px] border-b-transparent border-r-transparent -rotate-45 opacity-30" style={{ borderColor: card.color, borderBottomColor: "transparent", borderRightColor: "transparent" }}></div>
-                    
+                    <div
+                      className="absolute inset-0 rounded-full border-[6px] border-t-transparent border-l-transparent -rotate-45 group-hover:rotate-45 transition-transform duration-700"
+                      style={{ borderColor: card.color, borderTopColor: "transparent", borderLeftColor: "transparent" }}
+                    />
+                    <div
+                      className="absolute inset-[-10px] rounded-full border-[4px] border-b-transparent border-r-transparent -rotate-45 opacity-30 group-hover:-rotate-90 transition-transform duration-1000"
+                      style={{ borderColor: card.color, borderBottomColor: "transparent", borderRightColor: "transparent" }}
+                    />
+
                     {/* Inner Image */}
-                    <div className="relative w-48 h-48 rounded-full overflow-hidden z-10 shadow-2xl">
-                      <Image
-                        src={card.img}
-                        alt={card.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover"
-                      />
+                    <div className="absolute inset-2 rounded-full overflow-hidden shadow-xl bg-white p-1">
+                      <div className="relative w-full h-full rounded-full overflow-hidden">
+                        <Image
+                          src={card.img}
+                          alt={card.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Right: Text */}
-                  <div className="w-full sm:w-1/2 text-center sm:text-left flex flex-col justify-center min-h-[250px]">
-                    <h3 
-                      className="text-2xl font-black tracking-widest uppercase mb-4"
-                      style={{ color: card.color }}
-                    >
-                      {card.title}
-                    </h3>
-                    <p className="text-slate-500 font-medium leading-relaxed text-base md:text-lg">
-                      {card.desc}
-                    </p>
-                  </div>
+                  {/* Content */}
+                  <h3
+                    className="text-xl font-black uppercase tracking-wide mb-3"
+                    style={{ color: card.color }}
+                  >
+                    {card.title}
+                  </h3>
+                  <p className="text-slate-500 font-medium leading-relaxed text-sm">
+                    {card.desc}
+                  </p>
 
                 </div>
               ))}
             </div>
 
-            {/* Slider Dots */}
-            <div className="flex justify-center gap-3 mt-8">
-              {statsCards.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveIndex(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    idx === activeIndex ? "bg-[#9c3ce7] w-8" : "bg-slate-200"
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
-
           </div>
-          
+
         </div>
+
+        {/* Disclaimer */}
+        <div className="mt-12 text-center lg:text-right w-full">
+          <p className="text-slate-500 text-sm font-medium italic">
+            * Pricing varies based on shed type, material, location and project scope.
+          </p>
+        </div>
+
       </div>
     </section>
   );

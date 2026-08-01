@@ -6,24 +6,24 @@ import { Plus, Minus } from "lucide-react";
 
 export const faqs = [
   {
-    question: "Do you manufacture your own materials?",
-    answer: "Yes, we handle all steel fabrication in-house at our Coimbatore facility using premium Apollo-brand steel. This ensures zero compromises on material quality and faster delivery."
+    question: "What does KPN Roofing Shed build?",
+    answer: "KPN builds industrial and factory sheds, warehouses, agricultural and animal sheds (goat, dairy, poultry, cattle), and home structures like terrace sheds and car parking shades, across India."
   },
   {
-    question: "Is there a structural warranty?",
-    answer: "Absolutely. Every KPN shed comes with a 10-year structural guarantee, a 3-year replacement warranty on flooring, and completely free maintenance for the first year."
+    question: "What is the cost of a goat farm shed in India?",
+    answer: "A basic goat farm shed starts at ₹599 per sq.ft, ₹699 per sq.ft with MS material, and ₹799 per sq.ft for the premium model."
   },
   {
-    question: "Do you use subcontractors for installation?",
-    answer: "No. The entire installation is carried out by KPN’s own expert crew. From engineering to the final bolt, you are dealing with one accountable team."
+    question: "How long does KPN take to complete a shed?",
+    answer: "A 1440 sq.ft shed is completed in 20 days. A 2400 sq.ft shed takes about 1 month."
   },
   {
-    question: "How long does construction take?",
-    answer: "A standard 5,000 sq.ft industrial shed is typically completed within 30 to 45 days. We provide a strict timeline before construction begins and stick to it."
+    question: "What warranty does KPN provide?",
+    answer: "KPN's in-house flooring comes with a 3-year replacement warranty and a 10-year guarantee, plus free repair for any damage within the first year."
   },
   {
-    question: "Can I visit your fabrication facility?",
-    answer: "Yes! We welcome clients to visit our Coimbatore manufacturing facility to inspect our fabrication processes and see our material quality firsthand."
+    question: "Does KPN build sheds outside Tamil Nadu?",
+    answer: "Yes. KPN delivers projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka."
   }
 ];
 
@@ -36,54 +36,54 @@ export default function FAQSection() {
 
   return (
     <section id="faqs" className="bg-[#fbfdfa] py-24 relative overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10 flex flex-col items-center">
+      <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
         
         {/* Top Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#f0f5ee] text-[#4d6d53] font-bold text-sm tracking-wide mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#83a686]"></span>
+        <div className="text-center mb-16" data-reveal="stagger">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#e5f6fd] text-[#00a3e0] font-bold text-sm tracking-wide mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#00a3e0]"></span>
             FAQ
           </div>
-          <h2 className="text-[clamp(32px,5vw,48px)] font-bold text-[#14261c] font-heading tracking-tight">
-            Questions About KPN Roofing Shed
-          </h2>
+          <div className="overflow-hidden">
+            <h2 className="text-[clamp(32px,5vw,48px)] font-bold text-[#1e2229] font-heading tracking-tight" data-reveal="text">
+              Frequently Asked Questions
+            </h2>
+          </div>
         </div>
 
-        {/* 50/50 Layout */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-stretch">
           
-          {/* Left Column: Accordion */}
-          <div className="flex flex-col gap-4">
+          {/* Left Column: FAQs */}
+          <div className="flex flex-col gap-4" data-reveal="stagger">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
                 <div 
                   key={index}
                   className={`rounded-[1.5rem] p-6 md:p-8 cursor-pointer transition-all duration-300 shadow-sm ${
-                    isOpen ? "bg-[#7a9d7d] text-white" : "bg-[#f0f5ee] text-[#14261c] hover:bg-[#e8f0e6]"
+                    isOpen ? "bg-[#00a3e0] text-white" : "bg-[#e5f6fd] text-[#1e2229] hover:bg-[#e8f0e6]"
                   }`}
                   onClick={() => toggleFaq(index)}
                 >
-                  <div className="flex justify-between items-center gap-4">
-                    <h3 className="font-bold text-lg md:text-xl leading-snug">
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="font-bold text-base md:text-lg leading-snug">
                       {faq.question}
                     </h3>
                     <div className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
-                      isOpen ? "border-white/50 text-white" : "border-[#14261c]/30 text-[#14261c]"
+                      isOpen ? "border-white/50 text-white" : "border-[#1e2229]/30 text-[#1e2229]"
                     }`}>
                       {isOpen ? <Minus size={16} strokeWidth={2.5} /> : <Plus size={16} strokeWidth={2.5} />}
                     </div>
                   </div>
-                  
                   <div 
-                    className={`grid transition-all duration-300 ease-in-out ${
-                      isOpen ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"
-                    }`}
+                    className="grid transition-all duration-300 ease-in-out"
+                    style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                   >
                     <div className="overflow-hidden">
                       <p className={`font-medium leading-relaxed text-sm md:text-base ${
-                        isOpen ? "text-white/90" : "text-[#14261c]/70"
+                        isOpen ? "text-white/90" : "text-[#1e2229]/70"
                       }`}>
+                        <br />
                         {faq.answer}
                       </p>
                     </div>
@@ -94,10 +94,10 @@ export default function FAQSection() {
           </div>
 
           {/* Right Column: Image */}
-          <div className="relative h-[500px] lg:h-auto min-h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
+          <div className="relative h-full min-h-[400px] w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,163,224,0.15)] group" data-reveal="image">
             <Image
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200"
-              alt="KPN Roofing Shed completed project"
+              src="/kpnroofingshed/images/image2.png"
+              alt="KPN Roofing Shed FAQ Industrial Facility"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

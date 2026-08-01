@@ -100,10 +100,12 @@ export default function ProcessSection() {
     >
       {/* Fixed Header */}
       <div className="absolute top-20 left-0 w-full z-10 pointer-events-none">
-        <div className="max-w-[1400px] w-full mx-auto px-6 text-center">
-          <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading">
-            We keep details <span className="italic font-bold font-heading">strong</span> and simple
-          </h2>
+        <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
+          <div className="overflow-hidden">
+            <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading" data-reveal="text">
+              Our Shed Construction Process
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -133,8 +135,9 @@ export default function ProcessSection() {
             d="M 0,250 C 100,250 150,150 250,150 S 600,350 750,350 S 1100,150 1250,150 S 1600,350 1750,350 S 2100,150 2250,150 S 2400,250 2500,250"
             fill="none"
             stroke="#004b87"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeLinecap="round"
+            style={{ filter: "drop-shadow(0px 25px 6px rgba(100, 116, 139, 0.5))" }}
           />
         </svg>
 

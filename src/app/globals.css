@@ -6,14 +6,14 @@
   --color-kpn-yellow: #ffcc00;
   --color-kpn-red: #ff0000;
 
-  --font-sans: var(--font-jakarta), system-ui, sans-serif;
-  --font-heading: var(--font-jakarta), sans-serif;
-  --font-serif: var(--font-playfair), serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
 }
 
 :root {
-  --primary: #f95c19;
-  --primary-hover: #e04b0c;
+  --primary: #ee0000;
+  --primary-hover: #cc0000;
   --secondary: #004b87;
   --text-dark: #1e2229;
   --text-light: #525c6e;
@@ -23,38 +23,40 @@
   --text-white: #ffffff;
   --border-color: #cbd5e1;
 
-  --font-heading: var(--font-jakarta), system-ui, sans-serif;
-  --font-body: var(--font-jakarta), system-ui, sans-serif;
-  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  font-family: var(--font-body);
-  color: var(--text-dark);
-  background-color: var(--bg-white);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 500;
-}
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  line-height: 1.25;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.25;
+  }
 
-p {
-  color: var(--text-light);
-  font-weight: 500;
+  p {
+    color: var(--text-light);
+    font-weight: 500;
+  }
 }
 
 /* Base utility for GSAP animation */

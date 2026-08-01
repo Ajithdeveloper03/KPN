@@ -1,177 +1,97 @@
 "use client";
-
-import React, { useState, useEffect, useRef } from "react";
+import { openQuoteModal } from "@/components/QuoteModal";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowUp } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-interface HeroSectionProps {
-  heroMode?: string;
-  setHeroMode?: (mode: string) => void;
-  setIsModalOpen: (val: boolean) => void;
-}
-
-const slides = [
-  {
-    badge: "PROFESSIONAL ROOFING FOR SAFER, STRONGER HOMES",
-    title: "Top-Quality Roofing Services For Homes And Businesses.",
-    desc: "Whether you need a quick repair or a full roof replacement, our expert team is here to deliver reliable results, affordable pricing.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000",
-  },
-  {
-    badge: "PRECISION ENGINEERING & FABRICATION",
-    title: "Built to Withstand the Toughest Conditions.",
-    desc: "We utilize premium Apollo steel and advanced structural designs to ensure your factory shed lasts for decades.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000",
-  },
-  {
-    badge: "CUSTOM AGRICULTURAL SHEDS",
-    title: "Optimized Spaces for Farms & Livestock.",
-    desc: "From poultry to dairy, our custom-built farm sheds are designed for perfect ventilation, hygiene, and efficiency.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2000",
-  }
+const backgroundImages = [
+  "/kpnroofingshed/images/morning-bg.png",
+  "/kpnroofingshed/images/night-bg.png",
+  "/kpnroofingshed/images/service-bg.png"
 ];
 
-export default function HeroSection({
-  setIsModalOpen,
-}: HeroSectionProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const contentRef = useRef<HTMLDivElement>(null);
+export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
-    setActiveIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
-  // Simple animation on slide change
   useEffect(() => {
-    const animateSlide = async () => {
-      const gsapModule = await import("gsap");
-      const gsap = gsapModule.default;
-      
-      if (contentRef.current) {
-        gsap.fromTo(
-          contentRef.current.children,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, stagger: 0.1, duration: 0.8, ease: "power3.out" }
-        );
-      }
-    };
-    animateSlide();
-  }, [activeIndex]);
-
-  const slide = slides[activeIndex];
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section className="relative w-full h-full min-h-[100dvh] flex items-center bg-[#030712] overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
       
-      {/* Background Images */}
-      {slides.map((s, idx) => (
-        <div 
-          key={idx}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ${
-            idx === activeIndex ? "opacity-100" : "opacity-0"
+      {/* Background Slider */}
+      {backgroundImages.map((img, index) => (
+        <div
+          key={img}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
           <Image
-            src={s.image}
-            alt="Roofing construction background"
+            src={img}
+            alt={`KPN Roofing Shed Background ${index + 1}`}
             fill
+            priority={index === 0}
             sizes="100vw"
-            priority={idx === 0}
             className="object-cover object-center"
           />
         </div>
       ))}
-      
-      {/* Heavy dark gradient overlay from left to right */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/80 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 z-[1] bg-black/40 pointer-events-none" />
 
-      <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 pt-20 flex justify-between items-center">
+      {/* Dark Overlay for Readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10" />
+      <div className="absolute inset-0 bg-black/20 z-10" />
+
+      {/* Content Container */}
+      <div className="max-w-[1400px] mx-auto px-6 w-full relative z-20" data-reveal="stagger">
         
-        {/* Left Content */}
-        <div className="max-w-[750px]" ref={contentRef}>
-          
-          {/* Top Badge */}
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <path d="M3 3v18h18" />
-                <path d="M7 16l4-4 4 4 6-6" />
-              </svg>
-            </div>
-            <span className="text-white font-bold text-xs md:text-sm tracking-widest uppercase opacity-90">
-              {slide.badge}
-            </span>
+        <div className="max-w-[700px]">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
+            <div className="w-2 h-2 rounded-full bg-[#ffcc00] animate-pulse" />
+            <span className="text-white text-sm font-black tracking-widest uppercase">PAN INDIA EXPERTISE</span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-[clamp(40px,6vw,72px)] font-bold text-white leading-[1.1] mb-8 font-heading">
-            {slide.title}
+          {/* Heading (Smaller Size) */}
+          <h1 
+            className="text-white text-4xl font-bold leading-[1.1] tracking-tight font-heading drop-shadow-xl mb-4"
+          >
+            India&apos;s Trusted Roofing Shed Construction Company for Industrial, Agricultural & Home Projects
           </h1>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed mb-10 max-w-[650px]">
-            {slide.desc}
+          {/* Paragraph */}
+          <p className="text-white text-md md:text-md leading-relaxed max-w-[600px] mb-6 font-medium drop-shadow-lg">
+            KPN Roofing Shed designs and builds steel roofing sheds for industrial, agricultural, home, and recreational projects across India, using Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a 10-year guarantee.
           </p>
 
-          {/* Call to Actions */}
-          <div className="flex flex-wrap gap-4 items-center">
-            
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="group flex items-center gap-3 bg-[#1f61f9] hover:bg-[#1550d6] text-white font-bold text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-300"
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+            <button 
+              onClick={() => openQuoteModal()}
+              className="bg-[#ee0000] hover:bg-[#cc0000] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-xl"
             >
-              REQUEST FREE ESTIMATE
-              <div className="bg-white rounded-full p-1 group-hover:rotate-45 transition-transform duration-300">
-                <ArrowUpRight size={16} className="text-[#1f61f9]" strokeWidth={3} />
-              </div>
+              Get Free Quote
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            
-            <a
-              href="#contact"
-              className="group flex items-center gap-3 bg-transparent border border-white/30 hover:border-white text-white font-bold text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-300 no-underline"
+            <a 
+              href="https://wa.me/911234567890" 
+              target="_blank"
+              rel="noreferrer"
+              className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
             >
-              CONTACT US
-              <div className="bg-white rounded-full p-1 group-hover:rotate-45 transition-transform duration-300">
-                <ArrowUpRight size={16} className="text-[#0a0a0f]" strokeWidth={3} />
-              </div>
+              Chat on WhatsApp
             </a>
-
           </div>
+
+         
+          
+
         </div>
-
-        {/* Right Content: Slider Controls */}
-        <div className="hidden lg:flex flex-col gap-4 pr-10">
-          <button 
-            onClick={prevSlide}
-            className="w-14 h-14 bg-white rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer border-none shadow-lg"
-          >
-            <ChevronLeft size={24} className="text-slate-900" />
-          </button>
-          <button 
-            onClick={nextSlide}
-            className="w-14 h-14 bg-white rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer border-none shadow-lg"
-          >
-            <ChevronRight size={24} className="text-slate-900" />
-          </button>
-        </div>
-
       </div>
-
-      {/* Mobile controls (visible only on small screens) */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex lg:hidden gap-4 z-20">
-        <button onClick={prevSlide} className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30">
-          <ChevronLeft size={20} />
-        </button>
-        <button onClick={nextSlide} className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30">
-          <ChevronRight size={20} />
-        </button>
-      </div>
-
     </section>
   );
 }

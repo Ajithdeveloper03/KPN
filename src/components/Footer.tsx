@@ -4,13 +4,27 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#121316] border-t border-white/10 pt-16 pb-8">
-        <div className="max-w-[1400px] w-full mx-auto px-6 grid grid-cols-[2fr_1fr_1.5fr] gap-12 mb-12">
+      <footer className="relative bg-[#121316] border-t border-white/10 pt-16 pb-8 overflow-hidden">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay">
+          <Image
+            src="/kpnroofingshed/images/night-bg.png"
+            alt="Footer Background Texture"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+        
+        {/* Dark Gradient for readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#121316] to-transparent pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-[2fr_1fr_1.5fr] gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
               <Image
-                src="/images/logo.jpg"
+                src="/kpnroofingshed/images/logo.jpg"
                 alt="KPN Roofing Shed Logo"
                 width={48}
                 height={48}
@@ -18,7 +32,7 @@ export default function Footer() {
               />
               <span className="text-xl font-extrabold text-white">KPN Roofing Shed</span>
             </div>
-            <p className="text-slate-400 leading-relaxed font-medium max-w-xs">
+            <p className="text-slate-300 leading-relaxed font-medium max-w-xs">
               India&apos;s premium roofing contractors delivering industrial warehouses, factory sheds, agricultural animal houses, and recreation turf structures.
             </p>
           </div>
@@ -27,10 +41,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Quick Links</h4>
             <ul className="list-none p-0 m-0 flex flex-col gap-3">
-              <li><a href="#services" className="text-slate-400 no-underline font-medium hover:text-[#00a3e0] transition-colors">Shed Solutions</a></li>
-              <li><a href="#about" className="text-slate-400 no-underline font-medium hover:text-[#00a3e0] transition-colors">Why KPN</a></li>
-              <li><a href="#process" className="text-slate-400 no-underline font-medium hover:text-[#00a3e0] transition-colors">Our Process</a></li>
-              <li><a href="#faqs" className="text-slate-400 no-underline font-medium hover:text-[#00a3e0] transition-colors">FAQs</a></li>
+              <li><a href="#services" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Shed Solutions</a></li>
+              <li><a href="#about" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Why KPN</a></li>
+              <li><a href="#process" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Our Process</a></li>
+              <li><a href="#faqs" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">FAQs</a></li>
             </ul>
           </div>
 
@@ -39,15 +53,15 @@ export default function Footer() {
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Contact Details</h4>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3 text-slate-400 font-medium">
-                <svg className="shrink-0 mt-0.5 text-[#f95c19]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg className="shrink-0 mt-0.5 text-[#ee0000]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 <span>Coimbatore Head Office & Manufacturing Facility, Tamil Nadu, India</span>
               </div>
               <div className="flex items-center gap-3 text-slate-400 font-medium">
-                <svg className="shrink-0 text-[#f95c19]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg className="shrink-0 text-[#ee0000]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <a href="tel:+919876543210" className="text-slate-400 no-underline hover:text-[#00a3e0] transition-colors">+91 98765 43210</a>
               </div>
               <div className="flex items-center gap-3 text-slate-400 font-medium">
-                <svg className="shrink-0 text-[#f95c19]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <svg className="shrink-0 text-[#ee0000]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 <a href="mailto:contact@kpnroofingshed.com" className="text-slate-400 no-underline hover:text-[#00a3e0] transition-colors">contact@kpnroofingshed.com</a>
               </div>
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -10,8 +10,8 @@ const testimonials = [
     property: "Purchased Property: The Grand Haven",
     quote: "KPN Roofing Shed made the entire construction process seamless. The team was professional, and they built me the perfect modern warehouse. Highly recommended!",
     rating: 4.9,
-    bgImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200"
+    bgImage: "/kpnroofingshed/images/morning-bg.png",
+    avatar: "/kpnroofingshed/images/image1.png"
   },
   {
     name: "Sarah Jenkins",
@@ -19,8 +19,8 @@ const testimonials = [
     property: "Agricultural Shed Setup",
     quote: "The ventilation and structural integrity of the farm shed they built for us is unmatched. Our livestock is healthier, and the construction was finished ahead of schedule.",
     rating: 5.0,
-    bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2000",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200"
+    bgImage: "/kpnroofingshed/images/night-bg.png",
+    avatar: "/kpnroofingshed/images/image2.png"
   },
   {
     name: "Rajesh Kumar",
@@ -28,13 +28,21 @@ const testimonials = [
     property: "Industrial Factory Complex",
     quote: "We needed a massive 50,000 sq.ft factory shed with heavy load-bearing capacities. KPN delivered flawlessly using premium Apollo steel.",
     rating: 4.8,
-    bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200"
+    bgImage: "/kpnroofingshed/images/service-bg.png",
+    avatar: "/kpnroofingshed/images/image1.png"
   }
 ];
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  // Automatic slider effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // Slide every 5 seconds
+    return () => clearInterval(timer);
+  }, [activeIndex]); // Reset timer when manually navigating
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
@@ -52,16 +60,18 @@ export default function TestimonialsSection() {
         
         {/* Top Header Area */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 md:mb-16 gap-8">
-          <h2 className="text-white text-[clamp(40px,5vw,60px)] font-serif leading-[1.1] max-w-[600px] tracking-tight">
-            Discover Insights, Trends, And Inspiration.
-          </h2>
-          <p className="text-slate-300 text-base md:text-lg max-w-[400px] leading-relaxed font-medium">
+          <div className="overflow-hidden">
+            <h2 className="text-white text-[clamp(40px,5vw,60px)] font-serif leading-[1.1] max-w-[600px] tracking-tight" data-reveal="text">
+              What Our Clients Say.
+            </h2>
+          </div>
+          <p className="text-slate-300 text-base md:text-lg max-w-[400px] leading-relaxed font-medium" data-reveal="stagger">
             Explore our latest projects and industrial setups. We have the perfect structural solution for you.
           </p>
         </div>
 
         {/* Main Testimonial Card Overlay */}
-        <div className="relative w-full rounded-[2rem] overflow-hidden bg-slate-900 shadow-2xl h-[550px] md:h-[600px]">
+        <div className="relative w-full rounded-[2rem] overflow-hidden bg-slate-900 shadow-2xl h-[550px] md:h-[600px]" data-reveal="image">
           
           {/* Background Images */}
           {testimonials.map((t, idx) => (
@@ -120,7 +130,7 @@ export default function TestimonialsSection() {
               
               {/* Logo Fake Placeholder */}
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#6a2bfa] flex items-center justify-center">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#062088] flex items-center justify-center">
                   <div className="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white" />
                 </div>
                 <span className="font-extrabold text-[#1e2229] tracking-tight hidden sm:block">Spherule</span>
@@ -140,7 +150,7 @@ export default function TestimonialsSection() {
               
               {/* Stars */}
               <div className="flex items-center gap-2 md:gap-3">
-                <div className="flex text-[#ffb800]">
+                <div className="flex text-[#ffe600]">
                   <Star size={16} fill="currentColor" stroke="none" />
                   <Star size={16} fill="currentColor" stroke="none" />
                   <Star size={16} fill="currentColor" stroke="none" />
