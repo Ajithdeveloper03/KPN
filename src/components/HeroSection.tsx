@@ -117,7 +117,7 @@ export default function HeroSection() {
       </div>
 
       {/* 3. Center Front Image Runner - Anchored directly to the bottom */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] md:w-[65%] max-w-[900px] h-[55vh] md:h-[65vh] z-20 pointer-events-none">
+      <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-[90%] md:w-[70%] max-w-[950px] h-[55vh] md:h-[55vh] z-20 pointer-events-none">
         {slides.map((slide, idx) => {
           let transformClass = "translate-x-[100vw] opacity-0"; // default hidden on right
           if (idx === currentSlide) {
@@ -144,6 +144,22 @@ export default function HeroSection() {
 
       {/* 3.5 Foreground white gradient (above images z-20, below path z-30) */}
       <div className="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-white via-white to-transparent z-[25] pointer-events-none" />
+      
+      {/* Side overlays (left and right) with smooth vertical masking */}
+      <div 
+        className="absolute inset-y-0 left-0 w-[15%] md:w-[20%] bg-gradient-to-r from-white via-white/80 to-transparent z-[25] pointer-events-none"
+        style={{ 
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)',
+          maskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)'
+        }}
+      />
+      <div 
+        className="absolute inset-y-0 right-0 w-[15%] md:w-[20%] bg-gradient-to-l from-white via-white/60 to-transparent z-[25] pointer-events-none"
+        style={{ 
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)',
+          maskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)'
+        }}
+      />
 
       {/* 4. Curved Path and Interactive Nodes */}
       <div className="absolute bottom-0 left-0 w-full h-[60vh] z-30 pointer-events-none">
