@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
       </head>
-      <body suppressHydrationWarning className="font-sans antialiased">
+      <body suppressHydrationWarning className="font-sans antialiased overflow-x-hidden w-full">
         <LenisScrollProvider>
           <ScrollReveal />
           {children}

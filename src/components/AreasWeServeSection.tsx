@@ -42,7 +42,11 @@ export default function AreasWeServeSection() {
               {["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Uttar Pradesh", "Pan-India"].map((r) => (
                 <span
                   key={r}
-                  className="px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-br from-slate-50 to-slate-200 border border-slate-300 font-bold text-[#1e2229] text-base md:text-lg hover:border-[#004b87] hover:text-[#004b87] transition-colors duration-200"
+                  className={`px-4 md:px-6 py-2 md:py-3 rounded-full border font-bold text-base md:text-lg transition-colors duration-200 ${
+                    r === "Pan-India"
+                      ? "bg-gradient-to-br from-[#062088] to-[#004b87] border-[#062088] text-white shadow-md hover:opacity-90"
+                      : "bg-gradient-to-br from-slate-50 to-slate-200 border-slate-300 text-[#1e2229] hover:border-[#004b87] hover:text-[#004b87]"
+                  }`}
                 >
                   {r}
                 </span>

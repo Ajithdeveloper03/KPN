@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    frontImage: "/kpnroofingshed/images/roofing.png",
+    frontImage: "/kpnroofingshed/images/roofing2.png",
     title: "Industrial",
     color: "#062088", // KPN Blue
     pathPercent: 0.15,
@@ -18,21 +18,22 @@ const slides = [
     id: 2,
     frontImage: "/kpnroofingshed/images/roofing.png",
     title: "Agricultural",
-    color: "#ee0000", // KPN Red
+    color: "#ffe600", // KPN Yellow
     pathPercent: 0.45,
     label: "Refuelling 125",
   },
   {
     id: 3,
-    frontImage: "/kpnroofingshed/images/roofing.png",
+    frontImage: "/kpnroofingshed/images/roofing3.png",
     title: "Home Roofing",
-    color: "#ffe600", // KPN Yellow
+    
+    color: "#ee0000", // KPN Red
     pathPercent: 0.65,
     label: "Station 80",
   },
   {
     id: 4,
-    frontImage: "/kpnroofingshed/images/roofing.png",
+    frontImage: "/kpnroofingshed/images/roofing2.png",
     title: "Sports Turf",
     color: "#00a3e0", // KPN Cyan
     pathPercent: 0.85,
@@ -46,6 +47,14 @@ export default function HeroSection() {
   const [isAnimating, setIsAnimating] = useState(false);
   const pathRef = useRef<SVGPathElement>(null);
   const [nodePositions, setNodePositions] = useState<{ x: number; y: number }[]>([]);
+
+  const [isNightMode, setIsNightMode] = useState(false);
+
+  useEffect(() => {
+    const handleTheme = (e: any) => setIsNightMode(e.detail === "night");
+    window.addEventListener("themeChange", handleTheme);
+    return () => window.removeEventListener("themeChange", handleTheme);
+  }, []);
 
   useEffect(() => {
     if (!pathRef.current) return;
@@ -75,6 +84,11 @@ export default function HeroSection() {
     }, 1000);
   };
 
+  const handlePrev = () => {
+    const nextIdx = (currentSlide - 1 + slides.length) % slides.length;
+    changeSlide(nextIdx);
+  };
+
   const handleNext = () => {
     const nextIdx = (currentSlide + 1) % slides.length;
     changeSlide(nextIdx);
@@ -91,33 +105,33 @@ export default function HeroSection() {
   }, [currentSlide, isAnimating]);
 
   return (
-    <section id="home" className="relative min-h-[100dvh] w-full overflow-hidden bg-slate-200 flex flex-col font-sans select-none">
+    <section id="home" className={`relative min-h-[100dvh] w-full overflow-hidden flex flex-col font-sans select-none transition-colors duration-700 ${isNightMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
 
       {/* 1. Static Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/kpnroofingshed/images/hero-bg.png"
+          src={isNightMode ? "/kpnroofingshed/images/night-bg.png" : "/kpnroofingshed/images/hero-bg.png"}
           alt="KPN Hero Background"
           fill
-          className="object-cover opacity-80"
+          className="object-cover opacity-80 transition-opacity duration-1000"
           priority
         />
         {/* Soft fog overlay to blend the bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/30 to-transparent" />
+        <div className={`absolute inset-0 transition-colors duration-700 ${isNightMode ? 'bg-gradient-to-t from-black/90 via-black/50 to-transparent' : 'bg-gradient-to-t from-white/90 via-white/30 to-transparent'}`} />
       </div>
 
       {/* 2. Huge Background Text (Category Title) */}
-      <div className="absolute top-[10%] md:top-[12%] w-full flex justify-center z-10 pointer-events-none px-4">
+      <div className="absolute top-32 md:top-[12%] w-full flex justify-center z-10 pointer-events-none px-4">
         <h1
           key={currentSlide}
-          className="text-[clamp(60px,12vw,220px)] font-black text-white tracking-tighter leading-none whitespace-nowrap drop-shadow-xl animate-fade-in-up"
+          className="text-[clamp(50px,15vw,220px)] md:text-[clamp(60px,12vw,220px)] font-black text-white tracking-tighter leading-none whitespace-nowrap drop-shadow-xl animate-fade-in-up"
         >
           {slides[currentSlide].title}
         </h1>
       </div>
 
       {/* 3. Center Front Image Runner - Anchored directly to the bottom */}
-      <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-[90%] md:w-[70%] max-w-[950px] h-[55vh] md:h-[55vh] z-20 pointer-events-none">
+      <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-[100%] md:w-[70%] max-w-[950px] h-[60vh] md:h-[65vh] z-20 pointer-events-none">
         {slides.map((slide, idx) => {
           let transformClass = "translate-x-[100vw] opacity-0"; // default hidden on right
           if (idx === currentSlide) {
@@ -135,7 +149,7 @@ export default function HeroSection() {
                 src={slide.frontImage}
                 alt={slide.title}
                 fill
-                className="object-cover object-bottom scale-[1.3] md:scale-[1.45] origin-bottom"
+                className="object-cover object-bottom scale-[1.6] md:scale-[1.45] origin-bottom"
               />
             </div>
           );
@@ -143,37 +157,37 @@ export default function HeroSection() {
       </div>
 
       {/* 3.5 Foreground white gradient (above images z-20, below path z-30) */}
-      <div className="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-white via-white to-transparent z-[25] pointer-events-none" />
-      
-      {/* Side overlays (left and right) with smooth vertical masking */}
-      <div 
-        className="absolute inset-y-0 left-0 w-[15%] md:w-[20%] bg-gradient-to-r from-white via-white/80 to-transparent z-[25] pointer-events-none"
-        style={{ 
+      <div className={`hidden md:block absolute bottom-0 left-0 w-full h-[40%] z-[25] pointer-events-none transition-colors duration-700 ${isNightMode ? 'bg-gradient-to-t from-black via-black/90 to-transparent' : 'bg-gradient-to-t from-white via-white to-transparent'}`} />
+
+      {/* Side overlays (left and right) with smooth vertical masking - Hidden on mobile */}
+      <div
+        className={`hidden md:block absolute inset-y-0 left-0 w-[15%] md:w-[20%] z-[25] pointer-events-none transition-colors duration-700 ${isNightMode ? 'bg-gradient-to-r from-black via-black/80 to-transparent' : 'bg-gradient-to-r from-white via-white/80 to-transparent'}`}
+        style={{
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)',
           maskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)'
         }}
       />
-      <div 
-        className="absolute inset-y-0 right-0 w-[15%] md:w-[20%] bg-gradient-to-l from-white via-white/60 to-transparent z-[25] pointer-events-none"
-        style={{ 
+      <div
+        className={`hidden md:block absolute inset-y-0 right-0 w-[15%] md:w-[20%] z-[25] pointer-events-none transition-colors duration-700 ${isNightMode ? 'bg-gradient-to-l from-black via-black/60 to-transparent' : 'bg-gradient-to-l from-white via-white/60 to-transparent'}`}
+        style={{
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)',
           maskImage: 'linear-gradient(to bottom, transparent 20%, black 35%, black 80%, transparent 100%)'
         }}
       />
 
-      {/* 4. Curved Path and Interactive Nodes */}
-      <div className="absolute bottom-0 left-0 w-full h-[60vh] z-30 pointer-events-none">
+      {/* 4. Curved Path and Interactive Nodes (Desktop Only) */}
+      <div className="hidden md:block absolute bottom-0 left-0 w-full h-[60vh] z-30 pointer-events-none">
 
         {/* The SVG Track (Perspective 3D Curve) */}
         <svg
           className="w-full h-full absolute inset-0 transition-colors duration-700"
-          viewBox="0 0 1200 420"
+          viewBox="0 0 1200 380"
           fill="none"
           preserveAspectRatio="none"
         >
           <path
             ref={pathRef}
-            d="M 0 120 Q 300 480 600 380 T 1200 20"
+            d="M 0 40 Q 300 400 600 300 T 1200 60"
             stroke={slides[currentSlide].color}
             style={{ transition: 'stroke 0.7s ease' }}
             strokeWidth="7.5"
@@ -188,7 +202,7 @@ export default function HeroSection() {
               key={`static-${idx}`}
               onClick={() => changeSlide(idx)}
               className="absolute flex flex-col items-center cursor-pointer group -translate-x-1/2 -translate-y-1/2"
-              style={{ left: `${(pos.x / 1200) * 100}%`, top: `${(pos.y / 420) * 100}%` }}
+              style={{ left: `${(pos.x / 1200) * 100}%`, top: `${(pos.y / 380) * 100}%` }}
             >
               {/* Fixed dot on path */}
               <div
@@ -196,7 +210,7 @@ export default function HeroSection() {
                 style={{ borderColor: slides[currentSlide].color }}
               />
               <div className={`absolute top-8 hidden sm:flex flex-col items-center whitespace-nowrap transition-opacity duration-300 ${currentSlide === idx ? "opacity-0" : "opacity-100"}`}>
-                <span className="text-[14px] sm:text-[18px] font-black tracking-wide text-black drop-shadow-md">
+                <span className={`text-[14px] sm:text-[18px] font-black tracking-wide drop-shadow-md transition-colors ${isNightMode ? 'text-white' : 'text-black'}`}>
                   {slides[idx].title}
                 </span>
               </div>
@@ -209,23 +223,23 @@ export default function HeroSection() {
             className="absolute z-40 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] -translate-x-1/2 -translate-y-[28px] pointer-events-none"
             style={{
               left: `${(nodePositions[currentSlide].x / 1200) * 100}%`,
-              top: `${(nodePositions[currentSlide].y / 420) * 100}%`
+              top: `${(nodePositions[currentSlide].y / 380) * 100}%`
             }}
           >
             <div className="relative flex flex-col items-center justify-center">
               {/* Pulse effect */}
               <span
-                className="absolute w-20 h-20 rounded-full animate-ping opacity-40"
+                className="absolute w-12 h-12 sm:w-20 sm:h-20 rounded-full animate-ping opacity-40"
                 style={{ backgroundColor: slides[currentSlide].color }}
               />
 
               {/* Solid Circle */}
               <div
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)] z-10 transition-colors duration-500"
+                className="w-10 h-10 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)] z-10 transition-colors duration-500"
                 style={{ backgroundColor: slides[currentSlide].color }}
               >
                 {/* Inner Icon Detail */}
-                <div className="flex flex-col items-center gap-0.5">
+                <div className="flex flex-col items-center gap-0.5 scale-75 sm:scale-100">
                   <div className="w-1 h-1.5 bg-white rounded-sm" />
                   <div className="w-5 h-5 border-2 border-white rounded-full flex items-center justify-center">
                     <div className="w-1.5 h-1.5 bg-white rounded-full" />
@@ -235,8 +249,8 @@ export default function HeroSection() {
               </div>
 
               {/* Active Node Text below */}
-              <div className="absolute top-[75px] sm:top-[90px] hidden sm:flex flex-col items-center whitespace-nowrap">
-                <span className="text-[18px] sm:text-[22px] font-black tracking-wide text-black drop-shadow-md">
+              <div className="absolute top-[60px] sm:top-[90px] hidden sm:flex flex-col items-center whitespace-nowrap">
+                <span className={`text-[16px] sm:text-[22px] font-black tracking-wide drop-shadow-md transition-colors ${isNightMode ? 'text-white' : 'text-black'}`}>
                   {slides[currentSlide].title}
                 </span>
               </div>
@@ -246,15 +260,48 @@ export default function HeroSection() {
 
       </div>
 
-      {/* Floating Action Button */}
-      <div className="absolute bottom-10 right-10 z-40 pointer-events-auto">
+      {/* Mobile Dotted Navigation */}
+      <div className="md:hidden absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 z-40 pointer-events-auto">
+        {slides.map((slide, idx) => (
+          <button
+            key={`dot-${idx}`}
+            onClick={() => changeSlide(idx)}
+            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 border-2 ${currentSlide === idx ? 'scale-125 border-white shadow-lg' : 'bg-transparent border-white/60 hover:border-white'}`}
+            style={{ backgroundColor: currentSlide === idx ? slides[currentSlide].color : undefined }}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Mobile Prev/Next Navigation */}
+      <div className="md:hidden absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 z-40 pointer-events-none">
+        <button
+          onClick={handlePrev}
+          disabled={isAnimating}
+          aria-label="Previous Slide"
+          className="pointer-events-auto w-12 h-12 bg-white/30 backdrop-blur-sm border border-white/50 rounded-full flex items-center justify-center cursor-pointer shadow-xl active:scale-95 transition-transform"
+        >
+          <ArrowRight size={24} className="text-white rotate-180" />
+        </button>
+        <button
+          onClick={handleNext}
+          disabled={isAnimating}
+          aria-label="Next Slide"
+          className="pointer-events-auto w-12 h-12 bg-[#ffcc00] border-none rounded-full flex items-center justify-center cursor-pointer shadow-xl active:scale-95 transition-transform"
+        >
+          <ArrowRight size={24} className="text-slate-900" />
+        </button>
+      </div>
+
+      {/* Floating Action Button (Desktop Only) */}
+      <div className="hidden md:flex absolute bottom-10 right-10 z-40 pointer-events-auto">
         <button
           onClick={handleNext}
           disabled={isAnimating}
           aria-label="Next Slide"
           className="w-14 h-14 bg-[#ffcc00] border-none rounded-[1rem] flex items-center justify-center cursor-pointer shadow-xl hover:scale-110 active:scale-95 transition-transform"
         >
-          <ArrowRight size={22} className="text-slate-900" />
+          <ArrowRight size={22} className="text-slate-900 scale-100" />
         </button>
       </div>
 
