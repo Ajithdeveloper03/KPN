@@ -8,6 +8,7 @@ import { Factory, Tractor, Droplets, Feather, Box, ShieldCheck, Check, Plus, Min
 export const metadata: Metadata = {
   title: 'Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed',
   description: 'KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 13+ yrs experience, 20-day completion. Get a free quote.',
+  keywords: 'Animal Shed Solutions India, Agricultural Sheds India, Modern Farm Sheds India, Goat Farm Shed Builders India, Dairy Farm Shed Contractors India, Poultry Shed Manufacturers India, Cow Shed Solutions India, Cattle Shed Builders India, Farm Infrastructure Solutions India',
 };
 
 export default function AgricultureAnimalHusbandryPage() {
@@ -46,17 +47,17 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="w-full lg:w-1/2 flex items-center justify-center gap-2 md:gap-3 mt-16 lg:mt-0">
               
               {/* Image 1: Medium Height */}
-              <div className="relative w-1/3 h-[250px] md:h-[350px] rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
+              <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
                 <Image src="/kpnroofingshed/images/image1.jpeg" alt="Goat Shed" fill className="object-cover" />
               </div>
               
               {/* Image 2: Long Height (Center) */}
-              <div className="relative w-1/3 h-[350px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
+              <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
                 <Image src="/kpnroofingshed/images/image8.jpeg" alt="Dairy Shed" fill className="object-cover" />
               </div>
               
               {/* Image 3: Medium Height */}
-              <div className="relative w-1/3 h-[250px] md:h-[350px] rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
+              <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
                 <Image src="/kpnroofingshed/images/image5.jpeg" alt="Poultry Shed" fill className="object-cover" />
               </div>
 
@@ -135,9 +136,12 @@ export default function AgricultureAnimalHusbandryPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Our Services
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-                Take a brief look at some of <br/>the sheds <span className="font-serif italic font-medium">we build</span>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
+                Agricultural Sheds & <span className="font-serif italic font-medium">Modern Farm Sheds</span>
               </h2>
+              <p className="text-lg text-slate-500 max-w-3xl font-medium leading-relaxed">
+                KPN designs agricultural sheds and modern farm sheds suited to Indian farm sizes — from a small backyard setup to a large commercial operation. Every structure is engineered with ventilated roofing and corrosion-resistant frames, built to handle years of heavy farm use with minimal maintenance.
+              </p>
             </div>
             <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-[#e6b800] transition-colors shadow-sm whitespace-nowrap">
               Explore Services <span className="w-2 h-2 rounded-full bg-black block ml-2"></span>
@@ -210,14 +214,14 @@ export default function AgricultureAnimalHusbandryPage() {
               {/* Cattle Shed - Light Gray Card */}
               <div className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden">
                 <div className="px-6 max-w-[85%] space-y-4 mb-10">
-                  <Factory strokeWidth={1.2} size={42} className="text-[#062088] group-hover:text-[#111] transition-colors" />
-                  <h3 className="text-2xl font-semibold text-[#111]">Farm Infrastructure Solutions</h3>
+                  <Box strokeWidth={1.2} size={42} className="text-[#062088] group-hover:text-[#111] transition-colors" />
+                  <h3 className="text-2xl font-semibold text-[#111]">Cattle Shed Builders</h3>
                   <p className="text-slate-500 group-hover:text-[#111]/80 transition-colors font-medium leading-relaxed">
-                    Beyond individual sheds, we provide complete farm infrastructure solutions—combining housing, storage, and utility structures.
+                    Our cattle shed solutions are designed as open-sided or enclosed structures based on herd size and local climate, with flooring built to handle heavy foot traffic without wearing down or becoming slippery.
                   </p>
                 </div>
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/kpnroofingshed/images/image2.jpeg" alt="cattle shed builders farm infrastructure" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/kpnroofingshed/images/image2.jpeg" alt="cattle shed builders" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <button className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
@@ -226,6 +230,29 @@ export default function AgricultureAnimalHusbandryPage() {
             </div>
 
           </div>
+
+          {/* Farm Infrastructure Solutions (Full Width Card) */}
+          <div className="mt-8 lg:mt-12 bg-[#111] rounded-[2rem] p-10 md:p-16 shadow-lg relative overflow-hidden group">
+            <div className="absolute inset-0 z-0">
+              <Image src="/kpnroofingshed/images/image6.jpeg" alt="Farm Infrastructure Background" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="absolute inset-0 z-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/70"></div>
+            <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+              <div className="w-full lg:w-2/3 space-y-6">
+                <Factory strokeWidth={1.5} size={42} className="text-[#ffcc00]" />
+                <h3 className="text-3xl md:text-4xl font-semibold text-white">Farm Infrastructure Solutions</h3>
+                <p className="text-blue-100 font-medium leading-relaxed text-lg max-w-3xl">
+                  Beyond individual sheds, KPN provides complete farm infrastructure solutions — combining livestock housing, storage, and utility structures into one coordinated build, so farm owners deal with a single contractor instead of coordinating multiple vendors.
+                </p>
+              </div>
+              <div className="w-full lg:w-1/3 flex justify-start lg:justify-end">
+                 <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-white transition-all shadow-md whitespace-nowrap">
+                   Explore Infrastructure <ArrowRight size={20} />
+                 </Link>
+              </div>
+            </div>
+          </div>
+          
           </div>
         </section>
 
@@ -247,14 +274,14 @@ export default function AgricultureAnimalHusbandryPage() {
               </Link>
             </div>
 
-            <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0">
+            <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
               {/* The "Laptop" replacement: A large crisp image of a shed */}
-              <div className="relative w-full aspect-video md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
                 <Image src="/kpnroofingshed/images/hero-bg.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
               </div>
               
               {/* The Floating Checklist Block */}
-              <div className="absolute -bottom-10 -left-6 md:-left-12 lg:-left-20 bg-[#ffcc00] rounded-3xl p-8 md:p-10 shadow-2xl border border-[#ffcc00]/50 z-20 w-[90%] md:w-[450px]">
+              <div className="absolute -bottom-16 left-4 right-4 md:right-auto md:-bottom-10 md:-left-12 lg:-left-20 bg-[#ffcc00] rounded-3xl p-6 md:p-10 shadow-2xl border border-[#ffcc00]/50 z-20 md:w-[450px]">
                 <ul className="space-y-6">
                   {[
                     "No middleman — deal directly",
@@ -385,6 +412,25 @@ export default function AgricultureAnimalHusbandryPage() {
           </div>
         </section>
         
+        {/* ---------------- Explore by Shed Type ---------------- */}
+        {/* <section className="bg-white py-12 lg:py-16 max-w-[1300px] mx-auto px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif italic font-medium text-[#ee0000]">Shed Type</span></h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Goat Farm Shed", link: "/services/goat-farm-shed" },
+              { name: "Dairy Farm Shed", link: "/services/dairy-farm-shed" },
+              { name: "Poultry Shed", link: "/services/poultry-shed" },
+              { name: "Cow / Cattle Shed", link: "/services/cattle-shed" },
+            ].map((shed, idx) => (
+              <Link key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
+                <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
+                <ArrowRight size={20} className="text-[#ee0000] group-hover:text-[#111] transition-colors" />
+              </Link>
+            ))}
+          </div>
+        </section> */}
 
         {/* ---------------- Interactive Accordion FAQ (Ref: Image 1) ---------------- */}
         <section className="bg-[#f8f9fc] py-12 lg:py-16 border-b border-slate-200 overflow-hidden">
@@ -432,7 +478,7 @@ export default function AgricultureAnimalHusbandryPage() {
         </section>
 
         {/* ---------------- High Impact CTA ---------------- */}
-        <section className="py-16 lg:py-24 text-center text-white relative overflow-hidden">
+        <section className="py-16 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
             <Image src="/kpnroofingshed/images/hero-bg.png" alt="Agriculture Sheds CTA" fill className="object-cover" />
@@ -441,23 +487,30 @@ export default function AgricultureAnimalHusbandryPage() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
               Planning a shed for <span className="font-serif italic font-medium text-[#ffcc00]">your farm?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-              <Link href="/contact" className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-5 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md">
-                Get Free Quote
-              </Link>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-5 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md">
-                Chat on WhatsApp
-              </a>
-              <a href="tel:+919876543210" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-5 px-10 rounded-full transition-all hover:-translate-y-1">
-                Call Now
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">
+              <div className="w-full sm:w-auto flex flex-col items-center">
+                <Link href="/contact" className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-5 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md mb-3 flex items-center justify-center">
+                  Get Free Quote
+                </Link>
+                
+              </div>
+              <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
+                <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-5 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
+                  Chat on WhatsApp
+                </a>
+              </div>
+              <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
+                <a href="tel:+919876543210" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-5 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
+                  Call Now
+                </a>
+              </div>
             </div>
             
             <p className="text-blue-200 font-medium">
