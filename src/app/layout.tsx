@@ -1,6 +1,9 @@
 import "./globals.css";
 import LenisScrollProvider from "@/components/LenisScrollProvider";
 import ScrollReveal from "@/components/ScrollReveal";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Roofing Shed Construction Company in India | KPN Roofing Shed",
@@ -24,7 +27,10 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className="font-sans antialiased overflow-x-hidden w-full">
         <LenisScrollProvider>
           <ScrollReveal />
+          <Header />
           {children}
+          <Footer />
+          <ScrollToTop />
         </LenisScrollProvider>
       </body>
     </html>

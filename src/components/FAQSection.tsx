@@ -11,7 +11,7 @@ export const faqs = [
   },
   {
     question: "What is the cost of a goat farm shed in India?",
-    answer: "A basic goat farm shed starts at ₹599 per sq.ft, ₹699 per sq.ft with MS material, and ₹799 per sq.ft for the premium model."
+    answer: "A basic goat farm shed starts at ₹599 per sq.ft, ₹725 per sq.ft with MS material, and ₹799 per sq.ft for the premium model."
   },
   {
     question: "How long does KPN take to complete a shed?",

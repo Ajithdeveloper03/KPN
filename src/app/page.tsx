@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Header from "@/components/Header";
+
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -13,7 +13,7 @@ import AreasWeServeSection from "@/components/AreasWeServeSection";
 import FAQSection, { faqs } from "@/components/FAQSection";
 // import IntegrationSection from "@/components/IntegrationSection";
 import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+
 import ScrollToTop from "@/components/ScrollToTop";
 import AboutSection from "@/components/AboutSection";
 import QuoteModal from "@/components/QuoteModal";
@@ -40,7 +40,7 @@ export default function Home() {
         }}
       />
 
-      <Header />
+      
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -54,7 +54,7 @@ export default function Home() {
       <FAQSection />
       {/* <IntegrationSection /> */}
       <CTASection />
-      <Footer />
+      
       <ScrollToTop />
       <QuoteModal />
     </>

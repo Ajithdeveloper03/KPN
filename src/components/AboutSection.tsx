@@ -54,7 +54,7 @@ export default function AboutSection() {
 
           <div className="mb-10 flex flex-col gap-6">
             <h2 className="text-3xl md:text-4xl xl:text-4xl font-extrabold text-[#1e2229] leading-[1.3] tracking-tight" data-reveal="text">
-              India's Trusted Roofing Shed Construction Company for <span className="text-[#062088]">Industrial, Agricultural & Home Projects</span>
+              India&apos;s Trusted Roofing Shed Construction Company for <span className="text-[#062088]">Industrial, Agricultural & Home Projects</span>
             </h2>
             <p className="text-base md:text-md text-slate-600 font-medium leading-relaxed max-w-[750px] mx-auto" data-reveal="text">
               KPN Roofing Shed designs and builds steel roofing sheds for industrial, agricultural, home, and recreational projects across India, using Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a <strong className="text-[#1e2229] font-bold">10-year guarantee</strong>.
@@ -82,7 +82,7 @@ export default function AboutSection() {
 
           <div className="mb-8 flex flex-col gap-5">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1e2229] leading-[1.3] tracking-tight" data-reveal="text">
-              India's Trusted Roofing Shed Construction Company for <span className="text-[#062088]">Industrial, Agricultural & Home Projects</span>
+              India&apos;s Trusted Roofing Shed Construction Company for <span className="text-[#062088]">Industrial, Agricultural & Home Projects</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed" data-reveal="text">
               KPN Roofing Shed designs and builds steel roofing sheds for industrial, agricultural, home, and recreational projects across India, using Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a <strong className="text-[#1e2229] font-bold">10-year guarantee</strong>.

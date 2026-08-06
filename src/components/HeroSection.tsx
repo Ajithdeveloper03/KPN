@@ -102,10 +102,11 @@ export default function HeroSection() {
       }
     }, 5000);
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide, isAnimating]);
 
   return (
-    <section id="home" className={`relative min-h-[100dvh] w-full overflow-hidden flex flex-col font-sans select-none transition-colors duration-700 ${isNightMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
+    <section id="home" className={`relative min-h-[80dvh] md:min-h-[100dvh] w-full overflow-hidden flex flex-col font-sans select-none transition-colors duration-700 ${isNightMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
 
       {/* 1. Static Background */}
       <div className="absolute inset-0 z-0">
@@ -149,7 +150,7 @@ export default function HeroSection() {
                 src={slide.frontImage}
                 alt={slide.title}
                 fill
-                className="object-cover object-bottom scale-[1.6] md:scale-[1.45] origin-bottom"
+                className="object-contain md:object-cover object-bottom scale-[2.2] sm:scale-[1.8] md:scale-[1.45] origin-bottom"
               />
             </div>
           );
@@ -273,25 +274,6 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Mobile Prev/Next Navigation */}
-      <div className="md:hidden absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 z-40 pointer-events-none">
-        <button
-          onClick={handlePrev}
-          disabled={isAnimating}
-          aria-label="Previous Slide"
-          className="pointer-events-auto w-12 h-12 bg-white/30 backdrop-blur-sm border border-white/50 rounded-full flex items-center justify-center cursor-pointer shadow-xl active:scale-95 transition-transform"
-        >
-          <ArrowRight size={24} className="text-white rotate-180" />
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={isAnimating}
-          aria-label="Next Slide"
-          className="pointer-events-auto w-12 h-12 bg-[#ffcc00] border-none rounded-full flex items-center justify-center cursor-pointer shadow-xl active:scale-95 transition-transform"
-        >
-          <ArrowRight size={24} className="text-slate-900" />
-        </button>
-      </div>
 
       {/* Floating Action Button (Desktop Only) */}
       <div className="hidden md:flex absolute bottom-10 right-10 z-40 pointer-events-auto">

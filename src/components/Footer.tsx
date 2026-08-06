@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="max-w-[1400px] w-full mx-auto px-6 pt-6 border-t border-white/10 flex justify-center items-center flex-wrap gap-4 text-center">
-          <span className="text-white text-sm font-medium">© {new Date().getFullYear()} KPN Roofing Shed. All Rights Reserved.</span>
+          <span className="text-white text-sm font-bold opacity-100">© {new Date().getFullYear()} KPN Roofing Shed. All Rights Reserved.</span>
         </div>
       </footer>
 
