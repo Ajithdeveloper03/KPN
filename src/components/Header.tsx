@@ -73,7 +73,7 @@ export default function Header() {
                   
                   {/* Column 2 */}
                   <div className="flex flex-col gap-6">
-                    <Link href="/#services" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                    <Link href="/services/industrial-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
                       <Image src="/kpnroofingshed/images/image4.jpeg" alt="Industrial Shed" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
@@ -81,15 +81,15 @@ export default function Header() {
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Factory size={18} className="text-[#ee0000]" /> Factory Shed</Link></li>
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Shirt size={18} className="text-[#ee0000]" /> Garment Factory Shed</Link></li>
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Warehouse size={18} className="text-[#ee0000]" /> Warehouse & Godown</Link></li>
+                      <li><Link href="/services/industrial-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Factory size={18} className="text-[#ee0000]" /> Factory Shed</Link></li>
+                      <li><Link href="/services/industrial-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Shirt size={18} className="text-[#ee0000]" /> Garment Factory Shed</Link></li>
+                      <li><Link href="/services/industrial-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Warehouse size={18} className="text-[#ee0000]" /> Warehouse & Godown</Link></li>
                     </ul>
                   </div>
                   
                   {/* Column 3 */}
                   <div className="flex flex-col gap-6">
-                    <Link href="/#services" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                    <Link href="/services/home-roofing-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
                       <Image src="/kpnroofingshed/images/image3.jpeg" alt="Home Roofing" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
@@ -97,8 +97,8 @@ export default function Header() {
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Home size={18} className="text-[#ee0000]" /> Terrace Roofing Shed</Link></li>
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Car size={18} className="text-[#ee0000]" /> Car Parking Shed</Link></li>
+                      <li><Link href="/services/home-roofing-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Home size={18} className="text-[#ee0000]" /> Terrace Roofing Shed</Link></li>
+                      <li><Link href="/services/home-roofing-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Car size={18} className="text-[#ee0000]" /> Car Parking Shed</Link></li>
                     </ul>
                   </div>
                   
@@ -127,13 +127,15 @@ export default function Header() {
         </nav>
 
         <div className="flex gap-4 items-center">
-          <button 
-            onClick={toggleTheme}
-            className={`flex items-center justify-center p-2 rounded-full border-2 transition-colors ${forceNightModeStyles ? 'border-slate-700 bg-slate-800 text-white hover:bg-slate-700' : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'}`}
-            title="Toggle Morning/Night Mode"
-          >
-            {isNightMode ? <Moon size={18} /> : <Sun size={18} />}
-          </button>
+          {isHomePage && (
+            <button 
+              onClick={toggleTheme}
+              className={`flex items-center justify-center p-2 rounded-full border-2 transition-colors ${forceNightModeStyles ? 'border-slate-700 bg-slate-800 text-white hover:bg-slate-700' : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'}`}
+              title="Toggle Morning/Night Mode"
+            >
+              {isNightMode ? <Moon size={18} /> : <Sun size={18} />}
+            </button>
+          )}
 
           <a href="tel:+919876543210" className={`hidden md:inline-flex items-center border-2 px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 ${forceNightModeStyles ? 'bg-transparent border-white text-white hover:bg-white hover:text-black' : 'bg-white border-white text-slate-900 hover:bg-transparent hover:text-slate-900'}`}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1.5 align-middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -172,16 +174,16 @@ export default function Header() {
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Industrial Shed</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Warehouse & Godown Shed</Link></li>
+                    <li><Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
+                    <li><Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
+                    <li><Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Warehouse & Godown Shed</Link></li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Home Roofing Sheds</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
+                    <li><Link href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
+                    <li><Link href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
                   </ul>
                 </div>
                 <div>

@@ -202,7 +202,7 @@ export default function StatsSection() {
 
         {/* Disclaimer */}
         <div className="mt-12 text-center lg:text-right w-full">
-          <p className="text-slate-500 text-sm font-medium italic">
+          <p className="text-slate-500 text-sm font-medium">
             * Pricing varies based on shed type, material, location and project scope.
           </p>
         </div>

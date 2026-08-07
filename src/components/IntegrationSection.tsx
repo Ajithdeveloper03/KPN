@@ -125,7 +125,7 @@ export default function IntegrationSection() {
           {/* Mid Left */}
           <div className="floating-icon absolute top-[45%] left-[5%] md:left-[15%] z-10">
             <div className="w-12 h-12 bg-[#ff1a1a] rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-black text-xl italic">C</span>
+              <span className="text-white font-black text-xl">C</span>
             </div>
           </div>
 
