@@ -6,11 +6,17 @@ import { ArrowLeft, Calendar, User, Clock, Share2 } from "lucide-react";
 import QuoteButton from "@/components/QuoteButton";
 import TableOfContents from "@/components/TableOfContents";
 
+// Bypass self-signed SSL errors during local development fetch calls to XAMPP
+if (process.env.NODE_ENV === 'development') {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+}
+
 export async function generateStaticParams() {
   try {
     // If running in production/build, it will try to hit the live API. 
     // In local dev without a PHP server, this might fail, so we provide fallbacks.
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const isDev = process.env.NODE_ENV === 'development';
+    const baseUrl = isDev ? 'https://localhost/php/KPN' : (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/admin/api.php`);
     if (!res.ok) throw new Error("API not reachable");
     const data = await res.json();
@@ -31,7 +37,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const isDev = process.env.NODE_ENV === 'development';
+    const baseUrl = isDev ? 'https://localhost/php/KPN' : (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/admin/api.php?slug=${resolvedParams.slug}`);
     if (res.ok) {
       const data = await res.json();
@@ -55,14 +62,15 @@ export default async function BlogDetailsPage({ params }: { params: Promise<{ sl
   
   let post = null;
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const isDev = process.env.NODE_ENV === 'development';
+    const baseUrl = isDev ? 'https://localhost/php/KPN' : (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/admin/api.php?slug=${resolvedParams.slug}`);
     if (res.ok) {
       const data = await res.json();
       post = data.data;
     }
   } catch (e) {
-    console.error("Failed to fetch blog post:", e);
+    // Silently fallback during build if PHP API is unreachable
   }
 
   // Fallback to placeholder if CMS is unreachable during build

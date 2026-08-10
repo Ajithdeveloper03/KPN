@@ -1,35 +1,48 @@
 <?php
 // db.php
-// Secure SQLite Database initialization and connection
+// Secure MySQL Database initialization and connection
 
-$dbFile = __DIR__ . '/kpn_blogs.sqlite';
+$host = '127.0.0.1';
+$user = 'root';
+$pass = ''; // Default XAMPP password is empty
+$dbname = 'kpn_blogs';
 
 try {
-    // Create (connect to) SQLite database in file
-    $pdo = new PDO('sqlite:' . $dbFile);
-    // Set errormode to exceptions
+    // First, connect without database to create it if it doesn't exist
+    $pdo_setup = new PDO("mysql:host=$host", $user, $pass);
+    $pdo_setup->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo_setup->exec("CREATE DATABASE IF NOT EXISTS `$dbname` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    
+    // Now connect to the specific database
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Create the blogs table if it doesn't exist
     $pdo->exec("CREATE TABLE IF NOT EXISTS blogs (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id INT AUTO_INCREMENT PRIMARY KEY,
         title TEXT NOT NULL,
-        slug TEXT NOT NULL UNIQUE,
-        category TEXT NOT NULL,
-        author TEXT NOT NULL,
-        read_time TEXT,
+        slug VARCHAR(255) NOT NULL UNIQUE,
+        category VARCHAR(255) NOT NULL,
+        author VARCHAR(255) NOT NULL,
+        read_time VARCHAR(255),
         image TEXT,
-        content TEXT NOT NULL,
+        content LONGTEXT NOT NULL,
+        builder_data LONGTEXT,
+        status VARCHAR(50) DEFAULT 'published',
         meta_title TEXT,
         meta_description TEXT,
         meta_keywords TEXT,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )");
 
+    // Try to add new columns to existing table (will silently fail if they already exist)
+    try { $pdo->exec("ALTER TABLE blogs ADD COLUMN status VARCHAR(50) DEFAULT 'published'"); } catch(PDOException $e) {}
+    try { $pdo->exec("ALTER TABLE blogs ADD COLUMN builder_data LONGTEXT"); } catch(PDOException $e) {}
+
 } catch (PDOException $e) {
-    // Return secure error without exposing server path
+    // Return secure error
     http_response_code(500);
-    die(json_encode(["error" => "Database connection failed."]));
+    die(json_encode(["error" => "Database connection failed. Please check if MySQL is running in XAMPP."]));
 }
 ?>

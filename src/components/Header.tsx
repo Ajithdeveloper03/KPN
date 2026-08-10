@@ -27,6 +27,8 @@ export default function Header() {
     window.dispatchEvent(new CustomEvent("themeChange", { detail: newMode }));
   };
 
+  if (pathname && pathname.startsWith('/admin')) return null;
+
   return (
     <header className={`absolute top-0 left-0 w-full z-[100] py-6 border-b border-transparent transition-colors ${forceNightModeStyles ? 'bg-transparent' : 'bg-transparent'}`}>
       <div className="max-w-[1400px] w-full mx-auto px-6 flex justify-between items-center">
@@ -97,8 +99,8 @@ export default function Header() {
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/services/home-roofing-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Home size={18} className="text-[#ee0000]" /> Terrace Roofing Shed</Link></li>
-                      <li><Link href="/services/home-roofing-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Car size={18} className="text-[#ee0000]" /> Car Parking Shed</Link></li>
+                      <li><Link href="/services/home-roofing-sheds/terrace-roofing-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Home size={18} className="text-[#ee0000]" /> Terrace Roofing Shed</Link></li>
+                      <li><Link href="/services/home-roofing-sheds/car-parking-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Car size={18} className="text-[#ee0000]" /> Car Parking Shed</Link></li>
                     </ul>
                   </div>
                   
@@ -182,7 +184,7 @@ export default function Header() {
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Home Roofing Sheds</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
+                    <li><Link href="/services/home-roofing-sheds/terrace-roofing-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
                     <li><Link href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
                   </ul>
                 </div>

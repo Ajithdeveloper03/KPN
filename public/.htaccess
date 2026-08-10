@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect trailing slashes if not a directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+  # Serve HTML file if it exists
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  # Optional: Handle 404s dynamically if using Next.js custom 404 page
+  ErrorDocument 404 /kpnroofingshed/404.html
+</IfModule>

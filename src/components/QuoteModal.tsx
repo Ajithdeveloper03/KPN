@@ -30,7 +30,9 @@ export default function QuoteModal() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/mailer/send_mail.php", {
+      const isDev = process.env.NODE_ENV === 'development';
+      const apiUrl = isDev ? 'https://localhost/php/KPN/mailer/send_mail.php' : '/mailer/send_mail.php';
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

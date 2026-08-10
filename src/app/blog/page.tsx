@@ -13,7 +13,9 @@ export default function BlogArchivePage() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const res = await fetch("/admin/api.php");
+        const isDev = process.env.NODE_ENV === 'development';
+        const apiUrl = isDev ? 'https://localhost/php/KPN/admin/api.php' : '/admin/api.php';
+        const res = await fetch(apiUrl, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data = await res.json();
         setPosts(data.data || []);

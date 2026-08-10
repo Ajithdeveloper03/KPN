@@ -1,14 +1,37 @@
 <?php
-// api.php
-// Secure REST API for Blog CRUD Operations
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-CSRF-Token");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
 header('Content-Type: application/json');
 
 require_once 'auth.php';
-require_once 'db.php'; // Provides $pdo
+require_once 'db.php'; 
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Handle GET requests (No CSRF required for safe reads)
+
+if ($method === 'POST' && isset($_GET['action']) && $_GET['action'] === 'login') {
+    $input = json_decode(file_get_contents('php://input'), true);
+    $username = trim($input['username'] ?? '');
+    $password = $input['password'] ?? '';
+    
+    if ($username === ADMIN_USERNAME && $password === ADMIN_PASSWORD_HASH) {
+        echo json_encode(["status" => "success", "token" => SECRET_TOKEN]);
+    } else {
+        http_response_code(401);
+        echo json_encode(["error" => "Invalid credentials"]);
+    }
+    exit;
+}
+
+// Handle GET requests (Public read access)
 if ($method === 'GET') {
     // Both frontend (Next.js) and Admin need to read blogs.
     // If not logged in, we only return published info (for Next.js frontend).
@@ -40,29 +63,19 @@ if ($method === 'GET') {
 }
 
 // ============================================================================
-// ALL OPERATIONS BELOW REQUIRE ADMIN LOGIN & CSRF VERIFICATION
+// ALL OPERATIONS BELOW REQUIRE ADMIN LOGIN TOKEN
 // ============================================================================
 
-require_login(); // Ensure admin is logged in
+require_login(); // Validates the Bearer token
 
 // Get JSON input
 $input = json_decode(file_get_contents('php://input'), true);
 
-// Extract CSRF token from header or JSON
-$csrf_token = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? ($input['csrf_token'] ?? '');
-
-// Verify CSRF Token (Crucial for security against Cross-Site Request Forgery)
-if (!verify_csrf_token($csrf_token)) {
-    http_response_code(403);
-    echo json_encode(["error" => "CSRF token validation failed"]);
-    exit;
-}
-
 // POST: Create new blog
 if ($method === 'POST') {
     try {
-        $stmt = $pdo->prepare("INSERT INTO blogs (title, slug, category, author, read_time, image, content, meta_title, meta_description, meta_keywords) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT INTO blogs (title, slug, category, author, read_time, image, content, builder_data, status, meta_title, meta_description, meta_keywords) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             
         $stmt->execute([
             $input['title'],
@@ -74,6 +87,8 @@ if ($method === 'POST') {
             // Intentionally not using htmlspecialchars on content because it is raw HTML from the admin.
             // A more advanced setup would use HTMLPurifier here.
             $input['content'], 
+            $input['builder_data'] ?? null,
+            $input['status'] ?? 'published',
             $input['meta_title'],
             $input['meta_description'],
             $input['meta_keywords']
@@ -96,7 +111,7 @@ if ($method === 'POST') {
 if ($method === 'PUT') {
     try {
         $stmt = $pdo->prepare("UPDATE blogs SET 
-            title = ?, slug = ?, category = ?, author = ?, read_time = ?, image = ?, content = ?, 
+            title = ?, slug = ?, category = ?, author = ?, read_time = ?, image = ?, content = ?, builder_data = ?, status = ?,
             meta_title = ?, meta_description = ?, meta_keywords = ?, updated_at = CURRENT_TIMESTAMP
             WHERE id = ?");
             
@@ -108,6 +123,8 @@ if ($method === 'PUT') {
             $input['read_time'],
             $input['image'],
             $input['content'],
+            $input['builder_data'] ?? null,
+            $input['status'] ?? 'published',
             $input['meta_title'],
             $input['meta_description'],
             $input['meta_keywords'],

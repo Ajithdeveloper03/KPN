@@ -4,16 +4,18 @@
  * Dependencies: PHPMailer (Place the PHPMailer folder inside this mailer directory or use Composer)
  */
 
-header("Access-Control-Allow-Origin: *"); // For production, change * to your exact domain e.g., https://inymartlabs.com
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-header("Content-Type: application/json; charset=UTF-8");
+// Add CORS headers to allow Next.js (port 3000) to communicate with XAMPP (port 80) during local dev
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, X-CSRF-Token");
 
-// Handle Preflight OPTIONS request
+// Handle preflight OPTIONS request
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
-    exit();
+    exit;
 }
+
+header("Content-Type: application/json; charset=UTF-8");
 
 // Only allow POST requests
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {

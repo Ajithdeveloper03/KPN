@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   basePath: '/kpnroofingshed',
   output: 'export',
-  trailingSlash: false,
+  trailingSlash: true,
   turbopack: {
     root: __dirname,
   },

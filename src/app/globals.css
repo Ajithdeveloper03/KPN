@@ -64,3 +64,7 @@
   opacity: 0;
   transform: translateY(30px);
 }
+
+@keyframes dash {
+  to { stroke-dashoffset: -1000; }
+}
