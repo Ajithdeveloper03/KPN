@@ -44,7 +44,7 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-8 list-none m-0 p-0 items-center">
             <li><Link href="/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Home</Link></li>
-            <li><Link href="/#about" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>About Us</Link></li>
+            <li><Link href="/about" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>About Us</Link></li>
             
             {/* Services Mega Menu */}
             <li className="relative group">
@@ -104,7 +104,7 @@ export default function Header() {
                   
                   {/* Column 4 */}
                   <div className="flex flex-col gap-6">
-                    <Link href="/#services" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                    <Link href="/services/sports-turf-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
                       <Image src="/kpnroofingshed/images/image7.jpeg" alt="Sports Turf" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
@@ -112,8 +112,8 @@ export default function Header() {
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Activity size={18} className="text-[#ee0000]" /> Badminton Court</Link></li>
-                      <li><Link href="/#services" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Trophy size={18} className="text-[#ee0000]" /> Cricket Turf Shed</Link></li>
+                      <li><Link href="/services/sports-turf-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Activity size={18} className="text-[#ee0000]" /> Badminton Court</Link></li>
+                      <li><Link href="/services/sports-turf-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Trophy size={18} className="text-[#ee0000]" /> Cricket Turf Shed</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export default function Header() {
             </li>
 
             <li><Link href="/gallery" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Gallery</Link></li>
-            <li><Link href="/#blog" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Blog</Link></li>
+            <li><Link href="/blog" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Blog</Link></li>
             <li><Link href="/contact" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Contact</Link></li>
           </ul>
         </nav>
@@ -137,7 +137,7 @@ export default function Header() {
             </button>
           )}
 
-          <a href="tel:+919876543210" className={`hidden md:inline-flex items-center border-2 px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 ${forceNightModeStyles ? 'bg-transparent border-white text-white hover:bg-white hover:text-black' : 'bg-white border-white text-slate-900 hover:bg-transparent hover:text-slate-900'}`}>
+          <a href="tel:+919788770786" className={`hidden md:inline-flex items-center border-2 px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 ${forceNightModeStyles ? 'bg-transparent border-white text-white hover:bg-white hover:text-black' : 'bg-white border-white text-slate-900 hover:bg-transparent hover:text-slate-900'}`}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1.5 align-middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call Now
           </a>
@@ -155,7 +155,7 @@ export default function Header() {
       <div className={`fixed inset-0 bg-white/95 backdrop-blur-md z-[105] transition-transform duration-300 flex flex-col pt-24 pb-8 px-8 md:hidden overflow-y-auto ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <ul className="flex flex-col gap-6 list-none m-0 p-0">
           <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Home</Link></li>
-          <li><Link href="/#about" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
+          <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
           <li className="flex flex-col">
             <button onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)} className="flex items-center justify-between text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] w-full text-left">
               Services
@@ -166,9 +166,9 @@ export default function Header() {
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Agriculture & Animal Husbandry</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Poultry Farm Shed</Link></li>
+                    <li><Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
+                    <li><Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
+                    <li><Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Poultry Farm Shed</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -189,15 +189,15 @@ export default function Header() {
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Sports Turf</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
-                    <li><Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
+                    <li><Link href="/services/sports-turf-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
+                    <li><Link href="/services/sports-turf-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
           <li><Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Gallery</Link></li>
-          <li><Link href="/#blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Blog</Link></li>
+          <li><Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Blog</Link></li>
           <li><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Contact</Link></li>
         </ul>
         <div className="mt-10">

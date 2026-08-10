@@ -1,0 +1,10 @@
+# Protect SQLite databases from being downloaded directly
+<FilesMatch "\.(sqlite|db)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Enforce HTTPS (if applicable on server)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

@@ -8,29 +8,29 @@ import PageHero from "@/components/PageHero";
 
 // Sample gallery data
 const galleryItems = [
-  { id: 1, title: "Modern Industrial Warehouse", category: "Industrial", img: "/kpnroofingshed/images/image1.jpeg", height: "h-96" },
-  { id: 2, title: "Agricultural Storage Shed", category: "Agricultural", img: "/kpnroofingshed/images/image2.jpeg", height: "h-64" },
-  { id: 3, title: "Custom Home Garage", category: "Home", img: "/kpnroofingshed/images/image3.jpeg", height: "h-80" },
-  { id: 4, title: "Large Manufacturing Plant", category: "Industrial", img: "/kpnroofingshed/images/image4.jpeg", height: "h-[28rem]" },
-  { id: 5, title: "Poultry Farm Shed", category: "Agricultural", img: "/kpnroofingshed/images/image5.jpeg", height: "h-72" },
-  { id: 6, title: "Residential Workshop", category: "Home", img: "/kpnroofingshed/images/image6.jpeg", height: "h-96" },
-  { id: 7, title: "Logistics Center", category: "Industrial", img: "/kpnroofingshed/images/image7.jpeg", height: "h-64" },
-  { id: 8, title: "Grain Storage Facility", category: "Agricultural", img: "/kpnroofingshed/images/image8.jpeg", height: "h-80" },
-  { id: 9, title: "Garden Studio Shed", category: "Home", img: "/kpnroofingshed/images/image9.jpeg", height: "h-72" },
-  { id: 10, title: "Automobile Factory", category: "Industrial", img: "/kpnroofingshed/images/imag10.jpeg", height: "h-[28rem]" },
-  { id: 11, title: "Dairy Farm Structure", category: "Agricultural", img: "/kpnroofingshed/images/image1.png", height: "h-96" },
-  { id: 12, title: "Luxury Carport", category: "Home", img: "/kpnroofingshed/images/image2.png", height: "h-64" },
-  { id: 13, title: "Livestock Shade Structure", category: "Agricultural", img: "/kpnroofingshed/images/roofing.png", height: "h-72" },
-  { id: 14, title: "Urban Backyard Shed", category: "Home", img: "/kpnroofingshed/images/roofing2.png", height: "h-[28rem]" },
-  { id: 15, title: "Steel Plant Warehouse", category: "Industrial", img: "/kpnroofingshed/images/roofing3.png", height: "h-96" },
-  { id: 16, title: "Modern Green House", category: "Agricultural", img: "/kpnroofingshed/images/hero-bg.png", height: "h-80" },
-  { id: 17, title: "Assembly Line Shed", category: "Industrial", img: "/kpnroofingshed/images/morning-bg.png", height: "h-72" },
-  { id: 18, title: "Patio Cover", category: "Home", img: "/kpnroofingshed/images/night-bg.png", height: "h-64" },
-  { id: 19, title: "Commercial Storage", category: "Industrial", img: "/kpnroofingshed/images/image1.jpeg", height: "h-96" },
-  { id: 20, title: "Farm Equipment Shed", category: "Agricultural", img: "/kpnroofingshed/images/image2.jpeg", height: "h-80" },
+  { id: 1, title: "Modern Industrial Warehouse", category: "Industrial Shed", img: "/kpnroofingshed/images/image1.jpeg", height: "h-96" },
+  { id: 2, title: "Agricultural Storage Shed", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/image2.jpeg", height: "h-64" },
+  { id: 3, title: "Custom Home Garage", category: "Home Roofing Sheds", img: "/kpnroofingshed/images/image3.jpeg", height: "h-80" },
+  { id: 4, title: "Large Manufacturing Plant", category: "Industrial Shed", img: "/kpnroofingshed/images/image4.jpeg", height: "h-[28rem]" },
+  { id: 5, title: "Poultry Farm Shed", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/image5.jpeg", height: "h-72" },
+  { id: 6, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/kpnroofingshed/images/image6.jpeg", height: "h-96" },
+  { id: 7, title: "Logistics Center", category: "Industrial Shed", img: "/kpnroofingshed/images/image7.jpeg", height: "h-64" },
+  { id: 8, title: "Grain Storage Facility", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/image8.jpeg", height: "h-80" },
+  { id: 9, title: "Garden Studio Shed", category: "Home Roofing Sheds", img: "/kpnroofingshed/images/image9.jpeg", height: "h-72" },
+  { id: 10, title: "Automobile Factory", category: "Industrial Shed", img: "/kpnroofingshed/images/imag10.jpeg", height: "h-[28rem]" },
+  { id: 11, title: "Dairy Farm Structure", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/image1.png", height: "h-96" },
+  { id: 12, title: "Luxury Carport", category: "Home Roofing Sheds", img: "/kpnroofingshed/images/image2.png", height: "h-64" },
+  { id: 13, title: "Livestock Shade Structure", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/roofing.png", height: "h-72" },
+  { id: 14, title: "Urban Backyard Shed", category: "Home Roofing Sheds", img: "/kpnroofingshed/images/roofing2.png", height: "h-[28rem]" },
+  { id: 15, title: "Steel Plant Warehouse", category: "Industrial Shed", img: "/kpnroofingshed/images/roofing3.png", height: "h-96" },
+  { id: 16, title: "Modern Green House", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/hero-bg.png", height: "h-80" },
+  { id: 17, title: "Assembly Line Shed", category: "Industrial Shed", img: "/kpnroofingshed/images/morning-bg.png", height: "h-72" },
+  { id: 18, title: "Patio Cover", category: "Home Roofing Sheds", img: "/kpnroofingshed/images/night-bg.png", height: "h-64" },
+  { id: 19, title: "Commercial Storage", category: "Industrial Shed", img: "/kpnroofingshed/images/image1.jpeg", height: "h-96" },
+  { id: 20, title: "Farm Equipment Shed", category: "Agriculture & Animal Husbandry", img: "/kpnroofingshed/images/image2.jpeg", height: "h-80" },
 ];
 
-const categories = ["All", "Industrial", "Agricultural", "Home"];
+const categories = ["All", "Agriculture & Animal Husbandry", "Industrial Shed", "Home Roofing Sheds", "Sports Turf"];
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");

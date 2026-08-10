@@ -9,8 +9,9 @@ export const openQuoteModal = () => {
 
 export default function QuoteModal() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", phone: "", location: "", shedType: "industrial", message: "" });
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({ name: "", phone: "", location: "", shedType: "industrial", message: "", bot_field: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const handleOpen = () => setIsModalOpen(true);
@@ -23,14 +24,40 @@ export default function QuoteModal() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setIsModalOpen(false);
-      setFormSubmitted(false);
-      setFormData({ name: "", phone: "", location: "", shedType: "industrial", message: "" });
-    }, 3000);
+    setFormStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/mailer/send_mail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "Quote Modal",
+          ...formData
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.status === "success") {
+        setFormStatus("success");
+        setTimeout(() => {
+          setIsModalOpen(false);
+          setFormStatus("idle");
+          setFormData({ name: "", phone: "", location: "", shedType: "industrial", message: "", bot_field: "" });
+        }, 3000);
+      } else {
+        setFormStatus("error");
+        setErrorMessage(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setFormStatus("error");
+      setErrorMessage("Network error. Please ensure you have internet access and try again.");
+    }
   };
 
   return (
@@ -47,7 +74,7 @@ export default function QuoteModal() {
           ×
         </button>
 
-        {formSubmitted ? (
+        {formStatus === "success" ? (
           <div className="text-center py-5">
             <div className="text-[#25d366] text-5xl mb-4">✓</div>
             <h3 className="text-2xl font-extrabold text-[#1e2229] mb-2">Quote Request Received!</h3>
@@ -57,7 +84,17 @@ export default function QuoteModal() {
           <>
             <h3 className="text-2xl font-extrabold text-[#1e2229] mb-2">Get a Free Quote</h3>
             <p className="text-slate-500 mb-6 font-medium">Fill in details for a customized structural estimate within 24 hours.</p>
+            {formStatus === "error" && (
+              <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl mb-4 text-sm font-medium">
+                {errorMessage}
+              </div>
+            )}
             <form onSubmit={handleFormSubmit} className="flex flex-col gap-4">
+              {/* HONEYPOT FIELD (Hidden from real users) */}
+              <div style={{ display: 'none' }} aria-hidden="true">
+                <label htmlFor="bot_field">Leave this field blank</label>
+                <input type="text" id="bot_field" name="bot_field" value={formData.bot_field} onChange={handleFormChange} tabIndex={-1} autoComplete="off" />
+              </div>
               {[
                 { label: "Your Name", id: "name", type: "text", placeholder: "Enter your name" },
                 { label: "Phone Number", id: "phone", type: "tel", placeholder: "Enter phone number" },
@@ -108,9 +145,17 @@ export default function QuoteModal() {
 
               <button
                 type="submit"
-                className="w-full bg-[#ee0000] hover:bg-[#cc0000] text-white font-extrabold py-4 rounded-xl text-base transition-all duration-300 hover:-translate-y-0.5 shadow-[0_8px_20px_rgba(249,92,25,0.35)] mt-2"
+                disabled={formStatus === "submitting"}
+                className="w-full bg-[#ee0000] hover:bg-[#cc0000] text-white font-extrabold py-4 rounded-xl text-base transition-all duration-300 hover:-translate-y-0.5 shadow-[0_8px_20px_rgba(249,92,25,0.35)] mt-2 disabled:opacity-70 disabled:hover:translate-y-0 flex items-center justify-center gap-2"
               >
-                Send Quote Request
+                {formStatus === "submitting" ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                    Sending...
+                  </>
+                ) : (
+                  "Send Quote Request"
+                )}
               </button>
             </form>
           </>

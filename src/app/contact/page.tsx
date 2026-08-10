@@ -13,18 +13,47 @@ export default function ContactPage() {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
+    bot_field: ""
   });
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-    alert("Message sent successfully!");
+    setFormStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/mailer/send_mail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "Contact Page",
+          ...formData
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.status === "success") {
+        setFormStatus("success");
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "", bot_field: "" });
+        setTimeout(() => setFormStatus("idle"), 5000);
+      } else {
+        setFormStatus("error");
+        setErrorMessage(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setFormStatus("error");
+      setErrorMessage("Network error. Please ensure you have internet access and try again.");
+    }
   };
 
   return (
@@ -42,7 +71,7 @@ export default function ContactPage() {
       <main className="max-w-[1400px] w-full mx-auto px-6 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start flex-grow">
         
         {/* Left Column (Details) */}
-        <section className="lg:col-span-5 space-y-12">
+        <section className="lg:col-span-5 space-y-8">
           <div className=" hidden md:block">
             <span className="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Connect with Excellence</span>
             <p className="text-lg text-slate-400 leading-relaxed max-w-md font-medium mt-4">
@@ -51,7 +80,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Details */}
-          <div className="space-y-10  mt-12">
+          <div className="space-y-10  mt-6">
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#ee0000]/20 group-hover:text-[#ee0000] transition-colors">
@@ -59,7 +88,7 @@ export default function ContactPage() {
                 </div>
                 Main Office
               </span>
-              <a href="tel:+919876543210" className="text-white hover:text-[#ee0000] transition-colors text-2xl font-bold ml-11">+91 98765 43210</a>
+              <a href="tel:+919788770786" className="text-white hover:text-[#ee0000] transition-colors text-2xl font-bold ml-11">9788770786, 0431-2660786</a>
             </div>
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
@@ -68,7 +97,7 @@ export default function ContactPage() {
                 </div>
                 General Email
               </span>
-              <a href="mailto:info@kpnroofingshed.com" className="text-white hover:text-[#ee0000] transition-colors text-xl font-medium ml-11">info@kpnroofingshed.com</a>
+              <a href="mailto:kpnroofingshed555@gmail.com" className="text-white hover:text-[#ee0000] transition-colors text-xl font-medium ml-11">kpnroofingshed555@gmail.com</a>
             </div>
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
@@ -77,20 +106,20 @@ export default function ContactPage() {
                 </div>
                 Location
               </span>
-              <p className="text-slate-300 text-lg ml-11 font-medium leading-relaxed">123 Industrial Area, Phase 1,<br />Coimbatore, Tamil Nadu 641001</p>
+              <p className="text-slate-300 text-lg ml-11 font-medium leading-relaxed">Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur, Tiruchirappalli, Tamil Nadu 620019</p>
             </div>
           </div>
           
           {/* Socials */}
-          <div className="flex items-center gap-4 pt-8  ml-11">
-            <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          <div className="flex items-center gap-4 pt-2  ml-11">
+            <a href="https://www.facebook.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" /></svg>
             </a>
-            <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
+            <a href="https://www.instagram.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            <a href="https://www.youtube.com/@kpnroofingshedindia" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
           </div>
 
@@ -101,7 +130,24 @@ export default function ContactPage() {
           {/* Decorative glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#ee0000] rounded-full mix-blend-multiply filter blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
+          {formStatus === "success" && (
+            <div className="bg-[#25d366]/10 border border-[#25d366] text-[#25d366] px-6 py-4 rounded-xl mb-8 relative z-10 font-medium flex items-center gap-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5"></path></svg>
+              Message sent successfully! Our team will contact you shortly.
+            </div>
+          )}
+          {formStatus === "error" && (
+            <div className="bg-red-500/10 border border-red-500 text-red-400 px-6 py-4 rounded-xl mb-8 relative z-10 font-medium">
+              {errorMessage}
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
+            {/* HONEYPOT FIELD (Hidden from real users) */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              <label htmlFor="bot_field">Leave this field blank</label>
+              <input type="text" id="bot_field" name="bot_field" value={formData.bot_field} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Name field */}
               <div className="relative w-full group pt-4">
@@ -205,9 +251,17 @@ export default function ContactPage() {
 
             <button 
               type="submit" 
-              className="w-full bg-[#ee0000] text-white py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#cc0000] hover:shadow-[0_10px_30px_rgba(238,0,0,0.3)] transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1"
+              disabled={formStatus === "submitting"}
+              className="w-full bg-[#ee0000] text-white py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#cc0000] hover:shadow-[0_10px_30px_rgba(238,0,0,0.3)] transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
             >
-              Submit Enquiry
+              {formStatus === "submitting" ? (
+                <>
+                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                  Sending...
+                </>
+              ) : (
+                "Submit Enquiry"
+              )}
             </button>
           </form>
         </section>

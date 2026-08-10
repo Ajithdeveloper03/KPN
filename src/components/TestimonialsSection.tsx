@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
         {/* Top Header Area */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 md:mb-16 gap-8">
           <div className="overflow-hidden">
-            <h2 className="text-white text-[clamp(40px,5vw,60px)] font-serif leading-[1.1] max-w-[600px] tracking-tight" data-reveal="text">
+            <h2 className="text-white text-[clamp(40px,5vw,60px)] font-serif italic leading-[1.1] max-w-[600px] tracking-tight" data-reveal="text">
               What Our Clients Say.
             </h2>
           </div>

@@ -8,7 +8,7 @@
 
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
-  --font-serif: "Playfair Display", serif;
+  --font-serif: "Lora", serif;
 }
 
 :root {
@@ -25,7 +25,7 @@
 
   --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Lora", Georgia, serif;
 }
 
 @layer base {

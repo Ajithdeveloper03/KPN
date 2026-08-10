@@ -26,7 +26,7 @@ export default function CTASection() {
                 Get Free Quote
               </button>
               <a
-                href="https://wa.me/911234567890"
+                href="https://wa.me/919788770786"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#25D366] text-white font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#20bd5a] hover:scale-105 shadow-xl no-underline"
@@ -34,7 +34,7 @@ export default function CTASection() {
                 Chat on WhatsApp
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+919788770786"
                 className="bg-transparent text-white border-2 border-white font-bold text-sm md:text-base px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:scale-105 no-underline"
               >
                 Call Now
