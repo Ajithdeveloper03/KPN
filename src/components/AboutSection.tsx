@@ -17,32 +17,32 @@ export default function AboutSection() {
         
         {/* Img 1: Far Left (Lowest) */}
         <div data-reveal="image" className="absolute left-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image1.png" fill sizes="250px" alt="About 1" className="object-cover" />
+          <Image src="/kpnroofingshed/images/image1.jpeg" fill sizes="250px" alt="About 1" className="object-cover" />
         </div>
 
         {/* Img 2: Mid Left (Higher, Taller) */}
         <div data-reveal="image" className="absolute left-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image2.png" fill sizes="250px" alt="About 2" className="object-cover" />
+          <Image src="/kpnroofingshed/images/image2.jpeg" fill sizes="250px" alt="About 2" className="object-cover" />
         </div>
 
         {/* Img 3: Center Left (Highest) */}
         <div data-reveal="image" className="absolute left-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/morning-bg.png" fill sizes="250px" alt="About 3" className="object-cover" />
+          <Image src="/kpnroofingshed/images/image3.jpeg" fill sizes="250px" alt="About 3" className="object-cover" />
         </div>
 
         {/* Img 4: Center Right (Highest) */}
         <div data-reveal="image" className="absolute right-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/night-bg.png" fill sizes="250px" alt="About 4" className="object-cover" />
+          <Image src="/kpnroofingshed/images/image4.jpeg" fill sizes="250px" alt="About 4" className="object-cover" />
         </div>
 
         {/* Img 5: Mid Right (Higher, Taller) */}
         <div data-reveal="image" className="absolute right-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/service-bg.png" fill sizes="250px" alt="About 5" className="object-cover" />
+          <Image src="/kpnroofingshed/images/image5.jpeg" fill sizes="250px" alt="About 5" className="object-cover" />
         </div>
 
         {/* Img 6: Far Right (Lowest) */}
         <div data-reveal="image" className="absolute right-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image1.png" fill sizes="250px" alt="About 6" className="object-cover" />
+          <Image src="/kpnroofingshed/images/image1.jpeg" fill sizes="250px" alt="About 6" className="object-cover" />
         </div>
 
         {/* Central Text Content */}

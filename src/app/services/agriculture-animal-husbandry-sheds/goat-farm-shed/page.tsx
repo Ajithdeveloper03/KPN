@@ -168,44 +168,76 @@ export default function GoatFarmShedPage() {
               <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">A goat farm shed can be divided into different areas depending on the farm's operation and herd management requirements.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform">
-                <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Animal Housing Area</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">
-                  The main housing area provides space for the herd with suitable floor planning, ventilation, and comfortable movement. Elevated slatted flooring can also be considered where appropriate to improve hygiene and cleaning.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Box 1 */}
+              <div className="bg-[#f8f9fa] p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl -mr-10 -mt-10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-14 h-14 bg-white rounded-full shadow-sm flex items-center justify-center text-blue-500 mb-6 relative z-10">
+                  <Home size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2d3436] mb-4 relative z-10">Animal Housing Area</h3>
+                <p className="text-gray-600 font-medium leading-relaxed relative z-10">
+                  The main housing area provides space for the herd with suitable floor planning, ventilation, and comfortable movement. Elevated slatted flooring can also be considered.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform">
-                <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Kid Pen</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">
+
+              {/* Box 2 */}
+              <div className="bg-[#fffdfa] p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full blur-3xl -mr-10 -mt-10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-14 h-14 bg-white rounded-full shadow-sm flex items-center justify-center text-orange-500 mb-6 relative z-10">
+                  <Shield size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2d3436] mb-4 relative z-10">Kid Pen</h3>
+                <p className="text-gray-600 font-medium leading-relaxed relative z-10">
                   A separate kid pen can provide newborn goats with additional protection, easier monitoring, and a more controlled environment.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform">
-                <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Feeding Area</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">
+
+              {/* Box 3 */}
+              <div className="bg-[#f0fdf4] p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-full blur-3xl -mr-10 -mt-10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-14 h-14 bg-white rounded-full shadow-sm flex items-center justify-center text-green-500 mb-6 relative z-10">
+                  <CheckCircle2 size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2d3436] mb-4 relative z-10">Feeding Area</h3>
+                <p className="text-gray-600 font-medium leading-relaxed relative z-10">
                   The feeding area is planned with sufficient space for troughs, water access, fodder movement, and easy handling of the herd.
                 </p>
               </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform">
-                <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Fodder Storage Area</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">
+
+              {/* Box 4 */}
+              <div className="bg-[#fefce8] p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full blur-3xl -mr-10 -mt-10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-14 h-14 bg-white rounded-full shadow-sm flex items-center justify-center text-yellow-600 mb-6 relative z-10">
+                  <FileText size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2d3436] mb-4 relative z-10">Fodder Storage Area</h3>
+                <p className="text-gray-600 font-medium leading-relaxed relative z-10">
                   A dry and weather-protected storage area helps protect fodder and feed from rain, moisture, and pests.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform">
-                <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Milking & Handling Area</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">
+
+              {/* Box 5 */}
+              <div className="bg-[#faf5ff] p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full blur-3xl -mr-10 -mt-10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-14 h-14 bg-white rounded-full shadow-sm flex items-center justify-center text-purple-500 mb-6 relative z-10">
+                  <Droplets size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2d3436] mb-4 relative z-10">Milking & Handling Area</h3>
+                <p className="text-gray-600 font-medium leading-relaxed relative z-10">
                   For dairy goat farms, a dedicated area can be planned for milking, health checks, and animal handling.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform">
-                <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Waste & Drainage Zone</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">
-                  Proper floor slope and drainage planning help move waste and water away from the animal housing area, supporting better hygiene and reducing odour.
+
+              {/* Box 6 */}
+              <div className="bg-[#f1f5f9] p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-slate-200 rounded-full blur-3xl -mr-10 -mt-10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-14 h-14 bg-white rounded-full shadow-sm flex items-center justify-center text-slate-500 mb-6 relative z-10">
+                  <Wind size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2d3436] mb-4 relative z-10">Waste & Drainage Zone</h3>
+                <p className="text-gray-600 font-medium leading-relaxed relative z-10">
+                  Proper floor slope and drainage planning help move waste and water away from the animal housing area, supporting better hygiene.
                 </p>
               </div>
             </div>
@@ -277,18 +309,24 @@ export default function GoatFarmShedPage() {
             </div>
 
             <div className="relative">
-              {/* Curved SVG Wavy Pattern Line */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-48 md:-translate-x-1/2 z-0 opacity-70" 
+              {/* Single Continuous SVG Wavy Line */}
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-64 md:-translate-x-1/2 z-0 opacity-70"
                    style={{
-                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='192' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96 0 C160 100 32 300 96 400' stroke='%23f39c12' stroke-width='32' fill='none' stroke-linecap='round' /%3E%3C/svg%3E")`,
-                     backgroundRepeat: 'repeat-y',
-                     backgroundPosition: 'center',
-                     maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
-                     WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
+                     maskImage: 'linear-gradient(to bottom, transparent, black 5%, black 95%, transparent)',
+                     WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 5%, black 95%, transparent)'
                    }}>
+                <svg className="w-full h-full" viewBox="0 0 256 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                  <path 
+                    d="M128 0 C350 166, -94 333, 128 500 C350 666, -94 833, 128 1000" 
+                    stroke="#f39c12" 
+                    strokeWidth="16" 
+                    fill="none" 
+                    strokeLinecap="round" 
+                  />
+                </svg>
               </div>
               
-              <div className="space-y-16 md:space-y-24 relative">
+              <div className="space-y-12 md:space-y-16 relative">
                 {[
                   { step: "01", title: "Herd Size", desc: "Determine the current and expected herd size before finalizing shed dimensions", color: "text-[#e67e22]", bg: "bg-[#e67e22]" },
                   { step: "02", title: "Space Planning", desc: "Plan adequate space for adult goats, kids, feeding, and movement", color: "text-[#f39c12]", bg: "bg-[#f39c12]" },

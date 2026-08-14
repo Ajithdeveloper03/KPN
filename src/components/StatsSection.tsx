@@ -9,55 +9,55 @@ const statsCards = [
     title: "13+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
-    img: "/kpnroofingshed/images/image2.png"
+    img: "/kpnroofingshed/images/image8.jpeg"
   },
   {
     title: "600+ Projects",
     desc: "Successfully completed across India.",
     color: "#ee0000", // Red
-    img: "/kpnroofingshed/images/service-bg.png"
+    img: "/kpnroofingshed/images/image9.jpeg"
   },
   {
     title: "All Services",
     desc: "Industrial, agricultural, home, turf & badminton sheds.",
     color: "#ffe600", // Yellow
-    img: "/kpnroofingshed/images/morning-bg.png"
+    img: "/kpnroofingshed/images/image6.jpeg"
   },
   {
     title: "₹599/sq.ft",
     desc: "Goat farm shed pricing starts at ₹599/sq.ft.",
     color: "#062088", // Blue
-    img: "/kpnroofingshed/images/image1.png"
+    img: "/kpnroofingshed/images/image7.jpeg"
   },
   {
     title: "Min. Size",
     desc: "1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states.",
     color: "#ee0000", // Red
-    img: "/kpnroofingshed/images/night-bg.png"
+    img: "/kpnroofingshed/images/image5.jpeg"
   },
   {
     title: "Fast Timeline",
     desc: "20 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
     color: "#ffe600", // Yellow
-    img: "/kpnroofingshed/images/image2.png"
+    img: "/kpnroofingshed/images/image8.jpeg"
   },
   {
     title: "10-Yr Warranty",
     desc: "10-year guarantee, 3-year replacement on flooring.",
     color: "#062088", // Blue
-    img: "/kpnroofingshed/images/service-bg.png"
+    img: "/kpnroofingshed/images/image9.jpeg"
   },
   {
     title: "50% Advance",
     desc: "Remainder in installments as materials arrive.",
     color: "#ee0000", // Red
-    img: "/kpnroofingshed/images/morning-bg.png"
+    img: "/kpnroofingshed/images/image6.jpeg"
   },
   {
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
     color: "#ffe600", // Yellow
-    img: "/kpnroofingshed/images/image1.png"
+    img: "/kpnroofingshed/images/image7.jpeg"
   }
 ];
 
@@ -105,7 +105,7 @@ export default function StatsSection() {
   return (
     <section id="stats" className="relative py-14  flex flex-col justify-center overflow-hidden">
       {/* Fixed Background Image with light overlay */}
-      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/service-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/image5.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="absolute inset-0 bg-gray-100" />
       </div>
 

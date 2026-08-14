@@ -13,15 +13,34 @@ export default function BlogArchivePage() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
+        // In dev, PHP backend may not be running — we fall back to empty state gracefully.
+        // On the live server, api.php lives at /kpnroofingshed/admin/api.php (basePath prefix).
         const isDev = process.env.NODE_ENV === 'development';
-        const apiUrl = isDev ? 'https://localhost/php/KPN/admin/api.php' : '/admin/api.php';
+        const apiUrl = isDev
+          ? 'https://localhost/php/KPN/admin/api.php'
+          : '/kpnroofingshed/admin/api.php';
         const res = await fetch(apiUrl, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data = await res.json();
-        setPosts(data.data || []);
+        
+        // Static highly-visual blog post per user request
+        const staticBlog = {
+          slug: "ultimate-guide-to-roofing-sheds",
+          title: "The Ultimate Guide to Roofing Shed Construction",
+          image: "/kpnroofingshed/images/image2.jpeg",
+          category: "Guides",
+          created_at: new Date().toISOString(),
+          read_time: "8 min read",
+          content: "Learn everything you need to know about choosing the right roofing shed, materials, layout planning, and maintenance in this comprehensive guide.",
+          author: "KPN Experts"
+        };
+        
+        setPosts([staticBlog, ...(data.data || [])]);
       } catch (err) {
-        console.error("Error loading blogs from CMS:", err);
-        setError("Unable to load latest blogs. Please try again later.");
+        // Silently swallow in dev (no PHP server running)
+        if (process.env.NODE_ENV !== 'development') {
+          setError("Unable to load latest blogs. Please try again later.");
+        }
       } finally {
         setLoading(false);
       }

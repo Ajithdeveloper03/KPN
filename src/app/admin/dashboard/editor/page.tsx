@@ -32,12 +32,12 @@ function EditorForm() {
 
   const getApiUrl = () => {
     const isDev = process.env.NODE_ENV === 'development';
-    return isDev ? 'https://localhost/php/KPN/admin/api.php' : '/admin/api.php';
+    return isDev ? 'https://localhost/php/KPN/admin/api.php' : '/kpnroofingshed/admin/api.php';
   };
 
   const getUploadUrl = () => {
     const isDev = process.env.NODE_ENV === 'development';
-    return isDev ? 'https://localhost/php/KPN/admin/upload.php' : '/admin/upload.php';
+    return isDev ? 'https://localhost/php/KPN/admin/upload.php' : '/kpnroofingshed/admin/upload.php';
   };
 
   const fetchBlog = async (blogId: string) => {

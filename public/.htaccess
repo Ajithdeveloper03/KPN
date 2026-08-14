@@ -1,51 +1,49 @@
+Options -MultiViews
+Options +FollowSymLinks
+DirectoryIndex index.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /kpnroofingshed/
 
-  # The Next.js app is deployed at /kpnroofingshed/
-  # All static HTML files live in the out/ directory mapped to /kpnroofingshed/
-
-  # Step 1: Let existing real files and directories through (images, JS, CSS, etc.)
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # 1. Serve real existing files directly (JS, CSS, images, fonts, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Step 2: For URLs under /kpnroofingshed/, try serving as-is, then as /index.html
-  # This handles trailingSlash: true static export where each page is /path/index.html
+  RewriteCond %{REQUEST_FILENAME}index.html -f
+  RewriteRule ^(.*/)?$ $1index.html [L]
 
-  # If the request (with trailing slash) maps to an index.html, serve it
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f
-  RewriteRule ^(.+/)$ $1index.html [L]
+  # 3. No trailing slash but a directory/index.html exists → 301 redirect to add /
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+[^/])$ $1/ [R=301,L]
 
-  # If the request maps to a directory containing index.html (no trailing slash)
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
-  RewriteRule ^(.+[^/])$ $1/index.html [L]
-
-  # Step 3: Fallback — serve 404 page
-  RewriteRule ^ /kpnroofingshed/404/index.html [L]
+  # 4. Nothing matched → serve 404 page
+  RewriteRule ^ 404/index.html [L]
 </IfModule>
 
-# Correct MIME types so browsers don't block JS/CSS
+# Correct MIME types
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
   AddType text/css .css
   AddType image/webp .webp
   AddType image/avif .avif
+  AddType font/woff2 .woff2
 </IfModule>
 
-# Aggressive caching for static assets (images, fonts, JS, CSS)
+# Browser caching for static assets
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png  "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/avif "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 6 months"
+  ExpiresByType image/jpeg            "access plus 1 year"
+  ExpiresByType image/png             "access plus 1 year"
+  ExpiresByType image/webp            "access plus 1 year"
+  ExpiresByType image/avif            "access plus 1 year"
+  ExpiresByType image/svg+xml         "access plus 1 year"
+  ExpiresByType font/woff2            "access plus 1 year"
+  ExpiresByType text/css              "access plus 6 months"
   ExpiresByType application/javascript "access plus 6 months"
-  ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
-# Compress text files for faster delivery
+# Gzip compression
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
 </IfModule>

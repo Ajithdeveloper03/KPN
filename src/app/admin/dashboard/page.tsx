@@ -11,7 +11,7 @@ export default function DashboardPage() {
 
   const getApiUrl = () => {
     const isDev = process.env.NODE_ENV === 'development';
-    return isDev ? 'https://localhost/php/KPN/admin/api.php' : '/admin/api.php';
+    return isDev ? 'https://localhost/php/KPN/admin/api.php' : '/kpnroofingshed/admin/api.php';
   };
 
   const fetchBlogs = async () => {

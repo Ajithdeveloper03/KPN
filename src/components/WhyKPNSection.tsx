@@ -11,7 +11,7 @@ const Card = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: str
     {/* Hover Background Image for the box */}
     <div 
       className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" 
-      style={{ backgroundImage: 'url(/kpnroofingshed/images/night-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{ backgroundImage: 'url(/kpnroofingshed/images/image8.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="absolute inset-0 bg-[black]/75" />
     </div>

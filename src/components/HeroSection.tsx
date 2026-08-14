@@ -182,7 +182,7 @@ export default function HeroSection() {
       {/* 4. Curved Path and Interactive Nodes (Desktop Only) */}
       <div className="hidden md:block absolute bottom-0 left-0 w-full h-[60vh] z-30 pointer-events-none">
 
-        {/* The SVG Track (Perspective 3D Curve) */}
+        {/* The SVG Track — Deep S-Curve for dramatic perspective effect */}
         <svg
           className="w-full h-full absolute inset-0 transition-colors duration-700"
           viewBox="0 0 1200 380"
@@ -196,6 +196,7 @@ export default function HeroSection() {
             style={{ transition: 'stroke 0.7s ease' }}
             strokeWidth="7.5"
             strokeLinecap="round"
+            fill="none"
           />
         </svg>
 

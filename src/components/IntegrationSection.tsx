@@ -29,24 +29,31 @@ export default function IntegrationSection() {
   };
 
   useEffect(() => {
+    let ctx: any;
     const initGSAP = async () => {
       const gsapModule = await import("gsap");
       const gsap = gsapModule.default;
       
-      // Floating animation for icons
-      gsap.to(".floating-icon", {
-        y: -15,
-        duration: 2,
-        yoyo: true,
-        repeat: -1,
-        ease: "sine.inOut",
-        stagger: {
-          each: 0.2,
-          from: "random"
-        }
-      });
+      ctx = gsap.context(() => {
+        // Floating animation for icons
+        gsap.to(".floating-icon", {
+          y: -15,
+          duration: 2,
+          yoyo: true,
+          repeat: -1,
+          ease: "sine.inOut",
+          stagger: {
+            each: 0.2,
+            from: "random"
+          }
+        });
+      }, containerRef);
     };
     initGSAP();
+
+    return () => {
+      if (ctx) ctx.revert();
+    };
   }, []);
 
   return (
