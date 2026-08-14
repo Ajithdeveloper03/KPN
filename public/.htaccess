@@ -6,22 +6,29 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /kpnroofingshed/
 
-  # 1. Serve real existing files directly (JS, CSS, images, fonts, etc.)
+  # 1. If it's a real file (like JS, CSS, images), serve it directly
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  RewriteCond %{REQUEST_FILENAME}index.html -f
-  RewriteRule ^(.*/)?$ $1index.html [L]
+  # 2. If it's a real directory, let Apache serve index.html inside it
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-  # 3. No trailing slash but a directory/index.html exists → 301 redirect to add /
+  # 3. If someone accesses a path without a trailing slash (e.g. /about),
+  # check if the corresponding Next.js index.html exists, and rewrite to it.
   RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.+[^/])$ $1/ [R=301,L]
+  RewriteRule ^(.*)$ $1/index.html [L]
 
-  # 4. Nothing matched → serve 404 page
-  RewriteRule ^ 404/index.html [L]
+  # 4. Also fallback to .html if trailingSlash was false (just in case)
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  # 5. If nothing matched, serve the standard Next.js 404 page
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ 404.html [L]
 </IfModule>
 
-# Correct MIME types
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
   AddType text/css .css
@@ -48,4 +55,4 @@ DirectoryIndex index.html
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
 </IfModule>
 
-ErrorDocument 404 /kpnroofingshed/404/index.html
+ErrorDocument 404 /kpnroofingshed/404.html

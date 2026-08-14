@@ -7,7 +7,7 @@ import { Factory, Tractor, Droplets, Feather, Box, ShieldCheck, Check, Plus, Min
 
 export const metadata: Metadata = {
   title: 'Industrial Shed Construction India | KPN Roofing Shed',
-  description: 'KPN builds industrial sheds across India with heavy-gauge steel structures. In-house engineers, 13+ yrs experience, 10-year warranty. Get a free quote.',
+  description: 'KPN builds industrial sheds across India with heavy-gauge steel structures. In-house engineers, 10+ yrs experience, 10-year warranty. Get a free quote.',
   keywords: 'Industrial Shed Construction India, Steel Structure Company India',
 };
 
@@ -35,7 +35,7 @@ export default function IndustrialShedPage() {
                 Our Vision
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
-                Industrial Shed Construction India — <br className="hidden xl:block"/>
+                Industrial Shed — <br className="hidden xl:block"/>
                 <span className="font-serif italic font-medium text-[#062088]">Factory, Garment & Warehouse Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
@@ -48,17 +48,17 @@ export default function IndustrialShedPage() {
               
               {/* Image 1: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/kpnroofingshed/images/image4.jpeg" alt="Industrial Shed Construction India — KPN" fill className="object-cover" priority />
+                <Image src="/kpnroofingshed/images/image4.jpeg" alt="Industrial Shed — KPN" fill className="object-cover" priority />
               </div>
               
               {/* Image 2: Long Height (Center) */}
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/kpnroofingshed/images/image9.jpeg" alt="Industrial Shed Construction India — KPN" fill className="object-cover" priority />
+                <Image src="/kpnroofingshed/images/image9.jpeg" alt="Industrial Shed — KPN" fill className="object-cover" priority />
               </div>
               
               {/* Image 3: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/kpnroofingshed/images/image6.jpeg" alt="Industrial Shed Construction India — KPN" fill className="object-cover" priority />
+                <Image src="/kpnroofingshed/images/image6.jpeg" alt="Industrial Shed — KPN" fill className="object-cover" priority />
               </div>
 
             </div>
@@ -470,7 +470,7 @@ export default function IndustrialShedPage() {
                 { q: "Does KPN Roofing Shed cover projects outside Tamil Nadu?", a: "Yes. KPN provides factory and industrial roofing services all over India, from small factory units to large industrial sheds." },
                 { q: "What happens if my roofing shed gets damaged after installation?", a: "Free repair support is provided for covered damage, as per the applicable warranty terms." }
               ].map((faq, i) => (
-                <details key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <details name='faq' key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <summary className="flex justify-between items-center cursor-pointer list-none p-6 md:p-8 text-xl font-semibold text-[#111]">
                     <span className="flex gap-4" itemProp="name"><span className="text-slate-400">0{i+1}.</span> {faq.q}</span>
                     <span className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center shrink-0 transition-all duration-300 group-open:bg-[#ee0000] group-open:border-[#ee0000] group-open:text-white group-hover:border-[#111]">

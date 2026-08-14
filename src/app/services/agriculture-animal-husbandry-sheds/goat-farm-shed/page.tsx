@@ -33,7 +33,7 @@ export default function GoatFarmShedPage() {
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
             Goat Farm Shed <br />
-            <span className="text-[#f39c12] font-serif italic font-normal">Construction India</span>
+            
           </h1>
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -473,7 +473,7 @@ export default function GoatFarmShedPage() {
                 { q: "What warranty does KPN provide on goat farm sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets, with repair support for covered issues as per the applicable warranty terms." },
                 { q: "Does KPN build goat farm sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed undertakes goat farm shed projects across India, subject to site conditions and project requirements." }
               ].map((faq, i) => (
-                <details key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
+                <details name='faq' key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
                   <summary className="flex justify-between items-center font-bold text-xl text-[#2d3436] list-none">
                     {faq.q}
                     <span className="transform transition-transform duration-300 group-open:-rotate-180 text-[#d35400]">
@@ -493,7 +493,7 @@ export default function GoatFarmShedPage() {
         <section className="py-16 lg:py-24 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/kpnroofingshed/images/hero-bg.png" alt="goat farm shed construction India — KPN" fill className="object-cover" />
+            <Image src="/kpnroofingshed/images/hero-bg.png" alt="goat farm shed — KPN" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

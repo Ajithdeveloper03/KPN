@@ -30,8 +30,13 @@ export default function IntegrationSection() {
 
   useEffect(() => {
     let ctx: any;
+    let isUnmounted = false;
+    
     const initGSAP = async () => {
       const gsapModule = await import("gsap");
+      
+      if (isUnmounted) return;
+      
       const gsap = gsapModule.default;
       
       ctx = gsap.context(() => {
@@ -52,6 +57,7 @@ export default function IntegrationSection() {
     initGSAP();
 
     return () => {
+      isUnmounted = true;
       if (ctx) ctx.revert();
     };
   }, []);

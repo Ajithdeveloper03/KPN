@@ -1,42 +1,42 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ClipboardList, Ruler, FileText, Hammer, ShieldCheck } from "lucide-react";
+import { ClipboardList, MapPin, Ruler, Hammer, CheckCircle2 } from "lucide-react";
 
 const steps = [
   {
     number: "1",
-    title: "Site Visit & Requirement Assessment",
-    description: "Our engineers visit your site, assess ground conditions, layout constraints, and specific project requirements before anything else.",
+    title: "Requirement",
+    description: "Understand the customer's roofing requirement and intended usage.",
     icon: ClipboardList,
   },
   {
     number: "2",
-    title: "Structural Design & Material Planning",
-    description: "In-house structural engineers design custom trusses and plan every material, using Apollo-brand steel and our Coimbatore-manufactured flooring.",
-    icon: Ruler,
+    title: "Site Planning",
+    description: "Review the available space, dimensions, and project requirements.",
+    icon: MapPin,
   },
   {
     number: "3",
-    title: "Transparent Quote & 50% Advance to Start",
-    description: "You receive a fully itemized quote with zero hidden costs. Work begins once 50% advance is confirmed — remainder paid in installments as materials arrive.",
-    icon: FileText,
+    title: "Design & Planning",
+    description: "Develop the roofing structure based on project requirements.",
+    icon: Ruler,
   },
   {
     number: "4",
-    title: "Fabrication & On-Site Installation",
-    description: "The same KPN crew that designed your shed builds it on-site. No subcontractors — full accountability from fabrication to the final bolt.",
+    title: "Fabrication",
+    description: "Prepare the required structural components.",
     icon: Hammer,
   },
   {
     number: "5",
-    title: "Handover With Warranty & Maintenance Guidance",
-    description: "You receive the completed shed with a 10-year structural guarantee, 3-year replacement warranty on flooring, and free repair for any damage in the first year.",
-    icon: ShieldCheck,
+    title: "Installation",
+    description: "Install and complete the roofing structure at the project site.",
+    icon: CheckCircle2,
   },
 ];
 
-export default function ProcessSection() {
+export default function AboutProcessSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
@@ -99,22 +99,21 @@ export default function ProcessSection() {
 
   return (
     <section
-      id="process"
+      id="about-process"
       ref={sectionRef}
-      className="bg-white h-screen flex flex-col justify-center overflow-hidden relative z-10 process-section-wrapper"
+      className="bg-[#f8f9fa] h-screen flex flex-col justify-center overflow-hidden relative z-10 process-section-wrapper"
       style={{ minHeight: "700px" }}
     >
       {/* Fixed Header */}
       <div className="absolute top-20 left-0 w-full z-10 pointer-events-none">
         <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
-          <div className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full font-bold text-sm tracking-wide mb-4 border transition-colors duration-700 bg-[#ccecfb] text-[#00a3e0] border-[#00a3e0]/20`}>
-            <span className={`w-2 h-2 rounded-full bg-white`}></span>
-           Our Process
-          </div>
           <div className="overflow-hidden">
             <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading" data-reveal="text">
-              Our Shed Construction Process
+              From Planning to Installation
             </h2>
+            <p className="text-xl text-slate-600 font-medium max-w-3xl mx-auto mt-4" data-reveal="text">
+              KPN Roofing Shed follows a structured approach to roofing shed projects to maintain a clear workflow from initial requirement to project completion.
+            </p>
           </div>
         </div>
       </div>
@@ -135,19 +134,19 @@ export default function ProcessSection() {
           <path
             d="M 0,250 C 100,250 150,150 250,150 S 600,350 750,350 S 1100,150 1250,150 S 1600,350 1750,350 S 2100,150 2250,150 S 2400,250 2500,250"
             fill="none"
-            stroke="rgba(0,75,135,0.1)"
+            stroke="rgba(0,163,224,0.15)"
             strokeWidth="3"
             strokeLinecap="round"
           />
           <path
-            id="process-path"
+            id="about-process-path"
             ref={pathRef}
             d="M 0,250 C 100,250 150,150 250,150 S 600,350 750,350 S 1100,150 1250,150 S 1600,350 1750,350 S 2100,150 2250,150 S 2400,250 2500,250"
             fill="none"
-            stroke="#004b87"
+            stroke="#00a3e0"
             strokeWidth="8"
             strokeLinecap="round"
-            style={{ filter: "drop-shadow(0px 25px 6px rgba(100, 116, 139, 0.5))" }}
+            style={{ filter: "drop-shadow(0px 25px 6px rgba(0, 163, 224, 0.4))" }}
           />
         </svg>
 
@@ -167,7 +166,7 @@ export default function ProcessSection() {
                   left: "-80px",
                   top: "-120px",
                   fontSize: "240px",
-                  color: "rgba(0,0,0,0.03)",
+                  color: "rgba(0,163,224,0.04)",
                   lineHeight: 1,
                   zIndex: -1,
                 }}
@@ -176,9 +175,9 @@ export default function ProcessSection() {
               </div>
 
               {/* Icon Badge on the path */}
-              <div className="absolute w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-[0_12px_30px_rgba(0,75,135,0.15)] border-2 border-white z-10"
+              <div className="absolute w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-[0_12px_30px_rgba(0,163,224,0.2)] border-2 border-[#00a3e0]/10 z-10"
                 style={{ left: "-32px", top: "-32px" }}>
-                <Icon size={28} color="#004b87" strokeWidth={2.5} />
+                <Icon size={28} color="#00a3e0" strokeWidth={2.5} />
               </div>
 
               {/* Text Content */}

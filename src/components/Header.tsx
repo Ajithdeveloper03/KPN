@@ -47,7 +47,7 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-8 list-none m-0 p-0 items-center">
             <li><Link href="/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Home</Link></li>
-            <li><Link href="/about" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>About Us</Link></li>
+            <li><Link href="/about-us" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>About Us</Link></li>
             
             {/* Services Mega Menu */}
             <li 
@@ -166,7 +166,7 @@ export default function Header() {
       <div className={`fixed inset-0 bg-white/95 backdrop-blur-md z-[105] transition-transform duration-300 flex flex-col pt-24 pb-8 px-8 md:hidden overflow-y-auto ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <ul className="flex flex-col gap-6 list-none m-0 p-0">
           <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Home</Link></li>
-          <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
+          <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
           <li className="flex flex-col">
             <button onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)} className="flex items-center justify-between text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] w-full text-left">
               Services

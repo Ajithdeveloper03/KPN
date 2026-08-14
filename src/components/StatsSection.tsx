@@ -6,7 +6,7 @@ import { ArrowRight, Star } from "lucide-react";
 
 const statsCards = [
   {
-    title: "13+ Years",
+    title: "10+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
     img: "/kpnroofingshed/images/image8.jpeg"
@@ -123,7 +123,7 @@ export default function StatsSection() {
           {/* Left Content */}
           <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left" data-reveal="stagger">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1e2229] leading-[1.2] tracking-tight mb-6">
-              Experience the new KPN
+              KPN Roofing Shed At A Glance
             </h2>
             <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed mb-8">
               Get the best construction experience built on the three pillars of Quality, Durability and Transparent Pricing.

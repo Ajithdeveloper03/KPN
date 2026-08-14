@@ -393,7 +393,7 @@ export default function PoultryFarmShedPage() {
                 { q: "What warranty does KPN provide on poultry farm sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets, with free repair support for covered damage as per the applicable warranty terms." },
                 { q: "Does KPN build poultry farm sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed undertakes poultry farm shed projects across India, subject to site conditions and project requirements." }
               ].map((faq, i) => (
-                <details key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
+                <details name='faq' key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
                   <summary className="flex justify-between items-center font-bold text-xl text-[#2d3436] list-none">
                     {faq.q}
                     <span className="transform transition-transform duration-300 group-open:-rotate-180 text-[#d35400]">

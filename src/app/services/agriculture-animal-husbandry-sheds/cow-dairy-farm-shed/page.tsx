@@ -33,7 +33,7 @@ export default function CowDairyFarmShedPage() {
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
             Cow & Dairy Farm Shed <br />
-            <span className="text-[#f39c12] font-serif italic font-normal">Contractors India</span>
+            
           </h1>
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -286,7 +286,7 @@ export default function CowDairyFarmShedPage() {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/kpnroofingshed/images/image3.jpeg" alt="dairy farm shed contractors India — KPN" fill className="object-cover" />
+              <Image src="/kpnroofingshed/images/image3.jpeg" alt="dairy farm shed — KPN" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#d35400]/40 to-transparent"></div>
               <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[80%]">
                 <FileText className="text-[#d35400] mb-3" size={32} />
@@ -382,7 +382,7 @@ export default function CowDairyFarmShedPage() {
                 { q: "What warranty does KPN provide on dairy farm sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets, with repair support according to the applicable warranty terms." },
                 { q: "Does KPN build cow and dairy farm sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed builds cow and dairy farm sheds across India, subject to site visit and project scope." }
               ].map((faq, i) => (
-                <details key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
+                <details name='faq' key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
                   <summary className="flex justify-between items-center font-bold text-xl text-[#2d3436] list-none">
                     {faq.q}
                     <span className="transform transition-transform duration-300 group-open:-rotate-180 text-[#d35400]">
@@ -402,7 +402,7 @@ export default function CowDairyFarmShedPage() {
         <section className="py-16 lg:py-24 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/kpnroofingshed/images/hero-bg.png" alt="cow shed contractors India — KPN" fill className="object-cover" />
+            <Image src="/kpnroofingshed/images/hero-bg.png" alt="cow shed — KPN" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

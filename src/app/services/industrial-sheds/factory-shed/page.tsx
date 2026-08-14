@@ -19,7 +19,7 @@ export default function FactoryShedPage() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/kpnroofingshed/images/hero-bg.png" 
-            alt="Factory Shed Construction India — KPN" 
+            alt="Factory Shed — KPN" 
             fill 
             className="object-cover" 
             priority
@@ -33,7 +33,7 @@ export default function FactoryShedPage() {
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
             Factory Shed <br />
-            <span className="text-[#f39c12] font-serif italic font-normal">Construction India</span>
+            
           </h1>
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -319,7 +319,7 @@ export default function FactoryShedPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/kpnroofingshed/images/image4.jpeg" alt="Factory Shed Contractors India — KPN" fill className="object-cover" />
+              <Image src="/kpnroofingshed/images/image4.jpeg" alt="Factory Shed — KPN" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-bl from-[#3498db]/40 to-transparent"></div>
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function FactoryShedPage() {
                 { q: "How much does factory shed construction cost in India?", a: "Factory shed construction cost depends on the shed size, structural design, steel quantity, roofing materials, insulation, foundation requirements, location, and additional project requirements. KPN provides a project-specific quotation after site inspection and engineering assessment." },
                 { q: "Does KPN provide factory shed construction across India?", a: "Yes. KPN Roofing Shed provides factory shed construction, industrial roofing, steel shed fabrication, and PEB shed installation services across India, subject to project requirements and site conditions." }
               ].map((faq, i) => (
-                <details key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
+                <details name='faq' key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">
                   <summary className="flex justify-between items-center font-bold text-xl text-[#2d3436] list-none">
                     {faq.q}
                     <span className="transform transition-transform duration-300 group-open:-rotate-180 text-[#d35400]">
@@ -401,7 +401,7 @@ export default function FactoryShedPage() {
         <section className="py-16 lg:py-24 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/kpnroofingshed/images/hero-bg.png" alt="Factory Shed Contractors India — KPN" fill className="object-cover" />
+            <Image src="/kpnroofingshed/images/hero-bg.png" alt="Factory Shed — KPN" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

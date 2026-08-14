@@ -7,7 +7,7 @@ import { Factory, ShieldCheck, Check, Plus, Minus, ArrowRight, Home, Settings, M
 
 export const metadata: Metadata = {
   title: 'Home Roofing Sheds India | Terrace & Car Parking Sheds',
-  description: 'KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
+  description: 'KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 10+ years of experience. Get a free quote.',
   keywords: 'home roofing sheds India, residential roofing shed construction, terrace shed contractors India, car parking shed India',
 };
 
@@ -400,7 +400,7 @@ export default function HomeRoofingShedsPage() {
                 { q: "What warranty does KPN provide on home roofing sheds?", a: "KPN provides a 10-year guarantee, with free repair support for covered damage as per applicable warranty terms." },
                 { q: "Does KPN build home roofing sheds outside Tamil Nadu?", a: "Yes. KPN delivers home roofing projects pan-India." }
               ].map((faq, i) => (
-                <details key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <details name='faq' key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <summary className="flex justify-between items-center cursor-pointer list-none p-6 md:p-8 text-xl font-semibold text-[#111]">
                     <span className="flex gap-4" itemProp="name"><span className="text-slate-400">0{i+1}.</span> {faq.q}</span>
                     <span className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center shrink-0 transition-all duration-300 group-open:bg-[#ee0000] group-open:border-[#ee0000] group-open:text-white group-hover:border-[#111]">

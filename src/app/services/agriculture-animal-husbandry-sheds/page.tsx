@@ -7,7 +7,7 @@ import { Factory, Tractor, Droplets, Feather, Box, ShieldCheck, Check, Plus, Min
 
 export const metadata: Metadata = {
   title: 'Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed',
-  description: 'KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 13+ yrs experience, 20-day completion. Get a free quote.',
+  description: 'KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 10+ yrs experience, 20-day completion. Get a free quote.',
   keywords: 'Animal Shed Solutions India, Agricultural Sheds India, Modern Farm Sheds India, Goat Farm Shed Builders India, Dairy Farm Shed Contractors India, Poultry Shed Manufacturers India, Cow Shed Solutions India, Cattle Shed Builders India, Farm Infrastructure Solutions India',
 };
 
@@ -459,7 +459,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 { q: "How long does a farm shed take to complete?", a: "A 1440 sq.ft shed is completed in 20 days; a 2400 sq.ft shed takes about 1 month." },
                 { q: "Does KPN build farm sheds outside Tamil Nadu?", a: "Yes. KPN delivers agricultural and animal shed projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka." }
               ].map((faq, i) => (
-                <details key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300">
+                <details name='faq' key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300">
                   <summary className="flex justify-between items-center cursor-pointer list-none p-6 md:p-8 text-xl font-semibold text-[#111]">
                     <span className="flex gap-4"><span className="text-slate-400">0{i+1}.</span> {faq.q}</span>
                     <span className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center shrink-0 transition-all duration-300 group-open:bg-[#ee0000] group-open:border-[#ee0000] group-open:text-white group-hover:border-[#111]">

@@ -8,7 +8,7 @@ import QuoteButton from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
   title: 'Sports Turf Sheds India | Badminton & Cricket Turf Sheds | KPN',
-  description: 'KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
+  description: 'KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 10+ years of experience. Get a free quote.',
   keywords: 'Sports Turf Construction India, Sports Shed Contractors India, Badminton Court Shed India, Cricket Turf Construction India',
 };
 
@@ -36,7 +36,7 @@ export default function SportsTurfShedsPage() {
                 Our Vision
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
-                Sports Turf Construction India — <br className="hidden xl:block"/>
+                Sports Turf Sheds — <br className="hidden xl:block"/>
                 <span className="font-serif italic font-medium text-[#062088]">Badminton Court & Cricket Turf Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
@@ -368,7 +368,7 @@ export default function SportsTurfShedsPage() {
                 { q: "What warranty does KPN Roofing Shed provide on sports turf sheds?", a: "KPN Roofing Shed provides a 10-year guarantee on sports turf sheds, along with free repair support for covered damage, as per the applicable warranty terms." },
                 { q: "Does KPN Roofing Shed build sports turf sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed undertakes sports turf shed projects across India for schools, colleges, sports academies, clubs, apartment complexes, and private sports facilities." }
               ].map((faq, i) => (
-                <details key={i} className="group bg-[#f8f9fc] rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <details name='faq' key={i} className="group bg-[#f8f9fc] rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <summary className="flex justify-between items-center cursor-pointer list-none p-6 md:p-8 text-xl font-semibold text-[#111]">
                     <span className="flex gap-4" itemProp="name"><span className="text-slate-400">0{i+1}.</span> {faq.q}</span>
                     <span className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center shrink-0 transition-all duration-300 group-open:bg-[#ee0000] group-open:border-[#ee0000] group-open:text-white group-hover:border-[#111]">
