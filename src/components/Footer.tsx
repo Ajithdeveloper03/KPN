@@ -12,9 +12,9 @@ export default function Footer() {
     <>
       <footer className="relative bg-[#121316ea] border-t border-white/10 pt-16 pb-8 overflow-hidden">
         {/* Background Image Overlay */}
-        <div className="absolute inset-0 z-0 opacity-90 pointer-events-none mix-blend-overlay">
+        <div className="absolute inset-0 z-0 opacity-60 pointer-events-none mix-blend-overlay">
           <Image
-            src="/kpnroofingshed/images/image4.jpeg"
+            src="/kpnroofingshed/images/image3.jpeg"
             alt="Footer Background Image"
             fill
             sizes="100vw"
@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Dark Gradient for readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#121316] to-transparent pointer-events-none" />
 
-        <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr] gap-10 md:gap-12 mb-12">
+        <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_2fr_1.5fr] gap-10 md:gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -49,12 +49,26 @@ export default function Footer() {
             <ul className="list-none p-0 m-0 flex flex-col gap-3">
               <li><Link href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Home</Link></li>
               <li><Link href="/about" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">About Us</Link></li>
-              <li><Link href="/services/industrial-sheds" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Industrial Sheds</Link></li>
-              <li><Link href="/services/agriculture-animal-husbandry-sheds" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Agriculture Sheds</Link></li>
-              <li><Link href="/services/sports-turf-sheds" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Sports Turf Sheds</Link></li>
               <li><Link href="/gallery" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Gallery</Link></li>
               <li><Link href="/blog" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Contact Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Our Services */}
+          <div>
+            <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Our Services</h4>
+            <ul className="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li><Link href="/services/industrial-sheds/factory-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Factory Shed</Link></li>
+              <li><Link href="/services/industrial-sheds/garment-factory-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Garment Factory</Link></li>
+              <li><Link href="/services/industrial-sheds/warehouse-godown-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Warehouse Shed</Link></li>
+              <li><Link href="/services/home-roofing-sheds/terrace-roofing-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Terrace Roofing</Link></li>
+              <li><Link href="/services/home-roofing-sheds/car-parking-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Car Parking Shed</Link></li>
+              <li><Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Goat Farm Shed</Link></li>
+              <li><Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Cow Farm Shed</Link></li>
+              <li><Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Poultry Farm</Link></li>
+              <li><Link href="/services/sports-turf-sheds/badminton-court-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Badminton Court</Link></li>
+              <li><Link href="/services/sports-turf-sheds/cricket-turf-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Cricket Turf</Link></li>
             </ul>
           </div>
 

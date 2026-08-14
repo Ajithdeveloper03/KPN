@@ -31,7 +31,7 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
-                Building India's <br/> <span className="font-serif italic font-medium text-[#ee0000]">Strongest Structures</span>
+                Building India&apos;s <br/> <span className="font-serif italic font-medium text-[#ee0000]">Strongest Structures</span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed font-medium">
                 For over 13 years, KPN Roofing Shed has been at the forefront of industrial, agricultural, and sports infrastructure in India. What started as a small fabrication unit has evolved into a premier contracting firm that has successfully delivered over 600 projects pan-India.

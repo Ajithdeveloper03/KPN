@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface TocItem {
   id: string;
@@ -10,32 +10,44 @@ interface TocItem {
 export default function TableOfContents({ contentSelector = ".prose" }: { contentSelector?: string }) {
   const [toc, setToc] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState<string>("");
+  // Track IDs we generated ourselves (not server-rendered) to avoid mutating
+  // heading.id on nodes React hydrated, which causes reconciler crashes.
+  const generatedIds = useRef<Set<string>>(new Set());
 
   useEffect(() => {
-    // Wait for content to render, then parse headings
     const contentElement = document.querySelector(contentSelector);
     if (!contentElement) return;
 
-    const headings = Array.from(contentElement.querySelectorAll("h2, h3"));
+    const headings = Array.from(contentElement.querySelectorAll("h2, h3")) as HTMLElement[];
+
     const items: TocItem[] = headings.map((heading) => {
-      // Ensure heading has an ID
-      if (!heading.id) {
-        heading.id = heading.textContent?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") || Math.random().toString(36).substr(2, 9);
+      let id = heading.id;
+      if (!id) {
+        // Generate a stable ID without mutating server-rendered HTML directly
+        id =
+          heading.textContent
+            ?.toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/(^-|-$)/g, "") ||
+          Math.random().toString(36).substring(2, 9);
+        // Only set the attribute if we generated it (client-only)
+        heading.setAttribute("id", id);
+        generatedIds.current.add(id);
       }
       return {
-        id: heading.id,
+        id,
         text: heading.textContent || "",
         level: Number(heading.tagName.charAt(1)),
       };
     });
+
     setToc(items);
 
-    // Setup intersection observer for highlighting active section
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
+            setActiveId((entry.target as HTMLElement).id);
           }
         });
       },
@@ -43,7 +55,16 @@ export default function TableOfContents({ contentSelector = ".prose" }: { conten
     );
 
     headings.forEach((h) => observer.observe(h));
-    return () => observer.disconnect();
+
+    return () => {
+      observer.disconnect();
+      // Clean up any IDs we injected on unmount so the DOM is clean
+      generatedIds.current.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.removeAttribute("id");
+      });
+      generatedIds.current.clear();
+    };
   }, [contentSelector]);
 
   if (toc.length === 0) return null;

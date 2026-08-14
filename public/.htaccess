@@ -1,14 +1,53 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Redirect trailing slashes if not a directory
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)/$ /$1 [L,R=301]
+  # The Next.js app is deployed at /kpnroofingshed/
+  # All static HTML files live in the out/ directory mapped to /kpnroofingshed/
 
-  # Serve HTML file if it exists
-  RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.*)$ $1.html [L]
+  # Step 1: Let existing real files and directories through (images, JS, CSS, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-  # Optional: Handle 404s dynamically if using Next.js custom 404 page
-  ErrorDocument 404 /kpnroofingshed/404.html
+  # Step 2: For URLs under /kpnroofingshed/, try serving as-is, then as /index.html
+  # This handles trailingSlash: true static export where each page is /path/index.html
+
+  # If the request (with trailing slash) maps to an index.html, serve it
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f
+  RewriteRule ^(.+/)$ $1index.html [L]
+
+  # If the request maps to a directory containing index.html (no trailing slash)
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.+[^/])$ $1/index.html [L]
+
+  # Step 3: Fallback — serve 404 page
+  RewriteRule ^ /kpnroofingshed/404/index.html [L]
 </IfModule>
+
+# Correct MIME types so browsers don't block JS/CSS
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/webp .webp
+  AddType image/avif .avif
+</IfModule>
+
+# Aggressive caching for static assets (images, fonts, JS, CSS)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 6 months"
+  ExpiresByType application/javascript "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Compress text files for faster delivery
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+ErrorDocument 404 /kpnroofingshed/404/index.html

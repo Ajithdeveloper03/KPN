@@ -10,6 +10,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isNightMode, setIsNightMode] = useState(false);
+  const [isDropdownClicked, setIsDropdownClicked] = useState(false);
   
   const pathname = usePathname();
   const isHomePage = pathname === '/';
@@ -49,50 +50,58 @@ export default function Header() {
             <li><Link href="/about" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>About Us</Link></li>
             
             {/* Services Mega Menu */}
-            <li className="relative group">
-              <span className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>
+            <li 
+              className="relative group"
+              onMouseLeave={() => setIsDropdownClicked(false)}
+            >
+              <Link href="/services" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>
                 Services
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
+              </Link>
               
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] lg:w-[1050px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-4 group-hover:translate-y-0 overflow-hidden z-[100] border border-slate-100 p-4 lg:p-6">
+              <div 
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] lg:w-[1050px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-300 translate-y-4 overflow-hidden z-[100] border border-slate-100 p-4 lg:p-6 ${
+                  isDropdownClicked ? "opacity-0 invisible pointer-events-none" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
+                }`}
+                onClick={() => setIsDropdownClicked(true)}
+              >
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                   {/* Column 1 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/agriculture-animal-husbandry-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/kpnroofingshed/images/image2.jpeg" alt="Agriculture" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
+                      <Image src="/kpnroofingshed/images/image2.jpeg" alt="Agriculture" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Agriculture & Animal Husbandry</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/services/agriculture-animal-husbandry-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Tractor size={18} className="text-[#ee0000]" /> Goat Farm Shed</Link></li>
-                      <li><Link href="/services/agriculture-animal-husbandry-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Droplets size={18} className="text-[#ee0000]" /> Dairy Farm Shed</Link></li>
-                      <li><Link href="/services/agriculture-animal-husbandry-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Feather size={18} className="text-[#ee0000]" /> Poultry Farm Shed</Link></li>
+                      <li><Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Tractor size={18} className="text-[#ee0000]" /> Goat Farm Shed</Link></li>
+                      <li><Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Droplets size={18} className="text-[#ee0000]" /> Dairy Farm Shed</Link></li>
+                      <li><Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Feather size={18} className="text-[#ee0000]" /> Poultry Farm Shed</Link></li>
                     </ul>
                   </div>
                   
                   {/* Column 2 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/industrial-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/kpnroofingshed/images/image4.jpeg" alt="Industrial Shed" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
+                      <Image src="/kpnroofingshed/images/image4.jpeg" alt="Industrial Shed" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Industrial<br/>Shed</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/services/industrial-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Factory size={18} className="text-[#ee0000]" /> Factory Shed</Link></li>
-                      <li><Link href="/services/industrial-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Shirt size={18} className="text-[#ee0000]" /> Garment Factory Shed</Link></li>
-                      <li><Link href="/services/industrial-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Warehouse size={18} className="text-[#ee0000]" /> Warehouse & Godown</Link></li>
+                      <li><Link href="/services/industrial-sheds/factory-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Factory size={18} className="text-[#ee0000]" /> Factory Shed</Link></li>
+                      <li><Link href="/services/industrial-sheds/garment-factory-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Shirt size={18} className="text-[#ee0000]" /> Garment Factory Shed</Link></li>
+                      <li><Link href="/services/industrial-sheds/warehouse-godown-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Warehouse size={18} className="text-[#ee0000]" /> Warehouse & Godown</Link></li>
                     </ul>
                   </div>
                   
                   {/* Column 3 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/home-roofing-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/kpnroofingshed/images/image3.jpeg" alt="Home Roofing" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
+                      <Image src="/kpnroofingshed/images/image3.jpeg" alt="Home Roofing" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Home Roofing<br/>Sheds</h4>
@@ -107,15 +116,15 @@ export default function Header() {
                   {/* Column 4 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/sports-turf-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/kpnroofingshed/images/image7.jpeg" alt="Sports Turf" fill className="object-cover group-hover/title:scale-110 transition-transform duration-700" />
+                      <Image src="/kpnroofingshed/images/image7.jpeg" alt="Sports Turf" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Sports<br/>Turf</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link href="/services/sports-turf-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Activity size={18} className="text-[#ee0000]" /> Badminton Court</Link></li>
-                      <li><Link href="/services/sports-turf-sheds" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Trophy size={18} className="text-[#ee0000]" /> Cricket Turf Shed</Link></li>
+                      <li><Link href="/services/sports-turf-sheds/badminton-court-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Activity size={18} className="text-[#ee0000]" /> Badminton Court</Link></li>
+                      <li><Link href="/services/sports-turf-sheds/cricket-turf-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Trophy size={18} className="text-[#ee0000]" /> Cricket Turf Shed</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -168,31 +177,31 @@ export default function Header() {
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Agriculture & Animal Husbandry</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
-                    <li><Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
-                    <li><Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Poultry Farm Shed</Link></li>
+                    <li><Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
+                    <li><Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
+                    <li><Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Poultry Farm Shed</Link></li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Industrial Shed</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
-                    <li><Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
-                    <li><Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Warehouse & Godown Shed</Link></li>
+                    <li><Link href="/services/industrial-sheds/factory-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
+                    <li><Link href="/services/industrial-sheds/garment-factory-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
+                    <li><Link href="/services/industrial-sheds/warehouse-godown-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Warehouse & Godown Shed</Link></li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Home Roofing Sheds</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
                     <li><Link href="/services/home-roofing-sheds/terrace-roofing-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
-                    <li><Link href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
+                    <li><Link href="/services/home-roofing-sheds/car-parking-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Sports Turf</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link href="/services/sports-turf-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
-                    <li><Link href="/services/sports-turf-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
+                    <li><Link href="/services/sports-turf-sheds/badminton-court-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
+                    <li><Link href="/services/sports-turf-sheds/cricket-turf-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
                   </ul>
                 </div>
               </div>

@@ -94,16 +94,19 @@ export default function HeroSection() {
     changeSlide(nextIdx);
   };
 
-  // Auto-slide effect
+  // Use a ref to keep handleNext stable and avoid stale closures in the interval
+  const handleNextRef = useRef(handleNext);
+  handleNextRef.current = handleNext;
+
+  // Auto-slide effect — only depends on isAnimating to avoid rapid interval recreation
   useEffect(() => {
     const timer = setInterval(() => {
       if (!isAnimating) {
-        handleNext();
+        handleNextRef.current();
       }
     }, 5000);
     return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSlide, isAnimating]);
+  }, [isAnimating]);
 
   return (
     <section id="home" className={`relative min-h-[80dvh] md:min-h-[100dvh] w-full overflow-hidden flex flex-col font-sans select-none transition-colors duration-700 ${isNightMode ? 'bg-slate-900' : 'bg-slate-200'}`}>

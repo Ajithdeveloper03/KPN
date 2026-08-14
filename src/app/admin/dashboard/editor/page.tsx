@@ -40,12 +40,6 @@ function EditorForm() {
     return isDev ? 'https://localhost/php/KPN/admin/upload.php' : '/admin/upload.php';
   };
 
-  useEffect(() => {
-    if (id) {
-      fetchBlog(id);
-    }
-  }, [id]);
-
   const fetchBlog = async (blogId: string) => {
     setLoading(true);
     try {
