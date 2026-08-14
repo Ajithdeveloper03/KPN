@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 opacity-60 pointer-events-none mix-blend-overlay">
           <Image
-            src="/kpnroofingshed/images/image3.jpeg"
+            src="/images/image3.jpeg"
             alt="Footer Background Image"
             fill
             sizes="100vw"
@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <Image
-                src="/kpnroofingshed/images/logo.jpg"
+                src="/images/logo.jpg"
                 alt="KPN Roofing Shed Logo"
                 width={48}
                 height={48}

@@ -14,25 +14,25 @@ const servicesList = [
   {
     title: 'Industrial Sheds',
     href: '/services/industrial-sheds',
-    img: '/kpnroofingshed/images/image4.jpeg',
+    img: '/images/image4.jpeg',
     desc: 'Heavy-duty steel structures for factories, garments, and warehouses.',
   },
   {
     title: 'Agriculture & Animal Husbandry Sheds',
     href: '/services/agriculture-animal-husbandry-sheds',
-    img: '/kpnroofingshed/images/image2.jpeg',
+    img: '/images/image2.jpeg',
     desc: 'Reliable sheds for poultry, cattle, goat farms, and agriculture.',
   },
   {
     title: 'Home Roofing Sheds',
     href: '/services/home-roofing-sheds',
-    img: '/kpnroofingshed/images/image3.jpeg',
+    img: '/images/image3.jpeg',
     desc: 'Aesthetic and durable roofing for home car parking and terraces.',
   },
   {
     title: 'Sports Turf Sheds',
     href: '/services/sports-turf-sheds',
-    img: '/kpnroofingshed/images/image1.jpeg',
+    img: '/images/image1.jpeg',
     desc: 'High-clearance sheds for badminton courts and cricket turfs.',
   }
 ];

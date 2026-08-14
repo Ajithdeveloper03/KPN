@@ -30,7 +30,7 @@ export default function QuoteModal() {
     setErrorMessage("");
     try {
       const isDev = process.env.NODE_ENV === 'development';
-      const apiUrl = isDev ? 'http://localhost/php/KPN/mailer/send_mail.php' : '/kpnroofingshed/mailer/send_mail.php';
+      const apiUrl = isDev ? 'http://localhost/php/KPN/mailer/send_mail.php' : '/mailer/send_mail.php';
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
@@ -72,7 +72,7 @@ export default function QuoteModal() {
         {/* Left Side: Image Cover (Hidden on Mobile) */}
         <div 
           className="hidden md:block w-1/2 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('/kpnroofingshed/images/image1.jpeg')" }}
+          style={{ backgroundImage: "url('/images/image1.jpeg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-[#062088]/80 to-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8 text-white">

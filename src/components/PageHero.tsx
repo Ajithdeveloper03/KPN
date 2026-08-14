@@ -11,14 +11,15 @@ interface Breadcrumb {
 interface PageHeroProps {
   title: string;
   breadcrumbs: Breadcrumb[];
+  bgImage?: string;
 }
 
-export default function PageHero({ title, breadcrumbs }: PageHeroProps) {
+export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-bg.png" }: PageHeroProps) {
   return (
     <div className="relative w-full h-[60vh] min-h-[450px] flex flex-col justify-center items-center overflow-hidden bg-slate-900 mt-0">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/kpnroofingshed/images/night-bg.png"
+          src={bgImage}
           alt={`${title} Background`}
           fill
           className="object-cover opacity-90"

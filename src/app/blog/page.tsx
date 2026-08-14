@@ -9,7 +9,7 @@ export default function BlogArchivePage() {
   const staticBlog = {
     slug: "ultimate-guide-to-roofing-sheds",
     title: "The Ultimate Guide to Roofing Shed Construction",
-    image: "/kpnroofingshed/images/image2.jpeg",
+    image: "/images/image2.jpeg",
     category: "Guides",
     created_at: new Date().toISOString(),
     read_time: "8 min read",
@@ -27,6 +27,7 @@ export default function BlogArchivePage() {
           { label: "Home", href: "/" },
           { label: "Blog", href: "/blog/" }
         ]} 
+        bgImage="/images/services/terrace-shed-banner-image.png"
       />
 
       <main className="flex-grow">
@@ -49,7 +50,7 @@ export default function BlogArchivePage() {
               <article key={idx} className="bg-white rounded-[2rem] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col">
                 <Link href={`/blog/${post.slug}/`} className="relative w-full h-[240px] block overflow-hidden">
                   <Image 
-                    src={post.image || "/kpnroofingshed/images/placeholder.jpg"} 
+                    src={post.image || "/images/placeholder.jpg"} 
                     alt={post.title} 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-700"

@@ -29,7 +29,7 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/kpnroofingshed/mailer/send_mail.php", {
+      const response = await fetch("/mailer/send_mail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

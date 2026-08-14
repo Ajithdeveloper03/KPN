@@ -70,25 +70,31 @@ export default function TableOfContents({ contentSelector = ".prose" }: { conten
   if (toc.length === 0) return null;
 
   return (
-    <div className="sticky top-32 p-6 bg-white border border-slate-100 rounded-2xl shadow-sm">
-      <h4 className="text-lg font-bold text-[#111] mb-4 uppercase tracking-wider">Table of Contents</h4>
-      <ul className="space-y-3">
-        {toc.map((item) => (
-          <li key={item.id} style={{ marginLeft: `${(item.level - 2) * 1}rem` }}>
-            <a
-              href={`#${item.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className={`block text-sm font-medium transition-colors ${
-                activeId === item.id ? "text-[#ee0000]" : "text-slate-500 hover:text-[#062088]"
-              }`}
-            >
-              {item.text}
-            </a>
-          </li>
-        ))}
+    <div className="sticky top-32 p-6 bg-white border border-slate-100 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.04)]">
+      <h4 className="text-lg font-extrabold text-[#111] mb-6 tracking-tight">Table of Contents</h4>
+      <ul className="space-y-1 relative before:absolute before:inset-y-0 before:left-0 before:w-px before:bg-slate-200">
+        {toc.map((item) => {
+          const isActive = activeId === item.id;
+          return (
+            <li key={item.id} className="relative">
+              <a
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className={`block py-2.5 pr-4 pl-4 text-[15px] font-medium transition-all duration-300 relative z-10 ${
+                  isActive 
+                    ? "text-[#ee0000] font-bold bg-[#ee0000]/5 rounded-r-lg border-l-[3px] border-[#ee0000] -ml-px" 
+                    : "text-slate-500 hover:text-[#111] border-l-[3px] border-transparent -ml-px hover:border-slate-300"
+                }`}
+                style={{ marginLeft: item.level > 2 ? `${(item.level - 2) * 1}rem` : "-1px" }}
+              >
+                {item.text}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

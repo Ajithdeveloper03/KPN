@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function AgricultureAnimalHusbandryPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
-      <PageHero 
+      <PageHero  
         title="Agriculture & Animal Husbandry" 
-        breadcrumbs={[
+         bgImage="/images/services/agriculture-and-animal-husbenday-bannar-image.png" breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/#services" },
           { label: "Agriculture & Animal Husbandry", href: "/services/agriculture-animal-husbandry-sheds" }
@@ -49,17 +49,17 @@ export default function AgricultureAnimalHusbandryPage() {
               
               {/* Image 1: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/kpnroofingshed/images/image1.jpeg" alt="Goat Shed" fill className="object-cover" priority />
+                <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="Goat Shed" fill className="object-cover" priority />
               </div>
               
               {/* Image 2: Long Height (Center) */}
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/kpnroofingshed/images/image8.jpeg" alt="Dairy Shed" fill className="object-cover" priority />
+                <Image src="/images/services/agriculture01.png" alt="Dairy Shed" fill className="object-cover" priority />
               </div>
               
               {/* Image 3: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/kpnroofingshed/images/image5.jpeg" alt="Poultry Shed" fill className="object-cover" priority />
+                <Image src="/images/services/animal-final-image.png" alt="Poultry Shed" fill className="object-cover" priority />
               </div>
 
             </div>
@@ -157,7 +157,7 @@ export default function AgricultureAnimalHusbandryPage() {
               {/* Goat Shed - White Card */}
               <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
                 <div className="relative w-full h-[300px] rounded-[1.5rem] overflow-hidden mb-10">
-                  <Image src="/kpnroofingshed/images/image1.jpeg" alt="goat farm shed roofing India" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/animal-why.png" alt="goat farm shed roofing India" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <div className="px-6 flex justify-between items-end">
                   <div className="max-w-[80%] space-y-4">
@@ -183,7 +183,7 @@ export default function AgricultureAnimalHusbandryPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/kpnroofingshed/images/image5.jpeg" alt="poultry shed manufacturers" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="poultry shed manufacturers" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <button className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
@@ -205,7 +205,7 @@ export default function AgricultureAnimalHusbandryPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/kpnroofingshed/images/image8.jpeg" alt="cow shed with milking area India" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="cow shed with milking area India" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <button className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
@@ -222,7 +222,7 @@ export default function AgricultureAnimalHusbandryPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/kpnroofingshed/images/image2.jpeg" alt="cattle shed builders" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="cattle shed builders" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <button className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
@@ -235,7 +235,7 @@ export default function AgricultureAnimalHusbandryPage() {
           {/* Farm Infrastructure Solutions (Full Width Card) */}
           <div className="mt-8 lg:mt-12 bg-[#111] rounded-[2rem] p-10 md:p-16 shadow-lg relative overflow-hidden group">
             <div className="absolute inset-0 z-0">
-              <Image src="/kpnroofingshed/images/image6.jpeg" alt="Farm Infrastructure Background" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="Farm Infrastructure Background" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="absolute inset-0 z-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/70"></div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -278,7 +278,7 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
               {/* The "Laptop" replacement: A large crisp image of a shed */}
               <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                <Image src="/kpnroofingshed/images/hero-bg.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
+                <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
               </div>
               
               {/* The Floating Checklist Block */}
@@ -447,7 +447,7 @@ export default function AgricultureAnimalHusbandryPage() {
               </div>
               {/* Solid Image under the title */}
               <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/kpnroofingshed/images/image4.jpeg" alt="FAQ Agriculture Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="FAQ Agriculture Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
             
@@ -482,7 +482,7 @@ export default function AgricultureAnimalHusbandryPage() {
         <section className="py-12 lg:py-12 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/kpnroofingshed/images/hero-bg.png" alt="Agriculture Sheds CTA" fill className="object-cover" />
+            <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="Agriculture Sheds CTA" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

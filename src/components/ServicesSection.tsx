@@ -11,7 +11,7 @@ const services = [
     icon: Factory,
     title: "Industrial & Factory Shed Construction",
     desc: "Our industrial shed construction covers factories, warehouses, and godowns with heavy-gauge steel structures built for load-bearing equipment, racking, and vehicle movement. As factory shed contractors, we plan every structure around your production layout. Long spans and minimal columns give warehouse owners maximum usable floor space.",
-    image: "/kpnroofingshed/images/image6.jpeg",
+    image: "/images/services/industrial-banner-image.png",
     alt: "Industrial factory warehouse shed construction by KPN",
   },
   {
@@ -19,7 +19,7 @@ const services = [
     icon: Leaf,
     title: "Agricultural & Animal Shed Solutions",
     desc: "KPN is a trusted name in agricultural sheds and animal shed solutions — goat, dairy, cattle, and poultry structures engineered for ventilation, drainage, and animal comfort. Our modern farm sheds are customizable in size and layout, from small farm setups to large commercial operations.",
-    image: "/kpnroofingshed/images/imag10.jpeg",
+    image: "/images/services/agriculture-and-animal-husbenday-bannar-image.png",
     alt: "Agricultural farm animal shed solution by KPN",
   },
   {
@@ -27,7 +27,7 @@ const services = [
     icon: Home,
     title: "Home & Recreational Sheds",
     desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures — along with turf grounds and badminton court sheds, built with the same weatherproof roofing standards used across our industrial and farm projects.",
-    image: "/kpnroofingshed/images/image7.jpeg",
+    image: "/images/services/home-roofing-shed-banner-image.png",
     alt: "Home terrace parking shades and sports turf roofing sheds by KPN",
   }
 ];
@@ -42,7 +42,7 @@ export default function ServicesSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 opacity-50">
         <Image
-          src="/kpnroofingshed/images/imag10.jpeg"
+          src="/images/services/factory-banner-image.png"
           alt="Services Background"
           fill
           sizes="100vw"

@@ -37,7 +37,7 @@ export default function FAQSection() {
   return (
     <section id="faqs" className="relative py-12 md:py-16 overflow-hidden">
       {/* Roofing background — morning-bg for warm earthy light */}
-      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/kpnroofingshed/images/image5.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/image5.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="absolute inset-0 bg-[#fbfdfa]" />
       </div>
       <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
@@ -97,7 +97,7 @@ export default function FAQSection() {
           {/* Right Column: Image */}
           <div className="relative h-full min-h-[400px] w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,163,224,0.15)] group" data-reveal="image">
             <Image
-              src="/kpnroofingshed/images/image9.jpeg"
+              src="/images/image9.jpeg"
               alt="KPN Roofing Shed FAQ Industrial Facility"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

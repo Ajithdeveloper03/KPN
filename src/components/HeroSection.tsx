@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    frontImage: "/kpnroofingshed/images/roofing2.png",
+    frontImage: "/images/roofing.png",
     title: "Industrial",
     color: "#062088", // KPN Blue
     pathPercent: 0.15,
@@ -16,7 +16,7 @@ const slides = [
   },
   {
     id: 2,
-    frontImage: "/kpnroofingshed/images/roofing.png",
+    frontImage: "/images/roofing2.png",
     title: "Agricultural",
     color: "#ffe600", // KPN Yellow
     pathPercent: 0.45,
@@ -24,7 +24,7 @@ const slides = [
   },
   {
     id: 3,
-    frontImage: "/kpnroofingshed/images/roofing3.png",
+    frontImage: "/images/roofing3.png",
     title: "Home Roofing",
     
     color: "#ee0000", // KPN Red
@@ -33,7 +33,7 @@ const slides = [
   },
   {
     id: 4,
-    frontImage: "/kpnroofingshed/images/roofing2.png",
+    frontImage: "/images/roofing5.png",
     title: "Sports Turf",
     color: "#00a3e0", // KPN Cyan
     pathPercent: 0.85,
@@ -114,7 +114,7 @@ export default function HeroSection() {
       {/* 1. Static Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={isNightMode ? "/kpnroofingshed/images/night-bg.png" : "/kpnroofingshed/images/hero-bg.png"}
+          src={isNightMode ? "/images/night-bg.png" : "/images/hero-bg.png"}
           alt="KPN Hero Background"
           fill
           className="object-cover opacity-80 transition-opacity duration-1000"

@@ -11,7 +11,7 @@ const Card = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: str
     {/* Hover Background Image for the box */}
     <div 
       className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" 
-      style={{ backgroundImage: 'url(/kpnroofingshed/images/image8.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{ backgroundImage: 'url(/images/image8.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="absolute inset-0 bg-[black]/75" />
     </div>
@@ -119,7 +119,7 @@ export default function WhyKPNSection() {
                 {/* Inner circle with image - Reverse spin to keep image upright */}
                 <div className="w-40 h-40 rounded-full bg-white flex items-center justify-center shadow-[0_15px_40px_rgba(0,163,224,0.15)] relative overflow-hidden border-4 border-white animate-[spin_15s_linear_infinite_reverse]">
                   <Image
-                    src="/kpnroofingshed/images/logo.jpg"
+                    src="/images/logo.jpg"
                     alt="KPN Logo"
                     fill
                     className="object-cover"

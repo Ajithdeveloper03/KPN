@@ -17,32 +17,32 @@ export default function AboutSection() {
         
         {/* Img 1: Far Left (Lowest) */}
         <div data-reveal="image" className="absolute left-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image1.jpeg" fill sizes="250px" alt="About 1" className="object-cover" />
+          <Image src="/images/image1.jpeg" fill sizes="250px" alt="About 1" className="object-cover" />
         </div>
 
         {/* Img 2: Mid Left (Higher, Taller) */}
         <div data-reveal="image" className="absolute left-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image2.jpeg" fill sizes="250px" alt="About 2" className="object-cover" />
+          <Image src="/images/image2.jpeg" fill sizes="250px" alt="About 2" className="object-cover" />
         </div>
 
         {/* Img 3: Center Left (Highest) */}
         <div data-reveal="image" className="absolute left-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image3.jpeg" fill sizes="250px" alt="About 3" className="object-cover" />
+          <Image src="/images/image3.jpeg" fill sizes="250px" alt="About 3" className="object-cover" />
         </div>
 
         {/* Img 4: Center Right (Highest) */}
         <div data-reveal="image" className="absolute right-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image4.jpeg" fill sizes="250px" alt="About 4" className="object-cover" />
+          <Image src="/images/image4.jpeg" fill sizes="250px" alt="About 4" className="object-cover" />
         </div>
 
         {/* Img 5: Mid Right (Higher, Taller) */}
         <div data-reveal="image" className="absolute right-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image5.jpeg" fill sizes="250px" alt="About 5" className="object-cover" />
+          <Image src="/images/image5.jpeg" fill sizes="250px" alt="About 5" className="object-cover" />
         </div>
 
         {/* Img 6: Far Right (Lowest) */}
         <div data-reveal="image" className="absolute right-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/kpnroofingshed/images/image1.jpeg" fill sizes="250px" alt="About 6" className="object-cover" />
+          <Image src="/images/image1.jpeg" fill sizes="250px" alt="About 6" className="object-cover" />
         </div>
 
         {/* Central Text Content */}
@@ -100,12 +100,12 @@ export default function AboutSection() {
         {/* Mobile Image Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full" data-reveal="stagger">
           {[
-            "/kpnroofingshed/images/image1.png",
-            "/kpnroofingshed/images/image2.png",
-            "/kpnroofingshed/images/morning-bg.png",
-            "/kpnroofingshed/images/night-bg.png",
-            "/kpnroofingshed/images/service-bg.png",
-            "/kpnroofingshed/images/image1.png"
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/morning-bg.png",
+            "/images/night-bg.png",
+            "/images/service-bg.png",
+            "/images/image1.png"
           ].map((src, idx) => (
             <div key={idx} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform">
               <Image src={src} sizes="(max-width: 768px) 50vw, 33vw" alt={`About KPN ${idx}`} fill className="object-cover" />

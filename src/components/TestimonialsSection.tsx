@@ -10,8 +10,8 @@ const testimonials = [
     property: "Industrial & Home Shed Works",
     quote: "Excellent service from KPN Roofing Shed. They completed our Roofing Shed Construction in Trichy with strong materials and perfect finishing. Highly recommended for industrial and home shed works.",
     rating: 5.0,
-    bgImage: "/kpnroofingshed/images/image4.jpeg",
-    avatar: "/kpnroofingshed/images/image1.png"
+    bgImage: "/images/image4.jpeg",
+    avatar: "/images/image1.png"
   },
   {
     name: "Latha Sethurajan",
@@ -19,8 +19,8 @@ const testimonials = [
     property: "Terrace Roofing Shed",
     quote: "KPN Roofing Shed done terrace shed with excellent quality materials. Really valuable and worth every rupee. The workmanship was top-notch and completed on time.",
     rating: 5.0,
-    bgImage: "/kpnroofingshed/images/image3.jpeg",
-    avatar: "/kpnroofingshed/images/image2.png"
+    bgImage: "/images/image3.jpeg",
+    avatar: "/images/image2.png"
   },
   {
     name: "Sasi Kumar",
@@ -28,8 +28,8 @@ const testimonials = [
     property: "Farm Shed Flooring",
     quote: "I bought flooring for my goat shed from KPN — it is a really good product. Durable, easy to clean, and the farm animals are comfortable. Very satisfied with the purchase.",
     rating: 5.0,
-    bgImage: "/kpnroofingshed/images/image2.jpeg",
-    avatar: "/kpnroofingshed/images/image1.png"
+    bgImage: "/images/image2.jpeg",
+    avatar: "/images/image1.png"
   },
   {
     name: "Vijay Vijay",
@@ -37,8 +37,8 @@ const testimonials = [
     property: "Home Roofing Project",
     quote: "I recently bought a flooring product from KPN — it is good in quality and the service was very good. The team was responsive and the installation was smooth from start to finish.",
     rating: 5.0,
-    bgImage: "/kpnroofingshed/images/image9.jpeg",
-    avatar: "/kpnroofingshed/images/image2.png"
+    bgImage: "/images/image9.jpeg",
+    avatar: "/images/image2.png"
   }
 ];
 

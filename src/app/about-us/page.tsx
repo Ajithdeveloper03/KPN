@@ -47,6 +47,7 @@ export default function AboutUsPage() {
           { label: "Home", href: "/" },
           { label: "About Us", href: "/about-us" }
         ]} 
+        bgImage="/images/services/industrial-banner-image.png"
       />
 
       <main className="flex-grow">
@@ -75,7 +76,7 @@ export default function AboutUsPage() {
             <div className="w-full lg:w-1/2" data-reveal="image">
               <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 group">
                 <Image 
-                  src="/kpnroofingshed/images/image1.jpeg" 
+                  src="/images/services/industrial-banner-image.png" 
                   alt="KPN Roofing Shed Construction Site" 
                   fill 
                   className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -100,7 +101,7 @@ export default function AboutUsPage() {
               <div className="w-full md:w-5/12 lg:w-1/3" data-reveal="image">
                 <div className="relative w-full max-w-[400px] mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-[6px] border-white">
                   <Image 
-                    src="/kpnroofingshed/images/founder.png" 
+                    src="/images/founder.png" 
                     alt="Mr. P. M. Puyamurthi Gobi - Founder of KPN Roofing Shed" 
                     fill 
                     className="object-cover" 
@@ -231,7 +232,7 @@ export default function AboutUsPage() {
               {/* Center Column: Image */}
               <div className="w-full order-1 lg:order-2" data-reveal="image">
                 <div className="relative w-full max-w-[450px] mx-auto aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-[#f8f9fa]">
-                  <Image src="/kpnroofingshed/images/image5.jpeg" alt="KPN Advantage Industrial Shed" fill className="object-cover" />
+                  <Image src="/images/image5.jpeg" alt="KPN Advantage Industrial Shed" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#004b87]/90 to-transparent flex items-end p-8">
                     <div className="text-white">
                       <div className="w-14 h-14 bg-[#ffcc00] text-[#111] rounded-2xl flex items-center justify-center mb-4">
@@ -372,7 +373,7 @@ export default function AboutUsPage() {
         {/* CTA Section */}
         <section className="py-12 lg:py-16 relative overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
-            <Image src="/kpnroofingshed/images/image7.jpeg" alt="Roofing Construction Site" fill className="object-cover" />
+            <Image src="/images/image7.jpeg" alt="Roofing Construction Site" fill className="object-cover" />
             <div className="absolute inset-0 bg-[#004b87]/95 mix-blend-multiply"></div>
           </div>
           <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-center">

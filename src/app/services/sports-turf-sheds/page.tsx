@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function SportsTurfShedsPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
-      <PageHero 
+      <PageHero  
         title="Sports Turf Sheds" 
-        breadcrumbs={[
+         bgImage="/images/services/sports-turf-main-banner.png" breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/#services" },
           { label: "Sports Turf Sheds", href: "/services/sports-turf-sheds" }
@@ -47,13 +47,13 @@ export default function SportsTurfShedsPage() {
             {/* Right Side: Image Gallery */}
             <div className="w-full lg:w-1/2 flex items-center justify-center gap-2 md:gap-3 mt-16 lg:mt-0">
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/kpnroofingshed/images/image7.jpeg" alt="Sports Turf Shed" fill className="object-cover" priority />
+                <Image src="/images/services/sports-turf-main-banner.png" alt="Sports Turf Shed" fill className="object-cover" priority />
               </div>
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/kpnroofingshed/images/image3.jpeg" alt="Badminton Court Shed India" fill className="object-cover" priority />
+                <Image src="/images/services/sports-turf-1-section-1-image.png" alt="Badminton Court Shed India" fill className="object-cover" priority />
               </div>
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/kpnroofingshed/images/image6.jpeg" alt="Cricket Turf Construction India" fill className="object-cover" priority />
+                <Image src="/images/services/sports-turf-1-section-2-image.png" alt="Cricket Turf Construction India" fill className="object-cover" priority />
               </div>
             </div>
 
@@ -145,7 +145,7 @@ export default function SportsTurfShedsPage() {
               {/* Badminton */}
               <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
                 <div className="relative w-full h-[300px] rounded-[1.5rem] overflow-hidden mb-10">
-                  <Image src="/kpnroofingshed/images/image7.jpeg" alt="Badminton Court Shed" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/sports-turf-main-banner.png" alt="Badminton Court Shed" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <div className="px-6 flex justify-between items-end">
                   <div className="max-w-[85%] space-y-4">
@@ -171,7 +171,7 @@ export default function SportsTurfShedsPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/kpnroofingshed/images/image9.jpeg" alt="Cricket Turf Shed" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/sports-turf-main-banner.png" alt="Cricket Turf Shed" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <QuoteButton className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
@@ -249,7 +249,7 @@ export default function SportsTurfShedsPage() {
 
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/kpnroofingshed/images/hero-bg.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
+                  <Image src="/images/services/sports-turf-main-banner.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
                 </div>
                 
                 <div className="relative -mt-16 mx-4 md:absolute md:mx-0 md:mt-0 md:right-auto md:-bottom-10 md:-left-12 lg:-left-20 bg-[#ffcc00] rounded-3xl p-6 md:p-10 shadow-2xl border border-[#ffcc00]/50 z-20 md:w-[480px]">
@@ -356,7 +356,7 @@ export default function SportsTurfShedsPage() {
                 </h2>
               </div>
               <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/kpnroofingshed/images/image4.jpeg" alt="FAQ Sports Turf Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/services/sports-turf-main-banner.png" alt="FAQ Sports Turf Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
             
@@ -389,7 +389,7 @@ export default function SportsTurfShedsPage() {
         {/* ---------------- High Impact CTA ---------------- */}
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image src="/kpnroofingshed/images/hero-bg.png" alt="Sports Turf Sheds CTA" fill className="object-cover" />
+            <Image src="/images/services/sports-turf-main-banner.png" alt="Sports Turf Sheds CTA" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

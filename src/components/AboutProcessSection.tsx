@@ -186,7 +186,7 @@ export default function AboutProcessSection() {
                 className="absolute w-[280px] text-center"
                 style={{
                   left: "-140px",
-                  ...(isPeak ? { top: "60px" } : { bottom: "60px" }),
+                  ...(isPeak ? { bottom: "60px" } : { top: "60px" }),
                 }}
               >
                 <h3 className="text-lg font-extrabold text-[#1e2229] mb-2 font-heading">{step.title}</h3>
