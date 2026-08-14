@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2, Shield, Calendar, Wrench, FileText, ChevronDown, Phone, MessageCircle, MapPin, ArrowRight, Check, Box, Factory, Settings, Wind } from 'lucide-react';
+import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   title: 'Factory Shed Construction India | Industrial Shed Contractors | KPN',
@@ -59,9 +60,9 @@ export default function FactoryShedPage() {
                 <p>Each factory shed is planned around your plot size, machinery layout, production flow, storage requirements, roof height, ventilation, and future expansion needs.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="bg-[#d35400] hover:bg-[#e67e22] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-1 text-center text-lg inline-flex items-center justify-center cursor-pointer">
+                <QuoteButton className="bg-[#d35400] hover:bg-[#e67e22] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-1 text-center text-lg inline-flex items-center justify-center cursor-pointer">
                   Get Free Quote
-                </Link>
+                </QuoteButton>
                 <a href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="bg-[#2d3436] hover:bg-[#1a1e1f] text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 text-lg shadow-lg hover:-translate-y-1 cursor-pointer">
                   <MessageCircle size={24} /> WhatsApp Us
                 </a>
@@ -416,9 +417,9 @@ export default function FactoryShedPage() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <div className="w-full sm:w-auto flex flex-col items-center">
-                <Link href="/contact" className="w-full sm:w-auto bg-[#f39c12] text-[#111] font-bold text-xl py-4 px-12 rounded-full transition-transform hover:-translate-y-1 shadow-[0_10px_30px_rgba(243,156,18,0.4)] mb-3 flex items-center justify-center cursor-pointer">
+                <QuoteButton className="w-full sm:w-auto bg-[#f39c12] text-[#111] font-bold text-xl py-4 px-12 rounded-full transition-transform hover:-translate-y-1 shadow-[0_10px_30px_rgba(243,156,18,0.4)] mb-3 flex items-center justify-center cursor-pointer">
                   Get Free Quote
-                </Link>
+                </QuoteButton>
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
                 <a href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-bold text-xl py-4 px-12 rounded-full transition-transform hover:-translate-y-1 shadow-lg flex items-center justify-center gap-2 cursor-pointer">

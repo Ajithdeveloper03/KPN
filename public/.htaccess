@@ -10,20 +10,29 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 2. If it's a real directory, let Apache serve index.html inside it
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # 2. Add trailing slash to paths if the corresponding Next.js folder exists
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/kpnroofingshed/$1/ -d
+  RewriteRule ^(.*[^/])$ $1/ [R=301,L]
 
-  # 3. If someone accesses a path without a trailing slash (e.g. /about),
-  # check if the corresponding Next.js index.html exists, and rewrite to it.
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  # 3. Explicitly map trailing slash requests to the internal index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/kpnroofingshed/$1/index.html -f
+  RewriteRule ^(.*)/$ $1/index.html [L]
+
+  # 4. Handle non-trailing slash fallback directly to index.html (just in case)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/kpnroofingshed/$1/index.html -f
   RewriteRule ^(.*)$ $1/index.html [L]
 
-  # 4. Also fallback to .html if trailingSlash was false (just in case)
+  # 5. Also fallback to .html if trailingSlash was false (just in case)
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L]
 
-  # 5. If nothing matched, serve the standard Next.js 404 page
+  # 6. If nothing matched, serve the standard Next.js 404 page
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ 404.html [L]

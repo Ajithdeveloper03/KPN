@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import { Factory, Tractor, Droplets, Feather, Box, ShieldCheck, Check, Plus, Minus, ArrowRight, ArrowUpRight } from 'lucide-react';
+import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   title: 'Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed',
@@ -143,9 +144,9 @@ export default function AgricultureAnimalHusbandryPage() {
                 KPN designs agricultural sheds and modern farm sheds suited to Indian farm sizes — from a small backyard setup to a large commercial operation. Every structure is engineered with ventilated roofing and corrosion-resistant frames, built to handle years of heavy farm use with minimal maintenance.
               </p>
             </div>
-            <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-[#e6b800] transition-colors shadow-sm whitespace-nowrap">
+            <QuoteButton className="inline-flex items-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-[#e6b800] transition-colors shadow-sm whitespace-nowrap">
               Explore Services <span className="w-2 h-2 rounded-full bg-black block ml-2"></span>
-            </Link>
+            </QuoteButton>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
@@ -246,9 +247,9 @@ export default function AgricultureAnimalHusbandryPage() {
                 </p>
               </div>
               <div className="w-full lg:w-1/3 flex justify-start lg:justify-end">
-                 <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-white transition-all shadow-md whitespace-nowrap">
+                 <QuoteButton className="inline-flex items-center justify-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-white transition-all shadow-md whitespace-nowrap">
                    Explore Infrastructure <ArrowRight size={20} />
-                 </Link>
+                 </QuoteButton>
               </div>
             </div>
           </div>
@@ -269,9 +270,9 @@ export default function AgricultureAnimalHusbandryPage() {
               <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-lg">
                 We remove the middleman and rely on our own qualified engineers and installation teams. This ensures transparent pricing and unmatched speed.
               </p>
-              <Link href="/contact" className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
+              <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
                 Standout Effortlessly
-              </Link>
+              </QuoteButton>
             </div>
 
             <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
@@ -496,9 +497,9 @@ export default function AgricultureAnimalHusbandryPage() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">
               <div className="w-full sm:w-auto flex flex-col items-center">
-                <Link href="/contact" className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md mb-3 flex items-center justify-center">
+                <QuoteButton className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md mb-3 flex items-center justify-center">
                   Get Free Quote
-                </Link>
+                </QuoteButton>
                 
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">

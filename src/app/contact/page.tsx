@@ -12,14 +12,14 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    subject: "",
+    shedType: "",
     message: "",
     bot_field: ""
   });
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -29,7 +29,7 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/mailer/send_mail.php", {
+      const response = await fetch("/kpnroofingshed/mailer/send_mail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export default function ContactPage() {
 
       if (response.ok && result.status === "success") {
         setFormStatus("success");
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "", bot_field: "" });
+        setFormData({ name: "", email: "", phone: "", shedType: "", message: "", bot_field: "" });
         setTimeout(() => setFormStatus("idle"), 5000);
       } else {
         setFormStatus("error");
@@ -209,23 +209,42 @@ export default function ContactPage() {
                   Phone Number
                 </label>
               </div>
-              {/* Subject field */}
+              {/* Service Selection field */}
               <div className="relative w-full group pt-4">
-                <input 
-                  id="subject" 
-                  name="subject"
-                  type="text" 
-                  value={formData.subject}
+                <select 
+                  id="shedType" 
+                  name="shedType"
+                  value={formData.shedType}
                   onChange={handleChange}
-                  placeholder="Subject" 
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-lg" 
-                />
-                <label 
-                  htmlFor="subject" 
-                  className="absolute left-0 top-4 text-xs uppercase tracking-widest text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]"
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer text-white font-medium text-lg appearance-none cursor-pointer"
+                  style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg fill=%22white%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M7 10l5 5 5-5z%22/></svg>')", backgroundRepeat: "no-repeat", backgroundPosition: "right 10px center" }}
                 >
-                  Subject
+                  <option value="" disabled className="text-slate-900 bg-white">Select a Service...</option>
+                  <optgroup label="Industrial Sheds" className="text-slate-900 bg-white">
+                    <option value="Factory Shed">Factory Shed</option>
+                    <option value="Garment Factory Shed">Garment Factory Shed</option>
+                    <option value="Warehouse / Godown Shed">Warehouse / Godown Shed</option>
+                  </optgroup>
+                  <optgroup label="Agricultural Sheds" className="text-slate-900 bg-white">
+                    <option value="Poultry Farm Shed">Poultry Farm Shed</option>
+                    <option value="Goat Farm Shed">Goat Farm Shed</option>
+                    <option value="Cow / Dairy Farm Shed">Cow / Dairy Farm Shed</option>
+                  </optgroup>
+                  <optgroup label="Sports Turf Sheds" className="text-slate-900 bg-white">
+                    <option value="Badminton Court Shed">Badminton Court Shed</option>
+                    <option value="Cricket Turf Shed">Cricket Turf Shed</option>
+                  </optgroup>
+                  <optgroup label="Home Roofing Sheds" className="text-slate-900 bg-white">
+                    <option value="Terrace Roofing Shed">Terrace Roofing Shed</option>
+                    <option value="Car Parking Shed">Car Parking Shed</option>
+                  </optgroup>
+                </select>
+                <label 
+                  htmlFor="shedType" 
+                  className={`absolute left-0 transition-all ${formData.shedType ? '-top-2 text-xs uppercase tracking-widest text-[#ee0000]' : 'top-4 text-slate-400 text-lg peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]'}`}
+                >
+                  Select Service
                 </label>
               </div>
             </div>

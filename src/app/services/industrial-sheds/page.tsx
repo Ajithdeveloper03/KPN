@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import { Factory, Tractor, Droplets, Feather, Box, ShieldCheck, Check, Plus, Minus, ArrowRight, Warehouse, Home, Settings, MapPin } from 'lucide-react';
+import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   title: 'Industrial Shed Construction India | KPN Roofing Shed',
@@ -183,9 +184,9 @@ export default function IndustrialShedPage() {
                   Different industries need different shed specifications. KPN engineers sheds around what your operations actually require.
                 </p>
               </div>
-              <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-[#e6b800] transition-colors shadow-sm whitespace-nowrap">
+              <QuoteButton className="inline-flex items-center gap-3 bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-semibold hover:bg-[#e6b800] transition-colors shadow-sm whitespace-nowrap">
                 Explore Services <span className="w-2 h-2 rounded-full bg-black block ml-2"></span>
-              </Link>
+              </QuoteButton>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
@@ -320,9 +321,9 @@ export default function IndustrialShedPage() {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
                   Why KPN is <br/> <span className="font-serif italic font-medium text-[#ee0000]">Different</span>
                 </h2>
-                <Link href="/contact" className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
+                <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
                   Standout Effortlessly
-                </Link>
+                </QuoteButton>
               </div>
 
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
@@ -507,9 +508,9 @@ export default function IndustrialShedPage() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">
               <div className="w-full sm:w-auto flex flex-col items-center">
-                <Link href="/contact" className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md mb-3 flex items-center justify-center">
+                <QuoteButton className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md mb-3 flex items-center justify-center">
                   Get Free Quote
-                </Link>
+                </QuoteButton>
                 <span className="text-xs text-blue-200/80 max-w-[240px] text-center leading-relaxed hidden sm:block">
                   10-year warranty on pipes and roofing sheets. Transparent, staged payment plan.
                 </span>
