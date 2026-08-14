@@ -6,50 +6,10 @@ import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import QuoteButton from "@/components/QuoteButton";
 import TableOfContents from "@/components/TableOfContents";
 
-// Helper: fetch with a hard timeout so builds never hang waiting for an unreachable server
-async function fetchWithTimeout(url: string, timeoutMs = 5000): Promise<Response> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, { signal: controller.signal });
-    return res;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
-// Build-time API URL — only used server-side during `next build`.
-// On the live server the PHP files live at /kpnroofingshed/admin/api.php.
-// In local dev (XAMPP running), use the localhost URL. If XAMPP is off, we
-// gracefully fall back to the static slug list / placeholder content.
-function getApiUrl() {
-  const isDev = process.env.NODE_ENV === "development";
-  return isDev
-    ? "https://localhost/php/KPN/admin/api.php"
-    : `${process.env.NEXT_PUBLIC_SITE_URL || "https://kpnroofingshed.com"}/kpnroofingshed/admin/api.php`;
-}
-
-// Bypass self-signed SSL errors during local development fetch calls to XAMPP
-if (process.env.NODE_ENV === "development") {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-}
-
 export async function generateStaticParams() {
-  try {
-    const res = await fetchWithTimeout(getApiUrl(), 4000);
-    if (!res.ok) throw new Error("API not reachable");
-    const data = await res.json();
-    return data.data.map((post: any) => ({ slug: post.slug }));
-  } catch {
-    // Fallback for local build without PHP server running
-    return [
-      { slug: "ultimate-guide-to-roofing-sheds" },
-      { slug: "benefits-of-industrial-sheds" },
-      { slug: "choosing-right-roofing-sheet" },
-      { slug: "goat-farm-shed-design-guide" },
-      { slug: "sports-turf-shed-advantages" },
-    ];
-  }
+  return [
+    { slug: "ultimate-guide-to-roofing-sheds" }
+  ];
 }
 
 export async function generateMetadata({
@@ -58,29 +18,15 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  try {
-    const res = await fetchWithTimeout(`${getApiUrl()}?slug=${slug}`, 4000);
-    if (res.ok) {
-      const data = await res.json();
-      return {
-        title: data.data.meta_title || `${data.data.title} | KPN Roofing Shed`,
-        description:
-          data.data.meta_description ||
-          "Read expert insights from KPN Roofing Shed.",
-        keywords: data.data.meta_keywords || "",
-      };
-    }
-  } catch {
-    // Silently fall back
-  }
+  
   const title = slug
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
+    
   return {
     title: `${title} | KPN Roofing Shed`,
-    description:
-      "Read expert insights on roofing shed construction, industrial sheds, and agricultural sheds from KPN Roofing Shed.",
+    description: "Read expert insights on roofing shed construction, industrial sheds, and agricultural sheds from KPN Roofing Shed.",
   };
 }
 
@@ -92,15 +38,6 @@ export default async function BlogDetailsPage({
   const { slug } = await params;
 
   let post = null;
-  try {
-    const res = await fetchWithTimeout(`${getApiUrl()}?slug=${slug}`, 4000);
-    if (res.ok) {
-      const data = await res.json();
-      post = data.data;
-    }
-  } catch {
-    // Silently fall back during build if PHP API is unreachable
-  }
 
   if (slug === "ultimate-guide-to-roofing-sheds") {
     post = {
@@ -108,25 +45,37 @@ export default async function BlogDetailsPage({
       content: `
         <h2 id="introduction">Introduction to Roofing Sheds</h2>
         <p>Choosing the right roofing shed is critical for the long-term success of your industrial, agricultural, or residential project. A well-built shed provides protection, durability, and functional value.</p>
-        <img src="/kpnroofingshed/images/image3.jpeg" alt="Roofing Shed Introduction" style="width:100%; border-radius:1rem; margin-top:2rem; margin-bottom:2rem;" />
+        <img src="/kpnroofingshed/images/image3.jpeg" alt="Roofing Shed Introduction" style="width:85%; max-width:700px; margin: 3rem auto; border-radius:1.5rem; display:block; box-shadow: 0 20px 40px rgba(0,0,0,0.08);" />
         
         <h2 id="materials">Choosing the Right Materials</h2>
         <p>Steel is the undisputed king of modern shed construction. Using high-quality materials like Apollo steel ensures structural integrity against heavy winds and storms.</p>
         <h3 id="roofing-sheets">Types of Roofing Sheets</h3>
         <p>From color-coated galvalume sheets to polycarbonate sheets for natural light, the roof cladding determines heat resistance and lifespan.</p>
-        <img src="/kpnroofingshed/images/image4.jpeg" alt="Roofing Materials" style="width:100%; border-radius:1rem; margin-top:2rem; margin-bottom:2rem;" />
+        <img src="/kpnroofingshed/images/image4.jpeg" alt="Roofing Materials" style="width:85%; max-width:700px; margin: 3rem auto; border-radius:1.5rem; display:block; box-shadow: 0 20px 40px rgba(0,0,0,0.08);" />
         
         <h2 id="ventilation">The Importance of Ventilation</h2>
         <p>Proper airflow prevents moisture buildup and heat accumulation, which is especially important for livestock sheds and industrial manufacturing units.</p>
         <ul>
-          <li>Turbo ventilators for continuous exhaust</li>
-          <li>Ridge vents for natural thermal lift</li>
-          <li>Side mesh for cross ventilation</li>
+          <li><strong>Turbo ventilators:</strong> Provide continuous exhaust and remove hot air trapped at the ceiling.</li>
+          <li><strong>Ridge vents:</strong> Utilize natural thermal lift to ensure consistent airflow along the entire roofline.</li>
+          <li><strong>Side mesh:</strong> Essential for cross ventilation, particularly in agricultural environments like poultry and goat farms.</li>
         </ul>
-        <img src="/kpnroofingshed/images/image7.jpeg" alt="Ventilation in Sheds" style="width:100%; border-radius:1rem; margin-top:2rem; margin-bottom:2rem;" />
+        <img src="/kpnroofingshed/images/image7.jpeg" alt="Ventilation in Sheds" style="width:85%; max-width:700px; margin: 3rem auto; border-radius:1.5rem; display:block; box-shadow: 0 20px 40px rgba(0,0,0,0.08);" />
+
+        <h2 id="faqs">Frequently Asked Questions</h2>
+        <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; margin: 2rem 0;">
+          <h4 style="margin-top: 0; color: #111;">1. How long does it take to construct a standard industrial shed?</h4>
+          <p style="font-size: 1.125rem; color: #475569; margin-bottom: 1.5rem;">Depending on the size, a standard 2000 sq.ft industrial shed typically takes between 3 to 4 weeks from design approval to final installation.</p>
+          
+          <h4 style="color: #111;">2. Which roofing sheet is best for heat resistance?</h4>
+          <p style="font-size: 1.125rem; color: #475569; margin-bottom: 1.5rem;">PUF insulated sheets or color-coated galvalume sheets combined with bubble wrap insulation provide excellent heat reduction.</p>
+          
+          <h4 style="color: #111;">3. Do you provide a warranty on the construction?</h4>
+          <p style="font-size: 1.125rem; color: #475569; margin-bottom: 0;">Yes, KPN Roofing Shed provides a 10-year guarantee on structural integrity and a 3-year replacement warranty on specific flooring installations.</p>
+        </div>
 
         <h2 id="conclusion">Conclusion</h2>
-        <p>Planning your shed with experts like KPN Roofing Shed ensures you get maximum value, durability, and performance from your investment.</p>
+        <p>Planning your shed with experts like KPN Roofing Shed ensures you get maximum value, durability, and performance from your investment. The right layout, materials, and ventilation design will save you massive maintenance costs over the next decade.</p>
       `,
       image: "/kpnroofingshed/images/image2.jpeg",
       author: "KPN Experts",
@@ -134,21 +83,16 @@ export default async function BlogDetailsPage({
       read_time: "8 min read",
       category: "Guides",
     };
-  }
-
-  // Fallback placeholder when CMS is unreachable during build (and not the static one)
-  if (!post) {
+  } else {
+    // Fallback placeholder for any other slug
     post = {
-      title: slug
-        .split("-")
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(" "),
-      content: `<p class="text-xl leading-relaxed text-slate-600 mb-8 font-medium">Content is currently unavailable. Please check back later or ensure the CMS API is running.</p>`,
-      image: "/kpnroofingshed/images/image4.jpeg",
+      title: "Post Not Found",
+      content: '<p class="text-xl leading-relaxed text-slate-600 mb-8 font-medium">This blog post could not be found.</p>',
+      image: "/kpnroofingshed/images/placeholder.jpg",
       author: "KPN Engineering Team",
       created_at: new Date().toISOString(),
-      read_time: "4 min read",
-      category: "Industrial",
+      read_time: "1 min read",
+      category: "General",
     };
   }
 
@@ -186,7 +130,7 @@ export default async function BlogDetailsPage({
                   {post.category}
                 </span>
                 <span className="flex items-center gap-1.5 text-sm font-medium text-slate-500">
-                  <Clock size={14} /> {post.read_time || post.readTime}
+                  <Clock size={14} /> {post.read_time}
                 </span>
               </div>
 
@@ -203,9 +147,7 @@ export default async function BlogDetailsPage({
                     <h4 className="font-bold text-[#111]">{post.author}</h4>
                     <span className="text-sm text-slate-500 font-medium flex items-center gap-1">
                       <Calendar size={14} />{" "}
-                      {post.created_at
-                        ? new Date(post.created_at).toLocaleDateString()
-                        : post.date}
+                      {new Date(post.created_at).toLocaleDateString()}
                     </span>
                   </div>
                 </div>
@@ -227,7 +169,7 @@ export default async function BlogDetailsPage({
               </div>
 
               <div
-                className="prose prose-lg max-w-none prose-headings:text-[#111] prose-a:text-[#062088] prose-a:font-bold hover:prose-a:text-[#ee0000] prose-img:rounded-2xl"
+                className="prose prose-xl max-w-none prose-headings:text-[#111] prose-a:text-[#062088] prose-a:font-bold hover:prose-a:text-[#ee0000] prose-img:rounded-2xl prose-li:marker:text-[#ee0000] prose-ul:list-disc prose-p:text-slate-600 prose-p:leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 
@@ -244,7 +186,7 @@ export default async function BlogDetailsPage({
             </div>
 
             {/* Sidebar (Right) */}
-            <div className="w-full lg:w-[30%]">
+            <div className="w-full lg:w-[30%] lg:sticky lg:top-32 self-start pt-8 lg:pt-0">
               <TableOfContents />
             </div>
 

@@ -49,7 +49,7 @@ export default function ServicesPage() {
       />
 
       <main className="flex-grow">
-        <section className="max-w-[1400px] mx-auto px-6 py-16 lg:py-24">
+        <section className="max-w-[1400px] mx-auto px-6 py-12 lg:py-16">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-6 inline-block">
               What We Do

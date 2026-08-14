@@ -52,7 +52,7 @@ export default function AboutUsPage() {
       <main className="flex-grow">
         
         {/* Introduction Section */}
-        <section className="py-16 lg:py-24 max-w-[1400px] mx-auto px-6 overflow-hidden">
+        <section className="py-12 lg:py-16 max-w-[1400px] mx-auto px-6 overflow-hidden">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start" data-reveal="stagger">
               <span className="px-5 py-2 rounded-full bg-[#e5f6fd] text-sm font-bold text-[#00a3e0] tracking-wide uppercase inline-flex items-center gap-2">
@@ -94,7 +94,7 @@ export default function AboutUsPage() {
         </section>
 
         {/* Founder Section */}
-        <section className="bg-white py-20 lg:py-28 relative border-y border-slate-100">
+        <section className="bg-white py-12 lg:py-16 relative border-y border-slate-100">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
               <div className="w-full md:w-5/12 lg:w-1/3" data-reveal="image">
@@ -107,9 +107,9 @@ export default function AboutUsPage() {
                   />
                 </div>
               </div>
-              <div className="w-full md:w-7/12 lg:w-2/3 space-y-3  text-justify md:text-left" data-reveal="stagger">
+              <div className="w-full md:w-7/12 lg:w-2/3 space-y-3 text-justify" data-reveal="stagger">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1e2229]">Meet Our Founder</h2>
-                <div className="pb-4 border-b border-slate-200">
+                <div className="pb-4 border-b border-slate-200 text-left">
                   <h3 className="text-2xl font-bold text-[#00a3e0]">Mr. P. M. Puyamurthi (a) Gobi</h3>
                   <p className="text-slate-500 font-semibold uppercase tracking-wider text-sm mt-1">Founder, KPN Roofing Shed</p>
                 </div>
@@ -130,7 +130,7 @@ export default function AboutUsPage() {
         </section>
 
         {/* Services Overview Grid */}
-        <section className="py-20 lg:py-28 bg-[#f8f9fa]">
+        <section className="py-12 lg:py-16 bg-[#f8f9fa]">
           <div className="max-w-[1400px] mx-auto px-6">
             <div className="text-center mb-16" data-reveal="stagger">
               <h2 className="text-4xl md:text-5xl font-bold text-[#1e2229] mb-6">Our Roofing Shed Services</h2>
@@ -192,7 +192,7 @@ export default function AboutUsPage() {
         </section>
 
         {/* The KPN Advantage */}
-        <section className="bg-white py-24 border-t border-slate-100">
+        <section className="bg-white py-12 lg:py-16 border-t border-slate-100">
           <div className="max-w-[1400px] mx-auto px-6">
             
             {/* Centered Header */}
@@ -281,52 +281,59 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        {/* Our Mission */}
-        <section className="bg-[#f0f7ff] py-16 lg:py-24 relative overflow-hidden">
-          <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-            <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
-              <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start" data-reveal="stagger">
-                <div className="w-16 h-16 bg-white border border-[#00a3e0]/20 shadow-sm text-[#00a3e0] rounded-2xl flex items-center justify-center mb-8">
-                  <Rocket size={32} />
+        {/* Our Mission & Vision (Light Minimalist Layout) */}
+        <section className="py-12 lg:py-16 bg-white relative overflow-hidden border-y border-slate-100">
+          <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+            
+            {/* The divide-x creates the vertical line between columns on desktop, divide-y for mobile */}
+            <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+              
+              {/* Mission Column */}
+              <div className="flex flex-col items-center text-center p-8 md:p-12 lg:px-20 group" data-reveal="stagger">
+                {/* Large Icon */}
+                <div className="text-[#ee0000] mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Rocket size={70} strokeWidth={1.5} />
                 </div>
-                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-[#1e2229]">Our Mission</h2>
-                <p className="text-xl text-slate-600 font-medium leading-relaxed mb-6">
-                  To provide valuable, high-quality roofing shed services through experienced professionals and timely project execution.
-                </p>
-                <p className="text-xl text-slate-600 font-medium leading-relaxed">
-                  KPN focuses on delivering practical roofing solutions while maintaining service quality and customer satisfaction throughout the project.
-                </p>
-              </div>
-              <div className="w-full md:w-1/2" data-reveal="image">
-                <div className="relative w-full max-w-[600px] mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white">
-                  <Image src="/kpnroofingshed/images/image4.jpeg" alt="KPN Roofing Shed Mission" fill className="object-cover" />
+                
+                {/* Title */}
+                <h2 className="text-2xl font-black mb-6 tracking-wide uppercase">
+                  <span className="text-[#1e2229]">Our</span> <span className="text-[#ee0000]">Mission</span>
+                </h2>
+                
+                {/* Text Content */}
+                <div className="space-y-4">
+                  <p className="text-slate-600 font-medium leading-relaxed">
+                    To provide valuable, high-quality roofing shed services through experienced professionals and timely project execution.
+                  </p>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    KPN focuses on delivering practical roofing solutions while maintaining service quality and customer satisfaction throughout the project.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Our Vision */}
-        <section className="bg-white border-y border-slate-100 py-16 lg:py-24 relative overflow-hidden">
-          <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-            <div className="flex flex-col md:flex-row-reverse items-center gap-16 lg:gap-24">
-              <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start" data-reveal="stagger">
-                <div className="w-16 h-16 bg-[#e5f6fd] text-[#00a3e0] rounded-2xl flex items-center justify-center mb-8">
-                  <Building2 size={32} />
+              {/* Vision Column */}
+              <div className="flex flex-col items-center text-center p-8 md:p-12 lg:px-20 group" data-reveal="stagger">
+                {/* Large Icon */}
+                <div className="text-[#00a3e0] mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Building2 size={70} strokeWidth={1.5} />
                 </div>
-                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-[#1e2229]">Our Vision</h2>
-                <p className="text-xl text-slate-600 font-medium leading-relaxed mb-6">
-                  To become one of India&apos;s leading roofing shed companies by delivering reliable and innovative roofing solutions.
-                </p>
-                <p className="text-xl text-slate-600 font-medium leading-relaxed">
-                  The vision is centred on building long-term trust through reliable construction, technical expertise, and continuously improving roofing solutions.
-                </p>
-              </div>
-              <div className="w-full md:w-1/2" data-reveal="image">
-                <div className="relative w-full max-w-[600px] mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border-[6px] border-slate-50">
-                  <Image src="/kpnroofingshed/images/image3.jpeg" alt="KPN Roofing Shed Vision" fill className="object-cover" />
+                
+                {/* Title */}
+                <h2 className="text-2xl font-black mb-6 tracking-wide uppercase">
+                  <span className="text-[#1e2229]">Our</span> <span className="text-[#00a3e0]">Vision</span>
+                </h2>
+
+                {/* Text Content */}
+                <div className="space-y-4">
+                  <p className="text-slate-600 font-medium leading-relaxed">
+                    To become one of India&apos;s leading roofing shed companies by delivering reliable and innovative roofing solutions.
+                  </p>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    The vision is centred on building long-term trust through reliable construction, technical expertise, and continuously improving roofing solutions.
+                  </p>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -335,7 +342,7 @@ export default function AboutUsPage() {
         <AboutProcessSection />
 
         {/* Custom FAQ for About Page */}
-        <section className="py-24 bg-[#f8f9fa]">
+        <section className="py-12 lg:py-16 bg-[#f8f9fa]">
           <div className="max-w-[900px] mx-auto px-6">
             <div className="text-center mb-16" data-reveal="stagger">
               <h2 className="text-4xl md:text-5xl font-bold text-[#1e2229] mb-6">Frequently Asked Questions</h2>
@@ -363,7 +370,7 @@ export default function AboutUsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 relative overflow-hidden bg-white">
+        <section className="py-12 lg:py-16 relative overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
             <Image src="/kpnroofingshed/images/image7.jpeg" alt="Roofing Construction Site" fill className="object-cover" />
             <div className="absolute inset-0 bg-[#004b87]/95 mix-blend-multiply"></div>

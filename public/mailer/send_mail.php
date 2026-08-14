@@ -89,18 +89,19 @@ require 'PHPMailer/src/SMTP.php';
 $mail = new PHPMailer(true);
 
 try {
-    // Server settings (UPDATE THESE WITH YOUR ACTUAL SMTP DETAILS)
+    // Server settings
     $mail->isSMTP();
-    $mail->Host       = 'smtp.example.com';       // Set the SMTP server to send through (e.g. smtp.gmail.com)
-    $mail->SMTPAuth   = true;                     // Enable SMTP authentication
-    $mail->Username   = 'your-email@example.com'; // SMTP username
-    $mail->Password   = 'your-smtp-password';     // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable implicit TLS encryption (or ENCRYPTION_STARTTLS)
-    $mail->Port       = 465;                      // TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'inymartlabs@gmail.com';
+    $mail->Password   = 'kpxlbctyiqxvzuhq';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
     // Recipients
-    $mail->setFrom('your-email@example.com', 'KPN Website Form'); // Sender
-    $mail->addAddress('kpnroofingshed555@gmail.com', 'KPN Roofing Shed'); // Add a recipient (The business email)
+    $mail->setFrom('inymartlabs@gmail.com', 'KPN Website Form');
+    $mail->addAddress('inymartlabs@gmail.com', 'KPN Admin');
+    $mail->addReplyTo($email !== 'Not Provided' ? $email : 'inymartlabs@gmail.com', $name);
     
     // Content
     $mail->isHTML(true);

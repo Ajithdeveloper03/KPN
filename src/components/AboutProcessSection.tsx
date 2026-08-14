@@ -98,12 +98,13 @@ export default function AboutProcessSection() {
   }, []);
 
   return (
-    <section
-      id="about-process"
-      ref={sectionRef}
-      className="bg-[#f8f9fa] h-screen flex flex-col justify-center overflow-hidden relative z-10 process-section-wrapper"
-      style={{ minHeight: "700px" }}
-    >
+    <div>
+      <section
+        id="about-process"
+        ref={sectionRef}
+        className="bg-[#f8f9fa] h-screen flex flex-col justify-center overflow-hidden relative z-10 process-section-wrapper"
+        style={{ minHeight: "700px" }}
+      >
       {/* Fixed Header */}
       <div className="absolute top-20 left-0 w-full z-10 pointer-events-none">
         <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
@@ -195,6 +196,7 @@ export default function AboutProcessSection() {
           );
         })}
       </div>
-    </section>
+      </section>
+    </div>
   );
 }

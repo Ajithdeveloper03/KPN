@@ -1,52 +1,23 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 
 export default function BlogArchivePage() {
-  const [posts, setPosts] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  // Hardcoded static blog post as requested
+  const staticBlog = {
+    slug: "ultimate-guide-to-roofing-sheds",
+    title: "The Ultimate Guide to Roofing Shed Construction",
+    image: "/kpnroofingshed/images/image2.jpeg",
+    category: "Guides",
+    created_at: new Date().toISOString(),
+    read_time: "8 min read",
+    content: "Learn everything you need to know about choosing the right roofing shed, materials, layout planning, and maintenance in this comprehensive guide.",
+    author: "KPN Experts"
+  };
 
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        // In dev, PHP backend may not be running — we fall back to empty state gracefully.
-        // On the live server, api.php lives at /kpnroofingshed/admin/api.php (basePath prefix).
-        const isDev = process.env.NODE_ENV === 'development';
-        const apiUrl = isDev
-          ? 'https://localhost/php/KPN/admin/api.php'
-          : '/kpnroofingshed/admin/api.php';
-        const res = await fetch(apiUrl, { cache: "no-store" });
-        if (!res.ok) throw new Error("Failed to fetch blogs");
-        const data = await res.json();
-        
-        // Static highly-visual blog post per user request
-        const staticBlog = {
-          slug: "ultimate-guide-to-roofing-sheds",
-          title: "The Ultimate Guide to Roofing Shed Construction",
-          image: "/kpnroofingshed/images/image2.jpeg",
-          category: "Guides",
-          created_at: new Date().toISOString(),
-          read_time: "8 min read",
-          content: "Learn everything you need to know about choosing the right roofing shed, materials, layout planning, and maintenance in this comprehensive guide.",
-          author: "KPN Experts"
-        };
-        
-        setPosts([staticBlog, ...(data.data || [])]);
-      } catch (err) {
-        // Silently swallow in dev (no PHP server running)
-        if (process.env.NODE_ENV !== 'development') {
-          setError("Unable to load latest blogs. Please try again later.");
-        }
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchBlogs();
-  }, []);
+  const posts = [staticBlog];
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
@@ -59,7 +30,7 @@ export default function BlogArchivePage() {
       />
 
       <main className="flex-grow">
-        <section className="max-w-[1400px] mx-auto px-6 py-16 lg:py-24">
+        <section className="max-w-[1400px] mx-auto px-6 py-12 lg:py-16">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-6 inline-block">
@@ -73,60 +44,49 @@ export default function BlogArchivePage() {
             </p>
           </div>
 
-          {loading ? (
-            <div className="flex justify-center items-center py-20">
-              <div className="w-12 h-12 border-4 border-[#062088] border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          ) : error ? (
-            <div className="text-center py-20 text-red-500 font-bold text-xl">{error}</div>
-          ) : posts.length === 0 ? (
-            <div className="text-center py-20 text-slate-500 font-bold text-xl">No blogs published yet. Check back soon!</div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post, idx) => (
-                <article key={idx} className="bg-white rounded-[2rem] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col">
-                  <Link href={`/blog/${post.slug}/`} className="relative w-full h-[240px] block overflow-hidden">
-                    <Image 
-                      src={post.image || "/kpnroofingshed/images/placeholder.jpg"} 
-                      alt={post.title} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#062088]">
-                      {post.category}
-                    </div>
-                  </Link>
-                  <div className="p-8 flex flex-col flex-grow">
-                    <div className="flex items-center gap-4 text-xs font-medium text-slate-400 mb-4">
-                      <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.created_at).toLocaleDateString()}</span>
-                      <span className="flex items-center gap-1"><Clock size={14} /> {post.read_time}</span>
-                    </div>
-                    <Link href={`/blog/${post.slug}/`} className="block group-hover:text-[#ee0000] transition-colors mb-4">
-                      <h3 className="text-2xl font-bold text-[#111] leading-snug group-hover:text-[#ee0000] transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                    </Link>
-                    <p className="text-slate-500 font-medium leading-relaxed mb-8 line-clamp-3">
-                      {/* Strip HTML tags for the excerpt */}
-                      {post.content.replace(/<[^>]*>?/gm, '').substring(0, 150)}...
-                    </p>
-                    
-                    <div className="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                        <div className="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#062088]">
-                          <User size={14} />
-                        </div>
-                        {post.author}
-                      </div>
-                      <Link href={`/blog/${post.slug}/`} className="w-10 h-10 rounded-full bg-[#f8f9fa] group-hover:bg-[#ffcc00] flex items-center justify-center text-[#111] transition-colors">
-                        <ArrowRight size={18} />
-                      </Link>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post, idx) => (
+              <article key={idx} className="bg-white rounded-[2rem] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col">
+                <Link href={`/blog/${post.slug}/`} className="relative w-full h-[240px] block overflow-hidden">
+                  <Image 
+                    src={post.image || "/kpnroofingshed/images/placeholder.jpg"} 
+                    alt={post.title} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#062088]">
+                    {post.category}
                   </div>
-                </article>
-              ))}
-            </div>
-          )}
+                </Link>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center gap-4 text-xs font-medium text-slate-400 mb-4">
+                    <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.created_at).toLocaleDateString()}</span>
+                    <span className="flex items-center gap-1"><Clock size={14} /> {post.read_time}</span>
+                  </div>
+                  <Link href={`/blog/${post.slug}/`} className="block group-hover:text-[#ee0000] transition-colors mb-4">
+                    <h3 className="text-2xl font-bold text-[#111] leading-snug group-hover:text-[#ee0000] transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                  </Link>
+                  <p className="text-slate-500 font-medium leading-relaxed mb-8 line-clamp-3">
+                    {post.content}
+                  </p>
+                  
+                  <div className="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                      <div className="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#062088]">
+                        <User size={14} />
+                      </div>
+                      {post.author}
+                    </div>
+                    <Link href={`/blog/${post.slug}/`} className="w-10 h-10 rounded-full bg-[#f8f9fa] group-hover:bg-[#ffcc00] flex items-center justify-center text-[#111] transition-colors">
+                      <ArrowRight size={18} />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
 
         </section>
       </main>

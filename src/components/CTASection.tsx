@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CTASection() {
   return (
-    <section id="contact" className="bg-white py-20">
+    <section id="contact" className="bg-white py-12 lg:py-16">
       <div className="max-w-[1400px] w-full mx-auto px-6">
         <div className="bg-gradient-to-br from-[#19191c] to-[#0a0a0f] border border-white/5 rounded-[2.5rem] relative overflow-hidden flex flex-col md:flex-row items-center min-h-[460px] shadow-2xl">
 

@@ -63,7 +63,7 @@ export default function IntegrationSection() {
   }, []);
 
   return (
-    <section id="integration" className="bg-white py-12 md:py-24 min-h-[100dvh] flex flex-col justify-center relative overflow-hidden">
+    <section id="integration" className="bg-white py-12 md:py-12 lg:py-16 min-h-[100dvh] flex flex-col justify-center relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10 flex flex-col items-center">
         
         {/* Header Content */}

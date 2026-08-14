@@ -301,7 +301,7 @@ export default function GoatFarmShedPage() {
         </section>
 
         {/* ---------------- 4. How to Choose (Vertical Timeline) ---------------- */}
-        <section className="py-16 lg:py-24 bg-[#2d3436] relative overflow-hidden">
+        <section className="py-12 lg:py-16 bg-[#2d3436] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">How to Choose the <span className="font-serif italic text-[#e67e22]">Right Shed</span></h2>
@@ -490,7 +490,7 @@ export default function GoatFarmShedPage() {
         </section>
 
         {/* ---------------- 8. High Impact CTA ---------------- */}
-        <section className="py-16 lg:py-24 text-center text-white relative overflow-hidden">
+        <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
             <Image src="/kpnroofingshed/images/hero-bg.png" alt="goat farm shed — KPN" fill className="object-cover" />

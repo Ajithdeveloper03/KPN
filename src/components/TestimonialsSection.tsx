@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
   const active = testimonials[activeIndex];
 
   return (
-    <section id="testimonials" className="bg-[#0a0a0f] py-16 md:py-20 overflow-hidden">
+    <section id="testimonials" className="bg-[#0a0a0f] py-16 md:py-12 lg:py-16 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 w-full">
 
         {/* Header */}
