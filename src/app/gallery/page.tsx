@@ -8,17 +8,17 @@ import PageHero from "@/components/PageHero";
 
 // Expanded gallery data incorporating the latest high-quality assets
 const galleryItems = [
-  { src: '/images/services/cricket-banner-image.png', title: 'Cricket Turf Shed Construction', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/cricket-image-1.png', title: 'Cricket Turf Framework', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/cricket-image-2.png', title: 'Cricket Turf Pitch Planning', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/cricket-image-3.png', title: 'Cricket Turf Structure', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/cricket-image-4.png', title: 'Cricket Turf Construction Phase', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/cricket-image-5.png', title: 'Cricket Turf Finished Design', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/how-long-does-a-carparking.png', title: 'Car Parking Shed Timeline', category: 'Home Roofing', type: 'image' },
-  { src: '/images/services/how-long-does-badminton.png', title: 'Badminton Court Construction Time', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/permits-and-approvals-badminton.png', title: 'Badminton Court Approvals', category: 'Sports Turf', type: 'image' },
-  { src: '/images/services/permits-and-approval-for-carparking.png', title: 'Car Parking Shed Permits', category: 'Home Roofing', type: 'image' },
-  { src: '/images/services/single-bay-vs-multi-bay-sheds-carparking.png', title: 'Single vs Multi Bay Car Parking', category: 'Home Roofing', type: 'image' },
+  { id: 101, title: 'Cricket Turf Shed Construction', category: 'Sports Turf', img: '/images/services/cricket-banner-image.png', height: 'h-96' },
+  { id: 102, title: 'Cricket Turf Framework', category: 'Sports Turf', img: '/images/services/cricket-image-1.png', height: 'h-72' },
+  { id: 103, title: 'Cricket Turf Pitch Planning', category: 'Sports Turf', img: '/images/services/cricket-image-2.png', height: 'h-80' },
+  { id: 104, title: 'Cricket Turf Structure', category: 'Sports Turf', img: '/images/services/cricket-image-3.png', height: 'h-[28rem]' },
+  { id: 105, title: 'Cricket Turf Construction Phase', category: 'Sports Turf', img: '/images/services/cricket-image-4.png', height: 'h-96' },
+  { id: 106, title: 'Cricket Turf Finished Design', category: 'Sports Turf', img: '/images/services/cricket-image-5.png', height: 'h-72' },
+  { id: 107, title: 'Car Parking Shed Timeline', category: 'Home Roofing Sheds', img: '/images/services/how-long-does-a-carparking.png', height: 'h-80' },
+  { id: 108, title: 'Badminton Court Construction Time', category: 'Sports Turf', img: '/images/services/how-long-does-badminton.png', height: 'h-96' },
+  { id: 109, title: 'Badminton Court Approvals', category: 'Sports Turf', img: '/images/services/permits-and-approvals-badminton.png', height: 'h-[28rem]' },
+  { id: 110, title: 'Car Parking Shed Permits', category: 'Home Roofing Sheds', img: '/images/services/permits-and-approval-for-carparking.png', height: 'h-72' },
+  { id: 111, title: 'Single vs Multi Bay Car Parking', category: 'Home Roofing Sheds', img: '/images/services/single-bay-vs-multi-bay-sheds-carparking.png', height: 'h-80' },
 
   // Industrial
   { id: 1, title: "Modern Industrial Warehouse", category: "Industrial Shed", img: "/images/services/industrial-banner-image.png", height: "h-96" },
@@ -56,23 +56,46 @@ const galleryItems = [
 
 const categories = ["All", "Agriculture & Animal Husbandry", "Industrial Shed", "Home Roofing Sheds", "Sports Turf"];
 
+function getInterleavedItems(items: typeof galleryItems) {
+  const grouped = items.reduce((acc, item) => {
+    if (!acc[item.category]) acc[item.category] = [];
+    acc[item.category].push(item);
+    return acc;
+  }, {} as Record<string, typeof galleryItems>);
+
+  const interleaved: typeof galleryItems = [];
+  let index = 0;
+  let added = true;
+  while (added) {
+    added = false;
+    for (const category of categories.slice(1)) {
+      if (grouped[category] && grouped[category][index]) {
+        interleaved.push(grouped[category][index]);
+        added = true;
+      }
+    }
+    index++;
+  }
+  return interleaved;
+}
+
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleCount, setVisibleCount] = useState(8);
 
-  const filteredItems = galleryItems.filter(item => 
-    activeCategory === "All" ? true : item.category === activeCategory
-  );
+  const filteredItems = activeCategory === "All" 
+    ? getInterleavedItems(galleryItems)
+    : galleryItems.filter(item => item.category === activeCategory);
 
   const visibleItems = filteredItems.slice(0, visibleCount);
 
   const handleLoadMore = () => {
-    setVisibleCount(prev => prev + 6);
+    setVisibleCount(prev => prev + 8);
   };
 
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
-    setVisibleCount(6); // Reset visible count when changing category
+    setVisibleCount(8); // Reset visible count when changing category
   };
 
   return (

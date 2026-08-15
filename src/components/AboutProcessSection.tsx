@@ -109,8 +109,8 @@ export default function AboutProcessSection() {
         className="bg-[#f8f9fa] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-24 md:py-0"
         style={{ minHeight: "700px" }}
       >
-        {/* Fixed Header */}
-        <div className="md:absolute top-20 left-0 w-full z-10 pointer-events-none mt-10 md:mt-0">
+        {/* Header */}
+        <div className="w-full z-10 pointer-events-none mt-16 md:mt-24 mb-10 md:mb-0">
           <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
             <div className="overflow-hidden">
               <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading" data-reveal="text">
@@ -210,7 +210,7 @@ export default function AboutProcessSection() {
                   className="absolute w-[280px] text-center"
                   style={{
                     left: "-140px",
-                    ...(isPeak ? { bottom: "60px" } : { top: "60px" }),
+                    ...(isPeak ? { top: "60px" } : { bottom: "60px" }),
                   }}
                 >
                   <h3 className="text-lg font-extrabold text-[#1e2229] mb-2 font-heading">{step.title}</h3>

@@ -1,10 +1,5 @@
 <?php
-/**
- * HIGHLY SECURE PHP MAILER SCRIPT
- * Dependencies: PHPMailer (Place the PHPMailer folder inside this mailer directory or use Composer)
- */
 
-// Add CORS headers to allow Next.js (port 3000) to communicate with XAMPP (port 80) during local dev
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, X-CSRF-Token");
@@ -34,12 +29,6 @@ if (!$input) {
     exit();
 }
 
-// ---------------------------------------------------------
-// 1. HONEYPOT BOT TRAP
-// ---------------------------------------------------------
-// The frontend contains a hidden field named 'bot_field'.
-// Real users won't see it, so it should remain empty.
-// If it's filled out, it's a spam bot.
 if (!empty($input['bot_field'])) {
     // Act like it was successful so the bot doesn't try other vectors
     http_response_code(200);
@@ -47,9 +36,6 @@ if (!empty($input['bot_field'])) {
     exit();
 }
 
-// ---------------------------------------------------------
-// 2. INPUT SANITIZATION
-// ---------------------------------------------------------
 function sanitize_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -71,12 +57,6 @@ if (empty($name) || empty($phone)) {
     echo json_encode(["status" => "error", "message" => "Name and Phone are required fields."]);
     exit();
 }
-
-// ---------------------------------------------------------
-// 3. PHP MAILER INTEGRATION
-// ---------------------------------------------------------
-// NOTE: You MUST download PHPMailer and place it on your server, or use Composer.
-// Adjust the require paths below based on your server structure.
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -100,8 +80,8 @@ try {
 
     // Recipients
     $mail->setFrom('inymartlabs@gmail.com', 'KPN Website Form');
-    $mail->addAddress('inymartlabs@gmail.com', 'KPN Admin');
-    $mail->addReplyTo($email !== 'Not Provided' ? $email : 'inymartlabs@gmail.com', $name);
+    $mail->addAddress('kpnroofingshed555@gmail.com', 'KPN Admin');
+    $mail->addReplyTo($email !== 'Not Provided' ? $email : 'kpnroofingshed555@gmail.com', $name);
     
     // Content
     $mail->isHTML(true);
@@ -128,6 +108,6 @@ try {
     echo json_encode(["status" => "success", "message" => "Request sent successfully! Our team will contact you shortly."]);
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(["status" => "error", "message" => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+    echo json_encode(["status" => "error", "message" => "Sorry, we couldn't send your message right now. Please try again later."]);
 }
 ?>

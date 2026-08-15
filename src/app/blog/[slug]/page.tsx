@@ -100,56 +100,58 @@ export default async function BlogDetailsPage({
       <main className="flex-grow pb-20">
 
         {/* Article Hero: Modern Split Layout */}
-        <section className="max-w-[1400px] mx-auto px-6 pt-32 pb-12">
-          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
-            
-            {/* Left: Metadata and Title */}
-            <div>
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#ee0000] hover:text-[#cc0000] transition-colors mb-8 uppercase tracking-widest"
-              >
-                <ArrowLeft size={16} /> Back to Blog
-              </Link>
+        <section className="bg-slate-900 w-full pt-32 pb-12">
+          <div className="max-w-[1400px] mx-auto px-6">
+            <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
               
-              <div className="flex items-center gap-4 mb-6">
-                <span className="bg-[#ee0000]/10 text-[#ee0000] px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest">
-                  {post.category}
-                </span>
-                <span className="flex items-center gap-1.5 text-sm font-bold text-slate-500">
-                  <Clock size={16} /> {post.read_time}
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#111] leading-[1.15] mb-8">
-                {post.title}
-              </h1>
-
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 border border-slate-200">
-                  <User size={28} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-[#111]">{post.author}</h4>
-                  <span className="text-sm text-slate-500 font-medium flex items-center gap-1.5">
-                    <Calendar size={14} />{" "}
-                    {new Date(post.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+              {/* Left: Metadata and Title */}
+              <div>
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#ee0000] hover:text-[#ff3333] transition-colors mb-8 uppercase tracking-widest"
+                >
+                  <ArrowLeft size={16} /> Back to Blog
+                </Link>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="bg-[#ee0000]/20 text-[#ff3333] px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest">
+                    {post.category}
+                  </span>
+                  <span className="flex items-center gap-1.5 text-sm font-bold text-slate-400">
+                    <Clock size={16} /> {post.read_time}
                   </span>
                 </div>
-              </div>
-            </div>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-8">
+                  {post.title}
+                </h1>
 
-            {/* Right: Featured Image */}
-            <div className="relative w-full aspect-[4/3] lg:aspect-[4/3.5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
-              <Image
-                src={post.image || "/images/placeholder.jpg"}
-                alt={post.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                priority
-              />
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 border border-slate-700">
+                    <User size={28} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg text-white">{post.author}</h4>
+                    <span className="text-sm text-slate-400 font-medium flex items-center gap-1.5">
+                      <Calendar size={14} />{" "}
+                      {new Date(post.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: Featured Image */}
+              <div className="relative w-full aspect-[4/3] lg:aspect-[4/3.5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group">
+                <Image
+                  src={post.image || "/images/placeholder.jpg"}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+              </div>
+              
             </div>
-            
           </div>
         </section>
 

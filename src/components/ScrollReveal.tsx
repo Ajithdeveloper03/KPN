@@ -9,20 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollReveal() {
   const pathname = usePathname();
-  // Use a ref to hold the GSAP context so we can safely revert it
   const ctxRef = useRef<gsap.Context | null>(null);
 
   useEffect(() => {
-    // Revert any previous context before creating a new one
     if (ctxRef.current) {
       ctxRef.current.revert();
       ctxRef.current = null;
     }
 
-    // Wait a brief moment for all sibling components to mount and render into the DOM
-    const timer = setTimeout(() => {
-      const ctx = gsap.context(() => {
-
+    const initAnimations = () => {
+      ctxRef.current = gsap.context(() => {
         // 1. Image Mask Reveals [data-reveal="image"]
         document.querySelectorAll('[data-reveal="image"]').forEach((img) => {
           const child = img.querySelector("img") || img.firstElementChild;
@@ -35,14 +31,14 @@ export default function ScrollReveal() {
             clipPath: "inset(0 0 0% 0)",
             duration: 1.2,
             ease: "power3.out",
-            scrollTrigger: { trigger: img, start: "top 80%" },
+            scrollTrigger: { trigger: img, start: "top 85%" },
           });
 
           gsap.to(child, {
             scale: 1,
             duration: 1.2,
             ease: "power3.out",
-            scrollTrigger: { trigger: img, start: "top 80%" },
+            scrollTrigger: { trigger: img, start: "top 85%" },
           });
         });
 
@@ -56,7 +52,7 @@ export default function ScrollReveal() {
               opacity: 1,
               duration: 1.0,
               ease: "power4.out",
-              scrollTrigger: { trigger: text, start: "top 85%" },
+              scrollTrigger: { trigger: text, start: "top 90%" },
             }
           );
         });
@@ -75,19 +71,38 @@ export default function ScrollReveal() {
               duration: 0.8,
               stagger: 0.15,
               ease: "power2.out",
-              scrollTrigger: { trigger: container, start: "top 75%" },
+              scrollTrigger: { trigger: container, start: "top 85%" },
+            }
+          );
+        });
+
+        // 4. Fade Up [data-reveal="fade-up"]
+        document.querySelectorAll('[data-reveal="fade-up"]').forEach((el) => {
+          gsap.fromTo(
+            el,
+            { y: 50, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 1.0,
+              ease: "power3.out",
+              scrollTrigger: { trigger: el, start: "top 85%" },
             }
           );
         });
       });
+    };
 
-      ctxRef.current = ctx;
-    }, 150);
+    // Wait for DOM paint and images
+    const timer = setTimeout(() => {
+      requestAnimationFrame(() => {
+        initAnimations();
+        ScrollTrigger.refresh();
+      });
+    }, 250);
 
     return () => {
       clearTimeout(timer);
-      // Revert on cleanup — this undoes ALL inline styles GSAP set, preventing
-      // React's reconciler from crashing on stale DOM mutations.
       if (ctxRef.current) {
         ctxRef.current.revert();
         ctxRef.current = null;

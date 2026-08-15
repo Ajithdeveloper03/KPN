@@ -27,7 +27,7 @@ const services = [
     icon: Home,
     title: "Home Roofing Sheds",
     desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures. Our residential roofing sheds are built with the same durable, weatherproof roofing standards used across our large-scale industrial projects.",
-    image: "/images/image19.jpeg",
+    image: "/images/services/home-roofing-shed-banner-image.png",
     alt: "Home terrace parking shades roofing sheds by KPN",
   },
   {
