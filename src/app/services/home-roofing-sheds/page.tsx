@@ -274,7 +274,7 @@ export default function HomeRoofingShedsPage() {
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 {/* Image */}
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/images/services/home-roofing-shed-banner-image.png" alt="KPN Home Roofing" fill className="object-cover" />
+                  <Image src="/images/services/home-roofing-shed-la-1-section-la-2-image.png" alt="KPN Home Roofing" fill className="object-cover" />
                 </div>
                 
                 {/* The Floating Checklist Block */}
@@ -359,7 +359,7 @@ export default function HomeRoofingShedsPage() {
         </section>
 
         {/* ---------------- Explore by Shed Type ---------------- */}
-        <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
+        {/* <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif italic font-medium text-[#ee0000]">Shed Type</span></h2>
           </div>
@@ -374,7 +374,7 @@ export default function HomeRoofingShedsPage() {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* ---------------- Interactive Accordion FAQ ---------------- */}
         <section className="bg-[#f8f9fc] py-10 lg:py-12 border-b border-slate-200 overflow-hidden">
@@ -422,7 +422,7 @@ export default function HomeRoofingShedsPage() {
         <section className="py-12 lg:py-12 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/home-roofing-shed-banner-image.png" alt="Home Roofing Sheds CTA" fill className="object-cover" />
+            <Image src="/images/services/home-roofing-shed-la-2-section-1-image.png" alt="Home Roofing Sheds CTA" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

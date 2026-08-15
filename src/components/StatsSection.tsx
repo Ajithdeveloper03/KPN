@@ -9,55 +9,55 @@ const statsCards = [
     title: "10+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
-    img: "/images/image8.jpeg"
+    img: "/images/services/goat01.png"
   },
   {
     title: "600+ Projects",
     desc: "Successfully completed across India.",
     color: "#ee0000", // Red
-    img: "/images/image9.jpeg"
+    img: "/images/services/factory-image-1.png"
   },
   {
     title: "All Services",
     desc: "Industrial, agricultural, home, turf & badminton sheds.",
     color: "#ffe600", // Yellow
-    img: "/images/image6.jpeg"
+    img: "/images/services/industrial-banner-image.png"
   },
   {
     title: "₹599/sq.ft",
     desc: "Goat farm shed pricing starts at ₹599/sq.ft.",
     color: "#062088", // Blue
-    img: "/images/image7.jpeg"
+    img: "/images/services/agriculture-and-animal-husbenday-bannar-image.png"
   },
   {
     title: "Min. Size",
     desc: "1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states.",
     color: "#ee0000", // Red
-    img: "/images/image5.jpeg"
+    img: "/images/services/home-roofing-shed-banner-image.png"
   },
   {
     title: "Fast Timeline",
     desc: "20 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
     color: "#ffe600", // Yellow
-    img: "/images/image8.jpeg"
+    img: "/images/services/factory-banner-image.png"
   },
   {
     title: "10-Yr Warranty",
     desc: "10-year guarantee, 3-year replacement on flooring.",
     color: "#062088", // Blue
-    img: "/images/image9.jpeg"
+    img: "/images/services/sports-turf-main-banner.png"
   },
   {
     title: "50% Advance",
     desc: "Remainder in installments as materials arrive.",
     color: "#ee0000", // Red
-    img: "/images/image6.jpeg"
+    img: "/images/services/warehouse-01.png"
   },
   {
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
     color: "#ffe600", // Yellow
-    img: "/images/image7.jpeg"
+    img: "/images/services/poultry01.png"
   }
 ];
 
@@ -105,7 +105,7 @@ export default function StatsSection() {
   return (
     <section id="stats" className="relative py-14  flex flex-col justify-center overflow-hidden">
       {/* Fixed Background Image with light overlay */}
-      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/image5.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/services/cricket-image-1.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="absolute inset-0 bg-gray-100" />
       </div>
 

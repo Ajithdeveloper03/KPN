@@ -72,7 +72,7 @@ export default function QuoteModal() {
         {/* Left Side: Image Cover (Hidden on Mobile) */}
         <div 
           className="hidden md:block w-1/2 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('/images/image1.jpeg')" }}
+          style={{ backgroundImage: "url('/images/services/animal-1-image-1.png')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-[#062088]/80 to-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -126,7 +126,7 @@ export default function QuoteModal() {
                       id={id}
                       name={id}
                       required
-                      className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-[#1e2229] outline-none transition-colors focus:border-[#ee0000] bg-slate-50"
+                      className="w-full border border-slate-200 rounded-xl px-4 py-3 text-base md:text-sm font-medium text-[#1e2229] outline-none transition-colors focus:border-[#ee0000] bg-slate-50"
                       placeholder={placeholder}
                       value={formData[id as keyof typeof formData]}
                       onChange={handleFormChange}
@@ -140,7 +140,7 @@ export default function QuoteModal() {
                     id="shedType"
                     name="shedType"
                     required
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-[#1e2229] outline-none transition-colors focus:border-[#ee0000] bg-slate-50"
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-base md:text-sm font-medium text-[#1e2229] outline-none transition-colors focus:border-[#ee0000] bg-slate-50"
                     value={formData.shedType}
                     onChange={handleFormChange}
                   >
@@ -172,7 +172,7 @@ export default function QuoteModal() {
                     id="message"
                     name="message"
                     rows={3}
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-[#1e2229] outline-none transition-colors focus:border-[#ee0000] bg-slate-50 resize-none"
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-base md:text-sm font-medium text-[#1e2229] outline-none transition-colors focus:border-[#ee0000] bg-slate-50 resize-none"
                     placeholder="e.g. Need a 2400 sq.ft goat farm shed"
                     value={formData.message}
                     onChange={handleFormChange}

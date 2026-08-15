@@ -69,7 +69,7 @@ export default function GoatFarmShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/goat-banner-image.png" alt="goat farm shed India — KPN" fill className="object-cover" />
+              <Image src="/images/services/goat01.png" alt="goat farm shed India — KPN" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
@@ -494,7 +494,7 @@ export default function GoatFarmShedPage() {
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/goat-banner-image.png" alt="goat farm shed — KPN" fill className="object-cover" />
+            <Image src="/images/services/animal-sec-7.png" alt="goat farm shed — KPN" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

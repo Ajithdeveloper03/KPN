@@ -11,7 +11,7 @@ const services = [
     icon: Factory,
     title: "Industrial & Factory Shed Construction",
     desc: "Our industrial shed construction covers factories, warehouses, and godowns with heavy-gauge steel structures built for load-bearing equipment, racking, and vehicle movement. As factory shed contractors, we plan every structure around your production layout. Long spans and minimal columns give warehouse owners maximum usable floor space.",
-    image: "/images/services/industrial-banner-image.png",
+    image: "/images/image17.jpeg",
     alt: "Industrial factory warehouse shed construction by KPN",
   },
   {
@@ -19,7 +19,7 @@ const services = [
     icon: Leaf,
     title: "Agricultural & Animal Shed Solutions",
     desc: "KPN is a trusted name in agricultural sheds and animal shed solutions — goat, dairy, cattle, and poultry structures engineered for ventilation, drainage, and animal comfort. Our modern farm sheds are customizable in size and layout, from small farm setups to large commercial operations.",
-    image: "/images/services/agriculture-and-animal-husbenday-bannar-image.png",
+    image: "/images/image18.jpeg",
     alt: "Agricultural farm animal shed solution by KPN",
   },
   {
@@ -27,7 +27,7 @@ const services = [
     icon: Home,
     title: "Home & Recreational Sheds",
     desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures — along with turf grounds and badminton court sheds, built with the same weatherproof roofing standards used across our industrial and farm projects.",
-    image: "/images/services/home-roofing-shed-banner-image.png",
+    image: "/images/image19.jpeg",
     alt: "Home terrace parking shades and sports turf roofing sheds by KPN",
   }
 ];
@@ -40,9 +40,12 @@ export default function ServicesSection() {
   return (
     <section id="services" className="bg-[#19191c] text-white py-12 md:py-16 relative overflow-hidden">
       {/* Background Image */}
+      {/* <div className="absolute left-[3%] lg:left-[5%] top-[10%] w-[12%] lg:w-[15%] aspect-square rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-2xl opacity-40 md:opacity-100 z-0 rotate-12 parallax-layer" data-speed="0.1">
+        <Image src="/images/service-bg.png" alt="Service Element 1" fill className="object-cover" />
+      </div> */}
       <div className="absolute inset-0 z-0 opacity-50">
         <Image
-          src="/images/services/factory-banner-image.png"
+          src="/images/service-bg.png"
           alt="Services Background"
           fill
           sizes="100vw"

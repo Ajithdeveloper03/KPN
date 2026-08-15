@@ -56,36 +56,40 @@ export default function ProcessSection() {
       gsap.registerPlugin(ScrollTrigger);
 
       ctx = gsap.context(() => {
-        const slider = sliderRef.current;
-        if (!slider) return;
+        const mm = gsap.matchMedia();
+        
+        mm.add("(min-width: 768px)", () => {
+          const slider = sliderRef.current;
+          if (!slider) return;
 
-        const scrollAmount = slider.scrollWidth - window.innerWidth;
+          const scrollAmount = slider.scrollWidth - window.innerWidth;
 
-        gsap.to(slider, {
-          x: -scrollAmount,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            pin: true,
-            scrub: 1,
-            end: () => `+=${scrollAmount}`,
-          }
-        });
-
-        if (pathRef.current) {
-          const pathLength = pathRef.current.getTotalLength();
-          gsap.set(pathRef.current, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
-          gsap.to(pathRef.current, {
-            strokeDashoffset: 0,
+          gsap.to(slider, {
+            x: -scrollAmount,
             ease: "none",
             scrollTrigger: {
               trigger: sectionRef.current,
-              start: "top top",
-              end: () => `+=${scrollAmount}`,
+              pin: true,
               scrub: 1,
+              end: () => `+=${scrollAmount}`,
             }
           });
-        }
+
+          if (pathRef.current) {
+            const pathLength = pathRef.current.getTotalLength();
+            gsap.set(pathRef.current, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
+            gsap.to(pathRef.current, {
+              strokeDashoffset: 0,
+              ease: "none",
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top top",
+                end: () => `+=${scrollAmount}`,
+                scrub: 1,
+              }
+            });
+          }
+        });
       }, sectionRef);
     };
     
@@ -102,11 +106,11 @@ export default function ProcessSection() {
       <section
         id="process"
         ref={sectionRef}
-        className="bg-white h-screen flex flex-col justify-center overflow-hidden relative z-10 process-section-wrapper"
+        className="bg-white md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-24 md:py-0"
         style={{ minHeight: "700px" }}
       >
-      {/* Fixed Header */}
-      <div className="absolute top-20 left-0 w-full z-10 pointer-events-none">
+      {/* Header */}
+      <div className="w-full z-10 pointer-events-none mt-16 md:mt-24 mb-10 md:mb-0">
         <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
           <div className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full font-bold text-sm tracking-wide mb-4 border transition-colors duration-700 bg-[#ccecfb] text-[#00a3e0] border-[#00a3e0]/20`}>
             <span className={`w-2 h-2 rounded-full bg-white`}></span>
@@ -120,10 +124,30 @@ export default function ProcessSection() {
         </div>
       </div>
 
-      {/* Horizontal Scrolling Container */}
+      {/* Mobile Vertical Layout */}
+      <div className="md:hidden flex flex-col gap-12 mt-32 px-6 pb-20 relative z-10 max-w-lg mx-auto">
+        <div className="absolute left-[38px] top-0 bottom-0 w-1 bg-slate-100 z-0" />
+        {steps.map((step, i) => {
+          const Icon = step.icon;
+          return (
+            <div key={i} className="relative flex gap-6 items-start z-10" data-reveal="fade-up">
+              <div className="flex-shrink-0 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-[0_12px_30px_rgba(0,75,135,0.15)] border-2 border-white z-10 relative">
+                <Icon size={28} color="#004b87" strokeWidth={2.5} />
+                <div className="absolute -top-4 -left-3 text-5xl font-black text-[#f1f5f9] z-[-1] leading-none select-none">{step.number}</div>
+              </div>
+              <div className="pt-2">
+                <h3 className="text-lg font-extrabold text-[#1e2229] mb-2 font-heading">{step.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed font-medium">{step.description}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Horizontal Scrolling Container (Desktop) */}
       <div
         ref={sliderRef}
-        className="flex relative mt-16"
+        className="hidden md:flex relative mt-16"
         style={{ width: "2500px", height: "500px" }}
       >
         {/* SVG Path */}

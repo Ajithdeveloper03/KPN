@@ -14,8 +14,8 @@ export default function Footer() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 opacity-60 pointer-events-none mix-blend-overlay">
           <Image
-            src="/images/image3.jpeg"
-            alt="Footer Background Image"
+            src="/images/image2.jpeg"
+            alt="Industrial Shed Construction"
             fill
             sizes="100vw"
             className="object-cover object-center grayscale"

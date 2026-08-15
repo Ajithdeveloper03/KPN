@@ -159,7 +159,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   placeholder="Your Name" 
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-lg" 
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base" 
                 />
                 <label 
                   htmlFor="name" 
@@ -178,7 +178,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   placeholder="Email Address" 
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-lg" 
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base" 
                 />
                 <label 
                   htmlFor="email" 
@@ -200,7 +200,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   placeholder="Phone Number" 
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-lg" 
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base" 
                 />
                 <label 
                   htmlFor="phone" 
@@ -217,7 +217,7 @@ export default function ContactPage() {
                   value={formData.shedType}
                   onChange={handleChange}
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer text-white font-medium text-lg appearance-none cursor-pointer"
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer text-white font-medium text-base appearance-none cursor-pointer"
                   style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg fill=%22white%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M7 10l5 5 5-5z%22/></svg>')", backgroundRepeat: "no-repeat", backgroundPosition: "right 10px center" }}
                 >
                   <option value="" disabled className="text-slate-900 bg-white">Select a Service...</option>

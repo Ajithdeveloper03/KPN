@@ -145,7 +145,7 @@ export default function SportsTurfShedsPage() {
               {/* Badminton */}
               <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
                 <div className="relative w-full h-[300px] rounded-[1.5rem] overflow-hidden mb-10">
-                  <Image src="/images/services/sports-turf-main-banner.png" alt="Badminton Court Shed" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/sports-turf-1-section-1-image.png" alt="Badminton Court Shed" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <div className="px-6 flex justify-between items-end">
                   <div className="max-w-[85%] space-y-4">
@@ -171,7 +171,7 @@ export default function SportsTurfShedsPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/images/services/sports-turf-main-banner.png" alt="Cricket Turf Shed" fill className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/sports-tur-1-section-2-image.png" alt="Cricket Turf Shed" fill className="object-cover transition-transform duration-700" />
                 </div>
                 <QuoteButton className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
@@ -249,7 +249,7 @@ export default function SportsTurfShedsPage() {
 
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/images/services/sports-turf-main-banner.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
+                  <Image src="/images/services/sports-turf-1-section-la-3-image.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
                 </div>
                 
                 <div className="relative -mt-16 mx-4 md:absolute md:mx-0 md:mt-0 md:right-auto md:-bottom-10 md:-left-12 lg:-left-20 bg-[#ffcc00] rounded-3xl p-6 md:p-10 shadow-2xl border border-[#ffcc00]/50 z-20 md:w-[480px]">
@@ -356,7 +356,7 @@ export default function SportsTurfShedsPage() {
                 </h2>
               </div>
               <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/images/services/sports-turf-main-banner.png" alt="FAQ Sports Turf Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/services/sports-turf-2-section-1-image.png" alt="FAQ Sports Turf Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
             
@@ -389,7 +389,7 @@ export default function SportsTurfShedsPage() {
         {/* ---------------- High Impact CTA ---------------- */}
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/sports-turf-main-banner.png" alt="Sports Turf Sheds CTA" fill className="object-cover" />
+            <Image src="/images/services/sports-turf-2-section-2-image.png" alt="Sports Turf Sheds CTA" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

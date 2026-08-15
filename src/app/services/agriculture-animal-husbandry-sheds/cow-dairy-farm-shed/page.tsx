@@ -69,7 +69,7 @@ export default function CowDairyFarmShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/dairy-banner-image.png" alt="cow and dairy farm shed India — KPN" fill className="object-cover" />
+              <Image src="/images/services/dairy-image-1.png" alt="cow and dairy farm shed India — KPN" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
@@ -221,8 +221,8 @@ export default function CowDairyFarmShedPage() {
             </div>
 
             <div className="relative">
-              {/* Curved SVG Wavy Pattern Line */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-48 md:-translate-x-1/2 z-0 opacity-70" 
+              {/* Curved SVG Wavy Pattern Line (Desktop Only) */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-48 -translate-x-1/2 z-0 opacity-70" 
                    style={{
                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='192' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96 0 C160 100 32 300 96 400' stroke='%23f39c12' stroke-width='32' fill='none' stroke-linecap='round' /%3E%3C/svg%3E")`,
                      backgroundRepeat: 'repeat-y',
@@ -231,6 +231,9 @@ export default function CowDairyFarmShedPage() {
                      WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
                    }}>
               </div>
+              
+              {/* Straight Line for Mobile */}
+              <div className="md:hidden absolute left-6 top-0 bottom-0 w-1 bg-white/10 z-0"></div>
               
               <div className="space-y-16 md:space-y-24 relative">
                 {[
@@ -245,7 +248,7 @@ export default function CowDairyFarmShedPage() {
                   <div key={idx} className={`relative flex flex-col md:flex-row items-center gap-8 md:gap-16 ${idx % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
                     
                     {/* Node on the Line */}
-                    <div className="absolute left-4 md:left-1/2 w-12 h-12 -translate-x-[8px] md:-translate-x-1/2 rounded-full border-4 border-[#2d3436] shadow-xl flex items-center justify-center z-10" style={{ backgroundColor: '#ffffff' }}>
+                    <div className="absolute left-6 md:left-1/2 w-12 h-12 -translate-x-1/2 md:-translate-x-1/2 rounded-full border-4 border-[#2d3436] shadow-xl flex items-center justify-center z-10" style={{ backgroundColor: '#ffffff' }}>
                       <div className={`w-4 h-4 rounded-full ${item.bg}`}></div>
                     </div>
 
@@ -253,7 +256,7 @@ export default function CowDairyFarmShedPage() {
                     <div className="hidden md:block w-1/2"></div>
                     
                     {/* Content Box */}
-                    <div className="w-full md:w-1/2 pl-20 md:pl-0 flex justify-start">
+                    <div className="w-full md:w-1/2 pl-16 md:pl-0 flex justify-start">
                       <div className={`bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 rounded-[2rem] hover:bg-white/10 transition-all shadow-xl group w-full max-w-lg ${idx % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}>
                         <div className="flex items-center gap-6 mb-6">
                           <span className={`text-4xl md:text-5xl font-bold opacity-30 group-hover:opacity-100 transition-opacity ${item.color}`}>
@@ -403,7 +406,7 @@ export default function CowDairyFarmShedPage() {
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/dairy-banner-image.png" alt="cow shed — KPN" fill className="object-cover" />
+            <Image src="/images/services/dairy-image-2.png" alt="cow shed — KPN" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

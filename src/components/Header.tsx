@@ -69,7 +69,7 @@ export default function Header() {
                   {/* Column 1 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/agriculture-animal-husbandry-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/image2.jpeg" alt="Agriculture" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/services/agriculture-and-animal-husbenday-bannar-image.png" alt="Agriculture" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Agriculture & Animal Husbandry</h4>
@@ -85,7 +85,7 @@ export default function Header() {
                   {/* Column 2 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/industrial-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/image4.jpeg" alt="Industrial Shed" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/services/industrial-banner-image.png" alt="Industrial Shed" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Industrial<br/>Shed</h4>
@@ -101,7 +101,7 @@ export default function Header() {
                   {/* Column 3 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/home-roofing-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/image3.jpeg" alt="Home Roofing" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/services/home-roofing-shed-banner-image.png" alt="Home Roofing" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Home Roofing<br/>Sheds</h4>
@@ -116,7 +116,7 @@ export default function Header() {
                   {/* Column 4 */}
                   <div className="flex flex-col gap-6">
                     <Link href="/services/sports-turf-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/image7.jpeg" alt="Sports Turf" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/services/sports-turf-main-banner.png" alt="Sports Turf" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Sports<br/>Turf</h4>

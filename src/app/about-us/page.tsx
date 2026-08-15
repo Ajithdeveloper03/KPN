@@ -102,7 +102,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full max-w-[400px] mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-[6px] border-white">
                   <Image 
                     src="/images/founder.png" 
-                    alt="Mr. P. M. Puyamurthi Gobi - Founder of KPN Roofing Shed" 
+                    alt="Mr. P. M. Punyamurthi Gobi - Founder of KPN Roofing Shed" 
                     fill 
                     className="object-cover" 
                   />
@@ -111,7 +111,7 @@ export default function AboutUsPage() {
               <div className="w-full md:w-7/12 lg:w-2/3 space-y-3 text-justify" data-reveal="stagger">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1e2229]">Meet Our Founder</h2>
                 <div className="pb-4 border-b border-slate-200 text-left">
-                  <h3 className="text-2xl font-bold text-[#00a3e0]">Mr. P. M. Puyamurthi (a) Gobi</h3>
+                  <h3 className="text-2xl font-bold text-[#00a3e0]">Mr. P. M. Punyamurthi (a) Gobi</h3>
                   <p className="text-slate-500 font-semibold uppercase tracking-wider text-sm mt-1">Founder, KPN Roofing Shed</p>
                 </div>
                 <div className="space-y-4 text-lg text-slate-600 font-medium leading-relaxed">

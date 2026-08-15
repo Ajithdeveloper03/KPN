@@ -223,7 +223,7 @@ export default function IndustrialShedPage() {
                     </p>
                   </div>
                   <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                    <Image src="/images/services/industrial-banner-image.png" alt="Chemical unit shed exterior photo" fill className="object-cover transition-transform duration-700" />
+                    <Image src="/images/services/industrial-image-01.png" alt="Chemical unit shed exterior photo" fill className="object-cover transition-transform duration-700" />
                   </div>
                   <button className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                     <ArrowRight strokeWidth={2} size={20} />
@@ -245,7 +245,7 @@ export default function IndustrialShedPage() {
                     </p>
                   </div>
                   <div className="relative w-[120%] h-[350px] -ml-10 rounded-tr-[2rem] overflow-hidden">
-                    <Image src="/images/services/industrial-banner-image.png" alt="Warehouse shed with racking photo" fill className="object-cover transition-transform duration-700" />
+                    <Image src="/images/services/industrial-image-02.png" alt="Warehouse shed with racking photo" fill className="object-cover transition-transform duration-700" />
                   </div>
                   <button className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
                     <ArrowRight strokeWidth={2} size={20} />
@@ -329,7 +329,7 @@ export default function IndustrialShedPage() {
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 {/* Image */}
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/images/services/industrial-banner-image.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
+                  <Image src="/images/services/industrial-image-03.png" alt="KPN Shed Infrastructure" fill className="object-cover" />
                 </div>
                 
                 {/* The Floating Checklist Block */}
@@ -412,7 +412,7 @@ export default function IndustrialShedPage() {
             {/* Service Coverage Banner */}
             <div className="bg-[#062088] rounded-[2rem] p-10 md:p-16 shadow-lg relative overflow-hidden text-center max-w-4xl mx-auto">
               <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply">
-                <Image src="/images/services/industrial-banner-image.png" alt="Service Coverage Background" fill className="object-cover" />
+                <Image src="/images/services/industrial-image-04.png" alt="Service Coverage Background" fill className="object-cover" />
               </div>
               <div className="relative z-10">
                 <MapPin size={48} className="mx-auto text-[#ffcc00] mb-6" />
@@ -426,7 +426,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- Explore by Shed Type ---------------- */}
-        <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
+        {/* <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif italic font-medium text-[#ee0000]">Shed Type</span></h2>
           </div>
@@ -442,7 +442,7 @@ export default function IndustrialShedPage() {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* ---------------- Interactive Accordion FAQ ---------------- */}
         <section className="bg-[#f8f9fc] py-10 lg:py-12 border-b border-slate-200 overflow-hidden">
@@ -458,7 +458,7 @@ export default function IndustrialShedPage() {
               </div>
               {/* Solid Image under the title */}
               <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/images/services/industrial-banner-image.png" alt="FAQ Industrial Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/services/industrial-image-05.png" alt="FAQ Industrial Sheds" fill className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
             
@@ -493,7 +493,7 @@ export default function IndustrialShedPage() {
         <section className="py-12 lg:py-12 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/industrial-banner-image.png" alt="Industrial Sheds CTA" fill className="object-cover" />
+            <Image src="/images/services/industrial-image-06.png" alt="Industrial Sheds CTA" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>
