@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Factory, Leaf, Home, Check } from "lucide-react";
+import { Factory, Leaf, Home, Trophy, Check } from "lucide-react";
 import { openQuoteModal } from "@/components/QuoteModal";
 
 const services = [
@@ -23,12 +23,20 @@ const services = [
     alt: "Agricultural farm animal shed solution by KPN",
   },
   {
-    category: "Home & Recreational",
+    category: "Home Roofing",
     icon: Home,
-    title: "Home & Recreational Sheds",
-    desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures — along with turf grounds and badminton court sheds, built with the same weatherproof roofing standards used across our industrial and farm projects.",
+    title: "Home Roofing Sheds",
+    desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures. Our residential roofing sheds are built with the same durable, weatherproof roofing standards used across our large-scale industrial projects.",
     image: "/images/image19.jpeg",
-    alt: "Home terrace parking shades and sports turf roofing sheds by KPN",
+    alt: "Home terrace parking shades roofing sheds by KPN",
+  },
+  {
+    category: "Sports Turf",
+    icon: Trophy,
+    title: "Sports Turf Shed Construction",
+    desc: "We build all-season, weatherproof sports turf sheds including badminton courts and cricket turfs. Engineered with Apollo Brand Steel for wide, column-free spans, ensuring uninterrupted play and durable protection against harsh sun and monsoon rains.",
+    image: "/images/services/sports-turf-main-banner.png",
+    alt: "Badminton court and cricket turf sports shed by KPN",
   }
 ];
 
@@ -69,7 +77,7 @@ export default function ServicesSection() {
 
         {/* Tabs Section */}
         <div className="relative mb-20 border-b-2 border-white/10" data-reveal="stagger">
-          <div className="flex flex-col sm:flex-row items-center justify-between sm:gap-16 w-full max-w-[900px] mx-auto">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-12 w-full max-w-[1100px] mx-auto">
             {services.map((service, index) => {
               const isActive = index === activeIndex;
               const Icon = service.icon;
@@ -77,11 +85,11 @@ export default function ServicesSection() {
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`relative flex items-center gap-3 pb-6 pt-2 px-2 md:px-8 transition-all duration-300 font-bold text-base md:text-md border-b-2 -mb-[2px] w-full sm:w-auto justify-center
+                  className={`relative flex items-center gap-2 md:gap-3 pb-4 md:pb-6 pt-2 px-2 md:px-4 lg:px-6 transition-all duration-300 font-bold text-sm md:text-base border-b-2 -mb-[2px] w-[45%] sm:w-auto justify-center
                     ${isActive ? "text-[#ee0000] border-[#ee0000]" : "text-slate-300 hover:text-white border-transparent"}`}
                 >
-                  <Icon size={22} className={isActive ? "text-[#ee0000]" : "text-slate-400"} />
-                  {service.category}
+                  <Icon size={20} className={isActive ? "text-[#ee0000]" : "text-slate-400"} />
+                  <span className="text-center sm:text-left">{service.category}</span>
                 </button>
               );
             })}

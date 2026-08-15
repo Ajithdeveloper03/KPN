@@ -53,7 +53,7 @@ export default function SportsTurfShedsPage() {
                 <Image src="/images/services/sports-turf-1-section-1-image.png" alt="Badminton Court Shed India" fill className="object-cover" priority />
               </div>
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/sports-turf-1-section-2-image.png" alt="Cricket Turf Construction India" fill className="object-cover" priority />
+                <Image src="/images/services/sports-tur-1-section-2-image.png" alt="Cricket Turf Construction India" fill className="object-cover" priority />
               </div>
             </div>
 

@@ -310,8 +310,8 @@ export default function GoatFarmShedPage() {
             </div>
 
             <div className="relative">
-              {/* Single Continuous SVG Wavy Line */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-64 md:-translate-x-1/2 z-0 opacity-70"
+              {/* Single Continuous SVG Wavy Line (Desktop Only) */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-64 -translate-x-1/2 z-0 opacity-70"
                    style={{
                      maskImage: 'linear-gradient(to bottom, transparent, black 5%, black 95%, transparent)',
                      WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 5%, black 95%, transparent)'
@@ -327,6 +327,9 @@ export default function GoatFarmShedPage() {
                 </svg>
               </div>
               
+              {/* Straight Line for Mobile */}
+              <div className="md:hidden absolute left-6 top-0 bottom-0 w-1 bg-white/10 z-0"></div>
+              
               <div className="space-y-12 md:space-y-16 relative">
                 {[
                   { step: "01", title: "Herd Size", desc: "Determine the current and expected herd size before finalizing shed dimensions", color: "text-[#e67e22]", bg: "bg-[#e67e22]" },
@@ -340,7 +343,7 @@ export default function GoatFarmShedPage() {
                   <div key={idx} className={`relative flex flex-col md:flex-row items-center gap-8 md:gap-16 ${idx % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
                     
                     {/* Node on the Line */}
-                    <div className="absolute left-4 md:left-1/2 w-12 h-12 -translate-x-[8px] md:-translate-x-1/2 rounded-full border-4 border-[#2d3436] shadow-xl flex items-center justify-center z-10" style={{ backgroundColor: '#ffffff' }}>
+                    <div className="absolute left-6 md:left-1/2 w-12 h-12 -translate-x-1/2 md:-translate-x-1/2 rounded-full border-4 border-[#2d3436] shadow-xl flex items-center justify-center z-10" style={{ backgroundColor: '#ffffff' }}>
                       <div className={`w-4 h-4 rounded-full ${item.bg}`}></div>
                     </div>
 
@@ -348,7 +351,7 @@ export default function GoatFarmShedPage() {
                     <div className="hidden md:block w-1/2"></div>
                     
                     {/* Content Box */}
-                    <div className="w-full md:w-1/2 pl-20 md:pl-0 flex justify-start">
+                    <div className="w-full md:w-1/2 pl-16 md:pl-0 flex justify-start">
                       <div className={`bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 rounded-[2rem] hover:bg-white/10 transition-all shadow-xl group w-full max-w-lg ${idx % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}>
                         <div className="flex items-center gap-6 mb-6">
                           <span className={`text-4xl md:text-5xl font-bold opacity-30 group-hover:opacity-100 transition-opacity ${item.color}`}>

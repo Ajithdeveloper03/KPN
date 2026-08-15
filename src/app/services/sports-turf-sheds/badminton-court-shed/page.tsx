@@ -69,7 +69,7 @@ export default function BadmintonCourtShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/badminton-faq.jpeg" alt="badminton court shed India — KPN" fill className="object-cover" />
+              <Image src="/images/services/how-long-does-badminton.png" alt="badminton court shed India — KPN" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
