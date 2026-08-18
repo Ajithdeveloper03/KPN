@@ -46,15 +46,15 @@ export default function Header() {
 
         <nav className="hidden md:block">
           <ul className="flex gap-8 list-none m-0 p-0 items-center">
-            <li><Link href="/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Home</Link></li>
-            <li><Link href="/about-us" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>About Us</Link></li>
+            <li><Link href="/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Home</Link></li>
+            <li><Link href="/about-us" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>About Us</Link></li>
             
             {/* Services Mega Menu */}
             <li 
               className="relative group"
               onMouseLeave={() => setIsDropdownClicked(false)}
             >
-              <Link href="/services" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>
+              <Link href="/services" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>
                 Services
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </Link>
@@ -131,9 +131,9 @@ export default function Header() {
               </div>
             </li>
 
-            <li><Link href="/gallery" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Gallery</Link></li>
-            <li><Link href="/blog" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Blog</Link></li>
-            <li><Link href="/contact" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-slate-900 hover:text-black'}`}>Contact</Link></li>
+            <li><Link href="/gallery" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Gallery</Link></li>
+            <li><Link href="/blog" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Blog</Link></li>
+            <li><Link href="/contact" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Contact</Link></li>
           </ul>
         </nav>
 
@@ -148,7 +148,7 @@ export default function Header() {
             </button>
           )}
 
-          <a href="tel:+919788770786" className={`hidden md:inline-flex items-center border-2 px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 ${forceNightModeStyles ? 'bg-transparent border-white text-white hover:bg-white hover:text-black' : 'bg-white border-white text-slate-900 hover:bg-transparent hover:text-slate-900'}`}>
+          <a href="tel:+919788770786" className={`hidden md:inline-flex items-center border-2 px-5 py-2.5 rounded-full text-sm font-bold transition-colors duration-300 ${forceNightModeStyles ? 'bg-white border-black text-black hover:bg-black hover:text-white': 'bg-white border-black text-black hover:bg-black hover:text-white'}`}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1.5 align-middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call Now
           </a>
@@ -156,7 +156,7 @@ export default function Header() {
             Get Free Quote
           </button>
           
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={`md:hidden relative z-[110] p-1 ${forceNightModeStyles ? 'text-white' : 'text-slate-900'}`}>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={`md:hidden relative z-[110] p-1 ${forceNightModeStyles ? 'text-white' : 'text-black'}`}>
              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>

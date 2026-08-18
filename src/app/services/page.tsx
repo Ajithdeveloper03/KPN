@@ -8,6 +8,9 @@ import { ArrowRight, Settings } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Our Services | KPN Roofing Shed',
   description: 'Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.',
+  alternates: {
+    canonical: 'https://kpnroofingshed.com/services',
+  },
 };
 
 const servicesList = [
@@ -40,6 +43,30 @@ const servicesList = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": servicesList.map((service, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Service",
+                "name": service.title,
+                "description": service.desc,
+                "url": `https://kpnroofingshed.com${service.href}`,
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "KPN Roofing Shed",
+                  "image": "https://kpnroofingshed.com/images/logo.jpg"
+                }
+              }
+            }))
+          })
+        }}
+      />
       <PageHero 
         title="Our Services" 
         breadcrumbs={[

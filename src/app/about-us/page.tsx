@@ -13,6 +13,9 @@ import {
 export const metadata: Metadata = {
   title: "About KPN Roofing Shed — Trusted Roofing Company Since 2016 | KPN",
   description: "Learn about KPN Roofing Shed — a roofing shed construction company with 10+ years of experience building durable sheds for homes, farms, and industries across India.",
+  alternates: {
+    canonical: "https://kpnroofingshed.com/about-us",
+  },
 };
 
 const faqs = [
@@ -41,6 +44,41 @@ const faqs = [
 export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#00a3e0] selection:text-white flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "AboutPage",
+                "name": "About KPN Roofing Shed",
+                "url": "https://kpnroofingshed.com/about-us",
+                "description": "Learn about KPN Roofing Shed — a roofing shed construction company with 10+ years of experience building durable sheds for homes, farms, and industries across India.",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "KPN Roofing Shed",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://kpnroofingshed.com/images/logo.jpg"
+                  }
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <PageHero 
         title="About KPN Roofing Shed" 
         breadcrumbs={[

@@ -79,7 +79,7 @@ try {
     $mail->Port       = 465;
 
     // Recipients
-    $mail->setFrom('inymartlabs@gmail.com', 'KPN Website Form');
+    $mail->setFrom('kpnroofingshed555@gmail.com', 'KPN Website Form');
     $mail->addAddress('kpnroofingshed555@gmail.com', 'KPN Admin');
     $mail->addReplyTo($email !== 'Not Provided' ? $email : 'kpnroofingshed555@gmail.com', $name);
     
