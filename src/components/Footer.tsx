@@ -39,7 +39,7 @@ export default function Footer() {
               <span className="text-xl font-extrabold text-white">KPN Roofing Shed</span>
             </div>
             <p className="text-slate-300 leading-relaxed font-medium max-w-sm mt-2">
-              India&apos;s leading roofing shed contractors with over 13 years of experience. We specialize in engineering durable, weatherproof, and custom-designed structures for industrial warehouses, factory sheds, agricultural animal houses, and premium sports turf arenas across the nation. Backed by in-house engineering, transparent pricing, and a 10-year guarantee.
+              India&apos;s leading roofing shed contractors with over 10 years of experience. We specialize in engineering durable, weatherproof, and custom-designed structures for industrial warehouses, factory sheds, agricultural animal houses, and premium sports turf arenas across the nation. Backed by in-house engineering and a 10-year guarantee.
             </p>
           </div>
 

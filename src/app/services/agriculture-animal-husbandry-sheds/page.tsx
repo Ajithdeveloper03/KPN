@@ -71,7 +71,7 @@ export default function AgricultureAnimalHusbandryPage() {
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
-                 Are you a farmer looking to expand your livestock operation? A dairy owner needing a hygienic, well-ventilated cow shed? Or a poultry farmer looking for well-designed broiler or layer sheds? KPN Roofing Shed designs animal sheds for different farm types, with in-house engineering, direct pricing, and a 10-year guarantee.
+                 Are you a farmer looking to expand your livestock operation? A dairy owner needing a hygienic, well-ventilated cow shed? Or a poultry farmer looking for well-designed broiler or layer sheds? KPN Roofing Shed designs animal sheds for different farm types, with in-house engineering, and a 10-year guarantee.
                </p>
              </div>
           </div>
@@ -90,16 +90,12 @@ export default function AgricultureAnimalHusbandryPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Metric 1 */}
-              <div className="bg-[#222d58] p-10 rounded-[2rem] shadow-lg">
+              {/* <div className="bg-[#222d58] p-10 rounded-[2rem] shadow-lg">
                 <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-8">
                   <Box strokeWidth={1.5} size={28} />
                 </div>
-                <h4 className="text-white font-semibold text-2xl mb-6">Pricing Options</h4>
-                <ul className="space-y-4 text-blue-100 font-medium leading-relaxed">
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ffcc00] mt-1 shrink-0" /> <span><strong className="text-white">Goat farm shed price:</strong> starts at ₹599/sq.ft (basic), ₹699/sq.ft (MS material), ₹799/sq.ft (premium)</span></li>
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ffcc00] mt-1 shrink-0" /> <span><strong className="text-white">Integrated farms</strong>: pricing starts at ₹200/sq.ft above the standard shed price, depending on structure</span></li>
-                </ul>
-              </div>
+                
+              </div> */}
               
               {/* Metric 2 */}
               <div className="bg-[#6f1c1c] p-10 rounded-[2rem] shadow-lg">
@@ -268,7 +264,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 Why KPN is <br/> <span className="font-serif italic font-medium text-[#ee0000]">Different</span>
               </h2>
               <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-lg">
-                We remove the middleman and rely on our own qualified engineers and installation teams. This ensures transparent pricing and unmatched speed.
+                We remove the middleman and rely on our own qualified engineers and installation teams. This ensures unmatched speed and quality.
               </p>
               <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
                 Standout Effortlessly
@@ -288,7 +284,7 @@ export default function AgricultureAnimalHusbandryPage() {
                     "No middleman — deal directly",
                     "In-house qualified engineers",
                     "Own installation team (no subs)",
-                    "100% Transparent pricing",
+                    
                     "20 days for 1440 sq.ft shed",
                     "10-year structural guarantee"
                   ].map((feature, idx) => (
@@ -454,7 +450,6 @@ export default function AgricultureAnimalHusbandryPage() {
             {/* Right Side: Accordion */}
             <div className="w-full lg:w-7/12 space-y-4">
               {[
-                { q: "What is the cost of a goat farm shed in India?", a: "A basic goat farm shed starts at ₹599 per sq.ft, ₹699 per sq.ft with MS material, and ₹799 per sq.ft for the premium model." },
                 { q: "What is the minimum size for a farm shed?", a: "The minimum shed size is 1,440 sq.ft in Tamil Nadu and 2,400 sq.ft in other states." },
                 { q: "Can KPN build a combined dairy and poultry shed?", a: "KPN can assess the farm layout and recommend separate or integrated structures based on ventilation, hygiene, and operational requirements." },
                 { q: "How long does a farm shed take to complete?", a: "A 1440 sq.ft shed is completed in 20 days; a 2400 sq.ft shed takes about 1 month." },

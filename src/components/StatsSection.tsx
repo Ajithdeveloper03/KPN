@@ -25,7 +25,7 @@ const statsCards = [
   },
   {
     title: "₹599/sq.ft",
-    desc: "Goat farm shed pricing starts at ₹599/sq.ft.",
+    desc: "High-quality goat farm sheds tailored to your needs.",
     color: "#062088", // Blue
     img: "/images/services/agriculture-and-animal-husbenday-bannar-image.png"
   },
@@ -126,7 +126,7 @@ export default function StatsSection() {
               KPN Roofing Shed At A Glance
             </h2>
             <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed mb-8">
-              Get the best construction experience built on the three pillars of Quality, Durability and Transparent Pricing.
+              Get the best construction experience built on the three pillars of Quality, Durability and Timely Delivery.
             </p>
             <a
               href="#services"
@@ -203,7 +203,7 @@ export default function StatsSection() {
         {/* Disclaimer */}
         <div className="mt-12 text-center lg:text-right w-full">
           <p className="text-slate-500 text-sm font-medium">
-            * Pricing varies based on shed type, material, location and project scope.
+            
           </p>
         </div>
 

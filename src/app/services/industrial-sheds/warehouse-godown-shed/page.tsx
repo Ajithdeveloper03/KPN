@@ -75,16 +75,16 @@ export default function WarehouseGodownShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
@@ -125,7 +125,7 @@ export default function WarehouseGodownShedPage() {
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-orange-900/5 hover:shadow-xl hover:-translate-y-1 transition-all sm:col-span-2">
                   <Wrench size={36} className="text-[#d35400] mb-5" />
-                  <h3 className="text-xl font-bold text-[#2d3436] mb-3">Project-Specific Pricing</h3>
+                  <h3 className="text-xl font-bold text-[#2d3436] mb-3">Project Execution</h3>
                   <p className="text-gray-500 font-medium leading-relaxed">
                     Confirmed after site inspection and load calculation based on your custom storage requirements.
                   </p>
@@ -382,7 +382,7 @@ export default function WarehouseGodownShedPage() {
                 { q: "What is a warehouse or godown shed?", a: "A warehouse or godown shed is a steel or PEB structure designed for storing raw materials, finished goods, inventory, and other commercial goods. It typically provides open floor space, weatherproof roofing, and access for loading and unloading." },
                 { q: "Which type of shed is suitable for a warehouse?", a: "Clear-span steel or PEB sheds are suitable for many warehouse applications because they provide more usable floor space for pallet racking, forklift movement, storage, and future expansion. The suitable design depends on storage volume and site layout." },
                 { q: "Can KPN build a customized warehouse or godown shed?", a: "Yes. KPN Roofing Shed designs customized warehouse and godown sheds based on plot size, storage capacity, racking layout, loading bay requirements, vehicle movement, and future expansion plans." },
-                { q: "What is the cost of warehouse shed construction in India?", a: "Warehouse shed construction cost depends on factors such as shed size, structural design, steel quantity, roofing sheets, foundation, location, storage requirements, and additional specifications. KPN provides a project-specific quotation after the site visit and requirement assessment." },
+                
                 { q: "Does KPN build warehouse and godown sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed provides warehouse and godown shed construction, industrial roofing, and PEB shed installation services across India, subject to project scope and site conditions." }
               ].map((faq, i) => (
                 <details name='faq' key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">

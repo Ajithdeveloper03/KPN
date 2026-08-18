@@ -4,10 +4,6 @@ export const faqs = [
     answer: "KPN builds industrial and factory sheds, warehouses, agricultural and animal sheds (goat, dairy, poultry, cattle), and home structures like terrace sheds and car parking shades, across India."
   },
   {
-    question: "What is the cost of a goat farm shed in India?",
-    answer: "A basic goat farm shed starts at ₹599 per sq.ft, ₹725 per sq.ft with MS material, and ₹799 per sq.ft for the premium model."
-  },
-  {
     question: "How long does KPN take to complete a shed?",
     answer: "A 1440 sq.ft shed is completed in 20 days. A 2400 sq.ft shed takes about 1 month."
   },

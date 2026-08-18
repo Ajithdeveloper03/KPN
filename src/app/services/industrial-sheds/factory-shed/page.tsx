@@ -75,16 +75,16 @@ export default function FactoryShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
@@ -125,7 +125,7 @@ export default function FactoryShedPage() {
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-orange-900/5 hover:shadow-xl hover:-translate-y-1 transition-all sm:col-span-2">
                   <Wrench size={36} className="text-[#d35400] mb-5" />
-                  <h3 className="text-xl font-bold text-[#2d3436] mb-3">Project-Specific Pricing</h3>
+                  <h3 className="text-xl font-bold text-[#2d3436] mb-3">Project Execution</h3>
                   <p className="text-gray-500 font-medium leading-relaxed">
                     Confirmed after site inspection, load calculation, and engineering design based on your custom requirements.
                   </p>
@@ -382,7 +382,7 @@ export default function FactoryShedPage() {
                 { q: "What is a factory shed?", a: "A factory shed is a steel, PEB, or prefabricated industrial structure used for manufacturing, production, storage, workshops, and other industrial operations." },
                 { q: "Which type of shed is suitable for a factory?", a: "Steel and PEB factory sheds are suitable for many industrial applications because they can provide flexible layouts, wide clear-span areas, and scope for future expansion. The appropriate structure depends on the site, machinery, production requirements, and project design." },
                 { q: "What height is suitable for a factory shed?", a: "A standard factory shed may have a roof height of around 20–30 feet, while high-clearance requirements may extend to approximately 30–35 feet. The final height depends on machinery, ventilation, lifting equipment, storage, and operational requirements." },
-                { q: "How much does factory shed construction cost in India?", a: "Factory shed construction cost depends on the shed size, structural design, steel quantity, roofing materials, insulation, foundation requirements, location, and additional project requirements. KPN provides a project-specific quotation after site inspection and engineering assessment." },
+                
                 { q: "Does KPN provide factory shed construction across India?", a: "Yes. KPN Roofing Shed provides factory shed construction, industrial roofing, steel shed fabrication, and PEB shed installation services across India, subject to project requirements and site conditions." }
               ].map((faq, i) => (
                 <details name='faq' key={i} className="group border-b border-gray-200 pb-6 cursor-pointer">

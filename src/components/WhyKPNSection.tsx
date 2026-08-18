@@ -98,7 +98,7 @@ export default function WhyKPNSection() {
               <Card
                 icon={ShieldCheck}
                 title="No Middleman"
-                desc="You deal directly with KPN, not a broker or dealer, so pricing and communication stay direct."
+                desc="You deal directly with KPN, not a broker or dealer, so communication stays direct."
               />
               <Card
                 icon={Ruler}
@@ -132,7 +132,7 @@ export default function WhyKPNSection() {
             <div className="flex flex-col gap-12 lg:gap-16 w-full items-center lg:items-start z-10 relative py-8">
               <Card
                 icon={Award}
-                title="Transparent Pricing"
+                title="Clear Process"
                 desc="Quotes are itemized upfront with no hidden costs added later."
               />
               <Card

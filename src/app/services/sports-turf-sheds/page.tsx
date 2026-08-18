@@ -64,7 +64,7 @@ export default function SportsTurfShedsPage() {
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
-                 Planning a badminton court that needs cover from sun and rain? Building a cricket turf that stays playable through the monsoon? KPN Roofing Shed builds sports turf sheds for academies, schools, colleges, sports clubs, apartment complexes, and private facility owners across India, backed by in-house engineers, transparent pricing, and a 10-year guarantee.
+                 Planning a badminton court that needs cover from sun and rain? Building a cricket turf that stays playable through the monsoon? KPN Roofing Shed builds sports turf sheds for academies, schools, colleges, sports clubs, apartment complexes, and private facility owners across India, backed by in-house engineers, and a 10-year guarantee.
                </p>
              </div>
           </div>
@@ -258,7 +258,7 @@ export default function SportsTurfShedsPage() {
                       "No middleman",
                       "In-house engineers",
                       "Own installation team",
-                      "Transparent pricing",
+                      
                       "10-year guarantee",
                       "Free repair support for covered damage in the first year"
                     ].map((feature, idx) => (
@@ -286,7 +286,7 @@ export default function SportsTurfShedsPage() {
                     { feature: "Materials", kpn: "Apollo Brand Steel", other: "Generic steel" },
                     { feature: "Installation", kpn: "Own installation team", other: "Often subcontracted" },
                     { feature: "Warranty", kpn: "10 years", other: "Often limited" },
-                    { feature: "Pricing", kpn: "Transparent, itemized quote", other: "Varies by contractor" }
+                    
                   ].map((row, idx) => (
                     <div key={idx} className="grid grid-cols-3 hover:bg-slate-50 transition-colors">
                       <div className="p-4 md:p-6 text-slate-700 font-semibold">{row.feature}</div>
@@ -315,7 +315,7 @@ export default function SportsTurfShedsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col justify-between">
                   <p className="text-slate-600 font-medium text-lg leading-relaxed mb-8">
-                    &quot;Our academy required a column-free design for uninterrupted play. KPN delivered perfectly, on time, and with transparent pricing.&quot;
+                    &quot;Our academy required a column-free design for uninterrupted play. KPN delivered perfectly, on time, and with great quality.&quot;
                   </p>
                   <div>
                     <h5 className="text-[#111] font-bold text-lg">Sports Academy Director</h5>
@@ -364,7 +364,6 @@ export default function SportsTurfShedsPage() {
               {[
                 { q: "Does KPN Roofing Shed build badminton court sheds?", a: "Yes. KPN Roofing Shed designs and builds badminton court sheds engineered for weatherproof, all-season play. Every structure is planned with adequate roof height, structural clearance, and durable roofing materials to provide comfortable playing conditions." },
                 { q: "Does KPN Roofing Shed build cricket turf sheds?", a: "Yes. KPN Roofing Shed builds cricket turf sheds for practice nets and cricket turf facilities. The structures are designed with durable steel framing and weatherproof roofing to help keep the playing area usable throughout the year." },
-                { q: "What is the cost of a sports turf shed in India?", a: "The cost depends on factors such as the type of sport, project size, span, roofing materials, and site location. Contact KPN Roofing Shed for a free site visit and a customized quotation." },
                 { q: "What warranty does KPN Roofing Shed provide on sports turf sheds?", a: "KPN Roofing Shed provides a 10-year guarantee on sports turf sheds, along with free repair support for covered damage, as per the applicable warranty terms." },
                 { q: "Does KPN Roofing Shed build sports turf sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed undertakes sports turf shed projects across India for schools, colleges, sports academies, clubs, apartment complexes, and private sports facilities." }
               ].map((faq, i) => (

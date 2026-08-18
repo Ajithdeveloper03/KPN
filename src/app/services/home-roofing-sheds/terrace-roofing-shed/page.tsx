@@ -75,16 +75,16 @@ export default function TerraceRoofingShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
@@ -352,7 +352,6 @@ export default function TerraceRoofingShedPage() {
             
             <div className="space-y-6">
               {[
-                { q: "What is the cost of a terrace roofing shed in India?", a: "The Kerala tile-style terrace roofing model is priced at ₹500–₹520 per sq.ft. The final cost may vary depending on project size, design, material requirements, and site conditions." },
                 { q: "Can a terrace roofing shed be added to an existing home?", a: "Yes. KPN designs terrace roofing sheds to suit existing residential structures. The terrace layout, slope, drainage, dimensions, and intended usage are considered during planning." },
                 { q: "What type of roofing model does KPN offer for terrace sheds?", a: "KPN offers a Kerala tile-style roofing model for terrace projects. It is designed to provide a traditional, finished appearance while offering protection from sun and rain." },
                 { q: "What warranty does KPN provide on terrace roofing sheds?", a: "KPN provides a 10-year guarantee on terrace roofing sheds, with free repair support for covered damage, as per the applicable warranty terms." },

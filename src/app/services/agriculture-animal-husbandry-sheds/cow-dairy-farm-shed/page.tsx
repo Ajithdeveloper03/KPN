@@ -75,20 +75,20 @@ export default function CowDairyFarmShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
-                    <p className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Project Pricing</p>
+                    
                     <p className="text-lg font-medium text-gray-200">The final quotation depends on shed size, steel quantity, roofing type, flooring, and milking parlour requirements, provided after a site visit.</p>
                   </div>
                   <hr className="border-white/10" />
@@ -382,7 +382,7 @@ export default function CowDairyFarmShedPage() {
               {[
                 { q: "What type of shed is best for a cow or dairy farm?", a: "A steel-framed shed with proper ventilation, non-slip flooring, and suitable areas for feeding and milking works well for many dairy farms. The final design depends on herd size, farm layout, and operational requirements." },
                 { q: "What height is suitable for a dairy farm shed?", a: "A height of around 12–16 feet suits many dairy farms. Larger commercial units may require additional height depending on ventilation and cooling requirements." },
-                { q: "How much does a cow or dairy farm shed cost in India?", a: "The cost depends on shed size, steel quantity, roofing type, flooring, and milking parlour requirements. KPN provides the final quotation after a site visit." },
+                
                 { q: "What warranty does KPN provide on dairy farm sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets, with repair support according to the applicable warranty terms." },
                 { q: "Does KPN build cow and dairy farm sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed builds cow and dairy farm sheds across India, subject to site visit and project scope." }
               ].map((faq, i) => (

@@ -75,20 +75,20 @@ export default function GoatFarmShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
-                    <p className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Project Pricing</p>
+                    
                     <p className="text-lg font-medium text-gray-200">Final dimensions and structural specifications are determined based on herd size, farm layout, production type, site conditions, and project requirements.</p>
                   </div>
                   <hr className="border-white/10" />
@@ -473,7 +473,7 @@ export default function GoatFarmShedPage() {
               {[
                 { q: "What type of shed is best for a goat farm?", a: "A steel-framed goat farm shed with suitable ventilation, practical floor planning, and elevated slatted flooring where required can work well for many goat farms. The final design depends on herd size, farm type, climate, and site conditions." },
                 { q: "What is the suitable height for a goat farm shed?", a: "A roof height of around 10–14 feet is suitable for many goat farm sheds. Larger commercial farms may require different heights depending on ventilation, shed size, and structural requirements." },
-                { q: "How much does a goat farm shed cost in India?", a: "The cost depends on shed size, structural design, steel quantity, roofing material, flooring, and site requirements. KPN provides a project-specific quotation after understanding the farm requirements and site conditions." },
+                
                 { q: "What warranty does KPN provide on goat farm sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets, with repair support for covered issues as per the applicable warranty terms." },
                 { q: "Does KPN build goat farm sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed undertakes goat farm shed projects across India, subject to site conditions and project requirements." }
               ].map((faq, i) => (

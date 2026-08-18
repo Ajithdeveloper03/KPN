@@ -108,7 +108,7 @@ export default function IndustrialShedPage() {
                 <h4 className="text-white font-semibold text-2xl mb-6">Payment & Site Visit</h4>
                 <ul className="space-y-4 text-red-100 font-medium leading-relaxed">
                   <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Payment:</strong> 50% at booking, 45% during processing, 5% after completion</span></li>
-                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Site visit:</strong> transparent charges — only the to-and-fro travel cost for the booking visit</span></li>
+                  
                 </ul>
               </div>
 
@@ -393,7 +393,7 @@ export default function IndustrialShedPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
               {[
-                { name: "Ramesh", location: "Maharashtra", type: "Factory Shed", text: "The team built our factory shed precisely to our requirements. Excellent structural integrity and very transparent pricing." },
+                { name: "Ramesh", location: "Maharashtra", type: "Factory Shed", text: "The team built our factory shed precisely to our requirements. Excellent structural integrity and excellent quality." },
                 { name: "Karthik", location: "Telangana", type: "Warehouse Shed", text: "KPN delivered our clear-span warehouse shed right on schedule. The rack spacing and height was perfectly calculated for our operations." },
                 { name: "Suresh", location: "Karnataka", type: "Garment Unit Shed", text: "Ventilation was critical for our textile unit. KPN's engineers designed a fantastic setup that controls dust and maintains great airflow." }
               ].map((testimonial, idx) => (

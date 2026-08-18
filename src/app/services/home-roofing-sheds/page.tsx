@@ -71,7 +71,7 @@ export default function HomeRoofingShedsPage() {
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
-                 Looking to extend your terrace with a durable roofing shed? Need a car parking shed that can handle heavy rain and sun? KPN Roofing Shed builds home roofing structures for homeowners across India, with in-house engineers and transparent, upfront pricing.
+                 Looking to extend your terrace with a durable roofing shed? Need a car parking shed that can handle heavy rain and sun? KPN Roofing Shed builds home roofing structures for homeowners across India, with in-house engineers and excellent quality.
                </p>
              </div>
           </div>
@@ -89,18 +89,14 @@ export default function HomeRoofingShedsPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Metric 1 */}
-              <div className="bg-[#222d58] p-8 rounded-[2rem] shadow-lg flex flex-col justify-between">
+              {/* <div className="bg-[#222d58] p-8 rounded-[2rem] shadow-lg flex flex-col justify-between">
                 <div>
                   <div className="w-14 h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-6">
                     <PenTool strokeWidth={1.5} size={24} />
                   </div>
-                  <h4 className="text-white font-semibold text-xl mb-4">Pricing</h4>
-                  <ul className="space-y-3 text-blue-100 font-medium leading-relaxed text-sm">
-                    <li className="flex items-start gap-2"><Check size={18} className="text-[#ffcc00] mt-0.5 shrink-0" /> <span>Starts at ₹140/sq.ft (standard ISI sheet)</span></li>
-                    <li className="flex items-start gap-2"><Check size={18} className="text-[#ffcc00] mt-0.5 shrink-0" /> <span>₹500-520/sq.ft (Kerala tile model)</span></li>
-                  </ul>
+                  
                 </div>
-              </div>
+              </div> */}
               
               {/* Metric 2 */}
               <div className="bg-[#6f1c1c] p-8 rounded-[2rem] shadow-lg flex flex-col justify-between">
@@ -284,7 +280,7 @@ export default function HomeRoofingShedsPage() {
                       "No middleman — deal directly with KPN",
                       "Own engineers — 5 qualified in-house designers",
                       "Own installation team — no subcontracted labour",
-                      "Transparent pricing — itemized quotes, no hidden costs",
+                      
                       "Warranty support — 10-year guarantee"
                     ].map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-4 text-[#111] font-medium text-base md:text-lg leading-snug">
@@ -311,7 +307,7 @@ export default function HomeRoofingShedsPage() {
                     { feature: "Materials", kpn: "Apollo Brand Steel", other: "Generic steel" },
                     { feature: "Installation", kpn: "Own installation team", other: "Often subcontracted" },
                     { feature: "Warranty", kpn: "10 years", other: "Often limited" },
-                    { feature: "Pricing", kpn: "Transparent, itemized quote", other: "Varies by contractor" }
+                    
                   ].map((row, idx) => (
                     <div key={idx} className="grid grid-cols-3 hover:bg-slate-50 transition-colors">
                       <div className="p-4 md:p-6 text-slate-700 font-semibold">{row.feature}</div>
@@ -338,7 +334,7 @@ export default function HomeRoofingShedsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {[
                 { name: "Priya", location: "Chennai", type: "Terrace Roofing Shed", text: "KPN installed a beautiful Kerala tile model shed on our terrace. The quality of work and the speed of execution were both top-notch. Highly recommended!" },
-                { name: "Arvind", location: "Coimbatore", type: "Car Parking Shed", text: "The team designed a robust car parking shed for my two cars. The structure is extremely sturdy, and the transparent pricing meant no surprises." },
+                { name: "Arvind", location: "Coimbatore", type: "Car Parking Shed", text: "The team designed a robust car parking shed for my two cars. The structure is extremely sturdy, and the execution was flawless." },
                 { name: "Lakshmi", location: "Madurai", type: "Terrace Roofing Shed", text: "We wanted a budget-friendly option and went with the standard ISI sheet. The 10-year warranty gives us great peace of mind." }
               ].map((testimonial, idx) => (
                 <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col justify-between">
@@ -395,7 +391,6 @@ export default function HomeRoofingShedsPage() {
             {/* Right Side: Accordion */}
             <div className="w-full lg:w-7/12 space-y-4" itemScope itemType="https://schema.org/FAQPage">
               {[
-                { q: "What is the cost of a terrace roofing shed in India?", a: "A standard ISI sheet terrace shed starts at ₹140 per sq.ft. A Kerala tile-style model costs ₹500-520 per sq.ft." },
                 { q: "Does KPN build car parking sheds?", a: "Yes. KPN builds car parking sheds sized for single or multiple vehicles, engineered for weatherproof, durable coverage." },
                 { q: "How long does a home roofing shed take to complete?", a: "Timeline depends on the size of the terrace or parking area — smaller home roofing projects are typically completed faster than full farm or industrial sheds. Contact KPN for a project-specific timeline." },
                 { q: "What warranty does KPN provide on home roofing sheds?", a: "KPN provides a 10-year guarantee, with free repair support for covered damage as per applicable warranty terms." },

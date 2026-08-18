@@ -36,15 +36,6 @@ export default function ComparisonSection() {
       otherDesc: "Inexperienced daily-wage workers often lead to poor finishing and delays."
     },
     { 
-      label: "Pricing & Quotes", 
-      icon: Check,
-      image: "/images/services/sports-turf-main-banner.png",
-      kpn: "Itemized, transparent quote", 
-      kpnDesc: "You see exactly what you pay for. No hidden fees or sudden mid-project price hikes.",
-      other: "Varies by contractor",
-      otherDesc: "Vague estimates usually result in unexpected extra costs as the project progresses."
-    },
-    { 
       label: "After-Sales Support", 
       icon: ShieldCheck,
       image: "/images/services/warehouse-01.png",

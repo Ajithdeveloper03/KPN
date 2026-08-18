@@ -75,16 +75,16 @@ export default function GarmentFactoryShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
@@ -125,7 +125,7 @@ export default function GarmentFactoryShedPage() {
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-orange-900/5 hover:shadow-xl hover:-translate-y-1 transition-all sm:col-span-2">
                   <Wrench size={36} className="text-[#d35400] mb-5" />
-                  <h3 className="text-xl font-bold text-[#2d3436] mb-3">Project-Specific Pricing</h3>
+                  <h3 className="text-xl font-bold text-[#2d3436] mb-3">Project Execution</h3>
                   <p className="text-gray-500 font-medium leading-relaxed">
                     Confirmed after site inspection, load calculation, and engineering design based on your custom requirements.
                   </p>
@@ -381,7 +381,6 @@ export default function GarmentFactoryShedPage() {
               {[
                 { q: "What type of shed is best for a garment factory?", a: "A steel-framed or PEB-style double-slope shed with proper ventilation and natural lighting can work well for garment factories. The final design depends on the available plot, production layout, machinery, storage requirements, and project needs." },
                 { q: "What height is suitable for a garment factory shed?", a: "A roof height of 20–30 feet suits most garment manufacturing units. Higher clearances (up to 35 feet) are recommended when installing ridge ventilators, turbo fans, or high-density vertical fabric storage racks to ensure proper thermal airflow and machine clearance." },
-                { q: "What is the cost of a garment factory shed in India?", a: "The cost depends on factors such as shed size, steel quantity, roofing type, insulation requirements, roof height, and site conditions. KPN provides a project-specific quotation after understanding the site and production requirements." },
                 { q: "What warranty does KPN provide on garment factory sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets, with free repair support as per the applicable warranty terms." },
                 { q: "Does KPN build garment and textile sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed builds garment and textile factory sheds across India, subject to site assessment and project scope." }
               ].map((faq, i) => (

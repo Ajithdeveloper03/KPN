@@ -75,21 +75,20 @@ export default function CricketTurfShedPage() {
           </div>
         </section>
         
-        {/* ---------------- 2. Specifications & Pricing (Split Layout) ---------------- */}
+        {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
         <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Left: Highlight Pricing Box */}
+            {/* Left: Highlight Box */}
             <div className="w-full lg:w-5/12">
               <div className="bg-gradient-to-br from-[#2c3e50] to-[#1a252f] rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden text-white">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#d35400]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">
-                  Specifications <span className="font-serif italic text-[#e67e22]">&</span> Pricing
+                  Specifications
                 </h2>
                 <div className="space-y-8 relative z-10">
                   <div>
-                    <p className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Project Pricing</p>
-                    <p className="text-lg font-medium text-gray-200">Pricing depends on the number of pitches or nets, total covered area, span and roof height, roofing material, site location and additional requirements.</p>
+                    
                   </div>
                   <hr className="border-white/10" />
                   <div>
@@ -340,8 +339,7 @@ export default function CricketTurfShedPage() {
                   <p className="text-gray-600 font-medium">KPN's team handles design, fabrication, and on-site installation, reducing handoffs between different vendors.</p>
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-1 transition-transform relative lg:-ml-12">
-                  <h3 className="text-2xl font-bold text-[#2d3436] mb-3">Transparent Project Pricing</h3>
-                  <p className="text-gray-600 font-medium">KPN provides an itemized quotation upfront, helping clients understand the project cost before construction begins.</p>
+                  
                 </div>
               </div>
               
@@ -357,7 +355,6 @@ export default function CricketTurfShedPage() {
             <div className="space-y-6">
               {[
                 { q: "Does KPN Roofing Shed build cricket turf sheds?", a: "Yes. KPN designs and builds cricket turf sheds for practice nets and turf pitches, with column-free spans, durable steel framing, and weatherproof roofing for all-season use." },
-                { q: "What is the cost of a cricket turf shed in India?", a: "The cost depends on the number of pitches or nets, total covered area, span design, roofing material, site location, and additional requirements. KPN provides a customized quotation after assessing the project requirements." },
                 { q: "Can KPN build a column-free structure for multiple cricket practice nets?", a: "Yes. KPN can design large, column-free spans to cover multiple practice nets or a full cricket pitch while keeping the practice area free from unnecessary structural obstructions." },
                 { q: "What materials are used for cricket turf sheds?", a: "KPN uses Apollo Brand Steel for structural framing, with weatherproof roofing materials selected according to the project requirements and site conditions." },
                 { q: "Does KPN build cricket turf sheds outside Tamil Nadu?", a: "Yes. KPN Roofing Shed undertakes cricket turf shed projects across India for schools, colleges, cricket academies, clubs, apartment complexes, and private sports facilities." }

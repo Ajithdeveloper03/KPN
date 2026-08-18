@@ -65,6 +65,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className="notranslate">
       <head>
+        <link rel="icon" href="/images/logo.jpg" type="image/jpeg" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FHPZGLQSQQ"
           strategy="afterInteractive"
