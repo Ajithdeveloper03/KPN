@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Contact Us | KPN Roofing Shed",
   description: "Get in touch with KPN Roofing Shed for all your industrial, agricultural, and residential roofing needs in India. Request a free quote today.",
   alternates: {
-    canonical: "https://kpnroofingshed.com/contact",
+    canonical: "https://kpnroofingsheds.com/contact",
   },
 };
 
@@ -22,12 +22,12 @@ export default function ContactLayout({
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact KPN Roofing Shed",
-            "url": "https://kpnroofingshed.com/contact",
+            "url": "https://kpnroofingsheds.com/contact",
             "description": "Get in touch with KPN Roofing Shed for all your industrial, agricultural, and residential roofing needs in India.",
             "mainEntity": {
               "@type": "LocalBusiness",
               "name": "KPN Roofing Shed",
-              "image": "https://kpnroofingshed.com/images/logo.jpg",
+              "image": "https://kpnroofingsheds.com/images/logo.jpg",
               "telephone": "+91-9788770786",
               "email": "kpnroofingshed555@gmail.com",
               "address": {

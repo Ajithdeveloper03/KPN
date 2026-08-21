@@ -96,7 +96,9 @@ export default function HeroSection() {
 
   // Use a ref to keep handleNext stable and avoid stale closures in the interval
   const handleNextRef = useRef(handleNext);
-  handleNextRef.current = handleNext;
+  useEffect(() => {
+    handleNextRef.current = handleNext;
+  }, [handleNext]);
 
   // Auto-slide effect — only depends on isAnimating to avoid rapid interval recreation
   useEffect(() => {
@@ -117,8 +119,11 @@ export default function HeroSection() {
           src={isNightMode ? "/images/night-bg.png" : "/images/hero-bg.png"}
           alt="KPN Hero Background"
           fill
+          sizes="100vw"
           className="object-cover opacity-80 transition-opacity duration-1000"
           priority
+          fetchPriority="high"
+
         />
         {/* Soft fog overlay to blend the bottom */}
         <div className={`absolute inset-0 transition-colors duration-700 ${isNightMode ? 'bg-gradient-to-t from-black/90 via-black/50 to-transparent' : 'bg-gradient-to-t from-white/90 via-white/30 to-transparent'}`} />
@@ -153,7 +158,11 @@ export default function HeroSection() {
                 src={slide.frontImage}
                 alt={slide.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 70vw"
+                priority={idx === 0}
+                fetchPriority={idx === 0 ? "high" : "auto"}
                 className="object-contain md:object-cover object-bottom scale-[2.2] sm:scale-[1.8] md:scale-[1.45] origin-bottom"
+
               />
             </div>
           );

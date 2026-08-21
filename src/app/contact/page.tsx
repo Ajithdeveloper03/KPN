@@ -88,7 +88,11 @@ export default function ContactPage() {
                 </div>
                 Main Office
               </span>
-              <a href="tel:+919788770786" className="text-white hover:text-[#ee0000] transition-colors text-2xl font-bold ml-11">9788770786, 0431-2660786</a>
+              <div className="text-white text-2xl font-bold ml-11">
+                <a href="tel:+919788770786" className="hover:text-[#ee0000] transition-colors">9788770786</a>
+                {", "}
+                <a href="tel:04312660786" className="hover:text-[#ee0000] transition-colors">0431-2660786</a>
+              </div>
             </div>
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">

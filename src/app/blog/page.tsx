@@ -52,7 +52,7 @@ export default function BlogArchivePage() {
                   <Image 
                     src={post.image || "/images/placeholder.jpg"} 
                     alt={post.title} 
-                    fill 
+                    fill sizes="100vw" 
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#062088]">

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -61,12 +62,12 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <button className="bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] flex items-center gap-3 group text-lg">
+          <Link href="/about-us" className="inline-flex bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] items-center gap-3 group text-lg">
             More About Us
             <div className="bg-white text-[#062088] w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
               <ArrowUpRight size={20} strokeWidth={2.5} />
             </div>
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -89,12 +90,12 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <button className="bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] flex items-center gap-3 group text-lg">
+          <Link href="/about-us" className="inline-flex bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] items-center gap-3 group text-lg">
             More About Us
             <div className="bg-white text-[#062088] w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
               <ArrowUpRight size={20} strokeWidth={2.5} />
             </div>
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Image Grid */}

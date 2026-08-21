@@ -145,7 +145,7 @@ export default async function BlogDetailsPage({
                 <Image
                   src={post.image || "/images/placeholder.jpg"}
                   alt={post.title}
-                  fill
+                  fill sizes="100vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   priority
                 />

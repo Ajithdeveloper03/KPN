@@ -21,7 +21,7 @@ export default function CricketTurfShedPage() {
           <Image 
             src="/images/services/cricket-banner-image.png" 
             alt="cricket turf shed India — KPN" 
-            fill 
+            fill sizes="100vw" 
             className="object-cover" 
             priority
           />
@@ -69,7 +69,7 @@ export default function CricketTurfShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/sports-turf-2-section-2-image.png" alt="cricket turf shed India — KPN" fill className="object-cover" />
+              <Image src="/images/services/sports-turf-2-section-2-image.png" alt="cricket turf shed India — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function CricketTurfShedPage() {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/sports-turf-3-section-1-image.png" alt="cricket turf shed — KPN" fill className="object-cover" />
+              <Image src="/images/services/sports-turf-3-section-1-image.png" alt="cricket turf shed — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#d35400]/40 to-transparent"></div>
               <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[80%]">
                 <FileText className="text-[#d35400] mb-3" size={32} />
@@ -295,7 +295,7 @@ export default function CricketTurfShedPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/sports-turf-la-final-image-faq.png" alt="cricket turf roofing shed — KPN Roofing Shed" fill className="object-cover" />
+              <Image src="/images/services/sports-turf-la-final-image-faq.png" alt="cricket turf roofing shed — KPN Roofing Shed" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-bl from-[#3498db]/40 to-transparent"></div>
             </div>
           </div>
@@ -328,7 +328,7 @@ export default function CricketTurfShedPage() {
               
               {/* Center Image */}
               <div className="w-full lg:w-1/3 relative h-[600px] lg:h-[800px] rounded-[3rem] overflow-hidden shadow-2xl z-0">
-                <Image src="/images/services/cricket-image-1.png" alt="Why KPN" fill className="object-cover" />
+                <Image src="/images/services/cricket-image-1.png" alt="Why KPN" fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-[#e67e22]/20 mix-blend-multiply"></div>
               </div>
               
@@ -379,7 +379,7 @@ export default function CricketTurfShedPage() {
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/cricket-image-2.png" alt="cricket turf shed — KPN" fill className="object-cover" />
+            <Image src="/images/services/cricket-image-2.png" alt="cricket turf shed — KPN" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

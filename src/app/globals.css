@@ -4,9 +4,9 @@
   --color-kpn-cyan: #00a3e0;
   --color-kpn-yellow: #ffcc00;
   --color-kpn-red: #ff0000;
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-heading: "Plus Jakarta Sans", sans-serif;
-  --font-serif: "Lora", serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-heading: var(--font-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), serif;
 }
 :root {
   --primary: #ee0000;
@@ -19,9 +19,9 @@
   --bg-dark-section: #121316;
   --text-white: #ffffff;
   --border-color: #cbd5e1;
-  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-serif: "Lora", Georgia, serif;
+  --font-heading: var(--font-sans), system-ui, sans-serif;
+  --font-body: var(--font-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
 }
 @layer base {
   html {

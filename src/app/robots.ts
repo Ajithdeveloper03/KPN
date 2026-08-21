@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin/', '/private/'],
     },
-    sitemap: 'https://kpnroofingshed.com/sitemap.xml',
+    sitemap: 'https://kpnroofingsheds.com/sitemap.xml',
   }
 }

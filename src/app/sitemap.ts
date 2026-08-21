@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://kpnroofingshed.com'
+  const baseUrl = 'https://kpnroofingsheds.com'
   const date = new Date().toISOString() // This is fine if dynamic='force-static'
 
   const routes = [

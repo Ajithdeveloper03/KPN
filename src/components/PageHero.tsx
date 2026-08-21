@@ -21,7 +21,7 @@ export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-
         <Image
           src={bgImage}
           alt={`${title} Background`}
-          fill
+          fill sizes="100vw"
           className="object-cover opacity-90"
           priority
         />

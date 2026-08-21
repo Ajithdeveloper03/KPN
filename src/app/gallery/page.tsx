@@ -145,7 +145,7 @@ export default function GalleryPage() {
               <Image
                 src={item.img}
                 alt={item.title}
-                fill
+                fill sizes="100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               

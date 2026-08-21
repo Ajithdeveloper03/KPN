@@ -18,6 +18,19 @@ export default function ScrollReveal() {
     }
 
     const initAnimations = () => {
+      // Disable scroll animations on mobile for better performance
+      if (typeof window !== "undefined" && window.innerWidth < 768) {
+        // Just make sure elements are visible
+        document.querySelectorAll('[data-reveal]').forEach((el) => {
+          gsap.set(el, { opacity: 1, y: 0, clipPath: "none" });
+          if (el.getAttribute("data-reveal") === "image") {
+            const child = el.querySelector("img") || el.firstElementChild;
+            if (child) gsap.set(child, { scale: 1 });
+          }
+        });
+        return;
+      }
+
       ctxRef.current = gsap.context(() => {
         // 1. Image Mask Reveals [data-reveal="image"]
         document.querySelectorAll('[data-reveal="image"]').forEach((img) => {

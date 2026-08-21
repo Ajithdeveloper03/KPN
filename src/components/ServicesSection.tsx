@@ -49,7 +49,7 @@ export default function ServicesSection() {
     <section id="services" className="bg-[#19191c] text-white py-12 md:py-16 relative overflow-hidden">
       {/* Background Image */}
       {/* <div className="absolute left-[3%] lg:left-[5%] top-[10%] w-[12%] lg:w-[15%] aspect-square rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-2xl opacity-40 md:opacity-100 z-0 rotate-12 parallax-layer" data-speed="0.1">
-        <Image src="/images/service-bg.png" alt="Service Element 1" fill className="object-cover" />
+        <Image src="/images/service-bg.png" alt="Service Element 1" fill sizes="100vw" className="object-cover" />
       </div> */}
       <div className="absolute inset-0 z-0 opacity-50">
         <Image

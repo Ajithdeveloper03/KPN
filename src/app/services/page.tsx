@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Our Services | KPN Roofing Shed',
   description: 'Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.',
   alternates: {
-    canonical: 'https://kpnroofingshed.com/services',
+    canonical: 'https://kpnroofingsheds.com/services',
   },
 };
 
@@ -56,11 +56,11 @@ export default function ServicesPage() {
                 "@type": "Service",
                 "name": service.title,
                 "description": service.desc,
-                "url": `https://kpnroofingshed.com${service.href}`,
+                "url": `https://kpnroofingsheds.com${service.href}`,
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "KPN Roofing Shed",
-                  "image": "https://kpnroofingshed.com/images/logo.jpg"
+                  "image": "https://kpnroofingsheds.com/images/logo.jpg"
                 }
               }
             }))
@@ -100,7 +100,7 @@ export default function ServicesPage() {
                   <Image 
                     src={service.img} 
                     alt={service.title} 
-                    fill 
+                    fill sizes="100vw" 
                     className="object-cover group-hover:scale-105 transition-transform duration-700" 
                   />
                 </div>

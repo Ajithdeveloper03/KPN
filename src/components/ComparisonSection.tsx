@@ -103,7 +103,7 @@ export default function ComparisonSection() {
               <Image 
                 src={activeData.image} 
                 alt={activeData.label}
-                fill
+                fill sizes="100vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />

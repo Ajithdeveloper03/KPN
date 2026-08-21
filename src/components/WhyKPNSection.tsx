@@ -121,7 +121,7 @@ export default function WhyKPNSection() {
                   <Image
                     src="/images/logo.jpg"
                     alt="KPN Logo"
-                    fill
+                    fill sizes="100vw"
                     className="object-cover"
                   />
                 </div>

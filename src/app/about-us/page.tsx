@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "About KPN Roofing Shed — Trusted Roofing Company Since 2016 | KPN",
   description: "Learn about KPN Roofing Shed — a roofing shed construction company with 10+ years of experience building durable sheds for homes, farms, and industries across India.",
   alternates: {
-    canonical: "https://kpnroofingshed.com/about-us",
+    canonical: "https://kpnroofingsheds.com/about-us",
   },
 };
 
@@ -53,14 +53,14 @@ export default function AboutUsPage() {
               {
                 "@type": "AboutPage",
                 "name": "About KPN Roofing Shed",
-                "url": "https://kpnroofingshed.com/about-us",
+                "url": "https://kpnroofingsheds.com/about-us",
                 "description": "Learn about KPN Roofing Shed — a roofing shed construction company with 10+ years of experience building durable sheds for homes, farms, and industries across India.",
                 "publisher": {
                   "@type": "Organization",
                   "name": "KPN Roofing Shed",
                   "logo": {
                     "@type": "ImageObject",
-                    "url": "https://kpnroofingshed.com/images/logo.jpg"
+                    "url": "https://kpnroofingsheds.com/images/logo.jpg"
                   }
                 }
               },
@@ -116,7 +116,7 @@ export default function AboutUsPage() {
                 <Image 
                   src="/images/services/industrial-banner-image.png" 
                   alt="KPN Roofing Shed Construction Site" 
-                  fill 
+                  fill sizes="100vw" 
                   className="object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e2229]/80 to-transparent"></div>
@@ -141,7 +141,7 @@ export default function AboutUsPage() {
                   <Image 
                     src="/images/founder.png" 
                     alt="Mr. P. M. Punyamurthi Gobi - Founder of KPN Roofing Shed" 
-                    fill 
+                    fill sizes="100vw" 
                     className="object-cover" 
                   />
                 </div>
@@ -270,7 +270,7 @@ export default function AboutUsPage() {
               {/* Center Column: Image */}
               <div className="w-full order-1 lg:order-2" data-reveal="image">
                 <div className="relative w-full max-w-[450px] mx-auto aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-[#f8f9fa]">
-                  <Image src="/images/image5.jpeg" alt="KPN Advantage Industrial Shed" fill className="object-cover" />
+                  <Image src="/images/image5.jpeg" alt="KPN Advantage Industrial Shed" fill sizes="100vw" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#004b87]/90 to-transparent flex items-end p-8">
                     <div className="text-white">
                       <div className="w-14 h-14 bg-[#ffcc00] text-[#111] rounded-2xl flex items-center justify-center mb-4">
@@ -411,7 +411,7 @@ export default function AboutUsPage() {
         {/* CTA Section */}
         <section className="py-12 lg:py-16 relative overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
-            <Image src="/images/image7.jpeg" alt="Roofing Construction Site" fill className="object-cover" />
+            <Image src="/images/image7.jpeg" alt="Roofing Construction Site" fill sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[#004b87]/95 mix-blend-multiply"></div>
           </div>
           <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-center">
