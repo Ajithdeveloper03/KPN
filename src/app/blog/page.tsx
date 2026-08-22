@@ -38,7 +38,7 @@ export default function BlogArchivePage() {
               Insights & Updates
             </span>
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#111] mb-6">
-              Latest from <span className="font-serif italic font-medium text-[#ee0000]">KPN Roofing Shed</span>
+              Latest from <span className="font-serif  font-medium text-[#ee0000]">KPN Roofing Shed</span>
             </h2>
             <p className="text-lg text-slate-500 font-medium">
               Expert advice, project showcases, and industry trends to help you make informed decisions about your next roofing shed project.

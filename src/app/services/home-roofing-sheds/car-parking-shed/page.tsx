@@ -14,6 +14,66 @@ export const metadata: Metadata = {
 export default function CarParkingShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://kpnroofingsheds.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://kpnroofingsheds.com/services/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Home Roofing Sheds",
+                "item": "https://kpnroofingsheds.com/services/home-roofing-sheds/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Car Parking Shed",
+                "item": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/"
+              }
+            ]
+          })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/#service",
+            "name": "Car Parking Shed",
+            "description": "Durable car parking shed construction solutions designed to protect vehicles from sunlight, rain and changing weather conditions.",
+            "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
+            "provider": {
+              "@type": "Organization",
+              "@id": "https://kpnroofingsheds.com/#organization",
+              "name": "KPN Roofing Shed",
+              "url": "https://kpnroofingsheds.com/"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "serviceType": "Car Parking Shed Construction"
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -53,7 +113,7 @@ export default function CarParkingShedPage() {
           <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2d3436] mb-8 leading-tight">
-                Protect your vehicles with <span className="font-serif italic text-[#e67e22]">KPN Roofing</span>
+                Protect your vehicles with <span className="font-serif  text-[#e67e22]">KPN Roofing</span>
               </h2>
               <div className="text-lg text-gray-600 mb-10 leading-relaxed space-y-4 font-medium">
                 <p>KPN Roofing Shed builds car parking sheds across India to protect vehicles from sun, rain, and changing weather conditions while adding a clean, finished look to your home or business. The roofing structure is designed to complement your existing property while giving reliable, long-term protection to your vehicles.</p>
@@ -136,7 +196,7 @@ export default function CarParkingShedPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-16 mb-24">
               <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Single-Bay vs <span className="font-serif italic text-[#e67e22]">Multi-Bay Sheds</span></h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Single-Bay vs <span className="font-serif  text-[#e67e22]">Multi-Bay Sheds</span></h2>
                 <div className="space-y-6 text-lg text-gray-600 font-medium leading-relaxed">
                   <p>KPN designs car parking sheds for a range of needs — from a single vehicle at home to multi-bay structures for larger families, apartments, or commercial use. The choice of layout depends on the number of vehicles, available plot width, and how the space will be used.</p>
                   <p>For homes and individual vehicle owners, a single-bay shed with minimal support columns is usually sufficient. For apartments, showrooms, or fleet parking, a multi-bay layout with evenly spaced support columns provides the load-bearing strength needed for a wider structure.</p>
@@ -157,7 +217,7 @@ export default function CarParkingShedPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-[#d35400] font-bold tracking-widest uppercase text-sm mb-4 block">Craftsmanship</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Design & Construction <span className="font-serif italic text-[#e67e22]">Features</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Design & Construction <span className="font-serif  text-[#e67e22]">Features</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -187,7 +247,7 @@ export default function CarParkingShedPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-[#3498db] font-bold tracking-widest uppercase text-sm mb-4 block">Versatility</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Common Uses of <span className="font-serif italic text-[#3498db]">Parking Sheds</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Common Uses of <span className="font-serif  text-[#3498db]">Parking Sheds</span></h2>
               <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">The final design depends on the available plot area, structural conditions, and how the space will be used.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -214,7 +274,7 @@ export default function CarParkingShedPage() {
         <section className="py-12 lg:py-16 bg-[#2d3436] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-24">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">How to Choose the <span className="font-serif italic text-[#e67e22]">Right Shed</span></h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">How to Choose the <span className="font-serif  text-[#e67e22]">Right Shed</span></h2>
               <p className="text-gray-400 mt-6 text-xl max-w-2xl mx-auto">Choosing the right car parking shed depends on more than just the roof material. Consider the following before starting your project:</p>
             </div>
 
@@ -278,7 +338,7 @@ export default function CarParkingShedPage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
               <span className="text-[#d35400] font-bold tracking-widest uppercase text-sm mb-4 block">Compliance</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Permits & Approvals <br/><span className="font-serif italic text-gray-500">What You Need to Know</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Permits & Approvals <br/><span className="font-serif  text-gray-500">What You Need to Know</span></h2>
               <p className="text-lg text-gray-600 font-medium leading-relaxed mb-8">
                 Car parking shed requirements can vary depending on your location, building type, structure, and local authority regulations.
               </p>
@@ -303,7 +363,7 @@ export default function CarParkingShedPage() {
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="w-full lg:w-1/2">
               <span className="text-[#3498db] font-bold tracking-widest uppercase text-sm mb-4 block">Timeline</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">How Long Does a <br/><span className="font-serif italic text-gray-500">Parking Shed Take?</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">How Long Does a <br/><span className="font-serif  text-gray-500">Parking Shed Take?</span></h2>
               <p className="text-lg text-gray-600 font-medium leading-relaxed mb-8">
                 The completion time for a car parking shed depends on the parking area size, design, material requirements, and site conditions.
               </p>
@@ -328,7 +388,7 @@ export default function CarParkingShedPage() {
         <section className="py-12 lg:py-20 bg-[#fffdfa] border-b border-gray-200 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-6">Why KPN Is <span className="font-serif italic text-[#e67e22]">Different</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-6">Why KPN Is <span className="font-serif  text-[#e67e22]">Different</span></h2>
             </div>
             
             <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-4 relative">
@@ -370,7 +430,7 @@ export default function CarParkingShedPage() {
         {/* ---------------- 7. FAQ ---------------- */}
         <section className="py-12 lg:py-20 bg-[#faf9f6]">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-[#2d3436] text-center mb-16">Frequently Asked <span className="font-serif italic text-[#e67e22]">Questions</span></h2>
+            <h2 className="text-4xl font-bold text-[#2d3436] text-center mb-16">Frequently Asked <span className="font-serif  text-[#e67e22]">Questions</span></h2>
             
             <div className="space-y-6">
               {[
@@ -406,7 +466,7 @@ export default function CarParkingShedPage() {
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 tracking-tight leading-tight">
-              Planning a <span className="font-serif italic font-medium text-[#f39c12]">Car Parking Shed?</span>
+              Planning a <span className="font-serif  font-medium text-[#f39c12]">Car Parking Shed?</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 font-medium mb-12 max-w-3xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.

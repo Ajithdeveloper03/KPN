@@ -8,13 +8,14 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   title: 'Home Roofing Sheds India | Terrace & Car Parking Sheds',
-  description: 'KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 10+ years of experience. Get a free quote.',
+  description: 'KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
   keywords: 'home roofing sheds India, residential roofing shed construction, terrace shed contractors India, car parking shed India',
 };
 
 export default function HomeRoofingShedsPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,7 +63,7 @@ export default function HomeRoofingShedsPage() {
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
                 Home Roofing Sheds India — <br className="hidden xl:block"/>
-                <span className="font-serif italic font-medium text-[#062088]">Terrace & Car Parking Sheds</span>
+                <span className="font-serif  font-medium text-[#062088]">Terrace & Car Parking Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
                 KPN Roofing Shed designs and builds home roofing sheds across India, including terrace roofing sheds and car parking sheds. Every structure is engineered to protect your home from sun and rain while complementing your property&apos;s existing design, using high-quality steel and expert craftsmanship.
@@ -92,7 +93,7 @@ export default function HomeRoofingShedsPage() {
           </div>
           <div className="mt-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
              <div className="w-full md:w-1/3">
-               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif italic font-medium text-[#ee0000]">This For?</span></h3>
+               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif  font-medium text-[#ee0000]">This For?</span></h3>
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -109,52 +110,42 @@ export default function HomeRoofingShedsPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Overview
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Home Roofing Sheds <br/><span className="font-serif italic font-medium text-[#00a3e0]">at a Glance</span></h2>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Home Roofing Sheds <br/><span className="font-serif  font-medium text-[#00a3e0]">at a Glance</span></h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {/* Metric 1 */}
-              {/* <div className="bg-[#222d58] p-8 rounded-[2rem] shadow-lg flex flex-col justify-between">
-                <div>
-                  <div className="w-14 h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-6">
-                    <PenTool strokeWidth={1.5} size={24} />
-                  </div>
-                  
+              <div className="bg-[#222d58] p-10 rounded-[2rem] shadow-lg">
+                <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-8">
+                  <ShieldCheck strokeWidth={1.5} size={28} />
                 </div>
-              </div> */}
+                <h4 className="text-white font-semibold text-2xl mb-6">Warranty & Support</h4>
+                <ul className="space-y-4 text-blue-100 font-medium leading-relaxed">
+                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ffcc00] mt-1 shrink-0" /> <span><strong className="text-white">Warranty:</strong> 10-year guarantee on every shed</span></li>
+                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ffcc00] mt-1 shrink-0" /> <span><strong className="text-white">Repair support:</strong> free repair support for covered damage</span></li>
+                </ul>
+              </div>
               
               {/* Metric 2 */}
               <div className="bg-[#6f1c1c] p-10 rounded-[2rem] shadow-lg">
                 <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-8">
-                  <ShieldCheck strokeWidth={1.5} size={28} />
+                  <Box strokeWidth={1.5} size={28} />
                 </div>
-                <h4 className="text-white font-semibold text-2xl mb-6">Warranty</h4>
+                <h4 className="text-white font-semibold text-2xl mb-6">Payment</h4>
                 <ul className="space-y-4 text-red-100 font-medium leading-relaxed">
-                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span>10-year guarantee on every shed</span></li>
-                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span>Free repair support for covered damage</span></li>
+                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Advance:</strong> 50% advance to start</span></li>
+                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Milestones:</strong> remainder in installments as materials arrive</span></li>
                 </ul>
               </div>
 
               {/* Metric 3 */}
-              <div className="bg-[#005a8a] p-10 rounded-[2rem] shadow-lg">
-                <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-8">
-                  <CreditCard strokeWidth={1.5} size={28} />
-                </div>
-                <h4 className="text-white font-semibold text-2xl mb-6">Payment</h4>
-                <ul className="space-y-4 text-blue-100 font-medium leading-relaxed">
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ffcc00] mt-1 shrink-0" /> <span>50% advance to start</span></li>
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ffcc00] mt-1 shrink-0" /> <span>Remainder in installments as materials arrive</span></li>
-                </ul>
-              </div>
-
-              {/* Metric 4 */}
               <div className="bg-[#daaf01] p-10 rounded-[2rem] shadow-lg">
                 <div className="w-16 h-16 rounded-full bg-black/5 border border-black/10 flex items-center justify-center text-[#111] mb-8">
                   <MapPin strokeWidth={1.5} size={28} />
                 </div>
                 <h4 className="text-[#111] font-semibold text-2xl mb-6">Coverage</h4>
                 <ul className="space-y-4 text-slate-800 font-medium leading-relaxed">
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ee0000] mt-1 shrink-0" /> <span>Pan-India home roofing shed projects</span></li>
+                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ee0000] mt-1 shrink-0" /> <span><strong className="text-[#111]">Coverage:</strong> Pan-India home roofing shed projects</span></li>
                 </ul>
               </div>
             </div>
@@ -170,7 +161,7 @@ export default function HomeRoofingShedsPage() {
                   Shed Types
                 </span>
                 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-                  What We <br/><span className="font-serif italic font-medium text-[#ffcc00]">Build</span>
+                  What We <br/><span className="font-serif  font-medium text-[#ffcc00]">Build</span>
                 </h2>
               </div>
             </div>
@@ -225,7 +216,7 @@ export default function HomeRoofingShedsPage() {
                 Buying Guide
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">
-                How to Choose the <span className="font-serif italic font-medium text-[#062088]">Right Home Roofing Shed</span>
+                How to Choose the <span className="font-serif  font-medium text-[#062088]">Right Home Roofing Shed</span>
               </h2>
             </div>
 
@@ -279,7 +270,7 @@ export default function HomeRoofingShedsPage() {
               <div className="w-full lg:w-5/12 space-y-10 z-10">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm">Specialized Features</span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
-                  Why KPN is <br/> <span className="font-serif italic font-medium text-[#ee0000]">Different</span>
+                  Why KPN is <br/> <span className="font-serif  font-medium text-[#ee0000]">Different</span>
                 </h2>
                 <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
                   Experience Quality
@@ -347,7 +338,7 @@ export default function HomeRoofingShedsPage() {
           <div className="max-w-[1300px] mx-auto px-6">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#111]">
-                 What Our Home Roofing <span className="font-serif italic font-medium text-[#00a3e0]">Clients Say</span>
+                 What Our Home Roofing <span className="font-serif  font-medium text-[#00a3e0]">Clients Say</span>
                </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -376,7 +367,7 @@ export default function HomeRoofingShedsPage() {
         {/* ---------------- Explore by Shed Type ---------------- */}
         {/* <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif italic font-medium text-[#ee0000]">Shed Type</span></h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif  font-medium text-[#ee0000]">Shed Type</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
@@ -399,7 +390,7 @@ export default function HomeRoofingShedsPage() {
               <div className="mb-12">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
                 <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif italic font-medium lowercase">questions!</span>
+                  Frequently asked <br/> <span className="font-serif  font-medium lowercase">questions!</span>
                 </h2>
               </div>
               {/* Solid Image under the title */}
@@ -442,7 +433,7 @@ export default function HomeRoofingShedsPage() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
-              Planning a terrace or <span className="font-serif italic font-medium text-[#ffcc00]">car parking shed?</span>
+              Planning a terrace or <span className="font-serif  font-medium text-[#ffcc00]">car parking shed?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.

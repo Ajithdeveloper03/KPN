@@ -19,6 +19,42 @@ export default function FactoryShedPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://kpnroofingsheds.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://kpnroofingsheds.com/services/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Industrial Sheds",
+                "item": "https://kpnroofingsheds.com/services/industrial-sheds/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Factory Shed",
+                "item": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/"
+              }
+            ]
+          })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/#service",
             "name": "Factory Shed",
@@ -77,7 +113,7 @@ export default function FactoryShedPage() {
           <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2d3436] mb-8 leading-tight">
-                Steel & PEB Industrial Sheds with <span className="font-serif italic text-[#e67e22]">KPN Roofing</span>
+                Steel & PEB Industrial Sheds with <span className="font-serif  text-[#e67e22]">KPN Roofing</span>
               </h2>
               <div className="text-lg text-gray-600 mb-10 leading-relaxed space-y-4 font-medium">
                 <p>KPN Roofing Shed designs and builds factory sheds across India for manufacturing, production, storage, workshops, and industrial operations.</p>
@@ -165,7 +201,7 @@ export default function FactoryShedPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-16 mb-24">
               <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Common Factory <span className="font-serif italic text-[#e67e22]">Applications</span></h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Common Factory <span className="font-serif  text-[#e67e22]">Applications</span></h2>
                 <div className="space-y-6 text-lg text-gray-600 font-medium leading-relaxed">
                   <p>KPN factory sheds can be planned for different industrial requirements, including manufacturing units, engineering factories, and fabrication units.</p>
                   <p>The final shed design depends on the business operation, machinery, storage requirements, available plot area, and future expansion plans.</p>
@@ -186,7 +222,7 @@ export default function FactoryShedPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-[#d35400] font-bold tracking-widest uppercase text-sm mb-4 block">Craftsmanship</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Design & Construction <span className="font-serif italic text-[#e67e22]">Features</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Design & Construction <span className="font-serif  text-[#e67e22]">Features</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -216,7 +252,7 @@ export default function FactoryShedPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-[#3498db] font-bold tracking-widest uppercase text-sm mb-4 block">Versatility</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Industries <span className="font-serif italic text-[#3498db]">Served</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436]">Industries <span className="font-serif  text-[#3498db]">Served</span></h2>
               <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">KPN factory sheds can be planned for different industrial requirements.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -243,7 +279,7 @@ export default function FactoryShedPage() {
         <section className="py-12 lg:py-16 bg-[#2d3436] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-24">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">How to Choose the <span className="font-serif italic text-[#e67e22]">Right Shed</span></h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">How to Choose the <span className="font-serif  text-[#e67e22]">Right Shed</span></h2>
               <p className="text-gray-400 mt-6 text-xl max-w-2xl mx-auto">Choosing the right factory shed depends on your production requirements and available site conditions. Consider the following before construction:</p>
             </div>
 
@@ -307,7 +343,7 @@ export default function FactoryShedPage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
               <span className="text-[#d35400] font-bold tracking-widest uppercase text-sm mb-4 block">Compliance</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Permits & Approvals <br/><span className="font-serif italic text-gray-500">What You Need to Know</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">Permits & Approvals <br/><span className="font-serif  text-gray-500">What You Need to Know</span></h2>
               <p className="text-lg text-gray-600 font-medium leading-relaxed mb-8">
                 Factory shed requirements can vary depending on the project location, plot type, building use, and local authority regulations.
               </p>
@@ -332,7 +368,7 @@ export default function FactoryShedPage() {
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="w-full lg:w-1/2">
               <span className="text-[#3498db] font-bold tracking-widest uppercase text-sm mb-4 block">Timeline</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">How Long Does a <br/><span className="font-serif italic text-gray-500">Factory Shed Take?</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-8">How Long Does a <br/><span className="font-serif  text-gray-500">Factory Shed Take?</span></h2>
               <p className="text-lg text-gray-600 font-medium leading-relaxed mb-8">
                 The completion time for a factory shed depends on the shed size, structural design, material requirements, site conditions, and project complexity.
               </p>
@@ -357,7 +393,7 @@ export default function FactoryShedPage() {
         <section className="py-12 lg:py-20 bg-[#fffdfa] border-b border-gray-200 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-6">Why KPN Is <span className="font-serif italic text-[#e67e22]">Different</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-6">Why KPN Is <span className="font-serif  text-[#e67e22]">Different</span></h2>
             </div>
             
             <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-4 relative">
@@ -399,7 +435,7 @@ export default function FactoryShedPage() {
         {/* ---------------- 7. FAQ ---------------- */}
         <section className="py-12 lg:py-20 bg-[#faf9f6]">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-4xl font-bold text-[#2d3436] text-center mb-16">Frequently Asked <span className="font-serif italic text-[#e67e22]">Questions</span></h2>
+            <h2 className="text-4xl font-bold text-[#2d3436] text-center mb-16">Frequently Asked <span className="font-serif  text-[#e67e22]">Questions</span></h2>
             
             <div className="space-y-6">
               {[
@@ -436,7 +472,7 @@ export default function FactoryShedPage() {
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 tracking-tight leading-tight">
-              Planning a <span className="font-serif italic font-medium text-[#f39c12]">Factory Shed?</span>
+              Planning a <span className="font-serif  font-medium text-[#f39c12]">Factory Shed?</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 font-medium mb-12 max-w-3xl mx-auto">
               Talk to KPN Roofing Shed — get a site visit, suitable shed design, and a project-specific quotation based on your factory requirements.

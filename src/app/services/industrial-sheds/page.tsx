@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function IndustrialShedPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,7 +63,7 @@ export default function IndustrialShedPage() {
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
                 Industrial Shed — <br className="hidden xl:block"/>
-                <span className="font-serif italic font-medium text-[#062088]">Factory, Garment & Warehouse Sheds</span>
+                <span className="font-serif  font-medium text-[#062088]">Factory, Garment & Warehouse Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
                 KPN Roofing Shed provides industrial shed construction in India for factories, industrial units, workshops, and storage spaces. Every shed is designed and built to protect the structure and support daily operations for years, backed by heavy-gauge steel, in-house engineers, and a 10-year warranty.
@@ -92,7 +93,7 @@ export default function IndustrialShedPage() {
           </div>
           <div className="mt-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
              <div className="w-full md:w-1/3">
-               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif italic font-medium text-[#ee0000]">This For?</span></h3>
+               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif  font-medium text-[#ee0000]">This For?</span></h3>
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -109,7 +110,7 @@ export default function IndustrialShedPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Overview
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Industrial Sheds <br/><span className="font-serif italic font-medium text-[#00a3e0]">at a Glance</span></h2>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Industrial Sheds <br/><span className="font-serif  font-medium text-[#00a3e0]">at a Glance</span></h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -159,7 +160,7 @@ export default function IndustrialShedPage() {
                 Our Expertise
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#111]">
-                What We <span className="font-serif italic font-medium text-[#ee0000]">Build</span>
+                What We <span className="font-serif  font-medium text-[#ee0000]">Build</span>
               </h2>
             </div>
             
@@ -203,7 +204,7 @@ export default function IndustrialShedPage() {
                   Industries
                 </span>
                 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-                  Factory Shed Solutions <br/><span className="font-serif italic font-medium text-[#ffcc00]">by Industry</span>
+                  Factory Shed Solutions <br/><span className="font-serif  font-medium text-[#ffcc00]">by Industry</span>
                 </h2>
                 <p className="text-lg text-slate-500 max-w-3xl font-medium leading-relaxed">
                   Different industries need different shed specifications. KPN engineers sheds around what your operations actually require.
@@ -290,7 +291,7 @@ export default function IndustrialShedPage() {
                 Process
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">
-                How to Choose the <span className="font-serif italic font-medium text-[#062088]">Right Industrial Shed</span>
+                How to Choose the <span className="font-serif  font-medium text-[#062088]">Right Industrial Shed</span>
               </h2>
             </div>
 
@@ -344,7 +345,7 @@ export default function IndustrialShedPage() {
               <div className="w-full lg:w-5/12 space-y-10 z-10">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm">Specialized Features</span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
-                  Why KPN is <br/> <span className="font-serif italic font-medium text-[#ee0000]">Different</span>
+                  Why KPN is <br/> <span className="font-serif  font-medium text-[#ee0000]">Different</span>
                 </h2>
                 <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
                   Standout Effortlessly
@@ -412,7 +413,7 @@ export default function IndustrialShedPage() {
           <div className="max-w-[1300px] mx-auto px-6">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#111]">
-                 What Our Industrial <span className="font-serif italic font-medium text-[#00a3e0]">Clients Say</span>
+                 What Our Industrial <span className="font-serif  font-medium text-[#00a3e0]">Clients Say</span>
                </h2>
             </div>
             
@@ -453,7 +454,7 @@ export default function IndustrialShedPage() {
         {/* ---------------- Explore by Shed Type ---------------- */}
         {/* <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif italic font-medium text-[#ee0000]">Shed Type</span></h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif  font-medium text-[#ee0000]">Shed Type</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
@@ -478,7 +479,7 @@ export default function IndustrialShedPage() {
               <div className="mb-12">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
                 <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif italic font-medium lowercase">questions!</span>
+                  Frequently asked <br/> <span className="font-serif  font-medium lowercase">questions!</span>
                 </h2>
               </div>
               {/* Solid Image under the title */}
@@ -525,7 +526,7 @@ export default function IndustrialShedPage() {
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
-              Planning a factory or <span className="font-serif italic font-medium text-[#ffcc00]">industrial shed?</span>
+              Planning a factory or <span className="font-serif  font-medium text-[#ffcc00]">industrial shed?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.

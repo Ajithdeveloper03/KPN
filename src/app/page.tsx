@@ -44,7 +44,7 @@ export default function Home() {
                 "image": "https://kpnroofingsheds.com/images/logo.jpg",
                 "logo": "https://kpnroofingsheds.com/images/logo.jpg",
                 "telephone": "+91-9788770786",
-                "email": "kpnroofingshed555@gmail.com",
+                "email": "kpnroofingsheds@gmail.com",
                 "priceRange": "₹₹",
                 "address": {
                   "@type": "PostalAddress",
@@ -83,12 +83,12 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <TestimonialsSection />
       <StatsSection />
       
       <WhyKPNSection />
       <ComparisonSection />
       <ProcessSection />
-      <TestimonialsSection />
       <AreasWeServeSection />
       <FAQSection />
       {/* <IntegrationSection /> */}

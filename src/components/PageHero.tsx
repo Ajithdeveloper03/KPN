@@ -15,8 +15,23 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-bg.png" }: PageHeroProps) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((crumb, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": crumb.label,
+      "item": `https://kpnroofingsheds.com${crumb.href}`
+    }))
+  };
+
   return (
     <div className="relative w-full h-[60vh] min-h-[450px] flex flex-col justify-center items-center overflow-hidden bg-slate-900 mt-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImage}

@@ -6,13 +6,13 @@ import { ArrowRight, Star } from "lucide-react";
 
 const statsCards = [
   {
-    title: "10+ Years",
+    title: "13+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
     img: "/images/services/goat01.png"
   },
   {
-    title: "600+ Projects",
+    title: "1000+ Projects",
     desc: "Successfully completed across India.",
     color: "#ee0000", // Red
     img: "/images/services/factory-image-1.png"
@@ -24,7 +24,7 @@ const statsCards = [
     img: "/images/services/industrial-banner-image.png"
   },
   {
-    title: "₹599/sq.ft",
+    title: "upto ₹599/sq.ft",
     desc: "High-quality goat farm sheds tailored to your needs.",
     color: "#062088", // Blue
     img: "/images/services/agriculture-and-animal-husbenday-bannar-image.png"
@@ -37,7 +37,7 @@ const statsCards = [
   },
   {
     title: "Fast Timeline",
-    desc: "20 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
+    desc: "6 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
     color: "#ffe600", // Yellow
     img: "/images/services/factory-banner-image.png"
   },

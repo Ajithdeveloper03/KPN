@@ -6,31 +6,23 @@ import Image from "next/image";
 import { ShieldCheck, Ruler, Hammer, Award, ArrowUpRight, Clock, Shield } from "lucide-react";
 
 const Card = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) => (
-  <div className="group bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] relative z-10 w-full max-w-[380px] border border-slate-100 flex flex-col items-start transition-transform hover:-translate-y-1 overflow-hidden">
+  <div className="group bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] relative w-full max-w-[380px] border border-slate-100 flex flex-col items-start transition-transform hover:-translate-y-1 overflow-hidden">
     
-    {/* Hover Background Image for the box */}
-    <div 
-      className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" 
-      style={{ backgroundImage: 'url(/images/services/industrial-banner-image.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
-      <div className="absolute inset-0 bg-[black]/75" />
-    </div>
-
     {/* Content */}
     <div className="relative z-10 w-full flex flex-col items-start h-full">
-      <div className="w-14 h-14 rounded-full bg-[#e5f6fd] group-hover:bg-white/10 transition-colors duration-500 flex items-center justify-center mb-6">
-        <Icon size={24} className="text-[#00a3e0] group-hover:text-white transition-colors duration-500" strokeWidth={2.5} />
+      <div className="w-14 h-14 rounded-full bg-[#e5f6fd] transition-colors duration-500 flex items-center justify-center mb-6">
+        <Icon size={24} className="text-[#00a3e0] transition-colors duration-500" strokeWidth={2.5} />
       </div>
-      <h3 className="font-bold text-[#1e2229] group-hover:text-white transition-colors duration-500 text-xl mb-3 leading-tight">{title}</h3>
-      <p className="text-slate-500 group-hover:text-white/80 transition-colors duration-500 font-medium text-sm leading-relaxed mb-6">
+      <h3 className="font-bold text-[#1e2229] transition-colors duration-500 text-xl mb-3 leading-tight">{title}</h3>
+      <p className="text-slate-500 transition-colors duration-500 font-medium text-sm leading-relaxed mb-6">
         {desc}
       </p>
       <button
         onClick={() => openQuoteModal()}
-        className="mt-auto flex items-center gap-2 px-5 py-2 rounded-full border border-slate-200 group-hover:border-white/20 text-[#1e2229] group-hover:text-white font-bold text-sm hover:bg-[#00a3e0] hover:text-white hover:border-[#00a3e0] transition-all group-button"
+        className="mt-auto flex items-center gap-2 px-5 py-2 rounded-full border border-slate-200 text-[#1e2229] font-bold text-sm hover:bg-[#00a3e0] hover:text-white hover:border-[#00a3e0] transition-all group-button"
       >
         Learn More
-        <div className="bg-[#00a3e0] group-hover:bg-white/20 text-white rounded-full p-1 transition-colors">
+        <div className="bg-[#00a3e0] text-white rounded-full p-1 transition-colors">
           <ArrowUpRight size={14} strokeWidth={3} />
         </div>
       </button>
@@ -138,7 +130,7 @@ export default function WhyKPNSection() {
               <Card
                 icon={Clock}
                 title="Quick Completion"
-                desc="20 days for a 1440 sq.ft shed, 1 month for 2400 sq.ft, without cutting corners on quality."
+                desc="6 days for a 1440 sq.ft shed, 1 month for 2400 sq.ft, without cutting corners on quality."
               />
               <Card
                 icon={Shield}

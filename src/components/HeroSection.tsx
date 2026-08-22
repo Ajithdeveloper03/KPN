@@ -101,12 +101,14 @@ export default function HeroSection() {
   }, [handleNext]);
 
   // Auto-slide effect — only depends on isAnimating to avoid rapid interval recreation
+  // Auto-slide effect — only depends on isAnimating to avoid rapid interval recreation
   useEffect(() => {
+    const intervalTime = window.innerWidth < 768 ? 3000 : 5000;
     const timer = setInterval(() => {
       if (!isAnimating) {
         handleNextRef.current();
       }
-    }, 5000);
+    }, intervalTime);
     return () => clearInterval(timer);
   }, [isAnimating]);
 

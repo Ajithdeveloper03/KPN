@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = {
   title: "About KPN Roofing Shed — Trusted Roofing Company Since 2016 | KPN",
-  description: "Learn about KPN Roofing Shed — a roofing shed construction company with 10+ years of experience building durable sheds for homes, farms, and industries across India.",
+  description: "Learn about KPN Roofing Shed — a roofing shed construction company with 13+ years of experience building durable sheds for homes, farms, and industries across India.",
   alternates: {
     canonical: "https://kpnroofingsheds.com/about-us",
   },
@@ -52,17 +52,23 @@ export default function AboutUsPage() {
             "@graph": [
               {
                 "@type": "AboutPage",
+                "@id": "https://kpnroofingsheds.com/about-us/#aboutpage",
+                "url": "https://kpnroofingsheds.com/about-us/",
                 "name": "About KPN Roofing Shed",
-                "url": "https://kpnroofingsheds.com/about-us",
-                "description": "Learn about KPN Roofing Shed — a roofing shed construction company with 10+ years of experience building durable sheds for homes, farms, and industries across India.",
+                "description": "Learn about KPN Roofing Shed, a roofing shed construction company providing industrial, agricultural, residential, animal husbandry and sports turf shed solutions across India.",
+                "isPartOf": {
+                  "@type": "WebSite",
+                  "@id": "https://kpnroofingsheds.com/#website"
+                },
+                "about": {
+                  "@type": "Organization",
+                  "@id": "https://kpnroofingsheds.com/#organization"
+                },
                 "publisher": {
                   "@type": "Organization",
-                  "name": "KPN Roofing Shed",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://kpnroofingsheds.com/images/logo.jpg"
-                  }
-                }
+                  "@id": "https://kpnroofingsheds.com/#organization"
+                },
+                "inLanguage": "en-IN"
               },
               {
                 "@type": "FAQPage",
@@ -103,7 +109,7 @@ export default function AboutUsPage() {
               </h2>
               <div className="space-y-6 text-lg text-[#525c6e] font-medium leading-relaxed">
                 <p>
-                  <strong className="text-[#1e2229]">Established in 2016</strong>, KPN Roofing Shed has developed its expertise in planning, fabricating, and installing different types of roofing structures over 10+ years. The company focuses on practical designs, quality construction, timely project execution, and customer-focused service.
+                  <strong className="text-[#1e2229]">Established in 2016</strong>, KPN Roofing Shed has developed its expertise in planning, fabricating, and installing different types of roofing structures over 13+ years. The company focuses on practical designs, quality construction, timely project execution, and customer-focused service.
                 </p>
                 <p>
                   From farm sheds and animal husbandry sheds to factory sheds, warehouse sheds, terrace roofing sheds, car parking sheds, and sports turf sheds, KPN provides roofing solutions designed around the specific requirements of each project.
@@ -124,7 +130,7 @@ export default function AboutUsPage() {
                   <div className="bg-[#00a3e0] w-14 h-14 rounded-full flex items-center justify-center mb-4 shadow-lg text-white">
                     <Building2 size={28} />
                   </div>
-                  <h4 className="text-2xl font-bold mb-1">10+ Years of Excellence</h4>
+                  <h4 className="text-2xl font-bold mb-1">13+ years of Excellence</h4>
                   <p className="text-white/80 font-medium">Delivering strong, durable roofing solutions pan-India.</p>
                 </div>
               </div>
@@ -198,7 +204,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Industrial Roofing Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Factory Sheds, Garment & Textile Sheds, Warehouse & Godown Sheds.</p>
-                <Link href="/services/industrial-roofing-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link href="/services/industrial-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>

@@ -8,13 +8,14 @@ import QuoteButton from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
   title: 'Sports Turf Sheds India | Badminton & Cricket Turf Sheds | KPN',
-  description: 'KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 10+ years of experience. Get a free quote.',
+  description: 'KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
   keywords: 'Sports Turf Construction India, Sports Shed Contractors India, Badminton Court Shed India, Cricket Turf Construction India',
 };
 
 export default function SportsTurfShedsPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,7 +63,7 @@ export default function SportsTurfShedsPage() {
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
                 Sports Turf Sheds — <br className="hidden xl:block"/>
-                <span className="font-serif italic font-medium text-[#062088]">Badminton Court & Cricket Turf Sheds</span>
+                <span className="font-serif  font-medium text-[#062088]">Badminton Court & Cricket Turf Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
                 KPN Roofing Shed designs and builds sports turf sheds across India, including badminton court sheds and cricket turf sheds. Every structure is engineered for all-season performance using Apollo Brand Steel, in-house engineering, and durable weatherproof roofing systems.
@@ -85,7 +86,7 @@ export default function SportsTurfShedsPage() {
           </div>
           <div className="mt-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
              <div className="w-full md:w-1/3">
-               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif italic font-medium text-[#ee0000]">This For?</span></h3>
+               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif  font-medium text-[#ee0000]">This For?</span></h3>
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -102,7 +103,7 @@ export default function SportsTurfShedsPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Overview
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Sports Turf <br/><span className="font-serif italic font-medium text-[#00a3e0]">at a Glance</span></h2>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Sports Turf <br/><span className="font-serif  font-medium text-[#00a3e0]">at a Glance</span></h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -154,7 +155,7 @@ export default function SportsTurfShedsPage() {
                   Shed Types
                 </span>
                 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-                  Sports Turf Solutions <br/><span className="font-serif italic font-medium text-[#ffcc00]">by Sport</span>
+                  Sports Turf Solutions <br/><span className="font-serif  font-medium text-[#ffcc00]">by Sport</span>
                 </h2>
                 <p className="text-lg text-slate-500 max-w-3xl font-medium leading-relaxed">
                   Engineered for all-season performance with durable weatherproof roofing systems and proper structural clearances.
@@ -215,7 +216,7 @@ export default function SportsTurfShedsPage() {
                 Process
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">
-                How to Choose the <span className="font-serif italic font-medium text-[#062088]">Right Sports Turf Shed</span>
+                How to Choose the <span className="font-serif  font-medium text-[#062088]">Right Sports Turf Shed</span>
               </h2>
             </div>
 
@@ -265,7 +266,7 @@ export default function SportsTurfShedsPage() {
               <div className="w-full lg:w-5/12 space-y-10 z-10">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm">Specialized Features</span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
-                  Why KPN is <br/> <span className="font-serif italic font-medium text-[#ee0000]">Different</span>
+                  Why KPN is <br/> <span className="font-serif  font-medium text-[#ee0000]">Different</span>
                 </h2>
                 <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform cursor-pointer">
                   Standout Effortlessly
@@ -333,7 +334,7 @@ export default function SportsTurfShedsPage() {
           <div className="max-w-[1300px] mx-auto px-6">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#111]">
-                 What Our Sports Turf <span className="font-serif italic font-medium text-[#00a3e0]">Clients Say</span>
+                 What Our Sports Turf <span className="font-serif  font-medium text-[#00a3e0]">Clients Say</span>
                </h2>
             </div>
             
@@ -377,7 +378,7 @@ export default function SportsTurfShedsPage() {
               <div className="mb-12">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
                 <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif italic font-medium lowercase">questions!</span>
+                  Frequently asked <br/> <span className="font-serif  font-medium lowercase">questions!</span>
                 </h2>
               </div>
               <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
@@ -420,7 +421,7 @@ export default function SportsTurfShedsPage() {
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
-              Planning a badminton court or <span className="font-serif italic font-medium text-[#ffcc00]">cricket turf shed?</span>
+              Planning a badminton court or <span className="font-serif  font-medium text-[#ffcc00]">cricket turf shed?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.

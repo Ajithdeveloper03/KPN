@@ -5,7 +5,7 @@ export const faqs = [
   },
   {
     question: "How long does KPN take to complete a shed?",
-    answer: "A 1440 sq.ft shed is completed in 20 days. A 2400 sq.ft shed takes about 1 month."
+    answer: "A 1440 sq.ft shed is completed in 6 days. A 2400 sq.ft shed takes about 1 month."
   },
   {
     question: "What warranty does KPN provide?",

@@ -79,9 +79,9 @@ try {
     $mail->Port       = 465;
 
     // Recipients
-    $mail->setFrom('kpnroofingshed555@gmail.com', 'KPN Website Form');
-    $mail->addAddress('kpnroofingshed555@gmail.com', 'KPN Admin');
-    $mail->addReplyTo($email !== 'Not Provided' ? $email : 'kpnroofingshed555@gmail.com', $name);
+    $mail->setFrom('kpnroofingsheds@gmail.com', 'KPN Website Form');
+    $mail->addAddress('kpnroofingsheds@gmail.com', 'KPN Admin');
+    $mail->addReplyTo($email !== 'Not Provided' ? $email : 'kpnroofingsheds@gmail.com', $name);
     
     // Content
     $mail->isHTML(true);

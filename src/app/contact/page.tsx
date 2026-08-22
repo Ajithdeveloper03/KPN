@@ -58,6 +58,32 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#121316] text-white selection:bg-[#ee0000] selection:text-white flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "@id": "https://kpnroofingsheds.com/contact/#contactpage",
+            "url": "https://kpnroofingsheds.com/contact/",
+            "name": "Contact KPN Roofing Shed",
+            "description": "Contact KPN Roofing Shed for industrial, agricultural, home roofing, animal husbandry and sports turf shed construction services across India.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "@id": "https://kpnroofingsheds.com/#website"
+            },
+            "about": {
+              "@type": "Organization",
+              "@id": "https://kpnroofingsheds.com/#organization"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://kpnroofingsheds.com/#organization"
+            },
+            "inLanguage": "en-IN"
+          })
+        }}
+      />
       
       <PageHero 
         title="Let's Talk" 
@@ -101,7 +127,7 @@ export default function ContactPage() {
                 </div>
                 General Email
               </span>
-              <a href="mailto:kpnroofingshed555@gmail.com" className="text-white hover:text-[#ee0000] transition-colors text-xl font-medium ml-11">kpnroofingshed555@gmail.com</a>
+              <a href="mailto:kpnroofingsheds@gmail.com" className="text-white hover:text-[#ee0000] transition-colors text-xl font-medium ml-11">kpnroofingsheds@gmail.com</a>
             </div>
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">

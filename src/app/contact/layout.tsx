@@ -29,7 +29,7 @@ export default function ContactLayout({
               "name": "KPN Roofing Shed",
               "image": "https://kpnroofingsheds.com/images/logo.jpg",
               "telephone": "+91-9788770786",
-              "email": "kpnroofingshed555@gmail.com",
+              "email": "kpnroofingsheds@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",

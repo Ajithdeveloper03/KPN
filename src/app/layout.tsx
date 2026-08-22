@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
               "logo": "https://kpnroofingsheds.com/images/logo.jpg",
               "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
               "telephone": "+91-9788770786",
-              "email": "kpnroofingshed555@gmail.com",
+              "email": "kpnroofingsheds@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",

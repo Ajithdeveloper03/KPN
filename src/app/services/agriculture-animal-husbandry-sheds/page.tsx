@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function AgricultureAnimalHusbandryPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,7 +63,7 @@ export default function AgricultureAnimalHusbandryPage() {
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
                 Agriculture & Animal Husbandry India — <br className="hidden xl:block"/>
-                <span className="font-serif italic font-medium text-[#062088]">Goat, Dairy, Poultry & Cow Sheds</span>
+                <span className="font-serif  font-medium text-[#062088]">Goat, Dairy, Poultry & Cow Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
                 KPN Roofing Shed builds animal and agricultural sheds across India, engineered around airflow, drainage, and animal comfort — not just a roof over the herd. From single-unit goat shelters to full dairy and poultry setups, every structure uses Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a 10-year guarantee.
@@ -92,7 +93,7 @@ export default function AgricultureAnimalHusbandryPage() {
           </div>
           <div className="mt-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
              <div className="w-full md:w-1/3">
-               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif italic font-medium text-[#ee0000]">This For?</span></h3>
+               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif  font-medium text-[#ee0000]">This For?</span></h3>
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -110,7 +111,7 @@ export default function AgricultureAnimalHusbandryPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Overview
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Agriculture & Animal Husbandry <br/><span className="font-serif italic font-medium text-[#00a3e0]">at a Glance</span></h2>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Agriculture & Animal Husbandry <br/><span className="font-serif  font-medium text-[#00a3e0]">at a Glance</span></h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -130,7 +131,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <h4 className="text-white font-semibold text-2xl mb-6">Scale & Time</h4>
                 <ul className="space-y-4 text-red-100 font-medium leading-relaxed">
                   <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Minimum size:</strong> 1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states</span></li>
-                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Timeline:</strong> 20 days for a 1440 sq.ft shed, 1 month for 2400 sq.ft</span></li>
+                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Timeline:</strong> 6 days for a 1440 sq.ft shed, 1 month for 2400 sq.ft</span></li>
                 </ul>
               </div>
 
@@ -159,7 +160,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 Our Services
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-                Agricultural Sheds & <span className="font-serif italic font-medium">Modern Farm Sheds</span>
+                Agricultural Sheds & <span className="font-serif  font-medium">Modern Farm Sheds</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-3xl font-medium leading-relaxed">
                 KPN designs agricultural sheds and modern farm sheds suited to Indian farm sizes — from a small backyard setup to a large commercial operation. Every structure is engineered with ventilated roofing and corrosion-resistant frames, built to handle years of heavy farm use with minimal maintenance.
@@ -286,7 +287,7 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="w-full lg:w-5/12 space-y-10 z-10">
               <span className="text-slate-500 font-medium tracking-wide uppercase text-sm">Specialized Features</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
-                Why KPN is <br/> <span className="font-serif italic font-medium text-[#ee0000]">Different</span>
+                Why KPN is <br/> <span className="font-serif  font-medium text-[#ee0000]">Different</span>
               </h2>
               <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-lg">
                 We remove the middleman and rely on our own qualified engineers and installation teams. This ensures unmatched speed and quality.
@@ -310,7 +311,7 @@ export default function AgricultureAnimalHusbandryPage() {
                     "In-house qualified engineers",
                     "Own installation team (no subs)",
                     
-                    "20 days for 1440 sq.ft shed",
+                    "6 days for 1440 sq.ft shed",
                     "10-year structural guarantee"
                   ].map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-4 text-[#111] font-medium text-lg">
@@ -334,7 +335,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 Process
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">
-                How to Choose the <span className="font-serif italic font-medium text-[#062088]">Right Shed</span> <br/>for Your Farm
+                How to Choose the <span className="font-serif  font-medium text-[#062088]">Right Shed</span> <br/>for Your Farm
               </h2>
             </div>
 
@@ -388,7 +389,7 @@ export default function AgricultureAnimalHusbandryPage() {
               <span className="px-5 py-2 rounded-full border border-red-200 text-sm font-medium text-red-600 tracking-wide uppercase mb-6 inline-block bg-white shadow-sm">
                 Mapping
               </span>
-              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight">Which Shed <span className="font-serif italic font-medium text-[#ee0000]">Do You Need?</span></h2>
+              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight">Which Shed <span className="font-serif  font-medium text-[#ee0000]">Do You Need?</span></h2>
             </div>
             
             <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
@@ -437,7 +438,7 @@ export default function AgricultureAnimalHusbandryPage() {
         {/* ---------------- Explore by Shed Type ---------------- */}
         {/* <section className="bg-white py-12 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif italic font-medium text-[#ee0000]">Shed Type</span></h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif  font-medium text-[#ee0000]">Shed Type</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -463,7 +464,7 @@ export default function AgricultureAnimalHusbandryPage() {
               <div className="mb-12">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
                 <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif italic font-medium lowercase">questions!</span>
+                  Frequently asked <br/> <span className="font-serif  font-medium lowercase">questions!</span>
                 </h2>
               </div>
               {/* Solid Image under the title */}
@@ -477,7 +478,7 @@ export default function AgricultureAnimalHusbandryPage() {
               {[
                 { q: "What is the minimum size for a farm shed?", a: "The minimum shed size is 1,440 sq.ft in Tamil Nadu and 2,400 sq.ft in other states." },
                 { q: "Can KPN build a combined dairy and poultry shed?", a: "KPN can assess the farm layout and recommend separate or integrated structures based on ventilation, hygiene, and operational requirements." },
-                { q: "How long does a farm shed take to complete?", a: "A 1440 sq.ft shed is completed in 20 days; a 2400 sq.ft shed takes about 1 month." },
+                { q: "How long does a farm shed take to complete?", a: "A 1440 sq.ft shed is completed in 6 days; a 2400 sq.ft shed takes about 1 month." },
                 { q: "Does KPN build farm sheds outside Tamil Nadu?", a: "Yes. KPN delivers agricultural and animal shed projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka." }
               ].map((faq, i) => (
                 <details name='faq' key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300">
@@ -509,7 +510,7 @@ export default function AgricultureAnimalHusbandryPage() {
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
-              Planning a shed for <span className="font-serif italic font-medium text-[#ffcc00]">your farm?</span>
+              Planning a shed for <span className="font-serif  font-medium text-[#ffcc00]">your farm?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.
@@ -535,7 +536,7 @@ export default function AgricultureAnimalHusbandryPage() {
             </div>
             
             <p className="text-blue-200 font-medium">
-              <span className="text-white font-medium">50% advance to start</span> — no hidden costs. Projects completed in as little as 20 days.
+              <span className="text-white font-medium">50% advance to start</span> — no hidden costs. Projects completed in as little as 6 days.
             </p>
           </div>
         </section>

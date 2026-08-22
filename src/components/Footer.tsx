@@ -39,7 +39,7 @@ export default function Footer() {
               <span className="text-xl font-extrabold text-white">KPN Roofing Shed</span>
             </div>
             <p className="text-slate-300 leading-relaxed font-medium max-w-sm mt-2">
-              India&apos;s leading roofing shed contractors with over 10 years of experience. We specialize in engineering durable, weatherproof, and custom-designed structures for industrial warehouses, factory sheds, agricultural animal houses, and premium sports turf arenas across the nation. Backed by in-house engineering and a 10-year guarantee.
+              India&apos;s leading roofing shed contractors with over 13+ years of experience. We specialize in engineering durable, weatherproof, and custom-designed structures for industrial warehouses, factory sheds, agricultural animal houses, and premium sports turf arenas across the nation. Backed by in-house engineering and a 10-year guarantee.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-slate-400 font-medium">
                 <svg className="shrink-0 text-[#ee0000]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <a href="mailto:kpnroofingshed555@gmail.com" className="text-slate-400 no-underline hover:text-[#00a3e0] transition-colors">kpnroofingshed555@gmail.com</a>
+                <a href="mailto:kpnroofingsheds@gmail.com" className="text-slate-400 no-underline hover:text-[#00a3e0] transition-colors">kpnroofingsheds@gmail.com</a>
               </div>
               <div className="flex items-center gap-4 mt-2">
                 <a href="https://www.facebook.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#1877F2] transition-colors" aria-label="Facebook">

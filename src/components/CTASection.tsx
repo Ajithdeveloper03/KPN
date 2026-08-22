@@ -42,7 +42,7 @@ export default function CTASection() {
             </div>
 
             <p className="text-white/80 text-xs md:text-sm font-medium tracking-wide">
-              * 50% advance to start &mdash; no hidden costs. Projects completed in as little as 20 days.
+              * 50% advance to start &mdash; no hidden costs. Projects completed in as little as 6 days.
             </p>
           </div>
 

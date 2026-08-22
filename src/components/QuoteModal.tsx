@@ -77,7 +77,7 @@ export default function QuoteModal() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#062088]/80 to-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8 text-white">
             <h4 className="text-2xl font-bold mb-2">Build with Confidence</h4>
-            <p className="text-sm font-medium text-white/90">Join 600+ satisfied clients across India who trust KPN for durable roofing structures.</p>
+            <p className="text-sm font-medium text-white/90">Join 1000+ satisfied clients across India who trust KPN for durable roofing structures.</p>
           </div>
         </div>
 

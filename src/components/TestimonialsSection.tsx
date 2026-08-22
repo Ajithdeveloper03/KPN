@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div>
             <span className="text-[#ee0000] font-bold tracking-widest uppercase text-sm mb-3 block">Client Reviews</span>
-            <h2 className="text-white text-[clamp(34px,5vw,58px)] font-serif italic leading-[1.1] max-w-[550px] tracking-tight">
+            <h2 className="text-white text-[clamp(34px,5vw,58px)] font-serif  leading-[1.1] max-w-[550px] tracking-tight">
               What Our Clients Say.
             </h2>
           </div>

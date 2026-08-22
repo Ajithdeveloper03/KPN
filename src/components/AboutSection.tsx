@@ -108,8 +108,8 @@ export default function AboutSection() {
             "/images/services/goat01.png",
             "/images/services/factory-image-1.png"
           ].map((src, idx) => (
-            <div key={idx} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform">
-              <Image src={src} sizes="(max-width: 768px) 50vw, 33vw" alt={`About KPN ${idx}`} fill className="object-cover" />
+            <div key={idx} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+              <Image src={src} sizes="(max-width: 768px) 50vw, 33vw" alt={`About KPN ${idx}`} fill className="object-cover transition-transform duration-700 hover:scale-110" />
             </div>
           ))}
         </div>
