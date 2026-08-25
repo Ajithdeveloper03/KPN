@@ -72,7 +72,7 @@ export default function QuoteModal() {
         {/* Left Side: Image Cover (Hidden on Mobile) */}
         <div 
           className="hidden md:block w-1/2 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('/images/services/animal-1-image-1.png')" }}
+          style={{ backgroundImage: "url('/images/services/animal-1-image-1.webp')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-[#062088]/80 to-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8 text-white">

@@ -205,7 +205,7 @@ export default function DashboardPage() {
                         <td className="px-6 py-4 align-middle">
                           <div className="w-16 h-10 rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
                             {blog.image ? (
-                              <img src={blog.image} alt="" className="w-full h-full object-cover" />
+                              <img src={blog.image} alt="Blog" className="w-full h-full object-cover" />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center">
                                 <svg className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

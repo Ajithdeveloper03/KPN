@@ -3,21 +3,21 @@ import React from 'react';
 import Image from 'next/image';
 
 const brands = [
-  'arunachala.png',
-  'birmingham_industries_logo.jpg',
-  'chettinad.png',
-  'karuna.png',
+  'arunachala.webp',
+  'birmingham_industries_logo.webp',
+  'chettinad.webp',
+  'karuna.webp',
   'lee.avif',
-  'MIT-8.png',
+  'MIT-8.webp',
   'priyacement-logo-red.svg',
-  'teximass.png'
+  'teximass.webp'
 ];
 
 export default function ClientLogos() {
   return (
     <section className="py-12 bg-white overflow-hidden border-b border-slate-100">
       <div className="max-w-[1400px] mx-auto px-6 mb-8 text-center">
-        <h3 className="text-xl md:text-2xl font-extrabold text-slate-800">Trusted by Leading Brands</h3>
+        <h2 className="text-xl md:text-2xl font-extrabold text-slate-800">Trusted by Leading Brands</h2>
       </div>
       
       <div className="relative w-full flex overflow-hidden group">
@@ -33,7 +33,7 @@ export default function ClientLogos() {
                 alt={`Client Logo ${idx}`} 
                 width={140} 
                 height={80} 
-                className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover/logo:scale-110"
+                className="w-auto h-auto max-w-full max-h-full object-contain transition-transform duration-500 group-hover/logo:scale-110"
               />
             </div>
           ))}

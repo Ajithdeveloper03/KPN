@@ -11,17 +11,6 @@ export default function Footer() {
   return (
     <>
       <footer className="relative bg-[#121316ea] border-t border-white/10 pt-16 pb-8 overflow-hidden">
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0 z-0 opacity-60 pointer-events-none mix-blend-overlay">
-          <Image
-            src="/images/image2.jpeg"
-            alt="Industrial Shed Construction"
-            fill
-            sizes="100vw"
-            className="object-cover object-center grayscale"
-          />
-        </div>
-        
         {/* Dark Gradient for readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#121316] to-transparent pointer-events-none" />
 
@@ -30,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo.webp"
                 alt="KPN Roofing Shed Logo"
                 width={48}
                 height={48}
@@ -47,12 +36,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Quick Links</h4>
             <ul className="list-none p-0 m-0 flex flex-col gap-3">
-              <li><Link href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Home</Link></li>
-              <li><Link href="/about-us" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">About Us</Link></li>
-              <li><Link href="/corporate-social-responsibility" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Community</Link></li>
-              <li><Link href="/gallery" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Gallery</Link></li>
-              <li><Link href="/blog" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Contact Us</Link></li>
+              <li><Link href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Home</Link></li>
+              <li><Link href="/about-us" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">About Us</Link></li>
+              <li><Link href="/corporate-social-responsibility" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Community</Link></li>
+              <li><Link href="/gallery" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Gallery</Link></li>
+              <li><Link href="/blog" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Blog</Link></li>
+              <li><Link href="/contact" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Contact Us</Link></li>
             </ul>
           </div>
 

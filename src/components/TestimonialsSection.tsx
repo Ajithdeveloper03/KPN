@@ -10,8 +10,8 @@ const testimonials = [
     property: "Industrial & Home Shed Works",
     quote: "Excellent service from KPN Roofing Shed. They completed our Roofing Shed Construction in Trichy with strong materials and perfect finishing. Highly recommended for industrial and home shed works.",
     rating: 5.0,
-    bgImage: "/images/image5.jpeg",
-    avatar: "/images/image6.jpeg"
+    bgImage: "/images/image5.webp",
+    avatar: "/images/image6.webp"
   },
   {
     name: "Latha Sethurajan",
@@ -19,8 +19,8 @@ const testimonials = [
     property: "Terrace Roofing Shed",
     quote: "KPN Roofing Shed done terrace shed with excellent quality materials. Really valuable and worth every rupee. The workmanship was top-notch and completed on time.",
     rating: 5.0,
-    bgImage: "/images/image7.jpeg",
-    avatar: "/images/image8.jpeg"
+    bgImage: "/images/image7.webp",
+    avatar: "/images/image8.webp"
   },
   {
     name: "Sasi Kumar",
@@ -28,8 +28,8 @@ const testimonials = [
     property: "Farm Shed Flooring",
     quote: "I bought flooring for my goat shed from KPN — it is a really good product. Durable, easy to clean, and the farm animals are comfortable. Very satisfied with the purchase.",
     rating: 5.0,
-    bgImage: "/images/image9.jpeg",
-    avatar: "/images/image10.jpeg"
+    bgImage: "/images/image9.webp",
+    avatar: "/images/image10.webp"
   },
   {
     name: "Vijay Vijay",
@@ -37,8 +37,8 @@ const testimonials = [
     property: "Home Roofing Project",
     quote: "I recently bought a flooring product from KPN — it is good in quality and the service was very good. The team was responsive and the installation was smooth from start to finish.",
     rating: 5.0,
-    bgImage: "/images/image11.jpeg",
-    avatar: "/images/image12.jpeg"
+    bgImage: "/images/image11.webp",
+    avatar: "/images/image12.webp"
   }
 ];
 
@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
 
           {/* Single Static Background Image */}
           <div className="absolute inset-0">
-            <Image src="/images/image5.jpeg" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/image5.webp" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
           </div>
 
           {/* Overlay */}
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
             <div className="flex items-center justify-between border-t border-slate-100 pt-6">
               <div className="flex items-center gap-3">
                 <div>
-                  <h4 className="text-[#1e2229] font-bold text-sm leading-tight">{active.name.split(" ")[0]}</h4>
+                  <h3 className="text-[#1e2229] font-bold text-sm leading-tight">{active.name.split(" ")[0]}</h3>
                   <p className="text-slate-400 text-xs font-medium">{active.role}</p>
                 </div>
               </div>

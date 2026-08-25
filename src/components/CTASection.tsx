@@ -49,7 +49,7 @@ export default function CTASection() {
           {/* Right Image (Clear and visible) */}
           <div className="relative w-full md:w-[45%] h-[300px] md:h-[500px] md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 overflow-hidden shadow-[-20px_0_50px_rgba(0,0,0,0.15)] md:rounded-l-[4rem]">
             <Image
-              src="/images/imag10.jpeg"
+              src="/images/imag10.webp"
               alt="KPN Roofing Shed Construction Experts"
               fill
               className="object-cover object-center transition-transform duration-1000 hover:scale-110"

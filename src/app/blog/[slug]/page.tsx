@@ -46,14 +46,14 @@ export default async function BlogDetailsPage({
       content: `
         <h2 id="introduction" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">1</span>Introduction to Roofing Sheds</h2>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">Choosing the right roofing shed is critical for the long-term success of your industrial, agricultural, or residential project. A well-built shed provides protection, durability, and functional value.</p>
-        <img src="/images/image3.jpeg" alt="Roofing Shed Introduction" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
+        <img src="/images/image3.webp" alt="Roofing Shed Introduction" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
         
         <h2 id="materials" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">2</span>Choosing the Right Materials</h2>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">Steel is the undisputed king of modern shed construction. Using high-quality materials like Apollo steel ensures structural integrity against heavy winds and storms.</p>
         
         <h3 id="roofing-sheets" class="text-xl md:text-2xl font-bold text-[#111] mt-8 mb-4">Types of Roofing Sheets</h3>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">From color-coated galvalume sheets to polycarbonate sheets for natural light, the roof cladding determines heat resistance and lifespan.</p>
-        <img src="/images/image4.jpeg" alt="Roofing Materials" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
+        <img src="/images/image4.webp" alt="Roofing Materials" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
         
         <h2 id="ventilation" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">3</span>The Importance of Ventilation</h2>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">Proper airflow prevents moisture buildup and heat accumulation, which is especially important for livestock sheds and industrial manufacturing units.</p>
@@ -63,7 +63,7 @@ export default async function BlogDetailsPage({
           <li class="flex items-start gap-3"><span class="text-[#ee0000] mt-1 font-bold">✓</span><span class="text-[17px] leading-[1.7] text-slate-700 font-medium"><strong>Ridge vents:</strong> Utilize natural thermal lift to ensure consistent airflow along the entire roofline.</span></li>
           <li class="flex items-start gap-3"><span class="text-[#ee0000] mt-1 font-bold">✓</span><span class="text-[17px] leading-[1.7] text-slate-700 font-medium"><strong>Side mesh:</strong> Essential for cross ventilation, particularly in agricultural environments like poultry and goat farms.</span></li>
         </ul>
-        <img src="/images/image7.jpeg" alt="Ventilation in Sheds" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
+        <img src="/images/image7.webp" alt="Ventilation in Sheds" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
 
         <h2 id="faqs" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">4</span>Frequently Asked Questions</h2>
         <div id="faq-mount-point"></div>
@@ -76,7 +76,7 @@ export default async function BlogDetailsPage({
         { question: "Which roofing sheet is best for heat resistance?", answer: "PUF insulated sheets or color-coated galvalume sheets combined with bubble wrap insulation provide excellent heat reduction." },
         { question: "Do you provide a warranty on the construction?", answer: "Yes, KPN Roofing Shed provides a 10-year guarantee on structural integrity and a 3-year replacement warranty on specific flooring installations." }
       ],
-      image: "/images/image2.jpeg",
+      image: "/images/image2.webp",
       author: "KPN Experts",
       created_at: new Date().toISOString(),
       read_time: "8 min read",
@@ -87,7 +87,7 @@ export default async function BlogDetailsPage({
     post = {
       title: "Post Not Found",
       content: '<p class="text-xl leading-relaxed text-slate-600 mb-8 font-medium">This blog post could not be found.</p>',
-      image: "/images/placeholder.jpg",
+      image: "/images/placeholder.webp",
       author: "KPN Engineering Team",
       created_at: new Date().toISOString(),
       read_time: "1 min read",
@@ -114,7 +114,7 @@ export default async function BlogDetailsPage({
               "name": "KPN Roofing Shed",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://kpnroofingsheds.com/images/logo.jpg"
+                "url": "https://kpnroofingsheds.com/images/logo.webp"
               }
             },
             "datePublished": post.created_at
@@ -167,7 +167,7 @@ export default async function BlogDetailsPage({
               {/* Right: Featured Image */}
               <div className="relative w-full aspect-[4/3] lg:aspect-[4/3.5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group">
                 <Image
-                  src={post.image || "/images/placeholder.jpg"}
+                  src={post.image || "/images/placeholder.webp"}
                   alt={post.title}
                   fill sizes="100vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"

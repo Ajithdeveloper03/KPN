@@ -39,10 +39,10 @@ export default function Home() {
             "@id": "https://kpnroofingsheds.com/#localbusiness",
             "name": "KPN Roofing Shed",
             "url": "https://kpnroofingsheds.com/",
-            "image": "https://kpnroofingsheds.com/images/logo.jpg",
+            "image": "https://kpnroofingsheds.com/images/logo.webp",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://kpnroofingsheds.com/images/logo.jpg"
+              "url": "https://kpnroofingsheds.com/images/logo.webp"
             },
             "description": "KPN Roofing Shed provides industrial, agricultural, home roofing, animal husbandry and sports turf shed construction solutions across India.",
             "telephone": "+91-9788770786",

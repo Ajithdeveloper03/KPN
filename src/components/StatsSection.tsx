@@ -9,55 +9,55 @@ const statsCards = [
     title: "13+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
-    img: "/images/image17.jpeg"
+    img: "/images/image17.webp"
   },
   {
     title: "1000+ Projects",
     desc: "Successfully completed across India.",
     color: "#ee0000",
-    img: "/images/image18.jpeg"
+    img: "/images/image18.webp"
   },
   {
     title: "All Services",
     desc: "Industrial, agricultural, home, turf & badminton sheds.",
     color: "#ffe600",
-    img: "/images/image19.jpeg"
+    img: "/images/image19.webp"
   },
   {
     title: "upto ₹599/sq.ft",
     desc: "High-quality goat farm sheds tailored to your needs.",
     color: "#062088",
-    img: "/images/image20.jpeg"
+    img: "/images/image20.webp"
   },
   {
     title: "Min. Size",
     desc: "1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states.",
     color: "#ee0000",
-    img: "/images/imag10.jpeg"
+    img: "/images/imag10.webp"
   },
   {
     title: "Fast Timeline",
     desc: "6 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
     color: "#ffe600",
-    img: "/images/image1.jpeg"
+    img: "/images/image1.webp"
   },
   {
     title: "10-Yr Warranty",
     desc: "10-year guarantee, 3-year replacement on flooring.",
     color: "#062088",
-    img: "/images/image2.jpeg"
+    img: "/images/image2.webp"
   },
   {
     title: "50% Advance",
     desc: "Remainder in installments as materials arrive.",
     color: "#ee0000",
-    img: "/images/image3.jpeg"
+    img: "/images/image3.webp"
   },
   {
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
     color: "#ffe600",
-    img: "/images/image4.jpeg"
+    img: "/images/image4.webp"
   }
 ];
 
@@ -105,7 +105,7 @@ export default function StatsSection() {
   return (
     <section id="stats" className="relative py-14  flex flex-col justify-center overflow-hidden">
       {/* Fixed Background Image with light overlay */}
-      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/services/cricket-image-1.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/services/cricket-image-1.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="absolute inset-0 bg-gray-100" />
       </div>
 

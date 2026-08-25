@@ -30,7 +30,7 @@ export default function Preloader() {
       {/* Animated Logo Container */}
       <div className="relative animate-pulse flex flex-col items-center">
         <Image
-          src="/images/logo.jpg"
+          src="/images/logo.webp"
           alt="KPN Roofing Shed Preloader"
           width={150}
           height={120}

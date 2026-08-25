@@ -11,7 +11,7 @@ export default function ComparisonSection() {
     { 
       label: "Who You Deal With", 
       icon: Building2,
-      image: "/images/services/agriculture-and-animal-husbenday-bannar-image.png",
+      image: "/images/services/agriculture-and-animal-husbenday-bannar-image.webp",
       kpn: "Directly with KPN", 
       kpnDesc: "Enjoy clear communication, direct accountability, and absolutely no middleman margins.",
       other: "Often through a dealer/broker",
@@ -20,7 +20,7 @@ export default function ComparisonSection() {
     { 
       label: "Structural Design", 
       icon: FileText,
-      image: "/images/services/home-roofing-shed-banner-image.png",
+      image: "/images/services/home-roofing-shed-banner-image.webp",
       kpn: "In-house engineers", 
       kpnDesc: "Our qualified engineers create custom designs tailored to your specific load and wind requirements.",
       other: "Frequently outsourced",
@@ -29,7 +29,7 @@ export default function ComparisonSection() {
     { 
       label: "Installation Team", 
       icon: HardHat,
-      image: "/images/services/factory-banner-image.png",
+      image: "/images/services/factory-banner-image.webp",
       kpn: "KPN's own crew", 
       kpnDesc: "Trained professionals who know our products inside out ensure a flawless installation.",
       other: "Subcontracted labour",
@@ -38,7 +38,7 @@ export default function ComparisonSection() {
     { 
       label: "After-Sales Support", 
       icon: ShieldCheck,
-      image: "/images/services/warehouse-01.png",
+      image: "/images/services/warehouse-01.webp",
       kpn: "Warranty-backed repair", 
       kpnDesc: "We provide comprehensive warranties and are always just a call away for maintenance.",
       other: "Varies by provider",

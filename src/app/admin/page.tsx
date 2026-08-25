@@ -53,7 +53,7 @@ export default function AdminLogin() {
       <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-10 rounded-3xl w-full max-w-md relative z-10 shadow-2xl">
         <div className="text-center mb-10">
           <div className="bg-white inline-block p-4 rounded-2xl mb-6 shadow-lg">
-            <Image src="/images/logo.jpg" alt="KPN Logo" width={100} height={100} className="w-auto h-16" />
+            <Image src="/images/logo.webp" alt="KPN Logo" width={100} height={100} className="w-auto h-16" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Admin Portal</h1>
           <p className="text-slate-400">Sign in to manage your content</p>

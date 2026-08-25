@@ -18,32 +18,32 @@ export default function AboutSection() {
 
         {/* Img 1: Far Left (Lowest) */}
         <div data-reveal="image" className="absolute left-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/images/image11.jpeg" fill sizes="250px" alt="About 1" className="object-cover" />
+          <Image src="/images/image11.webp" fill sizes="250px" alt="About 1" className="object-cover" />
         </div>
 
         {/* Img 2: Mid Left (Higher, Taller) */}
         <div data-reveal="image" className="absolute left-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/images/image12.jpeg" fill sizes="250px" alt="About 2" className="object-cover" />
+          <Image src="/images/image12.webp" fill sizes="250px" alt="About 2" className="object-cover" />
         </div>
 
         {/* Img 3: Center Left (Highest) */}
         <div data-reveal="image" className="absolute left-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/images/image13.jpeg" fill sizes="250px" alt="About 3" className="object-cover" />
+          <Image src="/images/image13.webp" fill sizes="250px" alt="About 3" className="object-cover" />
         </div>
 
         {/* Img 4: Center Right (Highest) */}
         <div data-reveal="image" className="absolute right-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/images/image14.jpeg" fill sizes="250px" alt="About 4" className="object-cover" />
+          <Image src="/images/image14.webp" fill sizes="250px" alt="About 4" className="object-cover" />
         </div>
 
         {/* Img 5: Mid Right (Higher, Taller) */}
         <div data-reveal="image" className="absolute right-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/images/image15.jpeg" fill sizes="250px" alt="About 5" className="object-cover" />
+          <Image src="/images/image15.webp" fill sizes="250px" alt="About 5" className="object-cover" />
         </div>
 
         {/* Img 6: Far Right (Lowest) */}
         <div data-reveal="image" className="absolute right-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
-          <Image src="/images/image16.jpeg" fill sizes="250px" alt="About 6" className="object-cover" />
+          <Image src="/images/image16.webp" fill sizes="250px" alt="About 6" className="object-cover" />
         </div>
 
         {/* Central Text Content */}
@@ -101,12 +101,12 @@ export default function AboutSection() {
         {/* Mobile Image Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full" data-reveal="stagger">
           {[
-            "/images/services/industrial-image-02.png",
-            "/images/services/poultry01.png",
-            "/images/services/cricket-image-1.png",
-            "/images/services/animal-1-image-1.png",
-            "/images/services/goat01.png",
-            "/images/services/factory-image-1.png"
+            "/images/services/industrial-image-02.webp",
+            "/images/services/poultry01.webp",
+            "/images/services/cricket-image-1.webp",
+            "/images/services/animal-1-image-1.webp",
+            "/images/services/goat01.webp",
+            "/images/services/factory-image-1.webp"
           ].map((src, idx) => (
             <div key={idx} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shiny-hover">
               <Image src={src} sizes="(max-width: 768px) 50vw, 33vw" alt={`About KPN ${idx}`} fill className="object-cover transition-transform duration-700 hover:scale-110" />

@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/logo.jpg", type: "image/jpeg", sizes: "any" },
+      { url: "/images/logo.webp", type: "image/jpeg", sizes: "any" },
     ],
-    shortcut: "/images/logo.jpg",
-    apple: "/images/logo.jpg",
+    shortcut: "/images/logo.webp",
+    apple: "/images/logo.webp",
   },
   openGraph: {
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "KPN Roofing Shed",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "KPN Roofing Shed - Roofing Shed Construction in India",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
     description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 10+ yrs, 600+ projects, award-winning team. Get a free quote today.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.webp"],
   },
   robots: {
     index: true,
@@ -81,8 +81,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className="notranslate">
       <head>
-        <link rel="icon" href="/images/logo.jpg" sizes="any" type="image/jpeg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg" />
+        <link rel="icon" href="/images/logo.webp" sizes="any" type="image/jpeg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.webp" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FHPZGLQSQQ"
           strategy="afterInteractive"
@@ -104,7 +104,7 @@ export default function RootLayout({ children }) {
               "@id": "https://kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
               "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.jpg",
+              "logo": "https://kpnroofingsheds.com/images/logo.webp",
               "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
               "telephone": "+91-9788770786",
               "email": "kpnroofingsheds@gmail.com",
@@ -135,7 +135,7 @@ export default function RootLayout({ children }) {
         <LenisScrollProvider>
           <ScrollReveal />
           <Header />
-          {children}
+          <main id="main-content">{children}</main>
           <Footer />
           <ScrollToTop />
         </LenisScrollProvider>

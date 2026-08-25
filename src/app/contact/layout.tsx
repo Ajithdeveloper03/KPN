@@ -27,7 +27,7 @@ export default function ContactLayout({
             "mainEntity": {
               "@type": "LocalBusiness",
               "name": "KPN Roofing Shed",
-              "image": "https://kpnroofingsheds.com/images/logo.jpg",
+              "image": "https://kpnroofingsheds.com/images/logo.webp",
               "telephone": "+91-9788770786",
               "email": "kpnroofingsheds@gmail.com",
               "address": {

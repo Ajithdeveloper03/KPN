@@ -111,7 +111,7 @@ export default function WhyKPNSection() {
                 {/* Inner circle with image - Reverse spin to keep image upright */}
                 <div className="w-40 h-40 rounded-full bg-white flex items-center justify-center shadow-[0_15px_40px_rgba(0,163,224,0.15)] relative overflow-hidden border-4 border-white animate-[spin_15s_linear_infinite_reverse]">
                   <Image
-                    src="/images/logo.jpg"
+                    src="/images/logo.webp"
                     alt="KPN Logo"
                     fill sizes="100vw"
                     className="object-cover"

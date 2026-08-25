@@ -8,50 +8,50 @@ import PageHero from "@/components/PageHero";
 
 // Expanded gallery data incorporating the latest high-quality assets
 const galleryItems = [
-  { id: 101, title: 'Cricket Turf Shed Construction', category: 'Sports Turf', img: '/images/image1.jpeg', height: 'h-96' },
-  { id: 102, title: 'Cricket Turf Framework', category: 'Sports Turf', img: '/images/image2.jpeg', height: 'h-72' },
-  { id: 103, title: 'Cricket Turf Pitch Planning', category: 'Sports Turf', img: '/images/image3.jpeg', height: 'h-80' },
-  { id: 104, title: 'Cricket Turf Structure', category: 'Sports Turf', img: '/images/image4.jpeg', height: 'h-[28rem]' },
-  { id: 105, title: 'Cricket Turf Construction Phase', category: 'Sports Turf', img: '/images/image5.jpeg', height: 'h-96' },
-  { id: 106, title: 'Cricket Turf Finished Design', category: 'Sports Turf', img: '/images/image6.jpeg', height: 'h-72' },
-  { id: 107, title: 'Car Parking Shed Timeline', category: 'Home Roofing Sheds', img: '/images/image7.jpeg', height: 'h-80' },
-  { id: 108, title: 'Badminton Court Construction Time', category: 'Sports Turf', img: '/images/image8.jpeg', height: 'h-96' },
-  { id: 109, title: 'Badminton Court Approvals', category: 'Sports Turf', img: '/images/image9.jpeg', height: 'h-[28rem]' },
-  { id: 110, title: 'Car Parking Shed Permits', category: 'Home Roofing Sheds', img: '/images/imag10.jpeg', height: 'h-72' },
-  { id: 111, title: 'Single vs Multi Bay Car Parking', category: 'Home Roofing Sheds', img: '/images/image1.jpeg', height: 'h-80' },
+  { id: 101, title: 'Cricket Turf Shed Construction', category: 'Sports Turf', img: '/images/image1.webp', height: 'h-96' },
+  { id: 102, title: 'Cricket Turf Framework', category: 'Sports Turf', img: '/images/image2.webp', height: 'h-72' },
+  { id: 103, title: 'Cricket Turf Pitch Planning', category: 'Sports Turf', img: '/images/image3.webp', height: 'h-80' },
+  { id: 104, title: 'Cricket Turf Structure', category: 'Sports Turf', img: '/images/image4.webp', height: 'h-[28rem]' },
+  { id: 105, title: 'Cricket Turf Construction Phase', category: 'Sports Turf', img: '/images/image5.webp', height: 'h-96' },
+  { id: 106, title: 'Cricket Turf Finished Design', category: 'Sports Turf', img: '/images/image6.webp', height: 'h-72' },
+  { id: 107, title: 'Car Parking Shed Timeline', category: 'Home Roofing Sheds', img: '/images/image7.webp', height: 'h-80' },
+  { id: 108, title: 'Badminton Court Construction Time', category: 'Sports Turf', img: '/images/image8.webp', height: 'h-96' },
+  { id: 109, title: 'Badminton Court Approvals', category: 'Sports Turf', img: '/images/image9.webp', height: 'h-[28rem]' },
+  { id: 110, title: 'Car Parking Shed Permits', category: 'Home Roofing Sheds', img: '/images/imag10.webp', height: 'h-72' },
+  { id: 111, title: 'Single vs Multi Bay Car Parking', category: 'Home Roofing Sheds', img: '/images/image1.webp', height: 'h-80' },
 
   // Industrial
-  { id: 1, title: "Modern Industrial Warehouse", category: "Industrial Shed", img: "/images/image2.jpeg", height: "h-96" },
-  { id: 2, title: "Large Manufacturing Plant", category: "Industrial Shed", img: "/images/image3.jpeg", height: "h-[28rem]" },
-  { id: 3, title: "Garment Manufacturing Unit", category: "Industrial Shed", img: "/images/image4.jpeg", height: "h-80" },
-  { id: 4, title: "Logistics Center", category: "Industrial Shed", img: "/images/image5.jpeg", height: "h-72" },
-  { id: 5, title: "Automobile Factory", category: "Industrial Shed", img: "/images/image6.jpeg", height: "h-[28rem]" },
-  { id: 6, title: "Steel Plant Warehouse", category: "Industrial Shed", img: "/images/image7.jpeg", height: "h-96" },
-  { id: 7, title: "Assembly Line Shed", category: "Industrial Shed", img: "/images/image8.jpeg", height: "h-72" },
-  { id: 8, title: "Commercial Storage", category: "Industrial Shed", img: "/images/image9.jpeg", height: "h-96" },
+  { id: 1, title: "Modern Industrial Warehouse", category: "Industrial Shed", img: "/images/image2.webp", height: "h-96" },
+  { id: 2, title: "Large Manufacturing Plant", category: "Industrial Shed", img: "/images/image3.webp", height: "h-[28rem]" },
+  { id: 3, title: "Garment Manufacturing Unit", category: "Industrial Shed", img: "/images/image4.webp", height: "h-80" },
+  { id: 4, title: "Logistics Center", category: "Industrial Shed", img: "/images/image5.webp", height: "h-72" },
+  { id: 5, title: "Automobile Factory", category: "Industrial Shed", img: "/images/image6.webp", height: "h-[28rem]" },
+  { id: 6, title: "Steel Plant Warehouse", category: "Industrial Shed", img: "/images/image7.webp", height: "h-96" },
+  { id: 7, title: "Assembly Line Shed", category: "Industrial Shed", img: "/images/image8.webp", height: "h-72" },
+  { id: 8, title: "Commercial Storage", category: "Industrial Shed", img: "/images/image9.webp", height: "h-96" },
 
   // Agriculture & Animal Husbandry
-  { id: 9, title: "Agricultural Storage Shed", category: "Agriculture & Animal Husbandry", img: "/images/imag10.jpeg", height: "h-64" },
-  { id: 10, title: "Poultry Farm Shed", category: "Agriculture & Animal Husbandry", img: "/images/image1.jpeg", height: "h-72" },
-  { id: 11, title: "Grain Storage Facility", category: "Agriculture & Animal Husbandry", img: "/images/image2.jpeg", height: "h-80" },
-  { id: 12, title: "Dairy Farm Structure", category: "Agriculture & Animal Husbandry", img: "/images/image3.jpeg", height: "h-96" },
-  { id: 13, title: "Livestock Shade Structure", category: "Agriculture & Animal Husbandry", img: "/images/image4.jpeg", height: "h-72" },
-  { id: 14, title: "Modern Green House", category: "Agriculture & Animal Husbandry", img: "/images/image5.jpeg", height: "h-80" },
-  { id: 15, title: "Farm Equipment Shed", category: "Agriculture & Animal Husbandry", img: "/images/image6.jpeg", height: "h-80" },
+  { id: 9, title: "Agricultural Storage Shed", category: "Agriculture & Animal Husbandry", img: "/images/imag10.webp", height: "h-64" },
+  { id: 10, title: "Poultry Farm Shed", category: "Agriculture & Animal Husbandry", img: "/images/image1.webp", height: "h-72" },
+  { id: 11, title: "Grain Storage Facility", category: "Agriculture & Animal Husbandry", img: "/images/image2.webp", height: "h-80" },
+  { id: 12, title: "Dairy Farm Structure", category: "Agriculture & Animal Husbandry", img: "/images/image3.webp", height: "h-96" },
+  { id: 13, title: "Livestock Shade Structure", category: "Agriculture & Animal Husbandry", img: "/images/image4.webp", height: "h-72" },
+  { id: 14, title: "Modern Green House", category: "Agriculture & Animal Husbandry", img: "/images/image5.webp", height: "h-80" },
+  { id: 15, title: "Farm Equipment Shed", category: "Agriculture & Animal Husbandry", img: "/images/image6.webp", height: "h-80" },
 
   // Home Roofing Sheds
-  { id: 16, title: "Custom Home Garage", category: "Home Roofing Sheds", img: "/images/image7.jpeg", height: "h-80" },
-  { id: 17, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/images/image8.jpeg", height: "h-96" },
-  { id: 18, title: "Garden Studio Shed", category: "Home Roofing Sheds", img: "/images/image9.jpeg", height: "h-72" },
-  { id: 19, title: "Luxury Carport", category: "Home Roofing Sheds", img: "/images/imag10.jpeg", height: "h-64" },
-  { id: 20, title: "Urban Backyard Shed", category: "Home Roofing Sheds", img: "/images/image1.jpeg", height: "h-[28rem]" },
-  { id: 21, title: "Patio Cover", category: "Home Roofing Sheds", img: "/images/image2.jpeg", height: "h-64" },
+  { id: 16, title: "Custom Home Garage", category: "Home Roofing Sheds", img: "/images/image7.webp", height: "h-80" },
+  { id: 17, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/images/image8.webp", height: "h-96" },
+  { id: 18, title: "Garden Studio Shed", category: "Home Roofing Sheds", img: "/images/image9.webp", height: "h-72" },
+  { id: 19, title: "Luxury Carport", category: "Home Roofing Sheds", img: "/images/imag10.webp", height: "h-64" },
+  { id: 20, title: "Urban Backyard Shed", category: "Home Roofing Sheds", img: "/images/image1.webp", height: "h-[28rem]" },
+  { id: 21, title: "Patio Cover", category: "Home Roofing Sheds", img: "/images/image2.webp", height: "h-64" },
 
   // Sports Turf
-  { id: 22, title: "Professional Badminton Court", category: "Sports Turf", img: "/images/image3.jpeg", height: "h-[28rem]" },
-  { id: 23, title: "Cricket Turf Shelter", category: "Sports Turf", img: "/images/image4.jpeg", height: "h-96" },
-  { id: 24, title: "Weatherproof Multi-Sport", category: "Sports Turf", img: "/images/image5.jpeg", height: "h-72" },
-  { id: 25, title: "Indoor Sports Complex", category: "Sports Turf", img: "/images/image6.jpeg", height: "h-80" }
+  { id: 22, title: "Professional Badminton Court", category: "Sports Turf", img: "/images/image3.webp", height: "h-[28rem]" },
+  { id: 23, title: "Cricket Turf Shelter", category: "Sports Turf", img: "/images/image4.webp", height: "h-96" },
+  { id: 24, title: "Weatherproof Multi-Sport", category: "Sports Turf", img: "/images/image5.webp", height: "h-72" },
+  { id: 25, title: "Indoor Sports Complex", category: "Sports Turf", img: "/images/image6.webp", height: "h-80" }
 ];
 
 const categories = ["All", "Agriculture & Animal Husbandry", "Industrial Shed", "Home Roofing Sheds", "Sports Turf"];
@@ -125,7 +125,7 @@ export default function GalleryPage() {
           { label: "Home", href: "/" },
           { label: "Gallery", href: "/gallery" }
         ]} 
-        bgImage="/images/services/warehouse-banner-image.png"
+        bgImage="/images/services/warehouse-banner-image.webp"
       />
       
       <main className="max-w-[1400px] w-full mx-auto px-6 py-16 flex-grow">

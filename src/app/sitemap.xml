@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/about-us</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/contact</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/gallery</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/blog</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Corporate Social Responsibility -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/corporate-social-responsibility</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Main Service Pages -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/industrial-sheds</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/home-roofing-sheds</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/sports-turf-sheds</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Agriculture & Animal Husbandry Subpages -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Industrial Shed Subpages -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/industrial-sheds/factory-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Home Roofing Shed Subpages -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Sports Turf Subpages -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://kpnroofingsheds.com/services/sports-turf-sheds/cricket-turf-shed</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog -->
+
+  <url>
+    <loc>https://kpnroofingsheds.com/blog/ultimate-guide-to-roofing-sheds</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

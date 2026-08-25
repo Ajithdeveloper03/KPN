@@ -402,7 +402,7 @@ function EditorForm() {
                           <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Section Image (Optional)</label>
                           {section.image ? (
                             <div className="relative rounded-lg overflow-hidden border border-gray-200 group">
-                              <img src={section.image} alt="" className="w-full h-48 object-cover" />
+                              <img src={section.image} alt="Section" className="w-full h-48 object-cover" />
                               <button 
                                 onClick={() => {
                                   const newSecs = [...sections];
@@ -580,7 +580,7 @@ function EditorForm() {
                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Article Cover Image</h3>
                     {coverImage ? (
                       <div className="relative rounded-xl overflow-hidden border border-gray-200 group">
-                        <img src={coverImage} alt="" className="w-full h-[300px] object-cover" />
+                        <img src={coverImage} alt="Cover Image" className="w-full h-[300px] object-cover" />
                         <button 
                           onClick={() => setCoverImage("")}
                           className="absolute top-4 right-4 bg-red-500 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity shadow-lg"
@@ -661,7 +661,7 @@ function EditorForm() {
             <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Cover Image Preview</h4>
             <div className="bg-gray-50 border border-gray-100 rounded-lg h-32 flex items-center justify-center overflow-hidden">
               {coverImage ? (
-                <img src={coverImage} className="w-full h-full object-cover" alt="" />
+                <img src={coverImage} className="w-full h-full object-cover" alt="Cover Image" />
               ) : (
                 <span className="text-xs text-gray-400 font-medium">No cover image</span>
               )}

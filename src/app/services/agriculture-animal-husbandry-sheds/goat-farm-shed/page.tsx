@@ -65,7 +65,7 @@ export default function GoatFarmShedPage() {
               "@id": "https://kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
               "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.jpg"
+              "logo": "https://kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -122,7 +122,7 @@ export default function GoatFarmShedPage() {
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/services/goat-banner-image.png" 
+            src="/images/services/goat-banner-image.webp" 
             alt="goat farm shed India — KPN" 
             fill sizes="100vw" 
             className="object-cover" 
@@ -172,7 +172,7 @@ export default function GoatFarmShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/goat01.png" alt="goat farm shed India — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/goat01.webp" alt="goat farm shed India — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
@@ -488,7 +488,7 @@ export default function GoatFarmShedPage() {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/goat01.png" alt="goat farm shed manufacturers India — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/goat01.webp" alt="goat farm shed manufacturers India — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#d35400]/40 to-transparent"></div>
               <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[80%]">
                 <FileText className="text-[#d35400] mb-3" size={32} />
@@ -518,7 +518,7 @@ export default function GoatFarmShedPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/animal-sec-3.png" alt="goat farm roofing shed — KPN Roofing Shed" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/animal-sec-3.webp" alt="goat farm roofing shed — KPN Roofing Shed" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-bl from-[#3498db]/40 to-transparent"></div>
             </div>
           </div>
@@ -547,7 +547,7 @@ export default function GoatFarmShedPage() {
               
               {/* Center Image */}
               <div className="w-full lg:w-1/3 relative h-[500px] lg:h-[700px] rounded-[3rem] overflow-hidden shadow-2xl z-0">
-                <Image src="/images/services/animal-sec-5.png" alt="Why KPN" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/services/animal-sec-5.webp" alt="Why KPN" fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-[#e67e22]/20 mix-blend-multiply"></div>
               </div>
               
@@ -600,7 +600,7 @@ export default function GoatFarmShedPage() {
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/animal-sec-7.png" alt="goat farm shed — KPN" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/animal-sec-7.webp" alt="goat farm shed — KPN" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

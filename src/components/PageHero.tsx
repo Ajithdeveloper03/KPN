@@ -15,7 +15,7 @@ interface PageHeroProps {
   bgPosition?: string;
 }
 
-export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-bg.png", bgPosition = "object-cover object-center" }: PageHeroProps) {
+export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-bg.webp", bgPosition = "object-cover object-center" }: PageHeroProps) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
