@@ -12,7 +12,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    shedType: "",
+    shedType: "Factory Shed",
     message: "",
     bot_field: ""
   });
@@ -44,7 +44,7 @@ export default function ContactPage() {
 
       if (response.ok && result.status === "success") {
         setFormStatus("success");
-        setFormData({ name: "", email: "", phone: "", shedType: "", message: "", bot_field: "" });
+        setFormData({ name: "", email: "", phone: "", shedType: "Factory Shed", message: "", bot_field: "" });
         setTimeout(() => setFormStatus("idle"), 5000);
       } else {
         setFormStatus("error");

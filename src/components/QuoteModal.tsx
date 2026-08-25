@@ -9,7 +9,7 @@ export const openQuoteModal = () => {
 
 export default function QuoteModal() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", phone: "", location: "", shedType: "industrial", message: "", bot_field: "" });
+  const [formData, setFormData] = useState({ name: "", phone: "", location: "", shedType: "Factory Shed", message: "", bot_field: "" });
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -49,11 +49,11 @@ export default function QuoteModal() {
         setTimeout(() => {
           setIsModalOpen(false);
           setFormStatus("idle");
-          setFormData({ name: "", phone: "", location: "", shedType: "industrial", message: "", bot_field: "" });
+          setFormData({ name: "", phone: "", location: "", shedType: "Factory Shed", message: "", bot_field: "" });
         }, 3000);
       } else {
         setFormStatus("error");
-        setErrorMessage(result.message || "Something went wrong. Please try again.");
+        setErrorMessage(result.message + (result.debug ? ` [Debug: ${result.debug}]` : "") || "Something went wrong. Please try again.");
       }
     } catch (error) {
       setFormStatus("error");

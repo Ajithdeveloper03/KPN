@@ -73,17 +73,16 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'inymartlabs@gmail.com';
-    $mail->Password   = 'kpxlbctyiqxvzuhq';
+    $mail->Username   = 'kpnroofingsheds@gmail.com';
+    $mail->Password   = 'npkkowjtmxyiherj';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
-
     // Recipients
-    $mail->setFrom('inymartlabs@gmail.com', 'KPN Website Form');
-    $mail->addAddress('kpnroofingsheds@gmail.com', 'KPN Admin');
+    $mail->setFrom('kpnroofingsheds@gmail.com', 'KPN Website Form');
+    $mail->addAddress('kpnroofingshed555@gmail.com', 'KPN Admin');
     $mail->addReplyTo($email !== 'Not Provided' ? $email : 'kpnroofingsheds@gmail.com', $name);
     
-    // ContentZ
+    // Content
     $mail->isHTML(true);
     $mail->Subject = "New $formType Submission from $name";
     
