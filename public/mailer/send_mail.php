@@ -79,11 +79,11 @@ try {
     $mail->Port       = 465;
 
     // Recipients
-    $mail->setFrom('kpnroofingsheds@gmail.com', 'KPN Website Form');
+    $mail->setFrom('inymartlabs@gmail.com', 'KPN Website Form');
     $mail->addAddress('kpnroofingsheds@gmail.com', 'KPN Admin');
     $mail->addReplyTo($email !== 'Not Provided' ? $email : 'kpnroofingsheds@gmail.com', $name);
     
-    // Content
+    // ContentZ
     $mail->isHTML(true);
     $mail->Subject = "New $formType Submission from $name";
     
@@ -108,6 +108,6 @@ try {
     echo json_encode(["status" => "success", "message" => "Request sent successfully! Our team will contact you shortly."]);
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(["status" => "error", "message" => "Sorry, we couldn't send your message right now. Please try again later."]);
+    echo json_encode(["status" => "error", "message" => "Sorry, we couldn't send your message right now. Please try again later.", "debug" => $mail->ErrorInfo]);
 }
 ?>
