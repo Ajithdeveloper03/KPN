@@ -41,11 +41,53 @@ export default function AgricultureAnimalHusbandryPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the minimum size for a farm shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The minimum shed size is 1,440 sq.ft in Tamil Nadu and 2,400 sq.ft in other states."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can KPN build a combined dairy and poultry shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN can assess the farm layout and recommend separate or integrated structures based on ventilation, hygiene, and operational requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a farm shed take to complete?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A 1,440 sq.ft shed is completed in 20 days; a 2400 sq.ft shed takes about 1 month."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build farm sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN delivers agricultural and animal shed projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <PageHero  
         title="Agriculture & Animal Husbandry" 
          bgImage="/images/services/agriculture-and-animal-husbenday-bannar-image.png" breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Services", href: "/#services" },
           { label: "Agriculture & Animal Husbandry", href: "/services/agriculture-animal-husbandry-sheds" }
         ]} 
       />
@@ -63,7 +105,7 @@ export default function AgricultureAnimalHusbandryPage() {
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
                 Agriculture & Animal Husbandry India — <br className="hidden xl:block"/>
-                <span className="font-serif  font-medium text-[#062088]">Goat, Dairy, Poultry & Cow Sheds</span>
+                <span className="font-serif font-medium text-[#062088] italic">Goat, Dairy, Poultry & Cow Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
                 KPN Roofing Shed builds animal and agricultural sheds across India, engineered around airflow, drainage, and animal comfort — not just a roof over the herd. From single-unit goat shelters to full dairy and poultry setups, every structure uses Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a 10-year guarantee.
@@ -93,7 +135,7 @@ export default function AgricultureAnimalHusbandryPage() {
           </div>
           <div className="mt-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
              <div className="w-full md:w-1/3">
-               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif  font-medium text-[#ee0000]">This For?</span></h3>
+               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif font-medium text-[#ee0000] italic">This For?</span></h3>
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -111,39 +153,45 @@ export default function AgricultureAnimalHusbandryPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Overview
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Agriculture & Animal Husbandry <br/><span className="font-serif  font-medium text-[#00a3e0]">at a Glance</span></h2>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Agriculture & Animal Husbandry <br/><span className="font-serif font-medium text-[#00a3e0] italic">at a Glance</span></h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {/* Metric 1 */}
-              {/* <div className="bg-[#222d58] p-10 rounded-[2rem] shadow-lg">
-                <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-8">
-                  <Box strokeWidth={1.5} size={28} />
-                </div>
-                
-              </div> */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               
-              {/* Metric 2 */}
-              <div className="bg-[#6f1c1c] p-10 rounded-[2rem] shadow-lg">
+              {/* Metric 1 - Blue */}
+              <div className="bg-[#062088] p-10 rounded-[2rem] shadow-lg">
                 <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white mb-8">
                   <Factory strokeWidth={1.5} size={28} />
                 </div>
                 <h4 className="text-white font-semibold text-2xl mb-6">Scale & Time</h4>
-                <ul className="space-y-4 text-red-100 font-medium leading-relaxed">
+                <ul className="space-y-4 text-blue-100 font-medium leading-relaxed">
                   <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Minimum size:</strong> 1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states</span></li>
                   <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Timeline:</strong> 6 days for a 1440 sq.ft shed, 1 month for 2400 sq.ft</span></li>
                 </ul>
               </div>
 
-              {/* Metric 3 */}
-              <div className="bg-[#daaf01] p-10 rounded-[2rem] shadow-lg">
-                <div className="w-16 h-16 rounded-full bg-black/5 border border-black/10 flex items-center justify-center text-[#111] mb-8">
+              {/* Metric 2 - Red */}
+              <div className="bg-[#751919] p-10 rounded-[2rem] shadow-lg">
+                <div className="w-16 h-16 rounded-full bg-white/20 border border-white/30 flex items-center justify-center text-white mb-8">
                   <ShieldCheck strokeWidth={1.5} size={28} />
                 </div>
-                <h4 className="text-[#111] font-semibold text-2xl mb-6">Coverage & Warranty</h4>
-                <ul className="space-y-4 text-slate-800 font-medium leading-relaxed">
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ee0000] mt-1 shrink-0" /> <span><strong className="text-[#111]">Warranty:</strong> 10-year guarantee, 3-year replacement warranty on flooring</span></li>
-                  <li className="flex items-start gap-3"><Check size={20} className="text-[#ee0000] mt-1 shrink-0" /> <span><strong className="text-[#111]">Project coverage:</strong> pan-India, with strong demand from Maharashtra, Telangana, and Karnataka</span></li>
+                <h4 className="text-white font-semibold text-2xl mb-6">Coverage & Warranty</h4>
+                <ul className="space-y-4 text-red-100 font-medium leading-relaxed">
+                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Warranty:</strong> 10-year guarantee, 3-year replacement warranty on flooring</span></li>
+                  <li className="flex items-start gap-3"><Check size={20} className="text-white mt-1 shrink-0" /> <span><strong className="text-white">Project coverage:</strong> pan-India, with strong demand from Maharashtra, Telangana, and Karnataka</span></li>
+                </ul>
+              </div>
+
+              {/* Metric 3: Flooring At a Glance - Yellow */}
+              <div className="bg-[#ffcc00] p-10 rounded-[2rem] shadow-lg">
+                <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center text-[#111] mb-8">
+                  <Box strokeWidth={1.5} size={28} />
+                </div>
+                <h4 className="text-[#111] font-semibold text-2xl mb-6">Slatted Floor Mat</h4>
+                <ul className="space-y-4 text-[#111] font-medium leading-relaxed text-[15px]">
+                  <li className="flex items-start gap-3"><div className="w-2 h-2 rounded-full bg-[#ee0000] mt-2 shrink-0"></div> <span>Manufactured in-house at KPN's own facility in Coimbatore.</span></li>
+                  <li className="flex items-start gap-3"><div className="w-2 h-2 rounded-full bg-[#ee0000] mt-2 shrink-0"></div> <span>Made from virgin raw material, not recycled plastic.</span></li>
+                  <li className="flex items-start gap-3"><div className="w-2 h-2 rounded-full bg-[#ee0000] mt-2 shrink-0"></div> <span>Suitable across goat, dairy/cow, and poultry shed types.</span></li>
                 </ul>
               </div>
             </div>
@@ -160,7 +208,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 Our Services
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-                Agricultural Sheds & <span className="font-serif  font-medium">Modern Farm Sheds</span>
+                Agricultural Sheds & <span className="font-serif font-medium italic">Modern Farm Sheds</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-3xl font-medium leading-relaxed">
                 KPN designs agricultural sheds and modern farm sheds suited to Indian farm sizes — from a small backyard setup to a large commercial operation. Every structure is engineered with ventilated roofing and corrosion-resistant frames, built to handle years of heavy farm use with minimal maintenance.
@@ -287,7 +335,7 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="w-full lg:w-5/12 space-y-10 z-10">
               <span className="text-slate-500 font-medium tracking-wide uppercase text-sm">Specialized Features</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
-                Why KPN is <br/> <span className="font-serif  font-medium text-[#ee0000]">Different</span>
+                Why KPN is <br/> <span className="font-serif font-medium text-[#ee0000] italic">Different</span>
               </h2>
               <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-lg">
                 We remove the middleman and rely on our own qualified engineers and installation teams. This ensures unmatched speed and quality.
@@ -335,7 +383,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 Process
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">
-                How to Choose the <span className="font-serif  font-medium text-[#062088]">Right Shed</span> <br/>for Your Farm
+                How to Choose the <span className="font-serif font-medium text-[#062088] italic">Right Shed</span> <br/>for Your Farm
               </h2>
             </div>
 
@@ -389,7 +437,7 @@ export default function AgricultureAnimalHusbandryPage() {
               <span className="px-5 py-2 rounded-full border border-red-200 text-sm font-medium text-red-600 tracking-wide uppercase mb-6 inline-block bg-white shadow-sm">
                 Mapping
               </span>
-              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight">Which Shed <span className="font-serif  font-medium text-[#ee0000]">Do You Need?</span></h2>
+              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight">Which Shed <span className="font-serif font-medium text-[#ee0000] italic">Do You Need?</span></h2>
             </div>
             
             <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
@@ -434,11 +482,68 @@ export default function AgricultureAnimalHusbandryPage() {
             </div>
           </div>
         </section>
+
+        {/* ---------------- Our In-House Slatted Floor Mat Section ---------------- */}
+        <section className="bg-white py-12 lg:py-20 border-b border-slate-200 overflow-hidden">
+          <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            
+            {/* Left Content */}
+            <div className="w-full lg:w-1/2 space-y-4">
+              <span className="px-5 py-2 rounded-full border border-green-200 bg-green-50 text-sm font-medium text-green-700 tracking-wide uppercase inline-block">
+                Premium Flooring
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-4xl font-semibold text-[#111] leading-tight tracking-tight">
+                Our In-House <span className="font-serif font-medium text-[#00a3e0] italic">Slatted Floor Mat</span><br/>
+                <span className="text-2xl text-slate-500 font-sans mt-2 block">Manufactured in Coimbatore</span>
+              </h2>
+              <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                KPN Roofing Shed manufactures its own slatted floor mats in-house at its Coimbatore facility, using <strong className="text-[#111]">virgin raw material</strong> rather than recycled plastic. Designed for animal sheds, these mats support better drainage, hygiene, and ventilation compared with conventional flooring options.
+              </p>
+              
+              <div className="pt-4 space-y-4">
+                <h4 className="text-xl font-bold text-[#111] mb-4">Why Slatted Flooring Matters</h4>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-slate-600 font-medium text-lg">
+                    <Check size={24} className="text-[#00a3e0] shrink-0 mt-0.5" />
+                    <span>Waste and urine drain through the slats instead of collecting on the surface, keeping the shed drier and easier to clean.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600 font-medium text-lg">
+                    <Check size={24} className="text-[#00a3e0] shrink-0 mt-0.5" />
+                    <span>Reduces direct contact between animals and accumulated waste, supporting better hygiene and hoof/leg health.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600 font-medium text-lg">
+                    <Check size={24} className="text-[#00a3e0] shrink-0 mt-0.5" />
+                    <span>Improves ventilation from below, which helps regulate shed temperature in hot months.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600 font-medium text-lg">
+                    <Check size={24} className="text-[#00a3e0] shrink-0 mt-0.5" />
+                    <span>Made from virgin raw material (not recycled plastic), giving the flooring more consistent strength and durability.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right Images */}
+            <div className="w-full lg:w-1/2 relative flex items-center justify-center gap-4 sm:gap-6 lg:pl-8">
+              <div className="w-1/2 relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-xl transform translate-y-8">
+                <div className="shiny-hover w-full h-full">
+                  <Image src="/images/mate1.jpeg" alt="Slatted Floor Mat Coimbatore" fill sizes="100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
+                </div>
+              </div>
+              <div className="w-1/2 relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl transform -translate-y-8">
+                <div className="shiny-hover w-full h-full">
+                  <Image src="/images/mate2.jpeg" alt="Floor Mat Detail" fill sizes="100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
         
         {/* ---------------- Explore by Shed Type ---------------- */}
         {/* <section className="bg-white py-12 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif  font-medium text-[#ee0000]">Shed Type</span></h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif font-medium text-[#ee0000] italic">Shed Type</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -455,31 +560,24 @@ export default function AgricultureAnimalHusbandryPage() {
           </div>
         </section> */}
 
-        {/* ---------------- Interactive Accordion FAQ (Ref: Image 1) ---------------- */}
-        <section className="bg-[#f8f9fc] py-10 lg:py-12 border-b border-slate-200 overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-20">
+        {/* ---------------- Interactive Accordion FAQ ---------------- */}
+        <section className="bg-[#f8f9fc] py-16 lg:py-20 border-b border-slate-200 overflow-hidden">
+          <div className="max-w-[1000px] mx-auto px-6">
             
-            {/* Left Side: Typography & Image */}
-            <div className="w-full lg:w-5/12 flex flex-col">
-              <div className="mb-12">
-                <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
-                <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif  font-medium lowercase">questions!</span>
-                </h2>
-              </div>
-              {/* Solid Image under the title */}
-              <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/images/services/animal-sec-5.png" alt="FAQ Agriculture Sheds" fill sizes="100vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
+            <div className="text-center mb-16">
+              <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-4">Our faq&apos;s</span>
+              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
+                Frequently asked <span className="font-serif font-medium lowercase italic">questions!</span>
+              </h2>
             </div>
             
-            {/* Right Side: Accordion */}
-            <div className="w-full lg:w-7/12 space-y-4">
+            <div className="space-y-4">
               {[
                 { q: "What is the minimum size for a farm shed?", a: "The minimum shed size is 1,440 sq.ft in Tamil Nadu and 2,400 sq.ft in other states." },
                 { q: "Can KPN build a combined dairy and poultry shed?", a: "KPN can assess the farm layout and recommend separate or integrated structures based on ventilation, hygiene, and operational requirements." },
                 { q: "How long does a farm shed take to complete?", a: "A 1440 sq.ft shed is completed in 6 days; a 2400 sq.ft shed takes about 1 month." },
-                { q: "Does KPN build farm sheds outside Tamil Nadu?", a: "Yes. KPN delivers agricultural and animal shed projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka." }
+                { q: "Does KPN build farm sheds outside Tamil Nadu?", a: "Yes. KPN delivers agricultural and animal shed projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka." },
+                { q: "What flooring does KPN use in animal sheds?", a: "KPN manufactures its own slatted floor mats in-house at its Coimbatore facility, using virgin raw material. The flooring comes with a 3-year replacement warranty and a 10-year guarantee, and helps with drainage, hygiene, and ventilation in the shed." }
               ].map((faq, i) => (
                 <details name='faq' key={i} className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300">
                   <summary className="flex justify-between items-center cursor-pointer list-none p-6 md:p-8 text-xl font-semibold text-[#111]">
@@ -510,7 +608,7 @@ export default function AgricultureAnimalHusbandryPage() {
           
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
-              Planning a shed for <span className="font-serif  font-medium text-[#ffcc00]">your farm?</span>
+              Planning a shed for <span className="font-serif font-medium text-[#ffcc00] italic">your farm?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.

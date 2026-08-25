@@ -142,7 +142,7 @@ export default function HeroSection() {
       </div>
 
       {/* 3. Center Front Image Runner - Anchored directly to the bottom */}
-      <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-[100%] md:w-[70%] max-w-[950px] h-[60vh] md:h-[65vh] z-20 pointer-events-none">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[70%] max-w-[950px] h-[55vh] md:h-[65vh] z-20 pointer-events-none">
         {slides.map((slide, idx) => {
           let transformClass = "translate-x-[100vw] opacity-0"; // default hidden on right
           if (idx === currentSlide) {
@@ -163,8 +163,7 @@ export default function HeroSection() {
                 sizes="(max-width: 768px) 100vw, 70vw"
                 priority={idx === 0}
                 fetchPriority={idx === 0 ? "high" : "auto"}
-                className="object-contain md:object-cover object-bottom scale-[2.2] sm:scale-[1.8] md:scale-[1.45] origin-bottom"
-
+                className="object-contain object-bottom md:scale-[1.45] md:origin-bottom"
               />
             </div>
           );
@@ -264,8 +263,8 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Active Node Text below */}
-              <div className="absolute top-[60px] sm:top-[90px] hidden sm:flex flex-col items-center whitespace-nowrap">
+              {/* Active Node Text - Conditionally positioned above/below depending on curve */}
+              <div className={`absolute hidden sm:flex flex-col items-center whitespace-nowrap ${currentSlide === 1 ? "bottom-[60px] sm:bottom-[90px]" : "top-[60px] sm:top-[90px]"}`}>
                 <span className={`text-[16px] sm:text-[22px] font-black tracking-wide drop-shadow-md transition-colors ${isNightMode ? 'text-white' : 'text-black'}`}>
                   {slides[currentSlide].title}
                 </span>

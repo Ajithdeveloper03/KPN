@@ -49,6 +49,49 @@ export default function TerraceRoofingShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can a terrace roofing shed be added to an existing home?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN designs terrace roofing sheds to suit existing residential structures. The terrace layout, slope, drainage, dimensions, and intended usage are considered during planning."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What type of roofing model does KPN offer for terrace sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN offers a Kerala tile-style roofing model for terrace projects. It is designed to provide a traditional, finished appearance while offering protection from sun and rain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on terrace roofing sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year guarantee on terrace roofing sheds, with free repair support for covered damage, as per the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build terrace roofing sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed undertakes terrace roofing shed projects across India, subject to project requirements and site conditions."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section (Fully Transparent Content) ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">

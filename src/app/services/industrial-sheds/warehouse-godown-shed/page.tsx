@@ -49,6 +49,49 @@ export default function WarehouseGodownShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a warehouse or godown shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A warehouse or godown shed is a steel or PEB structure designed for storing raw materials, finished goods, inventory, and other commercial goods. It typically provides open floor space, weatherproof roofing, and access for loading and unloading."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which type of shed is suitable for a warehouse?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Clear-span steel or PEB sheds are suitable for many warehouse applications because they provide more usable floor space for pallet racking, forklift movement, storage, and future expansion. The suitable design depends on storage volume and site layout."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can KPN build a customized warehouse or godown shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed designs customized warehouse and godown sheds based on plot size, storage capacity, racking layout, loading bay requirements, vehicle movement, and future expansion plans."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build warehouse and godown sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed provides warehouse and godown shed construction, industrial roofing, and PEB shed installation services across India, subject to project scope and site conditions."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">

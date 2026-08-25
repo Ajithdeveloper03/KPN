@@ -74,6 +74,49 @@ export default function CricketTurfShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does KPN Roofing Shed build cricket turf sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN designs and builds cricket turf sheds for practice nets and turf pitches, with column-free spans, durable steel framing, and weatherproof roofing for all-season use."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can KPN build a column-free structure for multiple cricket practice nets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN can design large, column-free spans to cover multiple practice nets or a full cricket pitch while keeping the practice area free from unnecessary structural obstructions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What materials are used for cricket turf sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN uses Apollo Brand Steel for structural framing, with weatherproof roofing materials selected according to the project requirements and site conditions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build cricket turf sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed undertakes cricket turf shed projects across India for schools, colleges, cricket academies, clubs, apartment complexes, and private sports facilities."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section (Fully Transparent Content) ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">

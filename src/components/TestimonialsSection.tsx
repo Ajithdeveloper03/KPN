@@ -10,8 +10,8 @@ const testimonials = [
     property: "Industrial & Home Shed Works",
     quote: "Excellent service from KPN Roofing Shed. They completed our Roofing Shed Construction in Trichy with strong materials and perfect finishing. Highly recommended for industrial and home shed works.",
     rating: 5.0,
-    bgImage: "/images/services/agriculture-and-animal-husbenday-bannar-image.png",
-    avatar: "/images/services/home-roofing-shed-banner-image.png"
+    bgImage: "/images/image5.jpeg",
+    avatar: "/images/image6.jpeg"
   },
   {
     name: "Latha Sethurajan",
@@ -19,8 +19,8 @@ const testimonials = [
     property: "Terrace Roofing Shed",
     quote: "KPN Roofing Shed done terrace shed with excellent quality materials. Really valuable and worth every rupee. The workmanship was top-notch and completed on time.",
     rating: 5.0,
-    bgImage: "/images/services/factory-banner-image.png",
-    avatar: "/images/services/sports-turf-main-banner.png"
+    bgImage: "/images/image7.jpeg",
+    avatar: "/images/image8.jpeg"
   },
   {
     name: "Sasi Kumar",
@@ -28,8 +28,8 @@ const testimonials = [
     property: "Farm Shed Flooring",
     quote: "I bought flooring for my goat shed from KPN — it is a really good product. Durable, easy to clean, and the farm animals are comfortable. Very satisfied with the purchase.",
     rating: 5.0,
-    bgImage: "/images/services/warehouse-01.png",
-    avatar: "/images/services/poultry01.png"
+    bgImage: "/images/image9.jpeg",
+    avatar: "/images/image10.jpeg"
   },
   {
     name: "Vijay Vijay",
@@ -37,8 +37,8 @@ const testimonials = [
     property: "Home Roofing Project",
     quote: "I recently bought a flooring product from KPN — it is good in quality and the service was very good. The team was responsive and the installation was smooth from start to finish.",
     rating: 5.0,
-    bgImage: "/images/services/cricket-image-1.png",
-    avatar: "/images/services/animal-1-image-1.png"
+    bgImage: "/images/image11.jpeg",
+    avatar: "/images/image12.jpeg"
   }
 ];
 
@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div>
             <span className="text-[#ee0000] font-bold tracking-widest uppercase text-sm mb-3 block">Client Reviews</span>
-            <h2 className="text-white text-[clamp(34px,5vw,58px)] font-serif  leading-[1.1] max-w-[550px] tracking-tight">
+            <h2 className="text-white text-[clamp(34px,5vw,58px)] font-serif leading-[1.1] max-w-[550px] tracking-tight italic">
               What Our Clients Say.
             </h2>
           </div>
@@ -93,34 +93,13 @@ export default function TestimonialsSection() {
         {/* Card */}
         <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl" style={{ minHeight: 520 }}>
 
-          {/* Background Images */}
-          {testimonials.map((t, idx) => (
-            <div
-              key={idx}
-              className={`absolute inset-0 transition-opacity duration-700 ${idx === activeIndex ? "opacity-100" : "opacity-0"}`}
-            >
-              <Image src={t.bgImage} alt="Project" fill sizes="100vw" className="object-cover" />
-            </div>
-          ))}
+          {/* Single Static Background Image */}
+          <div className="absolute inset-0">
+            <Image src="/images/image5.jpeg" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
+          </div>
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 z-[1]" />
-
-          {/* Progress indicator */}
-          <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-10 flex flex-col gap-2">
-            <span className="text-white/60 font-bold tracking-widest text-xs">
-              {String(activeIndex + 1).padStart(2,'0')} / {String(testimonials.length).padStart(2,'0')}
-            </span>
-            <div className="flex gap-1.5">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`h-[3px] rounded-full transition-all duration-500 ${i === activeIndex ? "bg-white w-8" : "bg-white/30 w-3"}`}
-                />
-              ))}
-            </div>
-          </div>
 
           {/* Floating Review Card */}
           <div className="absolute bottom-0 right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-10 w-full md:w-[480px] lg:w-[520px] bg-white rounded-t-[2rem] md:rounded-[2rem] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] z-20">
@@ -144,30 +123,45 @@ export default function TestimonialsSection() {
             {/* Profile + Navigation */}
             <div className="flex items-center justify-between border-t border-slate-100 pt-6">
               <div className="flex items-center gap-3">
-                <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-slate-100">
-                  <Image src={active.avatar} alt={active.name} fill sizes="44px" className="object-cover" />
-                </div>
                 <div>
-                  <h4 className="text-[#1e2229] font-bold text-sm leading-tight">{active.name}</h4>
+                  <h4 className="text-[#1e2229] font-bold text-sm leading-tight">{active.name.split(" ")[0]}</h4>
                   <p className="text-slate-400 text-xs font-medium">{active.role}</p>
                 </div>
               </div>
 
-              <div className="flex gap-2">
-                <button
-                  onClick={prevSlide}
-                  className="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center bg-white hover:bg-slate-50 transition-colors text-slate-600"
-                  aria-label="Previous"
-                >
-                  <ChevronLeft size={18} />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="w-9 h-9 rounded-full flex items-center justify-center bg-[#1e2229] hover:bg-black transition-colors text-white"
-                  aria-label="Next"
-                >
-                  <ChevronRight size={18} />
-                </button>
+              <div className="flex items-center gap-6">
+                {/* Progress indicator */}
+                <div className="hidden sm:flex flex-col items-end gap-1.5 mr-2">
+                  <span className="text-slate-400 font-bold tracking-widest text-[10px]">
+                    {String(activeIndex + 1).padStart(2,'0')} / {String(testimonials.length).padStart(2,'0')}
+                  </span>
+                  <div className="flex gap-1">
+                    {testimonials.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setActiveIndex(i)}
+                        className={`h-1 rounded-full transition-all duration-500 ${i === activeIndex ? "bg-[#ee0000] w-6" : "bg-slate-200 w-2"}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex gap-2">
+                  <button
+                    onClick={prevSlide}
+                    className="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center bg-white hover:bg-slate-50 transition-colors text-slate-600"
+                    aria-label="Previous"
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="w-9 h-9 rounded-full flex items-center justify-center bg-[#1e2229] hover:bg-black transition-colors text-white"
+                    aria-label="Next"
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
               </div>
             </div>
 

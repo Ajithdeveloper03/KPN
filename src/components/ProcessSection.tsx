@@ -106,7 +106,7 @@ export default function ProcessSection() {
       <section
         id="process"
         ref={sectionRef}
-        className="bg-white md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-24 md:py-0"
+        className="bg-[#f3f4f6] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-24 md:py-0"
         style={{ minHeight: "700px" }}
       >
       {/* Header */}

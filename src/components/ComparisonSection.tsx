@@ -49,7 +49,7 @@ export default function ComparisonSection() {
   const activeData = comparisonData[activeTab];
 
   return (
-    <section id="comparison" className="relative bg-[#f8f9fa] py-12 md:py-16 overflow-hidden">
+    <section id="comparison" className="relative bg-[#fafaf9] py-12 md:py-16 overflow-hidden">
       <div className="max-w-[1300px] w-full mx-auto px-6 relative z-10">
 
         {/* Section Header */}

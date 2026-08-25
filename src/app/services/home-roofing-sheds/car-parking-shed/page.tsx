@@ -74,6 +74,49 @@ export default function CarParkingShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can a car parking shed be added to an existing home?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN designs car parking sheds to suit existing residential structures. The plot layout, slope, drainage, dimensions, and intended usage are considered during planning."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can the shed cover more than one vehicle?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN builds both single-bay sheds for individual vehicles and multi-bay sheds for two or more vehicles, including apartment and commercial parking projects."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on car parking sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year guarantee on car parking sheds, with free repair support for covered damage, as per the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build car parking sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed undertakes car parking shed projects across India, subject to project requirements and site conditions."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">

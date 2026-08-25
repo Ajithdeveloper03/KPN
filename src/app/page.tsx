@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from 'next';
 import HeroSection from "@/components/HeroSection";
+import ClientLogos from "@/components/ClientLogos";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
@@ -34,46 +35,76 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
+            "@type": "LocalBusiness",
+            "@id": "https://kpnroofingsheds.com/#localbusiness",
+            "name": "KPN Roofing Shed",
+            "url": "https://kpnroofingsheds.com/",
+            "image": "https://kpnroofingsheds.com/images/logo.jpg",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://kpnroofingsheds.com/images/logo.jpg"
+            },
+            "description": "KPN Roofing Shed provides industrial, agricultural, home roofing, animal husbandry and sports turf shed construction solutions across India.",
+            "telephone": "+91-9788770786",
+            "email": "kpnroofingshed555@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plot No. 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",
+              "addressLocality": "Tiruchirappalli",
+              "addressRegion": "Tamil Nadu",
+              "postalCode": "620019",
+              "addressCountry": "IN"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "sameAs": [
+              "https://www.instagram.com/kpnroofingshed/",
+              "https://www.facebook.com/kpnroofingshed",
+              "https://www.youtube.com/@kpnroofingshedindia"
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
               {
-                "@type": "LocalBusiness",
-                "@id": "https://kpnroofingsheds.com/#localbusiness",
-                "name": "KPN Roofing Shed",
-                "url": "https://kpnroofingsheds.com/",
-                "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
-                "image": "https://kpnroofingsheds.com/images/logo.jpg",
-                "logo": "https://kpnroofingsheds.com/images/logo.jpg",
-                "telephone": "+91-9788770786",
-                "email": "kpnroofingsheds@gmail.com",
-                "priceRange": "₹₹",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Plot No. 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",
-                  "addressLocality": "Tiruchirappalli",
-                  "addressRegion": "Tamil Nadu",
-                  "postalCode": "620019",
-                  "addressCountry": "IN"
-                },
-                "areaServed": {
-                  "@type": "Country",
-                  "name": "India"
-                },
-                "sameAs": [
-                  "https://www.instagram.com/kpnroofingshed/",
-                  "https://www.facebook.com/kpnroofingshed",
-                  "https://www.youtube.com/@kpnroofingshedindia"
-                ]
+                "@type": "Question",
+                "name": "What does KPN Roofing Shed build?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN builds industrial and factory sheds, warehouses, agricultural and animal sheds (goat, dairy, poultry, cattle), and home structures like terrace sheds and car parking shades, across India."
+                }
               },
               {
-                "@type": "FAQPage",
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                  }
-                }))
+                "@type": "Question",
+                "name": "How long does KPN take to complete a shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A 1440 sq.ft shed is completed in 20 days. A 2400 sq.ft shed takes about 1 month."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN's in-house flooring comes with a 3-year replacement warranty and a 10-year guarantee, plus free repair for any damage within the first year."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN delivers projects pan-India, with strong demand from Maharashtra, UP, Telangana, and Karnataka."
+                }
               }
             ]
           })
@@ -81,11 +112,12 @@ export default function Home() {
       />
 
       <HeroSection />
+      <ClientLogos />
       <AboutSection />
       <ServicesSection />
-      <TestimonialsSection />
-      <StatsSection />
       
+      <StatsSection />
+      <TestimonialsSection />
       <WhyKPNSection />
       <ComparisonSection />
       <ProcessSection />

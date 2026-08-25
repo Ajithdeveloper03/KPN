@@ -74,6 +74,49 @@ export default function BadmintonCourtShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does KPN Roofing Shed build badminton court sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed designs and builds badminton court sheds across India for sports academies, clubs, schools, colleges, apartment complexes, and private facility owners."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can a badminton court shed be built for an existing court?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN can design a badminton court shed around an existing or newly planned court by considering the available layout, required clearance, roof height, drainage, and structural conditions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on badminton court sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year structural guarantee along with free repair support for covered damage, as per the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build badminton court sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed undertakes badminton court shed projects across India for schools, colleges, sports academies, clubs, apartment complexes, and private sports facilities."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section (Fully Transparent Content) ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">

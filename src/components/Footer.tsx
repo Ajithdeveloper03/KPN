@@ -49,6 +49,7 @@ export default function Footer() {
             <ul className="list-none p-0 m-0 flex flex-col gap-3">
               <li><Link href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Home</Link></li>
               <li><Link href="/about-us" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">About Us</Link></li>
+              <li><Link href="/corporate-social-responsibility" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Community</Link></li>
               <li><Link href="/gallery" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Gallery</Link></li>
               <li><Link href="/blog" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors">Contact Us</Link></li>

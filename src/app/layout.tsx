@@ -7,12 +7,13 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 import type { Metadata } from 'next';
-import { Lora, Plus_Jakarta_Sans } from 'next/font/google';
+import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 
-const lora = Lora({
+const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
+  style: ['normal', 'italic'],
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -34,11 +35,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/images/logo.jpg", type: "image/jpeg", sizes: "any" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
   },
   openGraph: {
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
@@ -81,9 +81,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className="notranslate">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
+        <link rel="icon" href="/images/logo.jpg" sizes="any" type="image/jpeg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FHPZGLQSQQ"
           strategy="afterInteractive"
@@ -131,7 +130,7 @@ export default function RootLayout({ children }) {
         />
         {/* Removed render-blocking font link, handled via next/font/google */}
       </head>
-      <body suppressHydrationWarning className={`font-sans antialiased overflow-x-hidden w-full ${plusJakartaSans.variable} ${lora.variable}`}>
+      <body suppressHydrationWarning className={`font-sans antialiased overflow-x-hidden w-full ${plusJakartaSans.variable} ${playfair.variable}`}>
         <Preloader />
         <LenisScrollProvider>
           <ScrollReveal />

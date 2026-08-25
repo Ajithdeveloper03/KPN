@@ -14,7 +14,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faqs" className="relative py-12 md:py-16 overflow-hidden">
+    <section id="faqs" className="relative py-12 md:py-16 overflow-hidden bg-[#fdfbf7]">
       {/* Roofing background — morning-bg for warm earthy light */}
       {/* <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
         <Image src="/images/image6.jpeg" alt="FAQ Background" fill sizes="100vw" className="object-cover" />
@@ -35,56 +35,40 @@ export default function FAQSection() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-stretch">
-
-          {/* Left Column: FAQs */}
-          <div className="flex flex-col gap-4" data-reveal="stagger">
-            {faqs.map((faq, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div
-                  key={index}
-                  className={`rounded-[1.5rem] p-6 md:p-8 cursor-pointer transition-all duration-300 shadow-sm ${isOpen ? "bg-[#00a3e0] text-white" : "bg-[#e5f6fd] text-[#1e2229] hover:bg-[#e8f0e6]"
-                    }`}
-                  onClick={() => toggleFaq(index)}
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="font-bold text-base md:text-lg leading-snug">
-                      {faq.question}
-                    </h3>
-                    <div className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${isOpen ? "border-white/50 text-white" : "border-[#1e2229]/30 text-[#1e2229]"
-                      }`}>
-                      {isOpen ? <Minus size={16} strokeWidth={2.5} /> : <Plus size={16} strokeWidth={2.5} />}
-                    </div>
-                  </div>
-                  <div
-                    className="grid transition-all duration-300 ease-in-out"
-                    style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
-                  >
-                    <div className="overflow-hidden">
-                      <p className={`font-medium leading-relaxed text-sm md:text-base ${isOpen ? "text-white/90" : "text-[#1e2229]/70"
-                        }`}>
-                        <br />
-                        {faq.answer}
-                      </p>
-                    </div>
+        <div className="max-w-[900px] mx-auto w-full flex flex-col gap-4" data-reveal="stagger">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={index}
+                className={`rounded-[1.5rem] p-6 md:p-8 cursor-pointer transition-all duration-300 shadow-sm ${isOpen ? "bg-[#00a3e0] text-white" : "bg-[#e5f6fd] text-[#1e2229] hover:bg-[#e8f0e6]"
+                  }`}
+                onClick={() => toggleFaq(index)}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="font-bold text-base md:text-lg leading-snug">
+                    {faq.question}
+                  </h3>
+                  <div className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${isOpen ? "border-white/50 text-white" : "border-[#1e2229]/30 text-[#1e2229]"
+                    }`}>
+                    {isOpen ? <Minus size={16} strokeWidth={2.5} /> : <Plus size={16} strokeWidth={2.5} />}
                   </div>
                 </div>
-              );
-            })}
-          </div>
-
-          {/* Right Column: Image */}
-          <div className="relative h-full min-h-[400px] w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,163,224,0.15)] group" data-reveal="image">
-            <Image
-              src="/images/image6.jpeg"
-              alt="KPN Roofing Shed FAQ Industrial Facility"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-
+                <div
+                  className="grid transition-all duration-300 ease-in-out"
+                  style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <p className={`font-medium leading-relaxed text-sm md:text-base ${isOpen ? "text-white/90" : "text-[#1e2229]/70"
+                      }`}>
+                      <br />
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
       </div>

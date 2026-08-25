@@ -49,7 +49,49 @@ export default function GarmentFactoryShedPage() {
           })
         }}
       />
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What type of shed is best for a garment factory?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A steel-framed or PEB-style double-slope shed with proper ventilation and natural lighting can work well for garment factories. The final design depends on the available plot, production layout, machinery, storage requirements, and project needs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What height is suitable for a garment factory shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A roof height of 20–30 feet suits most garment manufacturing units. Higher clearances (up to 35 feet) are recommended when installing ridge ventilators, turbo fans, or high-density vertical fabric storage racks to ensure proper thermal airflow and machine clearance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on garment factory sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year warranty on pipes and roofing sheets, with free repair support as per the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build garment and textile sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed builds garment and textile factory sheds across India, subject to site assessment and project scope."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* ---------------- 1. Hero Section ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">

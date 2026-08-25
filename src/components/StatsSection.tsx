@@ -9,55 +9,55 @@ const statsCards = [
     title: "13+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
-    img: "/images/services/goat01.png"
+    img: "/images/image17.jpeg"
   },
   {
     title: "1000+ Projects",
     desc: "Successfully completed across India.",
-    color: "#ee0000", // Red
-    img: "/images/services/factory-image-1.png"
+    color: "#ee0000",
+    img: "/images/image18.jpeg"
   },
   {
     title: "All Services",
     desc: "Industrial, agricultural, home, turf & badminton sheds.",
-    color: "#ffe600", // Yellow
-    img: "/images/services/industrial-banner-image.png"
+    color: "#ffe600",
+    img: "/images/image19.jpeg"
   },
   {
     title: "upto ₹599/sq.ft",
     desc: "High-quality goat farm sheds tailored to your needs.",
-    color: "#062088", // Blue
-    img: "/images/services/agriculture-and-animal-husbenday-bannar-image.png"
+    color: "#062088",
+    img: "/images/image20.jpeg"
   },
   {
     title: "Min. Size",
     desc: "1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states.",
-    color: "#ee0000", // Red
-    img: "/images/services/home-roofing-shed-banner-image.png"
+    color: "#ee0000",
+    img: "/images/imag10.jpeg"
   },
   {
     title: "Fast Timeline",
     desc: "6 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
-    color: "#ffe600", // Yellow
-    img: "/images/services/factory-banner-image.png"
+    color: "#ffe600",
+    img: "/images/image1.jpeg"
   },
   {
     title: "10-Yr Warranty",
     desc: "10-year guarantee, 3-year replacement on flooring.",
-    color: "#062088", // Blue
-    img: "/images/services/sports-turf-main-banner.png"
+    color: "#062088",
+    img: "/images/image2.jpeg"
   },
   {
     title: "50% Advance",
     desc: "Remainder in installments as materials arrive.",
-    color: "#ee0000", // Red
-    img: "/images/services/warehouse-01.png"
+    color: "#ee0000",
+    img: "/images/image3.jpeg"
   },
   {
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
-    color: "#ffe600", // Yellow
-    img: "/images/services/poultry01.png"
+    color: "#ffe600",
+    img: "/images/image4.jpeg"
   }
 ];
 
@@ -169,7 +169,7 @@ export default function StatsSection() {
 
                     {/* Inner Image */}
                     <div className="absolute inset-2 rounded-full overflow-hidden shadow-xl bg-white p-1">
-                      <div className="relative w-full h-full rounded-full overflow-hidden">
+                      <div className="shiny-hover relative w-full h-full rounded-full overflow-hidden">
                         <Image
                           src={card.img}
                           alt={card.title}

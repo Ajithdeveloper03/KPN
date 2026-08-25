@@ -75,6 +75,49 @@ export default function CowDairyFarmShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What type of shed is best for a cow or dairy farm?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A steel-framed shed with proper ventilation, non-slip flooring, and suitable areas for feeding and milking works well for many dairy farms. The final design depends on herd size, farm layout, and operational requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What height is suitable for a dairy farm shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A height of around 12–16 feet suits many dairy farms. Larger commercial units may require additional height depending on ventilation and cooling requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on dairy farm sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year warranty on pipes and roofing sheets, with repair support according to the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build cow and dairy farm sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed builds cow and dairy farm sheds across India, subject to site visit and project scope."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* ---------------- 1. Hero Section (Fully Transparent Content) ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

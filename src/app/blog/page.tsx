@@ -21,6 +21,28 @@ export default function BlogArchivePage() {
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "KPN Roofing Shed Blog",
+            "url": "https://kpnroofingsheds.com/blog/",
+            "description": "Expert advice, project showcases, and industry trends to help you make informed decisions about your next roofing shed project.",
+            "blogPost": posts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "image": "https://kpnroofingsheds.com" + post.image,
+              "datePublished": post.created_at,
+              "author": {
+                "@type": "Organization",
+                "name": post.author
+              }
+            }))
+          })
+        }}
+      />
       <PageHero 
         title="Our Blog" 
         breadcrumbs={[
@@ -38,7 +60,7 @@ export default function BlogArchivePage() {
               Insights & Updates
             </span>
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#111] mb-6">
-              Latest from <span className="font-serif  font-medium text-[#ee0000]">KPN Roofing Shed</span>
+              Latest from <span className="font-serif font-medium text-[#ee0000] italic">KPN Roofing Shed</span>
             </h2>
             <p className="text-lg text-slate-500 font-medium">
               Expert advice, project showcases, and industry trends to help you make informed decisions about your next roofing shed project.

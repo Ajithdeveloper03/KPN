@@ -12,9 +12,10 @@ interface PageHeroProps {
   title: string;
   breadcrumbs: Breadcrumb[];
   bgImage?: string;
+  bgPosition?: string;
 }
 
-export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-bg.png" }: PageHeroProps) {
+export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-bg.png", bgPosition = "object-cover object-center" }: PageHeroProps) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -37,7 +38,7 @@ export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-
           src={bgImage}
           alt={`${title} Background`}
           fill sizes="100vw"
-          className="object-cover opacity-90"
+          className={`${bgPosition} opacity-90`}
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#121316] via-[#121316]/60 to-transparent"></div>
@@ -51,6 +52,8 @@ export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-
               {idx > 0 && <ChevronRight size={16} className="text-[#ee0000]" />}
               {idx === breadcrumbs.length - 1 ? (
                 <span className="text-[#ee0000] drop-shadow-md">{crumb.label}</span>
+              ) : crumb.href === "#" || crumb.href === "" ? (
+                <span className="text-slate-300">{crumb.label}</span>
               ) : (
                 <Link href={crumb.href} className="hover:text-white transition-colors">
                   {crumb.label}

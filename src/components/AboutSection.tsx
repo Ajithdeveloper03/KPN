@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section id="about-us" className="relative py-12 md:py-16 overflow-hidden bg-white">
+    <section id="about-us" className="relative py-12 md:py-16 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-white" />
@@ -15,34 +15,34 @@ export default function AboutSection() {
 
       {/* Desktop Exact Placement Layout */}
       <div className="hidden lg:block relative w-full max-w-[1600px] mx-auto min-h-[700px] xl:min-h-[800px] z-10">
-        
+
         {/* Img 1: Far Left (Lowest) */}
-        <div data-reveal="image" className="absolute left-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-500">
+        <div data-reveal="image" className="absolute left-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
           <Image src="/images/image11.jpeg" fill sizes="250px" alt="About 1" className="object-cover" />
         </div>
 
         {/* Img 2: Mid Left (Higher, Taller) */}
-        <div data-reveal="image" className="absolute left-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-500">
+        <div data-reveal="image" className="absolute left-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
           <Image src="/images/image12.jpeg" fill sizes="250px" alt="About 2" className="object-cover" />
         </div>
 
         {/* Img 3: Center Left (Highest) */}
-        <div data-reveal="image" className="absolute left-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-500">
+        <div data-reveal="image" className="absolute left-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
           <Image src="/images/image13.jpeg" fill sizes="250px" alt="About 3" className="object-cover" />
         </div>
 
         {/* Img 4: Center Right (Highest) */}
-        <div data-reveal="image" className="absolute right-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-500">
+        <div data-reveal="image" className="absolute right-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
           <Image src="/images/image14.jpeg" fill sizes="250px" alt="About 4" className="object-cover" />
         </div>
 
         {/* Img 5: Mid Right (Higher, Taller) */}
-        <div data-reveal="image" className="absolute right-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-500">
+        <div data-reveal="image" className="absolute right-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
           <Image src="/images/image15.jpeg" fill sizes="250px" alt="About 5" className="object-cover" />
         </div>
 
         {/* Img 6: Far Right (Lowest) */}
-        <div data-reveal="image" className="absolute right-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-500">
+        <div data-reveal="image" className="absolute right-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500">
           <Image src="/images/image16.jpeg" fill sizes="250px" alt="About 6" className="object-cover" />
         </div>
 
@@ -73,7 +73,7 @@ export default function AboutSection() {
 
       {/* Mobile / Tablet Layout */}
       <div className="lg:hidden relative w-full flex flex-col items-center z-10 px-6">
-        
+
         {/* Central Text Content for Mobile */}
         <div className="flex flex-col items-center text-center w-full max-w-[850px] mb-12" data-reveal="stagger">
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#f0f2fa] border border-[#d1d7ee] text-[#062088] font-bold text-sm md:text-base mb-6 shadow-sm">
@@ -108,7 +108,7 @@ export default function AboutSection() {
             "/images/services/goat01.png",
             "/images/services/factory-image-1.png"
           ].map((src, idx) => (
-            <div key={idx} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+            <div key={idx} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shiny-hover">
               <Image src={src} sizes="(max-width: 768px) 50vw, 33vw" alt={`About KPN ${idx}`} fill className="object-cover transition-transform duration-700 hover:scale-110" />
             </div>
           ))}

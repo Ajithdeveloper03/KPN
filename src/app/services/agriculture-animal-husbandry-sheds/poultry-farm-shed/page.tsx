@@ -75,6 +75,49 @@ export default function PoultryFarmShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What type of shed is best for a poultry farm?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A steel-framed poultry shed with suitable ventilation and curtain-side cladding works well for many poultry farming applications. The final design depends on bird capacity, rearing type, climate, and farm requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the ideal height for a poultry farm shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A height of around 10–14 feet suits many standard poultry sheds. Larger commercial or tunnel-ventilated sheds may require different heights based on airflow and structural requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on poultry farm sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year warranty on pipes and roofing sheets, with free repair support for covered damage as per the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build poultry farm sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed undertakes poultry farm shed projects across India, subject to site conditions and project requirements."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* ---------------- 1. Hero Section (Fully Transparent Content) ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

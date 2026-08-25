@@ -8,9 +8,6 @@ import { ArrowRight, Settings } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Our Services | KPN Roofing Shed',
   description: 'Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.',
-  alternates: {
-    canonical: 'https://kpnroofingsheds.com/services',
-  },
 };
 
 const servicesList = [
@@ -52,17 +49,9 @@ export default function ServicesPage() {
             "itemListElement": servicesList.map((service, index) => ({
               "@type": "ListItem",
               "position": index + 1,
-              "item": {
-                "@type": "Service",
-                "name": service.title,
-                "description": service.desc,
-                "url": `https://kpnroofingsheds.com${service.href}`,
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "KPN Roofing Shed",
-                  "image": "https://kpnroofingsheds.com/images/logo.jpg"
-                }
-              }
+              "url": `https://kpnroofingsheds.com${service.href}`,
+              "name": service.title,
+              "description": service.desc
             }))
           })
         }}
@@ -100,7 +89,7 @@ export default function ServicesPage() {
                   <Image 
                     src={service.img} 
                     alt={service.title} 
-                    fill sizes="100vw" 
+                    fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-700" 
                   />
                 </div>

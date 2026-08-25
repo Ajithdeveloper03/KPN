@@ -97,6 +97,30 @@ export default async function BlogDetailsPage({
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "image": "https://kpnroofingsheds.com" + post.image,
+            "author": {
+              "@type": "Organization",
+              "name": post.author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "KPN Roofing Shed",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://kpnroofingsheds.com/images/logo.jpg"
+              }
+            },
+            "datePublished": post.created_at
+          })
+        }}
+      />
       <main className="flex-grow pb-20">
 
         {/* Article Hero: Modern Split Layout */}

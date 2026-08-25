@@ -1,7 +1,7 @@
 "use client";
 import { openQuoteModal } from "@/components/QuoteModal";
 import React, { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon, Tractor, Droplets, Feather, Factory, Shirt, Warehouse, Home, Car, Activity, Trophy } from "lucide-react";
+import { Menu, X, Sun, Moon, Tractor, Droplets, Feather, Factory, Shirt, Warehouse, Home, Car, Activity, Trophy, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileCommunityOpen, setIsMobileCommunityOpen] = useState(false);
   const [isNightMode, setIsNightMode] = useState(false);
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
   
@@ -131,7 +132,21 @@ export default function Header() {
               </div>
             </li>
 
-            <li><Link href="/gallery" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Gallery</Link></li>
+            {/* Community Dropdown */}
+            <li className="relative group">
+              <Link href="#" onClick={(e) => e.preventDefault()} className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>
+                Community
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </Link>
+              <div className="absolute top-full left-0 mt-2 w-[280px] bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-300 translate-y-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 overflow-hidden z-[100] border border-slate-100 flex flex-col py-2">
+                <Link href="/corporate-social-responsibility" className="px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#00a3e0] transition-colors border-b border-slate-100 last:border-0">
+                  Corporate Social Responsibility
+                </Link>
+                <Link href="/gallery" className="px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#00a3e0] transition-colors border-b border-slate-100 last:border-0">
+                  Gallery
+                </Link>
+              </div>
+            </li>
             <li><Link href="/blog" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Blog</Link></li>
             <li><Link href="/contact" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Contact</Link></li>
           </ul>
@@ -168,12 +183,21 @@ export default function Header() {
           <li><Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Home</Link></li>
           <li><Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
           <li className="flex flex-col">
-            <button onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)} className="flex items-center justify-between text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] w-full text-left">
-              Services
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
+            <div className="flex items-center justify-between w-full">
+              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] flex-grow text-left">
+                Services
+              </Link>
+              <button onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)} className="p-2 text-slate-900 hover:text-[#00a3e0]">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
             <div className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[800px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="pl-4 border-l-2 border-slate-200 flex flex-col gap-6 py-2">
+                <div>
+                  <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-lg hover:text-[#cc0000] flex items-center gap-2 mb-4">
+                    View All Services <ArrowRight size={18} />
+                  </Link>
+                </div>
                 <div>
                   <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Agriculture & Animal Husbandry</h4>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
@@ -207,7 +231,18 @@ export default function Header() {
               </div>
             </div>
           </li>
-          <li><Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Gallery</Link></li>
+          <li className="flex flex-col">
+            <button onClick={() => setIsMobileCommunityOpen(!isMobileCommunityOpen)} className="flex items-center justify-between text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] w-full text-left">
+              Community
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isMobileCommunityOpen ? 'rotate-180' : ''}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${isMobileCommunityOpen ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <ul className="pl-4 border-l-2 border-slate-200 flex flex-col gap-4 py-2 list-none m-0">
+                <li><Link href="/corporate-social-responsibility" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Corporate Social Responsibility</Link></li>
+                <li><Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Gallery</Link></li>
+              </ul>
+            </div>
+          </li>
           <li><Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Blog</Link></li>
           <li><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Contact</Link></li>
         </ul>

@@ -46,20 +46,36 @@ DirectoryIndex index.html
   AddType font/woff2 .woff2
 </IfModule>
 
-# Browser caching for static assets
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpeg            "access plus 1 year"
-  ExpiresByType image/png             "access plus 1 year"
-  ExpiresByType image/webp            "access plus 1 year"
-  ExpiresByType image/avif            "access plus 1 year"
-  ExpiresByType image/svg+xml         "access plus 1 year"
-  ExpiresByType font/woff2            "access plus 1 year"
-  ExpiresByType text/css              "access plus 6 months"
-  ExpiresByType application/javascript "access plus 6 months"
+# ─── Cache Control ────────────────────────────────────────────────────────────
+
+# HTML pages: NEVER cache — always revalidate so visitors get latest content
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # Favicons & images: short cache + revalidate (30 days)
+  <FilesMatch "\.(ico|jpg|jpeg|png|webp|avif|svg|gif)$">
+    Header set Cache-Control "public, max-age=2592000, must-revalidate"
+  </FilesMatch>
+
+  # Next.js JS/CSS chunks — content-hashed so safe to cache long-term
+  <FilesMatch "\.(js|mjs|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Fonts: long cache
+  <FilesMatch "\.(woff2|woff|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
 </IfModule>
 
-# Gzip compression
+# Enable ETags for proper revalidation
+FileETag MTime Size
+
+# ─── Compression ─────────────────────────────────────────────────────────────
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
 </IfModule>

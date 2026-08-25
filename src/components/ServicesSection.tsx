@@ -11,7 +11,7 @@ const services = [
     icon: Factory,
     title: "Industrial & Factory Shed Construction",
     desc: "Our industrial shed construction covers factories, warehouses, and godowns with heavy-gauge steel structures built for load-bearing equipment, racking, and vehicle movement. As factory shed contractors, we plan every structure around your production layout. Long spans and minimal columns give warehouse owners maximum usable floor space.",
-    image: "/images/image17.jpeg",
+    image: "/images/image13.jpeg",
     alt: "Industrial factory warehouse shed construction by KPN",
   },
   {
@@ -19,7 +19,7 @@ const services = [
     icon: Leaf,
     title: "Agricultural & Animal Shed Solutions",
     desc: "KPN is a trusted name in agricultural sheds and animal shed solutions — goat, dairy, cattle, and poultry structures engineered for ventilation, drainage, and animal comfort. Our modern farm sheds are customizable in size and layout, from small farm setups to large commercial operations.",
-    image: "/images/image18.jpeg",
+    image: "/images/image14.jpeg",
     alt: "Agricultural farm animal shed solution by KPN",
   },
   {
@@ -27,7 +27,7 @@ const services = [
     icon: Home,
     title: "Home Roofing Sheds",
     desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures. Our residential roofing sheds are built with the same durable, weatherproof roofing standards used across our large-scale industrial projects.",
-    image: "/images/services/home-roofing-shed-banner-image.png",
+    image: "/images/image15.jpeg",
     alt: "Home terrace parking shades roofing sheds by KPN",
   },
   {
@@ -35,7 +35,7 @@ const services = [
     icon: Trophy,
     title: "Sports Turf Shed Construction",
     desc: "We build all-season, weatherproof sports turf sheds including badminton courts and cricket turfs. Engineered with Apollo Brand Steel for wide, column-free spans, ensuring uninterrupted play and durable protection against harsh sun and monsoon rains.",
-    image: "/images/services/sports-turf-main-banner.png",
+    image: "/images/image16.jpeg",
     alt: "Badminton court and cricket turf sports shed by KPN",
   }
 ];
@@ -118,7 +118,7 @@ export default function ServicesSection() {
 
           {/* Right: Clean Image */}
           <div className="relative h-full min-h-[400px] w-full group" data-reveal="image">
-            <div className="relative z-10 w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden rounded-3xl border-10 border-white/20 backdrop-blur-md transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
+            <div className="shiny-hover relative z-10 w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden rounded-3xl border-10 border-white/20 backdrop-blur-md transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_20px_60px_rgba(255,255,255,0.1)]">
               <Image
                 src={activeService.image}
                 alt={activeService.alt}

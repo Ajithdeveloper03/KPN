@@ -75,6 +75,49 @@ export default function GoatFarmShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What type of shed is best for a goat farm?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A steel-framed goat farm shed with suitable ventilation, practical floor planning, and elevated slatted flooring where required can work well for many goat farms. The final design depends on herd size, farm type, climate, and site conditions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the suitable height for a goat farm shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A roof height of around 10–14 feet is suitable for many goat farm sheds. Larger commercial farms may require different heights depending on ventilation, shed size, and structural requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on goat farm sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year warranty on pipes and roofing sheets, with repair support for covered issues as per the applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build goat farm sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed undertakes goat farm shed projects across India, subject to site conditions and project requirements."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* ---------------- 1. Hero Section (Fully Transparent Content) ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

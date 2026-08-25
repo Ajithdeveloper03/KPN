@@ -45,7 +45,6 @@ export default function HomeRoofingShedsPage() {
         title="Home Roofing Sheds" 
          bgImage="/images/services/home-roofing-shed-banner-image.png" breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Services", href: "/#services" },
           { label: "Home Roofing Sheds", href: "/services/home-roofing-sheds" }
         ]} 
       />
@@ -63,7 +62,7 @@ export default function HomeRoofingShedsPage() {
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#111] leading-[1.1] tracking-tight">
                 Home Roofing Sheds India — <br className="hidden xl:block"/>
-                <span className="font-serif  font-medium text-[#062088]">Terrace & Car Parking Sheds</span>
+                <span className="font-serif font-medium text-[#062088] italic">Terrace & Car Parking Sheds</span>
               </h2>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
                 KPN Roofing Shed designs and builds home roofing sheds across India, including terrace roofing sheds and car parking sheds. Every structure is engineered to protect your home from sun and rain while complementing your property&apos;s existing design, using high-quality steel and expert craftsmanship.
@@ -93,7 +92,7 @@ export default function HomeRoofingShedsPage() {
           </div>
           <div className="mt-12 bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
              <div className="w-full md:w-1/3">
-               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif  font-medium text-[#ee0000]">This For?</span></h3>
+               <h3 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">Who Is <br/> <span className="font-serif font-medium text-[#ee0000] italic">This For?</span></h3>
              </div>
              <div className="w-full md:w-2/3 border-l-0 md:border-l border-slate-200 md:pl-12">
                <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -110,7 +109,7 @@ export default function HomeRoofingShedsPage() {
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
                 Overview
               </span>
-              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Home Roofing Sheds <br/><span className="font-serif  font-medium text-[#00a3e0]">at a Glance</span></h2>
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Home Roofing Sheds <br/><span className="font-serif font-medium text-[#00a3e0] italic">at a Glance</span></h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -161,7 +160,7 @@ export default function HomeRoofingShedsPage() {
                   Shed Types
                 </span>
                 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-                  What We <br/><span className="font-serif  font-medium text-[#ffcc00]">Build</span>
+                  What We <br/><span className="font-serif font-medium text-[#ffcc00] italic">Build</span>
                 </h2>
               </div>
             </div>
@@ -216,7 +215,7 @@ export default function HomeRoofingShedsPage() {
                 Buying Guide
               </span>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#111] leading-tight tracking-tight">
-                How to Choose the <span className="font-serif  font-medium text-[#062088]">Right Home Roofing Shed</span>
+                How to Choose the <span className="font-serif font-medium text-[#062088] italic">Right Home Roofing Shed</span>
               </h2>
             </div>
 
@@ -270,7 +269,7 @@ export default function HomeRoofingShedsPage() {
               <div className="w-full lg:w-5/12 space-y-10 z-10">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm">Specialized Features</span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111] leading-[1.05]">
-                  Why KPN is <br/> <span className="font-serif  font-medium text-[#ee0000]">Different</span>
+                  Why KPN is <br/> <span className="font-serif font-medium text-[#ee0000] italic">Different</span>
                 </h2>
                 <QuoteButton className="inline-flex items-center justify-center bg-[#ee0000] text-white font-semibold text-lg py-4 px-10 rounded-full shadow-[0_15px_30px_rgba(238,0,0,0.2)] hover:-translate-y-1 transition-transform">
                   Experience Quality
@@ -338,7 +337,7 @@ export default function HomeRoofingShedsPage() {
           <div className="max-w-[1300px] mx-auto px-6">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#111]">
-                 What Our Home Roofing <span className="font-serif  font-medium text-[#00a3e0]">Clients Say</span>
+                 What Our Home Roofing <span className="font-serif font-medium text-[#00a3e0] italic">Clients Say</span>
                </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -367,7 +366,7 @@ export default function HomeRoofingShedsPage() {
         {/* ---------------- Explore by Shed Type ---------------- */}
         {/* <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif  font-medium text-[#ee0000]">Shed Type</span></h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif font-medium text-[#ee0000] italic">Shed Type</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
@@ -390,7 +389,7 @@ export default function HomeRoofingShedsPage() {
               <div className="mb-12">
                 <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
                 <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif  font-medium lowercase">questions!</span>
+                  Frequently asked <br/> <span className="font-serif font-medium lowercase italic">questions!</span>
                 </h2>
               </div>
               {/* Solid Image under the title */}
@@ -433,7 +432,7 @@ export default function HomeRoofingShedsPage() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className="max-w-4xl mx-auto px-6 relative z-20">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight leading-tight">
-              Planning a terrace or <span className="font-serif  font-medium text-[#ffcc00]">car parking shed?</span>
+              Planning a terrace or <span className="font-serif font-medium text-[#ffcc00] italic">car parking shed?</span>
             </h2>
             <p className="text-xl text-blue-100 font-medium mb-10 max-w-2xl mx-auto">
               Talk to KPN Roofing Shed — get a free site visit and a transparent quote within 24 hours.
