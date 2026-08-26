@@ -100,14 +100,14 @@ export default function AboutUsPage() {
         <section className="py-12 lg:py-16 max-w-[1400px] mx-auto px-6 overflow-hidden">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start" data-reveal="stagger">
-              <span className="px-5 py-2 rounded-full bg-[#e5f6fd] text-sm font-bold text-[#00a3e0] tracking-wide uppercase inline-flex items-center gap-2">
+              <span className="px-3 py-2 rounded-full bg-[#e5f6fd] text-xs font-bold text-[#00a3e0] tracking-wide uppercase inline-flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#00a3e0]"></span>
                 Trusted Roofing Shed Solutions Across India
               </span>
-              <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] text-[#1e2229]">
+              <h2 className="text-[clamp(32px,4vw,48px)] font-bold text-normal tracking-tight leading-[1.15] text-[#1e2229]">
                 Durable Roofing Solutions for Agricultural, Industrial, and Commercial Needs.
               </h2>
-              <div className="space-y-6 text-lg text-[#525c6e] font-medium leading-relaxed">
+              <div className="space-y-6 text-lg text-justify lg:text-left text-[#525c6e] font-medium leading-relaxed">
                 <p>
                   <strong className="text-[#1e2229]">Established in 2016</strong>, KPN Roofing Shed has developed its expertise in planning, fabricating, and installing different types of roofing structures over 13+ years. The company focuses on practical designs, quality construction, timely project execution, and customer-focused service.
                 </p>

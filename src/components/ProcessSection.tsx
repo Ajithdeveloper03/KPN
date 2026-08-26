@@ -106,11 +106,10 @@ export default function ProcessSection() {
       <section
         id="process"
         ref={sectionRef}
-        className="bg-[#f3f4f6] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-24 md:py-0"
-        style={{ minHeight: "700px" }}
+        className="bg-[#f3f4f6] min-h-[auto] md:min-h-[700px] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-12 md:py-0"
       >
         {/* Header */}
-        <div className="w-full z-10 pointer-events-none mt-16 md:mt-24 mb-10 md:mb-0">
+        <div className="w-full z-10 pointer-events-none mt-4 md:mt-24 mb-6 md:mb-0">
           <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
             <div className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full font-bold text-sm tracking-wide mb-4 border transition-colors duration-700 bg-[#ccecfb] text-[#00a3e0] border-[#00a3e0]/20`}>
               <span className={`w-2 h-2 rounded-full bg-white`}></span>
@@ -125,7 +124,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Mobile Vertical Layout */}
-        <div className="md:hidden flex flex-col gap-12 mt-32 px-6 pb-20 relative z-10 max-w-lg mx-auto">
+        <div className="md:hidden flex flex-col gap-12 mt-12 px-6 pb-8 relative z-10 max-w-lg mx-auto">
           <div className="absolute left-[38px] top-0 bottom-0 w-1 bg-slate-100 z-0" />
           {steps.map((step, i) => {
             const Icon = step.icon;

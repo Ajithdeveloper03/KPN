@@ -8,7 +8,7 @@ import PageHero from "@/components/PageHero";
 
 // Expanded gallery data incorporating the latest high-quality assets
 const galleryItems = [
-  // Agriculture & Animal Husbandry
+  // Priority: Animal, Goat, Poultry, Terrace
   { id: 9, title: "Agricultural Storage Shed", category: "Agriculture & Animal Husbandry", img: "/images/goat1.webp", height: "h-64" },
   { id: 10, title: "Poultry Farm Shed", category: "Agriculture & Animal Husbandry", img: "/images/services/poultry.webp", height: "h-72" },
   { id: 11, title: "Grain Storage Facility", category: "Agriculture & Animal Husbandry", img: "/images/animal1.webp", height: "h-80" },
@@ -16,14 +16,14 @@ const galleryItems = [
   { id: 13, title: "Livestock Shade Structure", category: "Agriculture & Animal Husbandry", img: "/images/animal4.webp", height: "h-72" },
   { id: 14, title: "Modern Green House", category: "Agriculture & Animal Husbandry", img: "/images/goat4.webp", height: "h-80" },
   { id: 15, title: "Farm Equipment Shed", category: "Agriculture & Animal Husbandry", img: "/images/animal6.webp", height: "h-80" },
+  { id: 17, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/images/terrace (2).webp", height: "h-96" },
+  { id: 18, title: "Garden Studio Shed", category: "Home Roofing Sheds", img: "/images/terrace3.webp", height: "h-72" },
 
-  // Home Roofing Sheds
+  // Other Images (Car Parking)
   { id: 107, title: 'Car Parking Shed Timeline', category: 'Home Roofing Sheds', img: '/images/services/car1.webp', height: 'h-80' },
   { id: 110, title: 'Car Parking Shed Permits', category: 'Home Roofing Sheds', img: '/images/services/car2.webp', height: 'h-72' },
   { id: 111, title: 'Single vs Multi Bay Car Parking', category: 'Home Roofing Sheds', img: '/images/services/car3.webp', height: 'h-80' },
   { id: 16, title: "Custom Home Garage", category: "Home Roofing Sheds", img: "/images/services/car4.webp", height: "h-80" },
-  { id: 17, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/images/terrace (2).webp", height: "h-96" },
-  { id: 18, title: "Garden Studio Shed", category: "Home Roofing Sheds", img: "/images/terrace3.webp", height: "h-72" },
   { id: 19, title: "Luxury Carport", category: "Home Roofing Sheds", img: "/images/services/car5.webp", height: "h-64" },
 
   // Industrial

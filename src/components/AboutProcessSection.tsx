@@ -106,11 +106,10 @@ export default function AboutProcessSection() {
       <section
         id="about-process"
         ref={sectionRef}
-        className="bg-[#f8f9fa] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-24 md:py-0"
-        style={{ minHeight: "700px" }}
+        className="bg-[#f8f9fa] min-h-[auto] md:min-h-[700px] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-12 md:py-0"
       >
         {/* Header */}
-        <div className="w-full z-10 pointer-events-none mt-16 md:mt-24 mb-10 md:mb-0">
+        <div className="w-full z-10 pointer-events-none mt-4 md:mt-24 mb-6 md:mb-0">
           <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
             <div className="overflow-hidden">
               <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading" data-reveal="text">
@@ -124,8 +123,7 @@ export default function AboutProcessSection() {
         </div>
 
         {/* Mobile Vertical Layout */}
-        <div className="md:hidden flex flex-col gap-12 mt-32 px-6 pb-20 relative z-10 max-w-lg mx-auto">
-          <div className="absolute left-[38px] top-0 bottom-0 w-1 bg-slate-200 z-0" />
+        <div className="md:hidden flex flex-col gap-8 mt-8 px-6 pb-8 relative z-10 max-w-lg mx-auto">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
