@@ -43,14 +43,24 @@ const services = [
 export default function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (isPaused) return;
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    if (typeof window !== 'undefined') {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isPaused || !isMobile) return;
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % services.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, isMobile]);
 
   const activeService = services[activeIndex];
 
