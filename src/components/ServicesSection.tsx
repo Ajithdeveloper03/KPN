@@ -93,21 +93,21 @@ export default function ServicesSection() {
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
         >
-          <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-2 md:gap-6 lg:gap-12 w-full max-w-[1100px] mx-auto px-1 md:px-0">
+          <div className="grid grid-cols-4 md:flex md:flex-nowrap md:justify-center items-center gap-0 md:gap-6 lg:gap-12 w-full max-w-[1100px] mx-auto">
             {services.map((service, index) => {
               const isActive = index === activeIndex;
               const Icon = service.icon;
               return (
                 <button
                   key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`relative flex items-center gap-1.5 md:gap-2 py-2 px-3 md:pb-6 md:pt-2 md:px-4 lg:px-6 transition-all duration-300 font-bold text-[11px] sm:text-xs md:text-base md:border-b-2 md:-mb-[2px] justify-center flex-shrink-0 rounded-full md:rounded-none
+                  onClick={() => { setActiveIndex(index); setIsPaused(true); }}
+                  className={`relative w-full flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 px-1 md:pb-6 md:pt-2 md:px-4 lg:px-6 transition-all duration-300 font-bold text-[10px] sm:text-xs md:text-base md:border-b-2 md:-mb-[2px] justify-center flex-shrink-0 rounded-xl md:rounded-none
                     ${isActive 
                       ? "bg-[#ee0000]/20 text-[#ff4444] md:text-[#ee0000] md:bg-transparent border border-[#ee0000]/50 md:border-transparent md:border-b-[#ee0000]" 
                       : "bg-white/5 text-slate-300 hover:text-white border border-white/5 md:bg-transparent md:border-transparent"}`}
                 >
                   <Icon size={14} className={`md:w-[18px] md:h-[18px] ${isActive ? "text-[#ff4444] md:text-[#ee0000]" : "text-slate-400"}`} />
-                  <span className="whitespace-nowrap">{service.category}</span>
+                  <span className="text-center leading-tight">{service.category}</span>
                 </button>
               );
             })}

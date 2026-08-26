@@ -122,7 +122,7 @@ export default function AboutSection() {
             <X size={24} />
           </button>
           
-          <div className="absolute bottom-6 flex gap-4 z-[60]">
+          <div className="absolute bottom-24 sm:bottom-6 flex gap-4 z-[60]">
             <button 
               className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
               onClick={(e) => { e.stopPropagation(); setZoom(z => Math.max(0.5, z - 0.25)); }}

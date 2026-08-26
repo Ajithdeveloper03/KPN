@@ -200,7 +200,7 @@ export default function Header() {
                   </Link>
                 </div>
                 <div>
-                  <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Agriculture & Animal Husbandry</h4>
+                  <Link href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Agriculture & Animal Husbandry →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
                     <li><Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
                     <li><Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
@@ -208,7 +208,7 @@ export default function Header() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Industrial Shed</h4>
+                  <Link href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Industrial Shed →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
                     <li><Link href="/services/industrial-sheds/factory-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
                     <li><Link href="/services/industrial-sheds/garment-factory-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
@@ -216,14 +216,14 @@ export default function Header() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Home Roofing Sheds</h4>
+                  <Link href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Home Roofing Sheds →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
                     <li><Link href="/services/home-roofing-sheds/terrace-roofing-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
                     <li><Link href="/services/home-roofing-sheds/car-parking-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3">Sports Turf</h4>
+                  <Link href="/services/sports-turf-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Sports Turf →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
                     <li><Link href="/services/sports-turf-sheds/badminton-court-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
                     <li><Link href="/services/sports-turf-sheds/cricket-turf-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
