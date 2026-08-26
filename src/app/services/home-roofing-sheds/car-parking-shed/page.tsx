@@ -6,6 +6,9 @@ import { CheckCircle2, Shield, Calendar, Wrench, FileText, ChevronDown, Phone, M
 import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "src/app/services/home-roofing-sheds/car-parking-shed/page.tsx",
+  },
   title: 'Car Parking Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds single & multi-bay car parking sheds across India for homes, apartments & offices. In-house engineers, weather-proof design & 10-year guarantee. Get a quote.',
   keywords: 'car parking shed contractors India, home roofing sheds India, car parking shed, multi-bay shed',
@@ -122,7 +125,7 @@ export default function CarParkingShedPage() {
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/services/car-parking-banner-image.webp" 
+            src="/images/services/car3.webp" 
             alt="car parking shed India — KPN" 
             fill sizes="100vw" 
             className="object-cover" 
@@ -172,7 +175,7 @@ export default function CarParkingShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/how-long-does-a-carparking.webp" alt="car parking shed India — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/car1.webp" alt="car parking shed India — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
@@ -248,7 +251,7 @@ export default function CarParkingShedPage() {
               <div className="lg:w-1/2 relative">
                  <div className="absolute inset-0 bg-[#3498db]/20 rounded-3xl transform rotate-2 scale-105"></div>
                  <div className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-xl">
-                   <Image src="/images/services/home-roofing-shed-la-2-section-1-image.webp" alt="multi-bay car parking shed — KPN Roofing Shed" fill sizes="100vw" className="object-cover" />
+                   <Image src="/images/services/car2.webp" alt="multi-bay car parking shed — KPN Roofing Shed" fill sizes="100vw" className="object-cover" />
                  </div>
               </div>
             </div>
@@ -391,7 +394,7 @@ export default function CarParkingShedPage() {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/home-roofing-shed-la-3-section-1-image.webp" alt="car parking shed — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/car2.webp" alt="car parking shed — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#d35400]/40 to-transparent"></div>
               <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[80%]">
                 <FileText className="text-[#d35400] mb-3" size={32} />
@@ -421,7 +424,7 @@ export default function CarParkingShedPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/home-roofing-shed-la-1-section-la-2-image.webp" alt="car parking shed — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/car1.webp" alt="car parking shed — KPN" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-bl from-[#3498db]/40 to-transparent"></div>
             </div>
           </div>
@@ -450,7 +453,7 @@ export default function CarParkingShedPage() {
               
               {/* Center Image */}
               <div className="w-full lg:w-1/3 relative h-[400px] lg:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl z-0">
-                <Image src="/images/services/permits-and-approval-for-carparking.webp" alt="Why KPN" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/services/car5.webp" alt="Why KPN" fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-[#e67e22]/20 mix-blend-multiply"></div>
               </div>
               
@@ -502,7 +505,7 @@ export default function CarParkingShedPage() {
         <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/single-bay-vs-multi-bay-sheds-carparking.webp" alt="car parking shed — KPN" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/car4.webp" alt="car parking shed — KPN" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

@@ -6,6 +6,9 @@ import PageHero from '@/components/PageHero';
 import { ArrowRight, Settings } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "src/app/services/page.tsx",
+  },
   title: 'Our Services | KPN Roofing Shed',
   description: 'Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.',
 };
@@ -26,7 +29,7 @@ const servicesList = [
   {
     title: 'Home Roofing Sheds',
     href: '/services/home-roofing-sheds',
-    img: '/images/image3.webp',
+    img: '/images/services/factory3.webp',
     desc: 'Aesthetic and durable roofing for home car parking and terraces.',
   },
   {

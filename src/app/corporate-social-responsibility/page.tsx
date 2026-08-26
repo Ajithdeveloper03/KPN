@@ -6,6 +6,9 @@ import PageHero from "@/components/PageHero";
 import { Plus, Minus, ArrowRight, HeartHandshake, Target, Medal, Users, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/corporate-social-responsibility",
+  },
   title: "Corporate Social Responsibility (CSR) | KPN Roofing Shed",
   description: "KPN Roofing Shed supports students, athletes, sports participation, and traditional arts through CSR initiatives that encourage talent and community development.",
   keywords: "KPN Roofing Shed CSR, corporate social responsibility KPN Roofing Shed, CSR activities in Trichy, student support CSR, sports CSR initiatives, traditional arts support Trichy",
@@ -126,7 +129,7 @@ export default function CSRPage() {
           { label: "Home", href: "/" },
           { label: "CSR", href: "/corporate-social-responsibility" }
         ]}
-        bgImage="/images/csr/image (9).jpeg"
+        bgImage="/images/csr/image (9).webp"
         bgPosition="object-cover object-top"
       />
 
@@ -136,7 +139,7 @@ export default function CSRPage() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative aspect-square md:aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100">
               <div className="shiny-hover w-full h-full">
-                <Image src="/images/csr/image (1).jpeg" alt="CSR Initiatives" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/csr/image (1).webp" alt="CSR Initiatives" fill sizes="100vw" className="object-cover" />
               </div>
             </div>
             {/* Floating Element */}
@@ -192,7 +195,7 @@ export default function CSRPage() {
           <div className="w-full lg:w-5/12 relative">
             <div className="relative aspect-[3/4] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200">
               <div className="shiny-hover w-full h-full">
-                <Image src="/images/csr/image (3).jpeg" alt="Our Approach" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/csr/image (3).webp" alt="Our Approach" fill sizes="100vw" className="object-cover" />
               </div>
             </div>
           </div>
@@ -239,7 +242,7 @@ export default function CSRPage() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative aspect-video md:aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-xl">
               <div className="shiny-hover w-full h-full">
-                <Image src="/images/csr/image (4).jpeg" alt="CSR Highlights" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/csr/image (4).webp" alt="CSR Highlights" fill sizes="100vw" className="object-cover" />
               </div>
             </div>
           </div>
@@ -319,16 +322,16 @@ export default function CSRPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              "/images/csr/image (1).jpeg",
-              "/images/csr/image (2).jpeg",
-              "/images/csr/image (3).jpeg",
-              "/images/csr/image (4).jpeg",
-              "/images/csr/image (5).jpeg",
-              "/images/csr/image (6).jpeg",
-              "/images/csr/image (7).jpeg",
-              "/images/csr/image (8).jpeg",
-              "/images/csr/image (9).jpeg",
-              "/images/csr/image (10).jpeg"
+              "/images/csr/image (1).webp",
+              "/images/csr/image (2).webp",
+              "/images/csr/image (3).webp",
+              "/images/csr/image (4).webp",
+              "/images/csr/image (5).webp",
+              "/images/csr/image (6).webp",
+              "/images/csr/image (7).webp",
+              "/images/csr/image (8).webp",
+              "/images/csr/image (9).webp",
+              "/images/csr/image (10).webp"
             ].map((src, index) => (
               <div key={index} className="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
                 <div className="shiny-hover w-full h-full">
@@ -349,7 +352,7 @@ export default function CSRPage() {
       {/* 6. Outro & Call to Action (Background Image Split) */}
       <section className="relative py-24 overflow-hidden bg-[#004b87]">
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/images/csr/image (7).jpeg" alt="CTA Background" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/csr/image (7).webp" alt="CTA Background" fill sizes="100vw" className="object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#004b87] to-transparent z-10" />
         

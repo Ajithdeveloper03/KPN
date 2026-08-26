@@ -17,7 +17,7 @@ export default function FAQSection() {
     <section id="faqs" className="relative py-12 md:py-16 overflow-hidden bg-[#fdfbf7]">
       {/* Roofing background — morning-bg for warm earthy light */}
       {/* <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
-        <Image src="/images/image6.webp" alt="FAQ Background" fill sizes="100vw" className="object-cover" />
+        <Image src="/images/animal2.webp" alt="FAQ Background" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-[#062088]/80 mix-blend-multiply"></div>
       </div> */}
       <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">

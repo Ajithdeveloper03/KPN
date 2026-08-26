@@ -9,55 +9,55 @@ const statsCards = [
     title: "13+ Years",
     desc: "Experience in shed and roofing construction.",
     color: "#062088", // Blue
-    img: "/images/image17.webp"
+    img: "/images/services/factory4.webp"
   },
   {
     title: "1000+ Projects",
     desc: "Successfully completed across India.",
     color: "#ee0000",
-    img: "/images/image18.webp"
+    img: "/images/services/factory6.webp"
   },
   {
     title: "All Services",
     desc: "Industrial, agricultural, home, turf & badminton sheds.",
     color: "#ffe600",
-    img: "/images/image19.webp"
+    img: "/images/services/factory7.webp"
   },
   {
     title: "upto ₹599/sq.ft",
     desc: "High-quality goat farm sheds tailored to your needs.",
     color: "#062088",
-    img: "/images/image20.webp"
+    img: "/images/goat2.webp"
   },
   {
     title: "Min. Size",
     desc: "1440 sq.ft in Tamil Nadu, 2400 sq.ft in other states.",
     color: "#ee0000",
-    img: "/images/imag10.webp"
+    img: "/images/services/factory5.webp"
   },
   {
     title: "Fast Timeline",
     desc: "6 days for 1440 sq.ft, 1 month for 2400 sq.ft.",
     color: "#ffe600",
-    img: "/images/image1.webp"
+    img: "/images/services/factory8.webp"
   },
   {
     title: "10-Yr Warranty",
     desc: "10-year guarantee, 3-year replacement on flooring.",
     color: "#062088",
-    img: "/images/image2.webp"
+    img: "/images/terrace.webp"
   },
   {
     title: "50% Advance",
     desc: "Remainder in installments as materials arrive.",
     color: "#ee0000",
-    img: "/images/image3.webp"
+    img: "/images/services/factory3.webp"
   },
   {
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
     color: "#ffe600",
-    img: "/images/image4.webp"
+    img: "/images/animal2.webp"
   }
 ];
 

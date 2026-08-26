@@ -84,18 +84,18 @@ export default function ContactPage() {
           })
         }}
       />
-      
-      <PageHero 
-        title="Let's Talk" 
+
+      <PageHero
+        title="Let's Talk"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact Us", href: "/contact" }
-        ]} 
+        ]}
       />
-      
+
       {/* Container with standard padding since PageHero sits behind the fixed header */}
       <main className="max-w-[1400px] w-full mx-auto px-6 py-12 lg:py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start flex-grow">
-        
+
         {/* Left Column (Details) */}
         <section className="lg:col-span-5 space-y-8">
           <div className=" hidden md:block">
@@ -110,7 +110,7 @@ export default function ContactPage() {
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#ee0000]/20 group-hover:text-[#ee0000] transition-colors">
-                  <Phone size={14}/> 
+                  <Phone size={14} />
                 </div>
                 Main Office
               </span>
@@ -123,7 +123,7 @@ export default function ContactPage() {
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#ee0000]/20 group-hover:text-[#ee0000] transition-colors">
-                  <Mail size={14}/> 
+                  <Mail size={14} />
                 </div>
                 General Email
               </span>
@@ -132,14 +132,14 @@ export default function ContactPage() {
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#ee0000]/20 group-hover:text-[#ee0000] transition-colors">
-                  <MapPin size={14}/> 
+                  <MapPin size={14} />
                 </div>
                 Location
               </span>
               <p className="text-slate-300 text-lg ml-11 font-medium leading-relaxed">Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur, Tiruchirappalli, Tamil Nadu 620019</p>
             </div>
           </div>
-          
+
           {/* Socials */}
           <div className="flex items-center gap-4 pt-2  ml-11">
             <a href="https://www.facebook.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
@@ -149,7 +149,7 @@ export default function ContactPage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
             <a href="https://www.youtube.com/@kpnroofingshedindia" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
             </a>
           </div>
 
@@ -181,18 +181,18 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Name field */}
               <div className="relative w-full group pt-4">
-                <input 
-                  id="name" 
+                <input
+                  id="name"
                   name="name"
-                  type="text" 
+                  type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your Name" 
+                  placeholder="Your Name"
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base" 
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base"
                 />
-                <label 
-                  htmlFor="name" 
+                <label
+                  htmlFor="name"
                   className="absolute left-0 top-4 text-xs uppercase tracking-widest text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]"
                 >
                   Your Name
@@ -200,18 +200,18 @@ export default function ContactPage() {
               </div>
               {/* Email field */}
               <div className="relative w-full group pt-4">
-                <input 
-                  id="email" 
+                <input
+                  id="email"
                   name="email"
-                  type="email" 
+                  type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email Address" 
+                  placeholder="Email Address"
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base" 
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base"
                 />
-                <label 
-                  htmlFor="email" 
+                <label
+                  htmlFor="email"
                   className="absolute left-0 top-4 text-xs uppercase tracking-widest text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]"
                 >
                   Email Address
@@ -222,18 +222,18 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Phone field */}
               <div className="relative w-full group pt-4">
-                <input 
-                  id="phone" 
+                <input
+                  id="phone"
                   name="phone"
-                  type="tel" 
+                  type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Phone Number" 
+                  placeholder="Phone Number"
                   required
-                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base" 
+                  className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors peer placeholder-transparent text-white font-medium text-base"
                 />
-                <label 
-                  htmlFor="phone" 
+                <label
+                  htmlFor="phone"
                   className="absolute left-0 top-4 text-xs uppercase tracking-widest text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]"
                 >
                   Phone Number
@@ -241,8 +241,8 @@ export default function ContactPage() {
               </div>
               {/* Service Selection field */}
               <div className="relative w-full group pt-4">
-                <select 
-                  id="shedType" 
+                <select
+                  id="shedType"
                   name="shedType"
                   value={formData.shedType}
                   onChange={handleChange}
@@ -270,8 +270,8 @@ export default function ContactPage() {
                     <option value="Car Parking Shed">Car Parking Shed</option>
                   </optgroup>
                 </select>
-                <label 
-                  htmlFor="shedType" 
+                <label
+                  htmlFor="shedType"
                   className={`absolute left-0 transition-all ${formData.shedType ? '-top-2 text-xs uppercase tracking-widest text-[#ee0000]' : 'top-4 text-slate-400 text-lg peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]'}`}
                 >
                   Select Service
@@ -281,25 +281,25 @@ export default function ContactPage() {
 
             {/* Message Field */}
             <div className="relative w-full group pt-4">
-              <textarea 
-                id="message" 
+              <textarea
+                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us about your requirements..." 
+                placeholder="Tell us about your requirements..."
                 required
                 className="w-full bg-transparent border-b border-slate-600 py-3 outline-none focus:border-[#ee0000] transition-colors resize-none h-32 peer placeholder-transparent text-white font-medium text-lg"
               ></textarea>
-              <label 
-                htmlFor="message" 
+              <label
+                htmlFor="message"
                 className="absolute left-0 top-4 text-xs uppercase tracking-widest text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-top-2 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-[#ee0000]"
               >
                 Tell us about your requirements...
               </label>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={formStatus === "submitting"}
               className="w-full bg-[#ee0000] text-white py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#cc0000] hover:shadow-[0_10px_30px_rgba(238,0,0,0.3)] transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
             >
@@ -315,11 +315,11 @@ export default function ContactPage() {
           </form>
         </section>
       </main>
-      
+
       {/* Full-width Google Map */}
       <section className="w-full h-[400px] md:h-[500px] bg-slate-800">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15665.86532454504!2d76.95147551000624!3d11.01980315802281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.625720987573!2d78.74695407591975!3d10.789117299455798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf35e578d93f5%3A0x8db4552833ab4e74!2s151%2C%205th%20Cross%20W%2C%20Gokula%20Nagar%2C%20Sakthi%20Nagar%2C%20Pappakurichi%20Kattur%2C%20Tiruchirappalli%20(Part%2C%20Tamil%20Nadu%20620019!5e0!3m2!1sen!2sin!4v1787664454996!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}

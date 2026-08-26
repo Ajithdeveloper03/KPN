@@ -2,18 +2,15 @@
 
 import React, { useEffect, useRef } from "react";
 import Lenis from "lenis";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function LenisScrollProvider({ children }: { children: React.ReactNode }) {
-  // Keep a stable ref to the Lenis instance so we never recreate it accidentally
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    // Guard: don't create a second instance if one is already running
     if (lenisRef.current) return;
+
+    // Disable smooth scrolling on mobile for performance
+    if (window.innerWidth < 768) return;
 
     const lenis = new Lenis({
       duration: 1.2,
@@ -23,23 +20,19 @@ export default function LenisScrollProvider({ children }: { children: React.Reac
 
     lenisRef.current = lenis;
 
-    // Synchronize Lenis scroll events with GSAP ScrollTrigger
-    lenis.on("scroll", ScrollTrigger.update);
-
-    // Drive Lenis via GSAP's RAF ticker for perfect sync
-    const rafCallback = (time: number) => {
-      lenis.raf(time * 1000);
+    let animFrame: number;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      animFrame = requestAnimationFrame(raf);
     };
-
-    gsap.ticker.add(rafCallback);
-    gsap.ticker.lagSmoothing(0);
+    animFrame = requestAnimationFrame(raf);
 
     return () => {
-      gsap.ticker.remove(rafCallback);
+      cancelAnimationFrame(animFrame);
       lenis.destroy();
       lenisRef.current = null;
     };
-  }, []); // Empty deps — only run once on mount / cleanup on unmount
+  }, []);
 
   return <>{children}</>;
 }

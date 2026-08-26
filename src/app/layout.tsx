@@ -30,9 +30,7 @@ export const metadata: Metadata = {
   },
   description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 10+ yrs, 600+ projects, award-winning team. Get a free quote today.",
   keywords: "Roofing Shed Construction Company India, Roofing Shed Contractors India, Industrial Shed Construction India, Factory Shed Contractors India, Steel Structure Company India, Warehouse Shed Builders India, Agricultural Sheds India, Animal Shed Solutions India, Modern Farm Sheds India",
-  alternates: {
-    canonical: "https://kpnroofingsheds.com",
-  },
+  
   icons: {
     icon: [
       { url: "/images/logo.webp", type: "image/jpeg", sizes: "any" },

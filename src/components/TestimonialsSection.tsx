@@ -10,8 +10,8 @@ const testimonials = [
     property: "Industrial & Home Shed Works",
     quote: "Excellent service from KPN Roofing Shed. They completed our Roofing Shed Construction in Trichy with strong materials and perfect finishing. Highly recommended for industrial and home shed works.",
     rating: 5.0,
-    bgImage: "/images/image5.webp",
-    avatar: "/images/image6.webp"
+    bgImage: "/images/services/factory4.webp",
+    avatar: "/images/animal2.webp"
   },
   {
     name: "Latha Sethurajan",
@@ -19,8 +19,8 @@ const testimonials = [
     property: "Terrace Roofing Shed",
     quote: "KPN Roofing Shed done terrace shed with excellent quality materials. Really valuable and worth every rupee. The workmanship was top-notch and completed on time.",
     rating: 5.0,
-    bgImage: "/images/image7.webp",
-    avatar: "/images/image8.webp"
+    bgImage: "/images/goat2.webp",
+    avatar: "/images/goat2.webp"
   },
   {
     name: "Sasi Kumar",
@@ -28,8 +28,8 @@ const testimonials = [
     property: "Farm Shed Flooring",
     quote: "I bought flooring for my goat shed from KPN — it is a really good product. Durable, easy to clean, and the farm animals are comfortable. Very satisfied with the purchase.",
     rating: 5.0,
-    bgImage: "/images/image9.webp",
-    avatar: "/images/image10.webp"
+    bgImage: "/images/terrace.webp",
+    avatar: "/images/animal2.webp"
   },
   {
     name: "Vijay Vijay",
@@ -37,8 +37,8 @@ const testimonials = [
     property: "Home Roofing Project",
     quote: "I recently bought a flooring product from KPN — it is good in quality and the service was very good. The team was responsive and the installation was smooth from start to finish.",
     rating: 5.0,
-    bgImage: "/images/image11.webp",
-    avatar: "/images/image12.webp"
+    bgImage: "/images/factory.webp",
+    avatar: "/images/goat1.webp"
   }
 ];
 
@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
 
           {/* Single Static Background Image */}
           <div className="absolute inset-0">
-            <Image src="/images/image5.webp" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/factory4.webp" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
           </div>
 
           {/* Overlay */}

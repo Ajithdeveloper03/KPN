@@ -68,11 +68,11 @@ export default function QuoteModal() {
       onClick={(e) => { if (e.target === e.currentTarget) setIsModalOpen(false); }}
     >
       <div className="bg-white rounded-2xl w-full max-w-[900px] mx-4 max-h-[90vh] overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
-        
+
         {/* Left Side: Image Cover (Hidden on Mobile) */}
-        <div 
+        <div
           className="hidden md:block w-1/2 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('/images/services/animal-1-image-1.webp')" }}
+          style={{ backgroundImage: "url('/images/animal1.webp')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-[#062088]/80 to-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -100,20 +100,20 @@ export default function QuoteModal() {
             <>
               <h3 className="text-2xl font-extrabold text-[#1e2229] mb-2">Get a Free Quote</h3>
               <p className="text-slate-500 mb-6 font-medium text-sm">Fill in details for a customized structural estimate within 24 hours.</p>
-              
+
               {formStatus === "error" && (
                 <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl mb-4 text-sm font-medium">
                   {errorMessage}
                 </div>
               )}
-              
+
               <form onSubmit={handleFormSubmit} className="flex flex-col gap-4">
                 {/* HONEYPOT FIELD (Hidden from real users) */}
                 <div style={{ display: 'none' }} aria-hidden="true">
                   <label htmlFor="bot_field">Leave this field blank</label>
                   <input type="text" id="bot_field" name="bot_field" value={formData.bot_field} onChange={handleFormChange} tabIndex={-1} autoComplete="off" />
                 </div>
-                
+
                 {[
                   { label: "Your Name", id: "name", type: "text", placeholder: "Enter your name" },
                   { label: "Phone Number", id: "phone", type: "tel", placeholder: "Enter phone number" },

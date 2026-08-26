@@ -32,29 +32,7 @@ export default function IntegrationSection() {
     let ctx: any;
     let isUnmounted = false;
     
-    const initGSAP = async () => {
-      const gsapModule = await import("gsap");
-      
-      if (isUnmounted) return;
-      
-      const gsap = gsapModule.default;
-      
-      ctx = gsap.context(() => {
-        // Floating animation for icons
-        gsap.to(".floating-icon", {
-          y: -15,
-          duration: 2,
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
-          stagger: {
-            each: 0.2,
-            from: "random"
-          }
-        });
-      }, containerRef);
-    };
-    initGSAP();
+    // GSAP Removed
 
     return () => {
       isUnmounted = true;
@@ -176,3 +154,4 @@ export default function IntegrationSection() {
     </section>
   );
 }
+
