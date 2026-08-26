@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section id="about-us" className="relative py-12 md:py-16 overflow-hidden bg-slate-50">
+    <section id="about-us" className="relative py-10 md:py-3 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-white" />
@@ -47,16 +47,16 @@ export default function AboutSection() {
         </div>
 
         {/* Central Text Content */}
-        <div className="absolute left-1/2 top-[45%] -translate-x-1/2 flex flex-col items-center text-center w-full max-w-[850px] px-6" data-reveal="stagger">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#f0f2fa] border border-[#d1d7ee] text-[#062088] font-bold text-sm md:text-base mb-8 shadow-sm">
+        <div className="absolute left-1/2 top-[45%] -translate-x-1/2 flex flex-col items-center text-center w-full max-w-[900px] px-2" data-reveal="stagger">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#f0f2fa] border border-[#d1d7ee] text-[#062088] font-bold text-sm md:text-base mb-4 shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-[#062088]"></span>
             About KPN Roofing
           </div>
 
-          <div className="mb-10 flex flex-col gap-6">
-            <h2 className="text-3xl md:text-4xl xl:text-4xl font-extrabold text-[#1e2229] leading-[1.3] tracking-tight" data-reveal="text">
+          <div className="mb-5 flex flex-col gap-6">
+            <h1 className="text-3xl md:text-4xl xl:text-4xl font-extrabold text-[#1e2229] leading-[1.3] tracking-tight" data-reveal="text">
               India&apos;s Trusted Roofing Shed Construction Company for <span className="text-[#062088]">Industrial, Agricultural & Home Projects</span>
-            </h2>
+            </h1>
             <p className="text-base md:text-md text-slate-600 font-medium leading-relaxed max-w-[750px] mx-auto" data-reveal="text">
               KPN Roofing Shed designs and builds steel roofing sheds for industrial, agricultural, home, and recreational projects across India, using Apollo-brand steel and an in-house, Coimbatore-manufactured flooring line backed by a <strong className="text-[#1e2229] font-bold">10-year guarantee</strong>.
             </p>

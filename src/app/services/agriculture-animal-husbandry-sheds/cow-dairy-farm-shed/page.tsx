@@ -175,8 +175,14 @@ export default function CowDairyFarmShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/animal4.webp" alt="cow and dairy farm shed India — KPN" fill sizes="100vw" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
+              <video 
+                src="/images/cow.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </div>
         </section>

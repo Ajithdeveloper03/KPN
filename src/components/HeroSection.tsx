@@ -113,7 +113,7 @@ export default function HeroSection() {
   }, [isAnimating]);
 
   return (
-    <section id="home" className={`relative min-h-[80dvh] md:min-h-[100dvh] w-full overflow-hidden flex flex-col font-sans select-none transition-colors duration-700 ${isNightMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
+    <section id="home" className={`relative min-h-[70dvh] md:min-h-[100dvh] w-full overflow-hidden flex flex-col font-sans select-none transition-colors duration-700 ${isNightMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
 
       {/* 1. Static Background */}
       <div className="absolute inset-0 z-0">
@@ -142,7 +142,7 @@ export default function HeroSection() {
       </div>
 
       {/* 3. Center Front Image Runner - Anchored directly to the bottom */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[70%] max-w-[950px] h-[55vh] md:h-[65vh] z-20 pointer-events-none">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[70%] max-w-[950px] h-[45vh] md:h-[65vh] z-20 pointer-events-none">
         {slides.map((slide, idx) => {
           let transformClass = "translate-x-[100vw] opacity-0"; // default hidden on right
           if (idx === currentSlide) {
@@ -163,7 +163,7 @@ export default function HeroSection() {
                 sizes="(max-width: 768px) 100vw, 70vw"
                 priority={idx === 0}
                 fetchPriority={idx === 0 ? "high" : "auto"}
-                className="object-contain object-bottom md:scale-[1.45] md:origin-bottom"
+                className="object-cover md:object-contain object-bottom md:scale-[1.45] md:origin-bottom"
               />
             </div>
           );
