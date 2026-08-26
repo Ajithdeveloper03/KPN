@@ -376,9 +376,6 @@ export default function CSRPage() {
             <Link href="/contact" className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold py-4 px-8 rounded-full text-center transition-transform hover:-translate-y-1 shadow-lg flex items-center justify-center gap-2">
               Contact KPN Roofing Shed <ArrowRight size={20} />
             </Link>
-            <Link href="/gallery" className="bg-white text-[#004b87] hover:bg-slate-100 font-bold py-4 px-8 rounded-full text-center transition-transform hover:-translate-y-1 shadow-lg">
-              View CSR Gallery
-            </Link>
           </div>
         </div>
       </section>

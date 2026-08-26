@@ -14,7 +14,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faqs" className="relative py-12 md:py-16 overflow-hidden bg-[#fdfbf7]">
+    <section id="faqs" className="relative overflow-hidden bg-[#fdfbf7] py-4 md:py-6">
       {/* Roofing background — morning-bg for warm earthy light */}
       {/* <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
         <Image src="/images/animal2.webp" alt="FAQ Background" fill sizes="100vw" className="object-cover" />

@@ -106,7 +106,7 @@ export default function AboutProcessSection() {
       <section
         id="about-process"
         ref={sectionRef}
-        className="bg-[#f8f9fa] min-h-[auto] md:min-h-[700px] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-12 md:py-0"
+        className="bg-[#f8f9fa] min-h-[auto] md:min-h-[700px] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-4 md:py-6"
       >
         {/* Header */}
         <div className="w-full z-10 pointer-events-none mt-4 md:mt-24 mb-6 md:mb-0">

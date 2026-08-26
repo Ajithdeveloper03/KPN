@@ -15,7 +15,7 @@ const brands = [
 
 export default function ClientLogos() {
   return (
-    <section className="py-12 bg-white overflow-hidden border-b border-slate-100">
+    <section className="bg-white overflow-hidden border-b border-slate-100 py-4 md:py-6">
       <div className="max-w-[1400px] mx-auto px-6 mb-8 text-center">
         <h2 className="text-xl md:text-2xl font-extrabold text-slate-800">Trusted by Leading Brands</h2>
       </div>

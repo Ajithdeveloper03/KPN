@@ -6,7 +6,6 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
 import dynamic from 'next/dynamic';
-const WhyKPNSection = dynamic(() => import("@/components/WhyKPNSection"));
 const ComparisonSection = dynamic(() => import("@/components/ComparisonSection"));
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
 const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"));
@@ -118,7 +117,6 @@ export default function Home() {
       
       <StatsSection />
       <TestimonialsSection />
-      <WhyKPNSection />
       <ComparisonSection />
       <ProcessSection />
       <AreasWeServeSection />

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AreasWeServeSection() {
   return (
-    <section className="bg-[#eef2f6] py-12 md:py-16">
+    <section className="bg-[#eef2f6] py-4 md:py-6">
       <div className="max-w-[1400px] w-full mx-auto px-6">
         <div className="text-center mb-14" data-reveal="stagger">
           <span className="inline-block px-5 py-1.5 rounded-full bg-[rgba(0,163,224,0.1)] text-[#00a3e0] border border-[rgba(0,163,224,0.3)] font-bold text-sm">

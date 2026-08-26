@@ -103,7 +103,7 @@ export default function StatsSection() {
   }, [isDragging]);
 
   return (
-    <section id="stats" className="relative py-14  flex flex-col justify-center overflow-hidden">
+    <section id="stats" className="relative flex flex-col justify-center overflow-hidden py-4 md:py-6">
       {/* Fixed Background Image with light overlay */}
       <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/services/cricket-image-1.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="absolute inset-0 bg-gray-100" />
