@@ -66,13 +66,10 @@ export default function ServicesSection() {
 
   return (
     <section id="services" className="bg-[#19191c] text-white relative overflow-hidden py-4 md:py-6">
-      {/* Background Image */}
-      {/* <div className="absolute left-[3%] lg:left-[5%] top-[10%] w-[12%] lg:w-[15%] aspect-square rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-2xl opacity-40 md:opacity-100 z-0 rotate-12 parallax-layer" data-speed="0.1">
-        <Image src="/images/night-bg.webp" alt="Service Element 1" fill sizes="100vw" className="object-cover" />
-      </div> */}
+      
       <div className="absolute inset-0 z-0 opacity-50">
         <Image
-          src="/images/night-bg.webp"
+          src="/images/service-bg.webp"
           alt="Services Background"
           fill
           sizes="100vw"
@@ -95,34 +92,36 @@ export default function ServicesSection() {
         </div>
 
         {/* Tabs Section */}
-        <div 
-          className="relative mb-12 md:mb-20 md:border-b-2 md:border-white/10" 
-          data-reveal="stagger"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
+        {/* Tabs Section */}
+<div 
+  className="relative mb-10 md:mb-10 md:border-b-2 md:border-white/10" 
+  data-reveal="stagger"
+  onMouseEnter={() => setIsPaused(true)}
+  onMouseLeave={() => setIsPaused(false)}
+  onTouchStart={() => setIsPaused(true)}
+  onTouchEnd={() => setIsPaused(false)}
+>
+  {/* Changed: Used grid-cols-4 for both mobile and desktop so all 4 items scale cleanly, or set a responsive grid wrapper */}
+  <div className="grid grid-cols-4 items-center gap-1 md:gap-6 lg:gap-8 w-full max-w-[1200px] mx-auto">
+    {services.map((service, index) => {
+      const isActive = index === activeIndex;
+      const Icon = service.icon;
+      return (
+        <button
+          key={index}
+          onClick={() => { setActiveIndex(index); setIsPaused(true); }}
+          className={`relative w-full flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 px-1 md:pb-6 md:pt-2 md:px-3 lg:px-6 transition-all duration-300 font-bold text-[10px] sm:text-xs md:text-base md:border-b-2 md:-mb-[2px] justify-center rounded-xl md:rounded-none
+            ${isActive 
+              ? "bg-[#ee0000]/20 text-[#ff4444] md:text-[#ee0000] md:bg-transparent border border-[#ee0000]/50 md:border-transparent md:border-b-[#ee0000]" 
+              : "bg-white/5 text-slate-300 hover:text-white border border-white/5 md:bg-transparent md:border-transparent"}`}
         >
-          <div className="grid grid-cols-4 md:flex md:flex-nowrap md:justify-center items-center gap-0 md:gap-6 lg:gap-12 w-full max-w-[1100px] mx-auto">
-            {services.map((service, index) => {
-              const isActive = index === activeIndex;
-              const Icon = service.icon;
-              return (
-                <button
-                  key={index}
-                  onClick={() => { setActiveIndex(index); setIsPaused(true); }}
-                  className={`relative w-full flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 px-1 md:pb-6 md:pt-2 md:px-4 lg:px-6 transition-all duration-300 font-bold text-[10px] sm:text-xs md:text-base md:border-b-2 md:-mb-[2px] justify-center flex-shrink-0 rounded-xl md:rounded-none
-                    ${isActive 
-                      ? "bg-[#ee0000]/20 text-[#ff4444] md:text-[#ee0000] md:bg-transparent border border-[#ee0000]/50 md:border-transparent md:border-b-[#ee0000]" 
-                      : "bg-white/5 text-slate-300 hover:text-white border border-white/5 md:bg-transparent md:border-transparent"}`}
-                >
-                  <Icon size={14} className={`md:w-[18px] md:h-[18px] ${isActive ? "text-[#ff4444] md:text-[#ee0000]" : "text-slate-400"}`} />
-                  <span className="text-center leading-tight">{service.category}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
+          <Icon size={14} className={`flex-shrink-0 md:w-[18px] md:h-[18px] ${isActive ? "text-[#ff4444] md:text-[#ee0000]" : "text-slate-400"}`} />
+          <span className="text-center leading-tight whitespace-nowrap">{service.category}</span>
+        </button>
+      );
+    })}
+  </div>
+</div>
 
         {/* Content Section */}
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-stretch">
