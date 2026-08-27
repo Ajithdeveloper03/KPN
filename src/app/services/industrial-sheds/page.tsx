@@ -130,7 +130,7 @@ export default function IndustrialShedPage() {
       <main className="flex-grow">
         
         {/* ---------------- Intro Section ---------------- */}
-        <section className="max-w-[1400px] mx-auto px-6 py-10 lg:py-16">
+        <section className="max-w-[1400px] mx-auto px-6 py-6 lg:py-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             
             {/* Left Side: Content */}
@@ -181,7 +181,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- At a Glance Metrics ---------------- */}
-        <section className="bg-[#f0f7ff] py-10 lg:py-12 relative overflow-hidden border-y border-blue-100">
+        <section className="bg-[#f0f7ff] py-6 lg:py-8 relative overflow-hidden border-y border-blue-100">
           <div className="max-w-[1300px] mx-auto px-6 relative z-10">
             <div className="mb-12">
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
@@ -230,7 +230,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- What We Build (Table/Grid) ---------------- */}
-        <section className="bg-white py-10 lg:py-16 border-b border-slate-200">
+        <section className="bg-white py-6 lg:py-8 border-b border-slate-200">
           <div className="max-w-[1300px] mx-auto px-6">
             <div className="mb-12 text-center">
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-6 inline-block">
@@ -273,7 +273,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- Factory Shed Solutions by Industry ---------------- */}
-        <section className="bg-[#fffcf0] py-10 lg:py-16 max-w-full px-6 border-b border-yellow-100">
+        <section className="bg-[#fffcf0] py-6 lg:py-8 max-w-full px-6 border-b border-yellow-100">
           <div className="max-w-[1300px] mx-auto">
             <div className="mb-12 flex flex-col md:flex-row justify-between items-end gap-10">
               <div>
@@ -361,7 +361,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- How to Choose (Process Cards) ---------------- */}
-        <section className="bg-white py-10 lg:py-16 border-b border-cyan-100 relative overflow-hidden">
+        <section className="bg-white py-6 lg:py-8 border-b border-cyan-100 relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 relative z-10">
             <div className="text-center mb-16 max-w-4xl mx-auto">
               <span className="px-5 py-2 rounded-full border border-slate-300 text-sm font-medium text-slate-600 tracking-wide uppercase mb-8 inline-block">
@@ -415,7 +415,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- Why KPN is Different ---------------- */}
-        <section className="bg-white py-10 lg:py-16 border-b border-slate-200 overflow-hidden">
+        <section className="bg-white py-6 lg:py-8 border-b border-slate-200 overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col gap-16">
             
             <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -486,7 +486,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- Testimonials & Service Coverage ---------------- */}
-        <section className="bg-[#f8f9fc] py-16 lg:py-20 border-b border-slate-200 relative overflow-hidden">
+        <section className="bg-[#f8f9fc] py-6 lg:py-8 border-b border-slate-200 relative overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-6">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#111]">
@@ -529,7 +529,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- Explore by Shed Type ---------------- */}
-        {/* <section className="bg-white py-10 lg:py-16 max-w-[1300px] mx-auto px-6">
+        {/* <section className="bg-white py-6 lg:py-8 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif font-medium text-[#ee0000] italic">Shed Type</span></h2>
           </div>
@@ -548,7 +548,7 @@ export default function IndustrialShedPage() {
         </section> */}
 
         {/* ---------------- Interactive Accordion FAQ ---------------- */}
-        <section className="bg-[#f8f9fc] py-10 lg:py-12 border-b border-slate-200 overflow-hidden">
+        <section className="bg-[#f8f9fc] py-6 lg:py-8 border-b border-slate-200 overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-20">
             
             {/* Left Side: Typography & Image */}
@@ -593,7 +593,7 @@ export default function IndustrialShedPage() {
         </section>
 
         {/* ---------------- High Impact CTA ---------------- */}
-        <section className="py-12 lg:py-12 text-center text-white relative overflow-hidden">
+        <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
             <Image src="/images/factory.webp" alt="Industrial Sheds CTA" fill sizes="100vw" className="object-cover" />

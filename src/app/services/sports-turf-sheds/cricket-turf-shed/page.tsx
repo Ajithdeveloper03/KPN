@@ -155,7 +155,7 @@ export default function CricketTurfShedPage() {
       <main>
         
         {/* ---------------- 1.5 Intro Section ---------------- */}
-        <section className="py-12 lg:py-20 bg-white overflow-hidden">
+        <section className="py-6 lg:py-8 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2d3436] mb-8 leading-tight">
@@ -182,7 +182,7 @@ export default function CricketTurfShedPage() {
         </section>
         
         {/* ---------------- 2. Specifications (Split Layout) ---------------- */}
-        <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
+        <section className="py-6 lg:py-8 px-6 max-w-7xl mx-auto border-b border-orange-900/10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left: Highlight Box */}
@@ -236,7 +236,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 3. Design & Construction Features ---------------- */}
-        <section className="py-12 lg:py-20 bg-[#fffdfa]">
+        <section className="py-6 lg:py-8 bg-[#fffdfa]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-[#d35400] font-bold tracking-widest uppercase text-sm mb-4 block">Craftsmanship</span>
@@ -266,7 +266,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 4. Common Uses ---------------- */}
-        <section className="py-12 lg:py-20 bg-[#f0f4f8]">
+        <section className="py-6 lg:py-8 bg-[#f0f4f8]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-[#3498db] font-bold tracking-widest uppercase text-sm mb-4 block">Versatility</span>
@@ -294,7 +294,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 4. How to Choose (Vertical Timeline) ---------------- */}
-        <section className="py-12 lg:py-16 bg-[#2d3436] relative overflow-hidden">
+        <section className="py-6 lg:py-8 bg-[#2d3436] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">How to Choose the <span className="font-serif  text-[#e67e22]">Right Shed</span></h2>
@@ -357,7 +357,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 5. Unique Permits & Approvals Layout ---------------- */}
-        <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-gray-200">
+        <section className="py-6 lg:py-8 px-6 max-w-7xl mx-auto border-b border-gray-200">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
               <span className="text-[#d35400] font-bold tracking-widest uppercase text-sm mb-4 block">Compliance</span>
@@ -382,7 +382,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 6. Unique Timeline / How Long Layout ---------------- */}
-        <section className="py-12 lg:py-20 px-6 max-w-7xl mx-auto border-b border-gray-200">
+        <section className="py-6 lg:py-8 px-6 max-w-7xl mx-auto border-b border-gray-200">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="w-full lg:w-1/2">
               <span className="text-[#3498db] font-bold tracking-widest uppercase text-sm mb-4 block">Timeline</span>
@@ -408,7 +408,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 6.5 Why KPN Is Different ---------------- */}
-        <section className="py-12 lg:py-20 bg-[#fffdfa] border-b border-gray-200 overflow-hidden">
+        <section className="py-6 lg:py-8 bg-[#fffdfa] border-b border-gray-200 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#2d3436] mb-6">Why KPN Is <span className="font-serif  text-[#e67e22]">Different</span></h2>
@@ -454,7 +454,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 7. FAQ (Minimalist Accordion) ---------------- */}
-        <section className="py-12 lg:py-20 bg-[#faf9f6]">
+        <section className="py-6 lg:py-8 bg-[#faf9f6]">
           <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-4xl font-bold text-[#2d3436] text-center mb-16">Frequently Asked <span className="font-serif  text-[#e67e22]">Questions</span></h2>
             
@@ -482,7 +482,7 @@ export default function CricketTurfShedPage() {
         </section>
 
         {/* ---------------- 8. High Impact CTA ---------------- */}
-        <section className="py-12 lg:py-16 text-center text-white relative overflow-hidden">
+        <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
             <Image src="/images/services/cricket-banner-image.webp" alt="cricket turf shed — KPN" fill sizes="100vw" className="object-cover" />

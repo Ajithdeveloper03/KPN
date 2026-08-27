@@ -53,7 +53,7 @@ export default function BlogArchivePage() {
       />
 
       <main className="flex-grow">
-        <section className="max-w-[1400px] mx-auto px-6 py-12 lg:py-16">
+        <section className="max-w-[1400px] mx-auto px-6 py-6 lg:py-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-6 inline-block">

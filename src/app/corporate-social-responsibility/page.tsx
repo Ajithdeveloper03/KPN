@@ -134,7 +134,7 @@ export default function CSRPage() {
       />
 
       {/* 1. Intro Section (Image Left, Text Right) */}
-      <section className="py-20 lg:py-28 bg-white overflow-hidden">
+      <section className="py-6 lg:py-8 bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="w-full lg:w-1/2 relative">
             <div className="relative aspect-square md:aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100">
@@ -167,7 +167,7 @@ export default function CSRPage() {
       </section>
 
       {/* 2. Why CSR Matters */}
-      <section className="py-20 lg:py-28 bg-[#1e2229]">
+      <section className="py-6 lg:py-8 bg-[#1e2229]">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2 space-y-6">
@@ -189,7 +189,7 @@ export default function CSRPage() {
       </section>
 
       {/* 3. Our Approach to Community Support (Text Left, Image Right) */}
-      <section className="py-20 lg:py-28 bg-[#f8f9fa] overflow-hidden">
+      <section className="py-6 lg:py-8 bg-[#f8f9fa] overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
           
           <div className="w-full lg:w-5/12 relative">
@@ -236,7 +236,7 @@ export default function CSRPage() {
       </section>
 
       {/* 4. CSR Highlights (Image Left, List Right) */}
-      <section className="py-20 lg:py-28 bg-white border-t border-slate-100">
+      <section className="py-6 lg:py-8 bg-white border-t border-slate-100">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           <div className="w-full lg:w-1/2 relative">
@@ -274,7 +274,7 @@ export default function CSRPage() {
       </section>
 
       {/* 5. Frequently Asked Questions (No Images) */}
-      <section className="py-20 lg:py-28 bg-[#1e2229] text-white overflow-hidden border-t border-white/10">
+      <section className="py-6 lg:py-8 bg-[#1e2229] text-white overflow-hidden border-t border-white/10">
         <div className="max-w-[1000px] mx-auto px-6">
           
           <div className="text-center mb-16">

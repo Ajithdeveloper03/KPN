@@ -109,7 +109,7 @@ export default function AboutProcessSection() {
         className="bg-[#f8f9fa] min-h-[auto] md:min-h-[700px] md:h-screen flex flex-col md:justify-center overflow-hidden relative z-10 process-section-wrapper py-4 md:py-6"
       >
         {/* Header */}
-        <div className="w-full z-10 pointer-events-none mt-4 md:mt-24 mb-6 md:mb-0">
+        <div className="w-full z-10 pointer-events-none mt-4 md:mt-8 mb-6 md:mb-0">
           <div className="max-w-[1400px] w-full mx-auto px-6 text-center" data-reveal="stagger">
             <div className="overflow-hidden">
               <h2 className="text-[clamp(36px,5vw,48px)] font-extrabold text-[#1e2229] tracking-tight mx-auto font-heading" data-reveal="text">
@@ -144,7 +144,7 @@ export default function AboutProcessSection() {
         {/* Horizontal Scrolling Container (Desktop) */}
         <div
           ref={sliderRef}
-          className="hidden md:flex relative mt-16"
+          className="hidden md:flex relative mt-4"
           style={{ width: "2500px", height: "500px" }}
         >
           {/* SVG Path */}

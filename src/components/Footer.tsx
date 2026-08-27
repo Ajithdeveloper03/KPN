@@ -75,7 +75,7 @@ export default function Footer() {
                 <div className="text-slate-400">
                   <a href="tel:+919788770786" className="no-underline hover:text-[#00a3e0] transition-colors">+91 9788770786</a>
                   {", "}
-                  <a href="tel:04312660786" className="no-underline hover:text-[#00a3e0] transition-colors">+91 0431-2660786</a>
+                  <a href="tel:04312660786" className="no-underline hover:text-[#00a3e0] transition-colors">0431-2660786</a>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-slate-400 font-medium">

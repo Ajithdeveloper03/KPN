@@ -94,7 +94,7 @@ export default function ContactPage() {
       />
 
       {/* Container with standard padding since PageHero sits behind the fixed header */}
-      <main className="max-w-[1400px] w-full mx-auto px-6 py-12 lg:py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start flex-grow">
+      <main className="max-w-[1400px] w-full mx-auto px-6 py-6 lg:py-8 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start flex-grow">
 
         {/* Left Column (Details) */}
         <section className="lg:col-span-5 space-y-8">

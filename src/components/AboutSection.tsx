@@ -95,12 +95,12 @@ export default function AboutSection() {
         {/* Mobile Image Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full" data-reveal="stagger">
           {[
-            "/images/services/factory1.webp",
-            "/images/services/poultry.webp",
-            "/images/services/cricket-image-1.webp",
-            "/images/animal1.webp",
+            "/images/factory.webp",
             "/images/goat1.webp",
-            "/images/factory.webp"
+            "/images/terrace.webp",
+            "/images/animal1.webp",
+            "/images/goat3.webp",
+            "/images/mate1.webp"
           ].map((src, idx) => (
             <div key={idx} onClick={() => setSelectedImage(src)} data-reveal="image" className="relative aspect-square rounded-2xl overflow-hidden shiny-hover cursor-pointer">
               <Image src={src} sizes="(max-width: 768px) 50vw, 33vw" alt={`About KPN ${idx}`} fill className="object-cover transition-transform duration-700 hover:scale-110" />
