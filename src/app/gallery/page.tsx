@@ -114,8 +114,7 @@ export default function GalleryPage() {
         {/* Load More Button */}
         {visibleCount < galleryItems.length && (
           <div className="mt-20 text-center">
-            <button
-              onClick={handleLoadMore}
+            <button id="page-button-124" onClick={handleLoadMore}
               className="inline-flex items-center gap-2 bg-slate-900 text-white px-10 py-4 rounded-full font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#ee0000] hover:shadow-[0_10px_30px_rgba(238,0,0,0.3)] transition-all duration-300 transform hover:-translate-y-1"
             >
               Load More Projects

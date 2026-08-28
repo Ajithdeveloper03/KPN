@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   
   icons: {
     icon: [
-      { url: "/images/logo.webp", type: "image/jpeg", sizes: "any" },
+      { url: "/images/logo.webp", type: "image/webp", sizes: "any" },
     ],
     shortcut: "/images/logo.webp",
     apple: "/images/logo.webp",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "KPN Roofing Shed",
     images: [
       {
-        url: "/images/og-image.webp",
+        url: "/images/logo.webp",
         width: 1200,
         height: 630,
         alt: "KPN Roofing Shed - Roofing Shed Construction in India",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
     description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 10+ yrs, 600+ projects, award-winning team. Get a free quote today.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/logo.webp"],
   },
   robots: {
     index: true,
@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className="notranslate">
       <head>
-        <link rel="icon" href="/images/logo.webp" sizes="any" type="image/jpeg" />
+        <link rel="icon" href="/images/logo.webp" sizes="any" type="image/webp" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.webp" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FHPZGLQSQQ"

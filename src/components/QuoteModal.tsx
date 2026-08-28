@@ -83,8 +83,7 @@ export default function QuoteModal() {
 
         {/* Right Side: Form Content */}
         <div className="w-full md:w-1/2 p-8 max-h-[90vh] overflow-y-auto relative">
-          <button
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 border-0 text-2xl text-slate-500 cursor-pointer flex items-center justify-center hover:bg-slate-200 transition-colors z-10"
+          <button id="quotemodal-button-93" aria-label="Close quote modal" className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 border-0 text-2xl text-slate-500 cursor-pointer flex items-center justify-center hover:bg-slate-200 transition-colors z-10"
             onClick={() => setIsModalOpen(false)}
           >
             ×
@@ -179,8 +178,7 @@ export default function QuoteModal() {
                   />
                 </div>
 
-                <button
-                  type="submit"
+                <button id="quotemodal-button-94" type="submit"
                   disabled={formStatus === "submitting"}
                   className="w-full bg-[#ee0000] hover:bg-[#cc0000] text-white font-extrabold py-3.5 rounded-xl text-sm transition-all duration-300 shadow-[0_8px_20px_rgba(238,0,0,0.25)] mt-2 disabled:opacity-70 flex items-center justify-center gap-2 uppercase tracking-wider"
                 >

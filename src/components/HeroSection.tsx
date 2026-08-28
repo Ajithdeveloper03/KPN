@@ -278,8 +278,7 @@ export default function HeroSection() {
       {/* Mobile Dotted Navigation */}
       <div className="md:hidden absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 z-40 pointer-events-auto">
         {slides.map((slide, idx) => (
-          <button
-            key={`dot-${idx}`}
+          <button id="herosection-button-87" key={`dot-${idx}`}
             onClick={() => changeSlide(idx)}
             className={`w-3.5 h-3.5 rounded-full transition-all duration-300 border-2 ${currentSlide === idx ? 'scale-125 border-white shadow-lg' : 'bg-transparent border-white/60 hover:border-white'}`}
             style={{ backgroundColor: currentSlide === idx ? slides[currentSlide].color : undefined }}
@@ -291,8 +290,7 @@ export default function HeroSection() {
 
       {/* Floating Action Button (Desktop Only) */}
       <div className="hidden md:flex absolute bottom-10 right-10 z-40 pointer-events-auto">
-        <button
-          onClick={handleNext}
+        <button id="herosection-button-88" onClick={handleNext}
           disabled={isAnimating}
           aria-label="Next Slide"
           className="w-14 h-14 bg-[#ffcc00] border-none rounded-[1rem] flex items-center justify-center cursor-pointer shadow-xl hover:scale-110 active:scale-95 transition-transform"

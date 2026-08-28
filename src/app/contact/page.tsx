@@ -115,9 +115,9 @@ export default function ContactPage() {
                 Main Office
               </span>
               <div className="text-white text-2xl font-bold ml-11">
-                <a href="tel:+919788770786" className="hover:text-[#ee0000] transition-colors">9788770786</a>
+                <a id="page-a-116" href="tel:+919788770786" className="hover:text-[#ee0000] transition-colors">9788770786</a>
                 {", "}
-                <a href="tel:04312660786" className="hover:text-[#ee0000] transition-colors">0431-2660786</a>
+                <a id="page-a-117" href="tel:04312660786" className="hover:text-[#ee0000] transition-colors">0431-2660786</a>
               </div>
             </div>
             <div className="group">
@@ -127,7 +127,7 @@ export default function ContactPage() {
                 </div>
                 General Email
               </span>
-              <a href="mailto:kpnroofingsheds@gmail.com" className="text-white hover:text-[#ee0000] transition-colors text-xl font-medium ml-11">kpnroofingsheds@gmail.com</a>
+              <a id="page-a-118" href="mailto:kpnroofingsheds@gmail.com" className="text-white hover:text-[#ee0000] transition-colors text-xl font-medium ml-11">kpnroofingsheds@gmail.com</a>
             </div>
             <div className="group">
               <span className="text-xs uppercase tracking-[0.2em] text-slate-500 block mb-3 flex items-center gap-3 font-bold">
@@ -142,13 +142,13 @@ export default function ContactPage() {
 
           {/* Socials */}
           <div className="flex items-center gap-4 pt-2  ml-11">
-            <a href="https://www.facebook.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
+            <a id="page-a-119" href="https://www.facebook.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" /></svg>
             </a>
-            <a href="https://www.instagram.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
+            <a id="page-a-120" href="https://www.instagram.com/kpnroofingshed" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="https://www.youtube.com/@kpnroofingshedindia" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
+            <a id="page-a-121" href="https://www.youtube.com/@kpnroofingshedindia" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#ee0000] hover:text-white hover:border-[#ee0000] transition-all duration-300 shadow-lg">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
             </a>
           </div>
@@ -298,8 +298,7 @@ export default function ContactPage() {
               </label>
             </div>
 
-            <button
-              type="submit"
+            <button id="page-button-122" type="submit"
               disabled={formStatus === "submitting"}
               className="w-full bg-[#ee0000] text-white py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#cc0000] hover:shadow-[0_10px_30px_rgba(238,0,0,0.3)] transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
             >

@@ -77,8 +77,7 @@ export default function TableOfContents({ contentSelector = ".prose" }: { conten
           const isActive = activeId === item.id;
           return (
             <li key={item.id} className="relative">
-              <a
-                href={`#${item.id}`}
+              <a id="tableofcontents-a-99" href={`#${item.id}`}
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });

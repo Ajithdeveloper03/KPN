@@ -311,7 +311,7 @@ export default function IndustrialShedPage() {
                       </p>
                     </div>
                   </div>
-                  <Link href="/services/industrial-sheds/garment-factory-shed" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
+                  <Link id="page-Link-172" href="/services/industrial-sheds/garment-factory-shed" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
                     <ArrowRight strokeWidth={2} size={20} />
                   </Link>
                 </div>
@@ -328,7 +328,7 @@ export default function IndustrialShedPage() {
                   <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
                     <Image src="/images/factory.webp" alt="Chemical unit shed exterior photo" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                   </div>
-                  <Link href="/contact" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                  <Link id="page-Link-173" href="/contact" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                     <ArrowRight strokeWidth={2} size={20} />
                   </Link>
                 </div>
@@ -350,7 +350,7 @@ export default function IndustrialShedPage() {
                   <div className="relative w-[120%] h-[350px] -ml-10 rounded-tr-[2rem] overflow-hidden">
                     <Image src="/images/services/factory6.webp" alt="Warehouse shed with racking photo" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                   </div>
-                  <Link href="/services/industrial-sheds/warehouse-godown-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
+                  <Link id="page-Link-174" href="/services/industrial-sheds/warehouse-godown-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
                     <ArrowRight strokeWidth={2} size={20} />
                   </Link>
                 </div>
@@ -539,7 +539,7 @@ export default function IndustrialShedPage() {
               { name: "Garment Factory Shed", link: "/services/garment-factory-shed" },
               { name: "Warehouse & Godown Shed", link: "/services/warehouse-shed" },
             ].map((shed, idx) => (
-              <Link key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
+              <Link id="page-Link-175" key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
                 <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
                 <ArrowRight size={20} className="text-[#ee0000] group-hover:text-[#111] transition-colors" />
               </Link>
@@ -619,12 +619,12 @@ export default function IndustrialShedPage() {
                 </span>
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
-                <a href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
+                <a id="page-a-176" href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
                   Chat on WhatsApp
                 </a>
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
-                <a href="tel:+919788770786" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-3 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
+                <a id="page-a-177" href="tel:+919788770786" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-3 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
                   Call Now
                 </a>
               </div>

@@ -26,8 +26,7 @@ export default function ScrollToTop() {
 
   return (
     <div className={`fixed bottom-24 right-6 z-50 transition-all duration-300 md:bottom-8 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
-      <button
-        onClick={scrollToTop}
+      <button id="scrolltotop-button-95" onClick={scrollToTop}
         className="w-12 h-12 rounded-full bg-[#00a3e0] text-white shadow-lg flex items-center justify-center hover:bg-[#004b87] transition-colors focus:outline-none border-none cursor-pointer"
         aria-label="Scroll to top"
       >

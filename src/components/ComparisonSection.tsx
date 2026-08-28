@@ -71,8 +71,7 @@ export default function ComparisonSection() {
               const isActive = activeTab === idx;
               const Icon = item.icon;
               return (
-                <button
-                  key={idx}
+                <button id="comparisonsection-button-7" key={idx}
                   onClick={() => setActiveTab(idx)}
                   className={`flex items-center gap-4 w-full p-5 rounded-2xl transition-all duration-300 text-left border ${
                     isActive 

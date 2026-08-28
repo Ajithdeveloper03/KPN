@@ -241,7 +241,7 @@ export default function AgricultureAnimalHusbandryPage() {
                     </p>
                   </div>
                 </div>
-                <Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
+                <Link id="page-Link-135" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -258,7 +258,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/animal1.webp" alt="poultry shed manufacturers" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-136" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -280,7 +280,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/animal2.webp" alt="cow shed with milking area India" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-137" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -297,7 +297,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/animal5.webp" alt="cattle shed builders" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-138" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -555,7 +555,7 @@ export default function AgricultureAnimalHusbandryPage() {
               { name: "Poultry Shed", link: "/services/poultry-shed" },
               { name: "Cow / Cattle Shed", link: "/services/cattle-shed" },
             ].map((shed, idx) => (
-              <Link key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
+              <Link id="page-Link-139" key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
                 <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
                 <ArrowRight size={20} className="text-[#ee0000] group-hover:text-[#111] transition-colors" />
               </Link>
@@ -625,12 +625,12 @@ export default function AgricultureAnimalHusbandryPage() {
                 
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
-                <a href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
+                <a id="page-a-140" href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
                   Chat on WhatsApp
                 </a>
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
-                <a href="tel:+919788770786" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-3 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
+                <a id="page-a-141" href="tel:+919788770786" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-3 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
                   Call Now
                 </a>
               </div>

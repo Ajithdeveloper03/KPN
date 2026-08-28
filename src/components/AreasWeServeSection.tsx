@@ -55,8 +55,7 @@ export default function AreasWeServeSection() {
             <p className="mt-8 text-slate-500 text-base leading-relaxed font-medium">
               From Tamil Nadu to Maharashtra — our in-house engineers and installation crew travel to your site. Same quality, same accountability, every state.
             </p>
-            <button
-              onClick={() => openQuoteModal()}
+            <button id="areasweservesection-button-6" onClick={() => openQuoteModal()}
               className="mt-7 bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_25px_rgba(249,92,25,0.3)]"
             >
               Get Free Quote

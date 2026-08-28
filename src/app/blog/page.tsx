@@ -70,7 +70,7 @@ export default function BlogArchivePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, idx) => (
               <article key={idx} className="bg-white rounded-[2rem] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] overflow-hidden group hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col">
-                <Link href={`/blog/${post.slug}/`} className="relative w-full h-[240px] block overflow-hidden">
+                <Link id="page-Link-109" href={`/blog/${post.slug}/`} className="relative w-full h-[240px] block overflow-hidden">
                   <Image 
                     src={post.image || "/images/terrace.webp"} 
                     alt={post.title} 
@@ -86,7 +86,7 @@ export default function BlogArchivePage() {
                     <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.created_at).toLocaleDateString()}</span>
                     <span className="flex items-center gap-1"><Clock size={14} /> {post.read_time}</span>
                   </div>
-                  <Link href={`/blog/${post.slug}/`} className="block group-hover:text-[#ee0000] transition-colors mb-4">
+                  <Link id="page-Link-110" href={`/blog/${post.slug}/`} className="block group-hover:text-[#ee0000] transition-colors mb-4">
                     <h3 className="text-2xl font-bold text-[#111] leading-snug group-hover:text-[#ee0000] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
@@ -102,7 +102,7 @@ export default function BlogArchivePage() {
                       </div>
                       {post.author}
                     </div>
-                    <Link href={`/blog/${post.slug}/`} className="w-10 h-10 rounded-full bg-[#f8f9fa] group-hover:bg-[#ffcc00] flex items-center justify-center text-[#111] transition-colors">
+                    <Link id="page-Link-111" href={`/blog/${post.slug}/`} className="w-10 h-10 rounded-full bg-[#f8f9fa] group-hover:bg-[#ffcc00] flex items-center justify-center text-[#111] transition-colors">
                       <ArrowRight size={18} />
                     </Link>
                   </div>

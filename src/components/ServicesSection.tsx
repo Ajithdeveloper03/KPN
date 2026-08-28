@@ -107,8 +107,7 @@ export default function ServicesSection() {
       const isActive = index === activeIndex;
       const Icon = service.icon;
       return (
-        <button
-          key={index}
+        <button id="servicessection-button-96" key={index}
           onClick={() => { setActiveIndex(index); setIsPaused(true); }}
           className={`relative w-full flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 px-1 md:pb-6 md:pt-2 md:px-3 lg:px-6 transition-all duration-300 font-bold text-[10px] sm:text-xs md:text-base md:border-b-2 md:-mb-[2px] justify-center rounded-xl md:rounded-none
             ${isActive 
@@ -135,8 +134,7 @@ export default function ServicesSection() {
 
             
 
-            <button
-              onClick={openQuoteModal}
+            <button id="servicessection-button-97" onClick={openQuoteModal}
               className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold py-4 px-10 rounded-full transition-colors duration-300 shadow-[0_8px_25px_rgba(238,0,0,0.3)] text-base md:text-lg"
             >
               Request a Quote

@@ -137,25 +137,23 @@ export default function TestimonialsSection() {
                   </span>
                   <div className="flex gap-1">
                     {testimonials.map((_, i) => (
-                      <button
-                        key={i}
+                      <button id="testimonialssection-button-100" key={i}
                         onClick={() => setActiveIndex(i)}
-                        className={`h-1 rounded-full transition-all duration-500 ${i === activeIndex ? "bg-[#ee0000] w-6" : "bg-slate-200 w-2"}`}
+                        aria-label={`Go to slide ${i + 1}`}
+                        className={`relative after:absolute after:-inset-3 after:content-[''] h-1 rounded-full transition-all duration-500 ${i === activeIndex ? "bg-[#ee0000] w-6" : "bg-slate-200 w-2"}`}
                       />
                     ))}
                   </div>
                 </div>
 
                 <div className="flex gap-2">
-                  <button
-                    onClick={prevSlide}
+                  <button id="testimonialssection-button-101" onClick={prevSlide}
                     className="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center bg-white hover:bg-slate-50 transition-colors text-slate-600"
                     aria-label="Previous"
                   >
                     <ChevronLeft size={18} />
                   </button>
-                  <button
-                    onClick={nextSlide}
+                  <button id="testimonialssection-button-102" onClick={nextSlide}
                     className="w-9 h-9 rounded-full flex items-center justify-center bg-[#1e2229] hover:bg-black transition-colors text-white"
                     aria-label="Next"
                   >

@@ -128,8 +128,7 @@ export default function StatsSection() {
             <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed mb-8">
               Get the best construction experience built on the three pillars of Quality, Durability and Timely Delivery.
             </p>
-            <a
-              href="#services"
+            <a id="statssection-a-98" href="#services"
               className="bg-[#062088] hover:bg-[#8640c8] text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(155,81,224,0.3)]"
             >
               Learn More

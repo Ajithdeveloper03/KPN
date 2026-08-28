@@ -56,10 +56,10 @@ export default function IntegrationSection() {
 
         {/* Buttons */}
         <div className="flex flex-col items-center gap-4 z-20 mb-20 md:mb-32">
-          <button className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-orange-500/20">
+          <button id="integrationsection-button-89" className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-orange-500/20">
             Start for free
           </button>
-          <a href="#contact" className="text-slate-500 text-sm font-medium hover:text-[#1e2229] transition-colors no-underline inline-flex items-center gap-1 group">
+          <a id="integrationsection-a-90" href="#contact" className="text-slate-500 text-sm font-medium hover:text-[#1e2229] transition-colors no-underline inline-flex items-center gap-1 group">
             Want to talk or get a live demo? <span className="font-bold text-[#1e2229]">Get in touch</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>

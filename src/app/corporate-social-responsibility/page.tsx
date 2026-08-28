@@ -373,7 +373,7 @@ export default function CSRPage() {
           <div className="w-full md:w-1/3 flex flex-col gap-4">
             <h4 className="text-2xl font-bold text-white mb-2">Learn More About KPN</h4>
             <p className="text-blue-100 font-medium mb-4">Discover KPN Roofing Shed's commitment to responsible business and community development.</p>
-            <Link href="/contact" className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold py-4 px-8 rounded-full text-center transition-transform hover:-translate-y-1 shadow-lg flex items-center justify-center gap-2">
+            <Link id="page-Link-123" href="/contact" className="bg-[#ee0000] hover:bg-[#cc0000] text-white font-bold py-4 px-8 rounded-full text-center transition-transform hover:-translate-y-1 shadow-lg flex items-center justify-center gap-2">
               Contact KPN Roofing Shed <ArrowRight size={20} />
             </Link>
           </div>

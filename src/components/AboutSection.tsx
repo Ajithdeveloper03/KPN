@@ -58,7 +58,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <Link href="/about-us" className="inline-flex bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] items-center gap-3 group text-lg">
+          <Link id="aboutsection-Link-1" href="/about-us" className="inline-flex bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] items-center gap-3 group text-lg">
             More About Us
             <div className="bg-white text-[#062088] w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
               <ArrowUpRight size={20} strokeWidth={2.5} />
@@ -84,7 +84,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <Link href="/about-us" className="inline-flex self-start md:self-center bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] items-center gap-3 group text-lg">
+          <Link id="aboutsection-Link-2" href="/about-us" className="inline-flex self-start md:self-center bg-[#062088] hover:bg-[#041662] text-white font-bold py-3 pl-8 pr-3 rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(6,32,136,0.2)] items-center gap-3 group text-lg">
             More About Us
             <div className="bg-white text-[#062088] w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
               <ArrowUpRight size={20} strokeWidth={2.5} />
@@ -115,22 +115,19 @@ export default function AboutSection() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={handleClose}
         >
-          <button 
-            className="absolute top-4 right-4 text-white z-[60] bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+          <button id="aboutsection-button-3" className="absolute top-4 right-4 text-white z-[60] bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
             onClick={(e) => { e.stopPropagation(); handleClose(); }}
           >
             <X size={24} />
           </button>
           
           <div className="absolute bottom-24 sm:bottom-6 flex gap-4 z-[60]">
-            <button 
-              className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
+            <button id="aboutsection-button-4" className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
               onClick={(e) => { e.stopPropagation(); setZoom(z => Math.max(0.5, z - 0.25)); }}
             >
               <ZoomOut size={24} />
             </button>
-            <button 
-              className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
+            <button id="aboutsection-button-5" className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
               onClick={(e) => { e.stopPropagation(); setZoom(z => Math.min(3, z + 0.25)); }}
             >
               <ZoomIn size={24} />

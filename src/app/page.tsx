@@ -19,8 +19,8 @@ const QuoteModal = dynamic(() => import("@/components/QuoteModal"));
 import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "Roofing Shed Construction Company in India | KPN Roofing Shed",
-  description: "Top-rated roofing shed construction company in India. We specialize in industrial, commercial, and residential roofing sheds. Get a free quote today!",
+  title: "Roofing Shed Construction in India | KPN Roofing Shed",
+  description: "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds. Get a free quote today!",
   alternates: {
     canonical: "https://kpnroofingsheds.com",
   },

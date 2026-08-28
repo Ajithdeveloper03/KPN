@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About KPN Roofing Shed — Trusted Roofing Company Since 2016 | KPN",
-  description: "Learn about KPN Roofing Shed — a roofing shed construction company with 13+ years of experience building durable sheds for homes, farms, and industries across India.",
+  title: "About KPN Roofing Shed — Trusted Roofing Since 2016 | KPN",
+  description: "Learn about KPN Roofing Shed — a roofing shed construction business with 13+ years of experience building durable sheds for homes, farms, and industries across India.",
   alternates: {
     canonical: "https://kpnroofingsheds.com/about-us",
   },
@@ -192,7 +192,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Agriculture & Animal Husbandry</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Goat Farm Sheds, Dairy Farm Sheds, Poultry Farm Sheds, Cow Farm Sheds.</p>
-                <Link href="/services/agriculture-animal-husbandry-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-103" href="/services/agriculture-animal-husbandry-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -204,7 +204,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Industrial Roofing Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Factory Sheds, Garment & Textile Sheds, Warehouse & Godown Sheds.</p>
-                <Link href="/services/industrial-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-104" href="/services/industrial-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -216,7 +216,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Home Roofing Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Practical roofing solutions for residential properties including Terrace and Car Parking sheds.</p>
-                <Link href="/services/home-roofing-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-105" href="/services/home-roofing-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -228,7 +228,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Sports Turf Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Covered sports structures designed for facilities like Badminton and Cricket turfs.</p>
-                <Link href="/services/sports-turf-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-106" href="/services/sports-turf-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -425,10 +425,10 @@ export default function AboutUsPage() {
               <QuoteButton className="bg-[#ffcc00] text-[#111] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-colors inline-flex items-center gap-2">
                 Get Free Quote <ArrowRight size={20} />
               </QuoteButton>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#25D366] transition-colors inline-flex items-center gap-2 shadow-lg">
+              <a id="page-a-107" href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#25D366] transition-colors inline-flex items-center gap-2 shadow-lg">
                 <MessageCircle size={20} /> Chat on WhatsApp
               </a>
-              <a href="tel:+919999999999" className="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#004b87] transition-colors inline-flex items-center gap-2">
+              <a id="page-a-108" href="tel:+919999999999" className="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#004b87] transition-colors inline-flex items-center gap-2">
                 <Phone size={20} /> Call Now
               </a>
             </div>

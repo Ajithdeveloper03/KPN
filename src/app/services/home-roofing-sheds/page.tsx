@@ -184,7 +184,7 @@ export default function HomeRoofingShedsPage() {
                     </p>
                   </div>
                 </div>
-                <Link href="/services/home-roofing-sheds/terrace-roofing-shed" className="absolute bottom-10 right-10 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-152" href="/services/home-roofing-sheds/terrace-roofing-shed" className="absolute bottom-10 right-10 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -201,7 +201,7 @@ export default function HomeRoofingShedsPage() {
                 <div className="relative w-full h-[320px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/services/car5.webp" alt="Car Parking Sheds" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <Link href="/services/home-roofing-sheds/car-parking-shed" className="absolute bottom-10 right-10 md:top-10 md:bottom-auto w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-153" href="/services/home-roofing-sheds/car-parking-shed" className="absolute bottom-10 right-10 md:top-10 md:bottom-auto w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -376,7 +376,7 @@ export default function HomeRoofingShedsPage() {
               { name: "Terrace Roofing Shed", link: "/services/terrace-roofing-shed" },
               { name: "Car Parking Shed", link: "/services/car-parking-shed" },
             ].map((shed, idx) => (
-              <Link key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
+              <Link id="page-Link-154" key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
                 <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
                 <ArrowRight size={20} className="text-[#ee0000] group-hover:text-[#111] transition-colors" />
               </Link>
@@ -451,12 +451,12 @@ export default function HomeRoofingShedsPage() {
                 </span>
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
-                <a href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
+                <a id="page-a-155" href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-3 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
                   Chat on WhatsApp
                 </a>
               </div>
               <div className="w-full sm:w-auto flex flex-col items-center sm:self-start">
-                <a href="tel:+919788770786" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-3 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
+                <a id="page-a-156" href="tel:+919788770786" className="w-full sm:w-auto border border-blue-400 hover:border-white text-white font-semibold text-lg py-3 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
                   Call Now
                 </a>
               </div>

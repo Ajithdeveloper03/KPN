@@ -19,22 +19,19 @@ export default function CTASection() {
             </p>
             
             <div className="flex flex-wrap items-center gap-4 mb-6">
-              <button
-                onClick={() => openQuoteModal()}
+              <button id="ctasection-button-8" onClick={() => openQuoteModal()}
                 className="bg-white text-[#19191c] font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-gray-200 hover:scale-105 shadow-xl"
               >
                 Get Free Quote
               </button>
-              <a
-                href="https://wa.me/919788770786"
+              <a id="ctasection-a-9" href="https://wa.me/919788770786"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#25D366] text-white font-bold text-sm md:text-base px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#20bd5a] hover:scale-105 shadow-xl no-underline"
               >
                 Chat on WhatsApp
               </a>
-              <a
-                href="tel:+919788770786"
+              <a id="ctasection-a-10" href="tel:+919788770786"
                 className="bg-transparent text-white border-2 border-white font-bold text-sm md:text-base px-8 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:scale-105 no-underline"
               >
                 Call Now

@@ -476,10 +476,10 @@ export default function SportsTurfShedsPage() {
               <QuoteButton className="w-full sm:w-auto bg-[#ffcc00] text-[#111] font-semibold text-lg py-4 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center cursor-pointer">
                 Get Free Quote
               </QuoteButton>
-              <a href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-4 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
+              <a id="page-a-194" href="https://wa.me/919788770786" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white font-semibold text-lg py-4 px-10 rounded-full transition-transform hover:-translate-y-1 shadow-md flex items-center justify-center">
                 Chat on WhatsApp
               </a>
-              <a href="tel:+919788770786" className="w-full sm:w-auto border-2 border-blue-400 hover:border-white text-white font-semibold text-lg py-3.5 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
+              <a id="page-a-195" href="tel:+919788770786" className="w-full sm:w-auto border-2 border-blue-400 hover:border-white text-white font-semibold text-lg py-3.5 px-10 rounded-full transition-all hover:-translate-y-1 flex items-center justify-center">
                 Call Now
               </a>
             </div>
