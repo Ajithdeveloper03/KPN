@@ -8,7 +8,7 @@ import QuoteButton from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/sports-turf-sheds/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/sports-turf-sheds/",
   },
   title: 'Sports Turf Sheds India | Badminton & Cricket Turf Sheds | KPN',
   description: 'KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
@@ -18,6 +18,22 @@ export const metadata: Metadata = {
 export default function SportsTurfShedsPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/#webpage",
+          "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/",
+          "name": "Sports Turf Sheds India | Badminton & Cricket Turf Sheds | KPN",
+          "description": "KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       
       <script
         type="application/ld+json"
@@ -40,7 +56,14 @@ export default function SportsTurfShedsPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Sports Turf Shed Construction"
+            "serviceType": "Sports Turf Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />

@@ -7,16 +7,46 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/",
   },
   title: 'Cow & Dairy Farm Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds cow and dairy farm sheds across India with proper ventilation, milking areas, fodder storage and weather-resistant roofing. Get a free quote.',
-  keywords: 'dairy farm shed contractors India, cow shed construction India',
+  keywords: 'Dairy Farm Shed Contractors India, Cow Shed Solutions India, Cattle Shed Builders India',
 };
 
 export default function CowDairyFarmShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/",
+          "name": "Cow & Dairy Farm Shed Contractors India | KPN Roofing Shed",
+          "description": "KPN builds cow and dairy farm sheds across India with proper ventilation, milking areas, fodder storage and weather-resistant roofing. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Cow & Dairy Farm Shed Construction by KPN Roofing Shed",
+            "description": "Visual overview of KPN Roofing Shed's dairy farm and cow shed construction solutions.",
+            "thumbnailUrl": "https://kpnroofingsheds.com/images/cow.mp4",
+            "uploadDate": "2023-01-01T08:00:00+08:00",
+            "contentUrl": "https://kpnroofingsheds.com/images/cow.mp4"
+          })
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -74,7 +104,14 @@ export default function CowDairyFarmShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Cow Dairy Farm Shed Construction"
+            "serviceType": "Cow Dairy Farm Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -145,7 +182,7 @@ export default function CowDairyFarmShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-125" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-126" href="/services" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-126" href="/services/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Cow & Dairy Farm Shed</span>
           </div>

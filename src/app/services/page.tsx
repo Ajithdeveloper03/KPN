@@ -7,7 +7,7 @@ import { ArrowRight, Settings } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/",
   },
   title: 'Our Services | KPN Roofing Shed',
   description: 'Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.',
@@ -43,6 +43,22 @@ const servicesList = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/#webpage",
+          "url": "https://kpnroofingsheds.com/services/",
+          "name": "Our Services | KPN Roofing Shed",
+          "description": "Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

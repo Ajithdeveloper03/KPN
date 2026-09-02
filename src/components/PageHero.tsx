@@ -19,12 +19,19 @@ export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((crumb, idx) => ({
-      "@type": "ListItem",
-      "position": idx + 1,
-      "name": crumb.label,
-      "item": `https://kpnroofingsheds.com${crumb.href}`
-    }))
+    "itemListElement": breadcrumbs.map((crumb, idx) => {
+      // Ensure trailing slash unless it's root or an anchor
+      let itemUrl = `https://kpnroofingsheds.com${crumb.href}`;
+      if (!itemUrl.endsWith('/') && !itemUrl.includes('#')) {
+        itemUrl += '/';
+      }
+      return {
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": crumb.label,
+        "item": itemUrl
+      };
+    })
   };
 
   return (

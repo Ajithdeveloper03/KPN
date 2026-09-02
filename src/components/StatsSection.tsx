@@ -57,7 +57,7 @@ const statsCards = [
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
     color: "#ffe600",
-    img: "/images/animal2.webp"
+    img: "/images/csr/image (3).webp"
   }
 ];
 
@@ -105,8 +105,17 @@ export default function StatsSection() {
   return (
     <section id="stats" className="relative flex flex-col justify-center overflow-hidden py-4 md:py-6">
       {/* Fixed Background Image with light overlay */}
-      <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(/images/services/cricket-image-1.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
-        <div className="absolute inset-0 bg-gray-100" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src="/images/services/cricket-image-1.webp"
+          alt="Stats Background"
+          fill
+          quality={60}
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: 'center', position: 'fixed' }}
+        />
+        <div className="absolute inset-0 bg-gray-100/90" />
       </div>
 
       {/* Hide Webkit Scrollbar globally for this section */}
@@ -173,7 +182,8 @@ export default function StatsSection() {
                           src={card.img}
                           alt={card.title}
                           fill
-                          sizes="(max-width: 768px) 100vw, 33vw"
+                          quality={60}
+                          sizes="160px"
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       </div>

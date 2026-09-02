@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
   },
   title: 'Poultry Farm Shed Manufacturers India | KPN Roofing Shed',
   description: 'KPN builds poultry farm sheds across India for broiler, layer and breeder farms with proper ventilation, durable roofing and in-house engineering. Get a free quote.',
-  keywords: 'poultry farm shed manufacturers India, poultry shed construction India',
+  keywords: 'Poultry Shed Manufacturers India, Farm Infrastructure Solutions India',
 };
 
 export default function PoultryFarmShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+          "name": "Poultry Farm Shed Manufacturers India | KPN Roofing Shed",
+          "description": "KPN builds poultry farm sheds across India for broiler, layer and breeder farms with proper ventilation, durable roofing and in-house engineering. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -74,7 +90,14 @@ export default function PoultryFarmShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Poultry Farm Shed Construction"
+            "serviceType": "Poultry Farm Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -145,7 +168,7 @@ export default function PoultryFarmShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-142" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-143" href="/services" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-143" href="/services/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Poultry Farm Shed</span>
           </div>

@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/sports-turf-sheds/badminton-court-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
   },
   title: 'Badminton Court Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds badminton court sheds pan-India with Apollo Brand Steel, in-house engineers, and a 10-year guarantee. Get a free quote.',
-  keywords: 'badminton court shed contractors India, badminton court roofing India',
+  keywords: 'Badminton Court Shed India',
 };
 
 export default function BadmintonCourtShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
+          "name": "Badminton Court Shed Contractors India | KPN Roofing Shed",
+          "description": "KPN builds badminton court sheds pan-India with Apollo Brand Steel, in-house engineers, and a 10-year guarantee. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -73,7 +89,14 @@ export default function BadmintonCourtShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Badminton Court Shed Construction"
+            "serviceType": "Badminton Court Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -145,7 +168,7 @@ export default function BadmintonCourtShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-184" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-185" href="/services" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-185" href="/services/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Badminton Court Shed</span>
           </div>

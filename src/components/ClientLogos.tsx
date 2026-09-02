@@ -32,7 +32,8 @@ export default function ClientLogos() {
                 src={`/images/brands/${brand}`} 
                 alt={`Client Logo ${idx}`} 
                 width={140} 
-                height={80} 
+                height={80}
+                quality={60}
                 className="w-auto h-auto max-w-full max-h-full object-contain transition-transform duration-500 group-hover/logo:scale-110"
               />
             </div>

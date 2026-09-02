@@ -11,11 +11,11 @@ export default function Footer() {
   return (
     <>
       <footer className="relative bg-[#121316ea] border-t border-white/10 pt-16 pb-8 overflow-hidden">
-        {/* Dark Gradient for readability */}
+      
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#121316] to-transparent pointer-events-none" />
 
         <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_2fr_1.5fr] gap-10 md:gap-12 mb-12">
-          {/* Brand */}
+
           <div>
             <div className="flex items-center gap-3 mb-5">
               <Image
@@ -23,6 +23,7 @@ export default function Footer() {
                 alt="KPN Roofing Shed Logo"
                 width={48}
                 height={48}
+                quality={60}
                 className="rounded-xl"
               />
               <span className="text-xl font-extrabold text-white">KPN Roofing Shed</span>
@@ -32,37 +33,33 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Quick Links</h4>
             <ul className="list-none p-0 m-0 flex flex-col gap-3">
               <li><Link id="footer-Link-11" href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Home</Link></li>
-              <li><Link id="footer-Link-12" href="/about-us" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">About Us</Link></li>
-              <li><Link id="footer-Link-13" href="/corporate-social-responsibility" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Community</Link></li>
-              <li><Link id="footer-Link-14" href="/gallery" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Gallery</Link></li>
-              <li><Link id="footer-Link-15" href="/blog" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Blog</Link></li>
-              <li><Link id="footer-Link-16" href="/contact" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Contact Us</Link></li>
+              <li><Link id="footer-Link-12" href="/about-us/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">About Us</Link></li>
+              <li><Link id="footer-Link-13" href="/corporate-social-responsibility/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Community</Link></li>
+              <li><Link id="footer-Link-14" href="/gallery/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Gallery</Link></li>
+              <li><Link id="footer-Link-15" href="/blog/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Blog</Link></li>
+              <li><Link id="footer-Link-16" href="/contact/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Our Services */}
           <div>
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Our Services</h4>
             <ul className="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <li><Link id="footer-Link-17" href="/services/industrial-sheds/factory-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Factory Shed</Link></li>
-              <li><Link id="footer-Link-18" href="/services/industrial-sheds/garment-factory-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Garment Factory</Link></li>
-              <li><Link id="footer-Link-19" href="/services/industrial-sheds/warehouse-godown-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Warehouse Shed</Link></li>
-              <li><Link id="footer-Link-20" href="/services/home-roofing-sheds/terrace-roofing-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Terrace Roofing</Link></li>
-              <li><Link id="footer-Link-21" href="/services/home-roofing-sheds/car-parking-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Car Parking Shed</Link></li>
-              <li><Link id="footer-Link-22" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Goat Farm Shed</Link></li>
-              <li><Link id="footer-Link-23" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Cow Farm Shed</Link></li>
-              <li><Link id="footer-Link-24" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Poultry Farm</Link></li>
-              <li><Link id="footer-Link-25" href="/services/sports-turf-sheds/badminton-court-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Badminton Court</Link></li>
-              <li><Link id="footer-Link-26" href="/services/sports-turf-sheds/cricket-turf-shed" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Cricket Turf</Link></li>
+              <li><Link id="footer-Link-17" href="/services/industrial-sheds/factory-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Factory Shed</Link></li>
+              <li><Link id="footer-Link-18" href="/services/industrial-sheds/garment-factory-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Garment Factory</Link></li>
+              <li><Link id="footer-Link-19" href="/services/industrial-sheds/warehouse-godown-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Warehouse Shed</Link></li>
+              <li><Link id="footer-Link-20" href="/services/home-roofing-sheds/terrace-roofing-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Terrace Roofing</Link></li>
+              <li><Link id="footer-Link-21" href="/services/home-roofing-sheds/car-parking-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Car Parking Shed</Link></li>
+              <li><Link id="footer-Link-22" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Goat Farm Shed</Link></li>
+              <li><Link id="footer-Link-23" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Cow Farm Shed</Link></li>
+              <li><Link id="footer-Link-24" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Poultry Farm</Link></li>
+              <li><Link id="footer-Link-25" href="/services/sports-turf-sheds/badminton-court-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Badminton Court</Link></li>
+              <li><Link id="footer-Link-26" href="/services/sports-turf-sheds/cricket-turf-shed/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors text-sm">Cricket Turf</Link></li>
             </ul>
           </div>
-
-          {/* Contact */}
           <div>
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Contact Details</h4>
             <div className="flex flex-col gap-4">
@@ -70,7 +67,7 @@ export default function Footer() {
                 <svg className="shrink-0 mt-0.5 text-[#ee0000]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 <span>Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur, Tiruchirappalli, Tamil Nadu 620019</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-400 font-medium">
+              <div className="flex items-center gap-2 text-[14px] text-slate-400 font-medium">
                 <svg className="shrink-0 text-[#ee0000]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <div className="text-slate-400">
                   <a id="footer-a-27" href="tel:+919788770786" className="no-underline hover:text-[#00a3e0] transition-colors">+91 9788770786</a>
@@ -99,7 +96,6 @@ export default function Footer() {
 
       </footer>
 
-      {/* Sticky Mobile Footer */}
       <div className="fixed bottom-0 left-0 right-0 z-[200] bg-white border-t border-slate-200 shadow-lg md:hidden">
         <div className="grid grid-cols-2">
           <a id="footer-a-33" href="tel:+919788770786" className="flex items-center justify-center gap-2 py-4 bg-[#004b87] text-white font-bold text-sm no-underline">

@@ -8,16 +8,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/agriculture-animal-husbandry-sheds/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
   },
   title: 'Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed',
-  description: 'KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 10+ yrs experience, 20-day completion. Get a free quote.',
-  keywords: 'Animal Shed Solutions India, Agricultural Sheds India, Modern Farm Sheds India, Goat Farm Shed Builders India, Dairy Farm Shed Contractors India, Poultry Shed Manufacturers India, Cow Shed Solutions India, Cattle Shed Builders India, Farm Infrastructure Solutions India',
+  description: 'KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 13+ yrs experience, 20-day completion. Get a free quote.',
+  keywords: 'Agricultural Sheds India, Modern Farm Sheds India',
 };
 
 export default function AgricultureAnimalHusbandryPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/#webpage",
+          "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
+          "name": "Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed",
+          "description": "KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 13+ yrs experience, 20-day completion. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       
       <script
         type="application/ld+json"
@@ -40,7 +56,14 @@ export default function AgricultureAnimalHusbandryPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Agriculture & Animal Husbandry Shed Construction"
+            "serviceType": "Agriculture & Animal Husbandry Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -241,7 +264,7 @@ export default function AgricultureAnimalHusbandryPage() {
                     </p>
                   </div>
                 </div>
-                <Link id="page-Link-135" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
+                <Link id="page-Link-135" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -258,7 +281,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/animal1.webp" alt="poultry shed manufacturers" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-136" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-136" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -280,7 +303,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/animal2.webp" alt="cow shed with milking area India" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-137" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-137" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -297,7 +320,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/animal5.webp" alt="cattle shed builders" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-138" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-138" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>

@@ -121,6 +121,7 @@ export default function HeroSection() {
           src={isNightMode ? "/images/night-bg.webp" : "/images/hero-bg.png"}
           alt="KPN Hero Background"
           fill
+          quality={60}
           sizes="100vw"
           className="object-cover opacity-80 transition-opacity duration-1000"
           priority
@@ -160,8 +161,10 @@ export default function HeroSection() {
                 src={slide.frontImage}
                 alt={slide.title}
                 fill
+                quality={60}
                 sizes="(max-width: 768px) 100vw, 70vw"
                 priority={idx === 0}
+                loading={idx === 0 ? "eager" : "lazy"}
                 fetchPriority={idx === 0 ? "high" : "auto"}
                 className="object-cover md:object-contain object-bottom md:scale-[1.45] md:origin-bottom"
               />

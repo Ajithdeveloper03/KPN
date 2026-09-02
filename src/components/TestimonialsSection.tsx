@@ -91,18 +91,18 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Card */}
-        <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl" style={{ minHeight: 520 }}>
+        <div className="relative w-full md:rounded-[2rem] md:overflow-hidden md:shadow-2xl md:min-h-[520px]">
 
           {/* Single Static Background Image */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 hidden md:block">
             <Image src="/images/services/factory4.webp" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
           </div>
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 z-[1] hidden md:block" />
 
           {/* Floating Review Card */}
-          <div className="absolute bottom-0 right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-10 w-full md:w-[480px] lg:w-[520px] bg-white rounded-t-[2rem] md:rounded-[2rem] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] z-20">
+          <div className="relative mx-auto md:absolute md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-10 w-full md:w-[480px] lg:w-[520px] bg-white rounded-[2rem] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] z-20">
 
             {/* Quote icon */}
             <div className="w-10 h-10 rounded-full bg-[#ee0000]/10 flex items-center justify-center mb-6">
@@ -166,6 +166,35 @@ export default function TestimonialsSection() {
           </div>
         </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": "https://kpnroofingsheds.com/#localbusiness",
+            "name": "KPN Roofing Shed",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": testimonials.length.toString()
+            },
+            "review": testimonials.map(t => ({
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": t.name
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": t.rating.toString()
+              },
+              "reviewBody": t.quote
+            }))
+          })
+        }}
+      />
     </section>
   );
 }

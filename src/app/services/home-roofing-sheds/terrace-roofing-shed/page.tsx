@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/home-roofing-sheds/terrace-roofing-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/",
   },
   title: 'Terrace Roofing Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds terrace roofing sheds across India with durable roofing materials, in-house engineers, and a 10-year guarantee. Get a free quote.',
-  keywords: 'terrace shed contractors India, home roofing sheds India, terrace roofing shed, kerala tile style roofing',
+  keywords: 'Terrace Roofing Shed Contractors India',
 };
 
 export default function TerraceRoofingShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/",
+          "name": "Terrace Roofing Shed Contractors India | KPN Roofing Shed",
+          "description": "KPN builds terrace roofing sheds across India with durable roofing materials, in-house engineers, and a 10-year guarantee. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -120,7 +136,7 @@ export default function TerraceRoofingShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-157" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-158" href="/services/home-roofing-sheds" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-158" href="/services/home-roofing-sheds/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Terrace Roofing Shed</span>
           </div>

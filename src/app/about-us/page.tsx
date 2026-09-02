@@ -5,8 +5,8 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import QuoteButton from "@/components/QuoteButton";
 import AboutProcessSection from "@/components/AboutProcessSection";
-import { 
-  Building2, Tractor, Factory, Home, Activity, CheckCircle2, 
+import {
+  Building2, Tractor, Factory, Home, Activity, CheckCircle2,
   MapPin, Rocket, ShieldCheck, HeartHandshake, Wrench, ChevronRight, Phone, MessageCircle, ArrowRight, Plus, Minus
 } from "lucide-react";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "About KPN Roofing Shed — Trusted Roofing Since 2016 | KPN",
   description: "Learn about KPN Roofing Shed — a roofing shed construction business with 13+ years of experience building durable sheds for homes, farms, and industries across India.",
   alternates: {
-    canonical: "https://kpnroofingsheds.com/about-us",
+    canonical: "https://kpnroofingsheds.com/about-us/",
   },
 };
 
@@ -85,17 +85,17 @@ export default function AboutUsPage() {
           })
         }}
       />
-      <PageHero 
-        title="About KPN Roofing Shed" 
+      <PageHero
+        title="About KPN Roofing Shed"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us", href: "/about-us" }
-        ]} 
+        ]}
         bgImage="/images/factory.webp"
       />
 
       <main className="flex-grow">
-        
+
         {/* Introduction Section */}
         <section className="py-6 lg:py-8 max-w-[1400px] mx-auto px-6 overflow-hidden">
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -116,14 +116,14 @@ export default function AboutUsPage() {
                 </p>
               </div>
             </div>
-            
+
             <div className="w-full lg:w-1/2" data-reveal="image">
               <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 group">
-                <Image 
-                  src="/images/factory.webp" 
-                  alt="KPN Roofing Shed Construction Site" 
-                  fill sizes="100vw" 
-                  className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                <Image
+                  src="/images/factory.webp"
+                  alt="KPN Roofing Shed Construction Site"
+                  fill sizes="100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e2229]/80 to-transparent"></div>
                 <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -144,11 +144,11 @@ export default function AboutUsPage() {
             <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
               <div className="w-full md:w-5/12 lg:w-1/3" data-reveal="image">
                 <div className="relative w-full max-w-[400px] mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-[6px] border-white">
-                  <Image 
-                    src="/images/founder.webp" 
-                    alt="Mr. P. M. Punyamurthi Gobi - Founder of KPN Roofing Shed" 
-                    fill sizes="100vw" 
-                    className="object-cover" 
+                  <Image
+                    src="/images/founder.webp"
+                    alt="Mr. P. M. Punyamurthi Gobi - Founder of KPN Roofing Shed"
+                    fill sizes="100vw"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Agriculture & Animal Husbandry</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Goat Farm Sheds, Dairy Farm Sheds, Poultry Farm Sheds, Cow Farm Sheds.</p>
-                <Link id="page-Link-103" href="/services/agriculture-animal-husbandry-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-103" href="/services/agriculture-animal-husbandry-sheds/" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -204,7 +204,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Industrial Roofing Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Factory Sheds, Garment & Textile Sheds, Warehouse & Godown Sheds.</p>
-                <Link id="page-Link-104" href="/services/industrial-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-104" href="/services/industrial-sheds/" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -216,7 +216,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Home Roofing Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Practical roofing solutions for residential properties including Terrace and Car Parking sheds.</p>
-                <Link id="page-Link-105" href="/services/home-roofing-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-105" href="/services/home-roofing-sheds/" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -228,7 +228,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1e2229] mb-4">Sports Turf Sheds</h3>
                 <p className="text-slate-600 mb-6 flex-grow font-medium">Covered sports structures designed for facilities like Badminton and Cricket turfs.</p>
-                <Link id="page-Link-106" href="/services/sports-turf-sheds" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
+                <Link id="page-Link-106" href="/services/sports-turf-sheds/" className="inline-flex items-center text-[#00a3e0] font-bold hover:text-[#007ba8] transition-colors">
                   Explore Sheds <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -239,7 +239,7 @@ export default function AboutUsPage() {
         {/* The KPN Advantage */}
         <section className="bg-white py-6 lg:py-8 border-t border-slate-100">
           <div className="max-w-[1400px] mx-auto px-6">
-            
+
             {/* Centered Header */}
             <div className="text-center mb-16" data-reveal="stagger">
               <span className="px-4 py-2 rounded-full bg-[#e5f6fd] text-[#00a3e0] text-sm font-bold tracking-wider uppercase mb-6 inline-block">
@@ -249,7 +249,7 @@ export default function AboutUsPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-              
+
               {/* Left Column: 2 Features (Text Right) */}
               <div className="w-full space-y-12 order-2 lg:order-1" data-reveal="stagger">
                 <div className="flex flex-col lg:flex-row lg:text-right gap-5 items-start lg:items-center justify-end">
@@ -261,7 +261,7 @@ export default function AboutUsPage() {
                     <Wrench size={28} />
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col lg:flex-row lg:text-right gap-5 items-start lg:items-center justify-end">
                   <div className="order-2 lg:order-1 flex-1">
                     <h4 className="text-2xl font-bold mb-3 text-[#1e2229]">Technical Expertise</h4>
@@ -329,22 +329,22 @@ export default function AboutUsPage() {
         {/* Our Mission & Vision (Light Minimalist Layout) */}
         <section className="py-6 lg:py-8 bg-white relative overflow-hidden border-y border-slate-100">
           <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-            
+
             {/* The divide-x creates the vertical line between columns on desktop, divide-y for mobile */}
             <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-              
+
               {/* Mission Column */}
               <div className="flex flex-col items-center text-center p-8 md:p-12 lg:px-20 group" data-reveal="stagger">
                 {/* Large Icon */}
                 <div className="text-[#ee0000] mb-6 group-hover:scale-110 transition-transform duration-500">
                   <Rocket size={70} strokeWidth={1.5} />
                 </div>
-                
+
                 {/* Title */}
                 <h2 className="text-2xl font-black mb-6 tracking-wide uppercase">
                   <span className="text-[#1e2229]">Our</span> <span className="text-[#ee0000]">Mission</span>
                 </h2>
-                
+
                 {/* Text Content */}
                 <div className="space-y-4">
                   <p className="text-lg text-slate-600 font-medium leading-relaxed text-justify">
@@ -359,7 +359,7 @@ export default function AboutUsPage() {
                 <div className="text-[#00a3e0] mb-6 group-hover:scale-110 transition-transform duration-500">
                   <Building2 size={70} strokeWidth={1.5} />
                 </div>
-                
+
                 {/* Title */}
                 <h2 className="text-2xl font-black mb-6 tracking-wide uppercase">
                   <span className="text-[#1e2229]">Our</span> <span className="text-[#00a3e0]">Vision</span>

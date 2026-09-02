@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/industrial-sheds/warehouse-godown-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/",
   },
   title: 'Warehouse & Godown Shed Construction India | KPN Roofing Shed',
   description: 'KPN builds warehouse and godown sheds across India with clear-span layouts, weatherproof roofing and durable steel structures. Get a free quote.',
-  keywords: 'Warehouse Shed Builders India, godown roofing shed',
+  keywords: 'Warehouse Shed Builders India',
 };
 
 export default function WarehouseGodownShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/",
+          "name": "Warehouse & Godown Shed Construction India | KPN Roofing Shed",
+          "description": "KPN builds warehouse and godown sheds across India with clear-span layouts, weatherproof roofing and durable steel structures. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -120,7 +136,7 @@ export default function WarehouseGodownShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-178" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-179" href="/services/industrial-sheds" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-179" href="/services/industrial-sheds/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Warehouse Shed</span>
           </div>

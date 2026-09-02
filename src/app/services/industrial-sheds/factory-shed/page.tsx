@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/industrial-sheds/factory-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
   },
   title: 'Factory Shed Construction India | Industrial Shed Contractors | KPN',
   description: 'KPN builds factory sheds across India with steel and PEB structures, durable roofing, and in-house engineering. 10-year warranty. Get a free quote.',
-  keywords: 'Factory Shed Contractors India, industrial roofing solutions',
+  keywords: 'Factory Shed Contractors India',
 };
 
 export default function FactoryShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
+          "name": "Factory Shed Construction India | Industrial Shed Contractors | KPN",
+          "description": "KPN builds factory sheds across India with steel and PEB structures, durable roofing, and in-house engineering. 10-year warranty. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -74,7 +90,14 @@ export default function FactoryShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Factory Shed Construction"
+            "serviceType": "Factory Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -102,7 +125,7 @@ export default function FactoryShedPage() {
           <div className="flex items-center justify-center flex-wrap gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-162" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-163" href="/services/industrial-sheds" className="hover:text-white transition-colors">Industrial Sheds</Link>
+             <Link id="page-Link-163" href="/services/industrial-sheds/" className="hover:text-white transition-colors">Industrial Sheds</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Factory Shed</span>
           </div>

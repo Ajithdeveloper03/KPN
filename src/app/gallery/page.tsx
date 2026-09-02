@@ -60,6 +60,22 @@ export default function GalleryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/gallery/#webpage",
+          "url": "https://kpnroofingsheds.com/gallery/",
+          "name": "Agricultural Storage Shed",
+          "description": "KPN Roofing Shed Services",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageGallery",
             "name": "KPN Roofing Shed Projects Gallery",

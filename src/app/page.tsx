@@ -1,11 +1,12 @@
+
 import React from "react";
 import type { Metadata } from 'next';
 import HeroSection from "@/components/HeroSection";
-import ClientLogos from "@/components/ClientLogos";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import StatsSection from "@/components/StatsSection";
 import dynamic from 'next/dynamic';
+const ClientLogos = dynamic(() => import("@/components/ClientLogos"));
+const AboutSection = dynamic(() => import("@/components/AboutSection"));
+const ServicesSection = dynamic(() => import("@/components/ServicesSection"));
+const StatsSection = dynamic(() => import("@/components/StatsSection"));
 const ComparisonSection = dynamic(() => import("@/components/ComparisonSection"));
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
 const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"));
@@ -15,14 +16,14 @@ const CTASection = dynamic(() => import("@/components/CTASection"));
 const ScrollToTop = dynamic(() => import("@/components/ScrollToTop"));
 const QuoteModal = dynamic(() => import("@/components/QuoteModal"));
 
-
 import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
   title: "Roofing Shed Construction in India | KPN Roofing Shed",
   description: "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds. Get a free quote today!",
+  keywords: "Roofing Shed Construction Company India, Best Roofing Shed Contractors India, Steel Structure Company India",
   alternates: {
-    canonical: "https://kpnroofingsheds.com",
+    canonical: "https://kpnroofingsheds.com/",
   },
 };
 
@@ -34,7 +35,26 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "WebPage",
+            "@id": "https://kpnroofingsheds.com/#webpage",
+            "url": "https://kpnroofingsheds.com/",
+            "name": "Roofing Shed Construction in India | KPN Roofing Shed",
+            "description": "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds. Get a free quote today!",
+            "isPartOf": {
+              "@id": "https://kpnroofingsheds.com/#website"
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": [
+              "LocalBusiness",
+              "RoofingContractor"
+            ],
             "@id": "https://kpnroofingsheds.com/#localbusiness",
             "name": "KPN Roofing Shed",
             "url": "https://kpnroofingsheds.com/",
@@ -43,9 +63,10 @@ export default function Home() {
               "@type": "ImageObject",
               "url": "https://kpnroofingsheds.com/images/logo.webp"
             },
-            "description": "KPN Roofing Shed provides industrial, agricultural, home roofing, animal husbandry and sports turf shed construction solutions across India.",
+            "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
             "telephone": "+91-9788770786",
             "email": "kpnroofingshed555@gmail.com",
+            "priceRange": "Contact for pricing",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Plot No. 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",

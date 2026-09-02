@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/home-roofing-sheds/car-parking-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
   },
   title: 'Car Parking Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds single & multi-bay car parking sheds across India for homes, apartments & offices. In-house engineers, weather-proof design & 10-year guarantee. Get a quote.',
-  keywords: 'car parking shed contractors India, home roofing sheds India, car parking shed, multi-bay shed',
+  keywords: 'Car Parking Shed India',
 };
 
 export default function CarParkingShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
+          "name": "Car Parking Shed Contractors India | KPN Roofing Shed",
+          "description": "KPN builds single & multi-bay car parking sheds across India for homes, apartments & offices. In-house engineers, weather-proof design & 10-year guarantee. Get a quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -73,7 +89,14 @@ export default function CarParkingShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Car Parking Shed Construction"
+            "serviceType": "Car Parking Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -145,7 +168,7 @@ export default function CarParkingShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-147" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-148" href="/services/home-roofing-sheds" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-148" href="/services/home-roofing-sheds/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Car Parking Shed</span>
           </div>

@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/sports-turf-sheds/cricket-turf-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/sports-turf-sheds/cricket-turf-shed/",
   },
   title: 'Cricket Turf Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds cricket turf sheds across India with column-free steel spans, weatherproof roofing, in-house engineering, and a 10-year guarantee. Get a free quote.',
-  keywords: 'cricket turf shed contractors India, cricket practice net shed India',
+  keywords: 'Cricket Turf Shed Construction India',
 };
 
 export default function CricketTurfShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/cricket-turf-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/cricket-turf-shed/",
+          "name": "Cricket Turf Shed Contractors India | KPN Roofing Shed",
+          "description": "KPN builds cricket turf sheds across India with column-free steel spans, weatherproof roofing, in-house engineering, and a 10-year guarantee. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -73,7 +89,14 @@ export default function CricketTurfShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Cricket Turf Shed Construction"
+            "serviceType": "Cricket Turf Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -145,7 +168,7 @@ export default function CricketTurfShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-189" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-190" href="/services" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-190" href="/services/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Cricket Turf Shed</span>
           </div>

@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     default: "Roofing Shed Construction in India | KPN Roofing Shed",
     template: "%s | KPN Roofing Shed"
   },
-  description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 10+ yrs, 600+ projects, award-winning team. Get a free quote today.",
+  description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 13+ yrs, 1000+ projects, award-winning team. Get a free quote today.",
   keywords: "Roofing Shed Construction Company India, Roofing Shed Contractors India, Industrial Shed Construction India, Factory Shed Contractors India, Steel Structure Company India, Warehouse Shed Builders India, Agricultural Sheds India, Animal Shed Solutions India, Modern Farm Sheds India",
-  
+
   icons: {
     icon: [
       { url: "/images/logo.webp", type: "image/webp", sizes: "any" },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
-    description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 10+ yrs, 600+ projects, award-winning team. Get a free quote today.",
+    description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 13+ yrs, 1000+ projects, award-winning team. Get a free quote today.",
     url: "https://kpnroofingsheds.com",
     siteName: "KPN Roofing Shed",
     images: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
-    description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 10+ yrs, 600+ projects, award-winning team. Get a free quote today.",
+    description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 13+ yrs, 1000+ projects, award-winning team. Get a free quote today.",
     images: ["/images/logo.webp"],
   },
   robots: {
@@ -81,6 +81,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/images/logo.webp" sizes="any" type="image/webp" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.webp" />
+        <link rel="preload" href="/images/hero-bg.png" as="image" fetchpriority="high" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FHPZGLQSQQ"
           strategy="afterInteractive"
@@ -98,30 +99,44 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
-              "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp",
-              "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
-              "telephone": "+91-9788770786",
-              "email": "kpnroofingsheds@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",
-                "addressLocality": "Tiruchirappalli",
-                "addressRegion": "Tamil Nadu",
-                "postalCode": "620019",
-                "addressCountry": "IN"
-              },
-              "areaServed": {
-                "@type": "Country",
-                "name": "India"
-              },
-              "sameAs": [
-                "https://www.instagram.com/kpnroofingshed/",
-                "https://www.facebook.com/kpnroofingshed",
-                "https://www.youtube.com/@kpnroofingshedindia"
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://kpnroofingsheds.com/#website",
+                  "url": "https://kpnroofingsheds.com/",
+                  "name": "Kpn Roofing Shed",
+                  "description": "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds.",
+                  "publisher": {
+                    "@id": "https://kpnroofingsheds.com/#organization"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://kpnroofingsheds.com/#organization",
+                  "name": "KPN Roofing Shed",
+                  "url": "https://kpnroofingsheds.com/",
+                  "logo": "https://kpnroofingsheds.com/images/logo.webp",
+                  "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
+                  "telephone": "+91-9788770786",
+                  "email": "kpnroofingsheds@gmail.com",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Plot no 151 E, 5th Cross W, South Extension, Amman Nagar, Pappakurichi Kattur",
+                    "addressLocality": "Tiruchirappalli",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "620019",
+                    "addressCountry": "IN"
+                  },
+                  "areaServed": {
+                    "@type": "Country",
+                    "name": "India"
+                  },
+                  "sameAs": [
+                    "https://www.instagram.com/kpnroofingshed/",
+                    "https://www.facebook.com/kpnroofingshed",
+                    "https://www.youtube.com/@kpnroofingshedindia"
+                  ]
+                }
               ]
             })
           }}

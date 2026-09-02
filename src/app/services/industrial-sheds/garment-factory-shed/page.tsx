@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/industrial-sheds/garment-factory-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/",
   },
   title: 'Garment & Textile Factory Shed Construction India | KPN Roofing Shed',
   description: 'KPN builds garment & textile factory sheds across India with proper ventilation, natural lighting and a 10-year warranty. Get a free quote.',
-  keywords: 'Garment Factory Shed India, textile production shed',
+  keywords: 'Garment Factory Shed India',
 };
 
 export default function GarmentFactoryShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/",
+          "name": "Garment & Textile Factory Shed Construction India | KPN Roofing Shed",
+          "description": "KPN builds garment & textile factory sheds across India with proper ventilation, natural lighting and a 10-year warranty. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -120,7 +136,7 @@ export default function GarmentFactoryShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-167" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-168" href="/services/industrial-sheds" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-168" href="/services/industrial-sheds/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Garment Factory</span>
           </div>

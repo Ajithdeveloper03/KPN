@@ -3,7 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Blog | KPN Roofing Shed",
+  description: "Expert advice, project showcases, and industry trends to help you make informed decisions about your next roofing shed project.",
+  alternates: {
+    canonical: "https://kpnroofingsheds.com/blog/",
+  },
+};
 export default function BlogArchivePage() {
   // Hardcoded static blog post as requested
   const staticBlog = {

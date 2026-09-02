@@ -8,7 +8,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/home-roofing-sheds/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/home-roofing-sheds/",
   },
   title: 'Home Roofing Sheds India | Terrace & Car Parking Sheds',
   description: 'KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
@@ -18,6 +18,22 @@ export const metadata: Metadata = {
 export default function HomeRoofingShedsPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/#webpage",
+          "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/",
+          "name": "Home Roofing Sheds India | Terrace & Car Parking Sheds",
+          "description": "KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       
       <script
         type="application/ld+json"
@@ -40,7 +56,14 @@ export default function HomeRoofingShedsPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Home Roofing Shed Construction"
+            "serviceType": "Home Roofing Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -184,7 +207,7 @@ export default function HomeRoofingShedsPage() {
                     </p>
                   </div>
                 </div>
-                <Link id="page-Link-152" href="/services/home-roofing-sheds/terrace-roofing-shed" className="absolute bottom-10 right-10 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-152" href="/services/home-roofing-sheds/terrace-roofing-shed/" className="absolute bottom-10 right-10 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>
@@ -201,7 +224,7 @@ export default function HomeRoofingShedsPage() {
                 <div className="relative w-full h-[320px] rounded-[1.5rem] overflow-hidden">
                   <Image src="/images/services/car5.webp" alt="Car Parking Sheds" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-153" href="/services/home-roofing-sheds/car-parking-shed" className="absolute bottom-10 right-10 md:top-10 md:bottom-auto w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <Link id="page-Link-153" href="/services/home-roofing-sheds/car-parking-shed/" className="absolute bottom-10 right-10 md:top-10 md:bottom-auto w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
                 </Link>
               </div>

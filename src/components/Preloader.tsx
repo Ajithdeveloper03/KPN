@@ -8,6 +8,11 @@ export default function Preloader() {
   const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      setLoading(false);
+      return;
+    }
+
     // Wait for the window to load (or a small delay) before fading out
     const timeout = setTimeout(() => {
       setIsFading(true);

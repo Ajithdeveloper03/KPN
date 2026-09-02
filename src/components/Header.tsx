@@ -40,6 +40,7 @@ export default function Header() {
             alt="KPN Roofing Shed Logo"
             width={92}
             height={72}
+            quality={60}
             className="rounded-xl shadow-lg"
             priority
           />
@@ -48,14 +49,14 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-8 list-none m-0 p-0 items-center">
             <li><Link id="header-Link-36" href="/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Home</Link></li>
-            <li><Link id="header-Link-37" href="/about-us" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>About Us</Link></li>
+            <li><Link id="header-Link-37" href="/about-us/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>About Us</Link></li>
             
             {/* Services Mega Menu */}
             <li 
               className="relative group"
               onMouseLeave={() => setIsDropdownClicked(false)}
             >
-              <Link id="header-Link-38" href="/services" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>
+              <Link id="header-Link-38" href="/services/" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>
                 Services
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </Link>
@@ -69,63 +70,63 @@ export default function Header() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                   {/* Column 1 */}
                   <div className="flex flex-col gap-6">
-                    <Link id="header-Link-39" href="/services/agriculture-animal-husbandry-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/goat1.webp" alt="Agriculture" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                    <Link id="header-Link-39" href="/services/agriculture-animal-husbandry-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                      <Image src="/images/goat1.webp" alt="Agriculture" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Agriculture & Animal Husbandry</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link id="header-Link-40" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Tractor size={18} className="text-[#ee0000]" /> Goat Farm Shed</Link></li>
-                      <li><Link id="header-Link-41" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Droplets size={18} className="text-[#ee0000]" /> Dairy Farm Shed</Link></li>
-                      <li><Link id="header-Link-42" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Feather size={18} className="text-[#ee0000]" /> Poultry Farm Shed</Link></li>
+                      <li><Link id="header-Link-40" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Tractor size={18} className="text-[#ee0000]" /> Goat Farm Shed</Link></li>
+                      <li><Link id="header-Link-41" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Droplets size={18} className="text-[#ee0000]" /> Dairy Farm Shed</Link></li>
+                      <li><Link id="header-Link-42" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Feather size={18} className="text-[#ee0000]" /> Poultry Farm Shed</Link></li>
                     </ul>
                   </div>
                   
                   {/* Column 2 */}
                   <div className="flex flex-col gap-6">
-                    <Link id="header-Link-43" href="/services/industrial-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/factory.webp" alt="Industrial Shed" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                    <Link id="header-Link-43" href="/services/industrial-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                      <Image src="/images/factory.webp" alt="Industrial Shed" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Industrial<br/>Shed</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link id="header-Link-44" href="/services/industrial-sheds/factory-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Factory size={18} className="text-[#ee0000]" /> Factory Shed</Link></li>
-                      <li><Link id="header-Link-45" href="/services/industrial-sheds/garment-factory-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Shirt size={18} className="text-[#ee0000]" /> Garment Factory Shed</Link></li>
-                      <li><Link id="header-Link-46" href="/services/industrial-sheds/warehouse-godown-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Warehouse size={18} className="text-[#ee0000]" /> Warehouse & Godown</Link></li>
+                      <li><Link id="header-Link-44" href="/services/industrial-sheds/factory-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Factory size={18} className="text-[#ee0000]" /> Factory Shed</Link></li>
+                      <li><Link id="header-Link-45" href="/services/industrial-sheds/garment-factory-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Shirt size={18} className="text-[#ee0000]" /> Garment Factory Shed</Link></li>
+                      <li><Link id="header-Link-46" href="/services/industrial-sheds/warehouse-godown-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Warehouse size={18} className="text-[#ee0000]" /> Warehouse & Godown</Link></li>
                     </ul>
                   </div>
                   
                   {/* Column 3 */}
                   <div className="flex flex-col gap-6">
-                    <Link id="header-Link-47" href="/services/home-roofing-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/terrace.webp" alt="Home Roofing" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                    <Link id="header-Link-47" href="/services/home-roofing-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                      <Image src="/images/terrace.webp" alt="Home Roofing" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Home Roofing<br/>Sheds</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link id="header-Link-48" href="/services/home-roofing-sheds/terrace-roofing-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Home size={18} className="text-[#ee0000]" /> Terrace Roofing Shed</Link></li>
-                      <li><Link id="header-Link-49" href="/services/home-roofing-sheds/car-parking-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Car size={18} className="text-[#ee0000]" /> Car Parking Shed</Link></li>
+                      <li><Link id="header-Link-48" href="/services/home-roofing-sheds/terrace-roofing-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Home size={18} className="text-[#ee0000]" /> Terrace Roofing Shed</Link></li>
+                      <li><Link id="header-Link-49" href="/services/home-roofing-sheds/car-parking-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Car size={18} className="text-[#ee0000]" /> Car Parking Shed</Link></li>
                     </ul>
                   </div>
                   
                   {/* Column 4 */}
                   <div className="flex flex-col gap-6">
-                    <Link id="header-Link-50" href="/services/sports-turf-sheds" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/services/sports-turf-main-banner.webp" alt="Sports Turf" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                    <Link id="header-Link-50" href="/services/sports-turf-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
+                      <Image src="/images/services/sports-turf-main-banner.webp" alt="Sports Turf" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Sports<br/>Turf</h4>
                       </div>
                     </Link>
                     <ul className="flex flex-col gap-4 list-none p-0 m-0 pl-1">
-                      <li><Link id="header-Link-51" href="/services/sports-turf-sheds/badminton-court-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Activity size={18} className="text-[#ee0000]" /> Badminton Court</Link></li>
-                      <li><Link id="header-Link-52" href="/services/sports-turf-sheds/cricket-turf-shed" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Trophy size={18} className="text-[#ee0000]" /> Cricket Turf Shed</Link></li>
+                      <li><Link id="header-Link-51" href="/services/sports-turf-sheds/badminton-court-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Activity size={18} className="text-[#ee0000]" /> Badminton Court</Link></li>
+                      <li><Link id="header-Link-52" href="/services/sports-turf-sheds/cricket-turf-shed/" className="text-slate-700 hover:text-[#00a3e0] text-sm font-bold transition-colors flex items-center gap-3"><Trophy size={18} className="text-[#ee0000]" /> Cricket Turf Shed</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -134,21 +135,21 @@ export default function Header() {
 
             {/* Community Dropdown */}
             <li className="relative group">
-              <Link id="header-Link-53" href="/corporate-social-responsibility" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>
+              <Link id="header-Link-53" href="/corporate-social-responsibility/" className={`cursor-pointer no-underline text-[15px] font-bold transition-colors duration-300 flex items-center gap-1 pb-6 -mb-6 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>
                 Community
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </Link>
               <div className="absolute top-full left-0 mt-2 w-[280px] bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-300 translate-y-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 overflow-hidden z-[100] border border-slate-100 flex flex-col py-2">
-                <Link id="header-Link-54" href="/corporate-social-responsibility" className="px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#00a3e0] transition-colors border-b border-slate-100 last:border-0">
+                <Link id="header-Link-54" href="/corporate-social-responsibility/" className="px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#00a3e0] transition-colors border-b border-slate-100 last:border-0">
                   Corporate Social Responsibility
                 </Link>
-                <Link id="header-Link-55" href="/gallery" className="px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#00a3e0] transition-colors border-b border-slate-100 last:border-0">
+                <Link id="header-Link-55" href="/gallery/" className="px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#00a3e0] transition-colors border-b border-slate-100 last:border-0">
                   Gallery
                 </Link>
               </div>
             </li>
-            <li><Link id="header-Link-56" href="/blog" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Blog</Link></li>
-            <li><Link id="header-Link-57" href="/contact" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Contact</Link></li>
+            <li><Link id="header-Link-56" href="/blog/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Blog</Link></li>
+            <li><Link id="header-Link-57" href="/contact/" className={`no-underline text-[15px] font-bold transition-colors duration-300 ${forceNightModeStyles ? 'text-white hover:text-slate-300' : 'text-black hover:text-[#00a3e0]'}`}>Contact</Link></li>
           </ul>
         </nav>
 
@@ -181,10 +182,10 @@ export default function Header() {
       <div className={`fixed inset-0 bg-white/95 backdrop-blur-md z-[105] transition-transform duration-300 flex flex-col pt-24 pb-8 px-8 md:hidden overflow-y-auto ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <ul className="flex flex-col gap-6 list-none m-0 p-0">
           <li><Link id="header-Link-62" href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Home</Link></li>
-          <li><Link id="header-Link-63" href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
+          <li><Link id="header-Link-63" href="/about-us/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">About Us</Link></li>
           <li className="flex flex-col">
             <div className="flex items-center justify-between w-full">
-              <Link id="header-Link-64" href="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] flex-grow text-left">
+              <Link id="header-Link-64" href="/services/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0] flex-grow text-left">
                 Services
               </Link>
               <button id="header-button-65" aria-label="Toggle Services Menu" onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)} className="p-2 text-slate-900 hover:text-[#00a3e0]">
@@ -194,38 +195,38 @@ export default function Header() {
             <div className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[800px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="pl-4 border-l-2 border-slate-200 flex flex-col gap-6 py-2">
                 <div>
-                  <Link id="header-Link-66" href="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-lg hover:text-[#cc0000] flex items-center gap-2 mb-4">
+                  <Link id="header-Link-66" href="/services/" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-lg hover:text-[#cc0000] flex items-center gap-2 mb-4">
                     View All Services <ArrowRight size={18} />
                   </Link>
                 </div>
                 <div>
-                  <Link id="header-Link-67" href="/services/agriculture-animal-husbandry-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Agriculture & Animal Husbandry →</Link>
+                  <Link id="header-Link-67" href="/services/agriculture-animal-husbandry-sheds/" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Agriculture & Animal Husbandry →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link id="header-Link-68" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
-                    <li><Link id="header-Link-69" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
-                    <li><Link id="header-Link-70" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Poultry Farm Shed</Link></li>
+                    <li><Link id="header-Link-68" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Goat Farm Shed</Link></li>
+                    <li><Link id="header-Link-69" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cow / Dairy Farm Shed</Link></li>
+                    <li><Link id="header-Link-70" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Poultry Farm Shed</Link></li>
                   </ul>
                 </div>
                 <div>
-                  <Link id="header-Link-71" href="/services/industrial-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Industrial Shed →</Link>
+                  <Link id="header-Link-71" href="/services/industrial-sheds/" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Industrial Shed →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link id="header-Link-72" href="/services/industrial-sheds/factory-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
-                    <li><Link id="header-Link-73" href="/services/industrial-sheds/garment-factory-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
-                    <li><Link id="header-Link-74" href="/services/industrial-sheds/warehouse-godown-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Warehouse & Godown Shed</Link></li>
+                    <li><Link id="header-Link-72" href="/services/industrial-sheds/factory-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Factory Shed</Link></li>
+                    <li><Link id="header-Link-73" href="/services/industrial-sheds/garment-factory-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Garment Factory Shed</Link></li>
+                    <li><Link id="header-Link-74" href="/services/industrial-sheds/warehouse-godown-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Warehouse & Godown Shed</Link></li>
                   </ul>
                 </div>
                 <div>
-                  <Link id="header-Link-75" href="/services/home-roofing-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Home Roofing Sheds →</Link>
+                  <Link id="header-Link-75" href="/services/home-roofing-sheds/" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Home Roofing Sheds →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link id="header-Link-76" href="/services/home-roofing-sheds/terrace-roofing-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
-                    <li><Link id="header-Link-77" href="/services/home-roofing-sheds/car-parking-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
+                    <li><Link id="header-Link-76" href="/services/home-roofing-sheds/terrace-roofing-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Terrace Roofing Shed</Link></li>
+                    <li><Link id="header-Link-77" href="/services/home-roofing-sheds/car-parking-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Car Parking Shed</Link></li>
                   </ul>
                 </div>
                 <div>
-                  <Link id="header-Link-78" href="/services/sports-turf-sheds" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Sports Turf →</Link>
+                  <Link id="header-Link-78" href="/services/sports-turf-sheds/" onClick={() => setIsMobileMenuOpen(false)} className="text-[#ee0000] font-bold text-sm uppercase tracking-widest mb-3 hover:text-[#cc0000] block">Sports Turf →</Link>
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                    <li><Link id="header-Link-79" href="/services/sports-turf-sheds/badminton-court-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
-                    <li><Link id="header-Link-80" href="/services/sports-turf-sheds/cricket-turf-shed" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
+                    <li><Link id="header-Link-79" href="/services/sports-turf-sheds/badminton-court-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Badminton Court Shed</Link></li>
+                    <li><Link id="header-Link-80" href="/services/sports-turf-sheds/cricket-turf-shed/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Cricket Turf Shed</Link></li>
                   </ul>
                 </div>
               </div>
@@ -238,13 +239,13 @@ export default function Header() {
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${isMobileCommunityOpen ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
               <ul className="pl-4 border-l-2 border-slate-200 flex flex-col gap-4 py-2 list-none m-0">
-                <li><Link id="header-Link-82" href="/corporate-social-responsibility" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Corporate Social Responsibility</Link></li>
-                <li><Link id="header-Link-83" href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Gallery</Link></li>
+                <li><Link id="header-Link-82" href="/corporate-social-responsibility/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Corporate Social Responsibility</Link></li>
+                <li><Link id="header-Link-83" href="/gallery/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-[#00a3e0] font-semibold text-lg">Gallery</Link></li>
               </ul>
             </div>
           </li>
-          <li><Link id="header-Link-84" href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Blog</Link></li>
-          <li><Link id="header-Link-85" href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Contact</Link></li>
+          <li><Link id="header-Link-84" href="/blog/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Blog</Link></li>
+          <li><Link id="header-Link-85" href="/contact/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-900 no-underline text-2xl font-extrabold hover:text-[#00a3e0]">Contact</Link></li>
         </ul>
         <div className="mt-10">
           <button id="header-button-86" onClick={() => { openQuoteModal(); setIsMobileMenuOpen(false); }} className="w-full bg-[#ee0000] text-white px-5 py-4 rounded-full text-lg font-bold">

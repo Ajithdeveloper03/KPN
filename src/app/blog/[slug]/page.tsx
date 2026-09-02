@@ -28,6 +28,9 @@ export async function generateMetadata({
   return {
     title: `${title} | KPN Roofing Shed`,
     description: "Read expert insights on roofing shed construction, industrial sheds, and agricultural sheds from KPN Roofing Shed.",
+    alternates: {
+      canonical: `https://kpnroofingsheds.com/blog/${slug}/`,
+    },
   };
 }
 
@@ -130,7 +133,7 @@ export default async function BlogDetailsPage({
               
               {/* Left: Metadata and Title */}
               <div>
-                <Link id="page-Link-112" href="/blog"
+                <Link id="page-Link-112" href="/blog/"
                   className="inline-flex items-center gap-2 text-sm font-bold text-[#ee0000] hover:text-[#ff3333] transition-colors mb-8 uppercase tracking-widest"
                 >
                   <ArrowLeft size={16} /> Back to Blog

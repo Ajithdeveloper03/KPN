@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Contact Us | KPN Roofing Shed",
   description: "Get in touch with KPN Roofing Shed for all your industrial, agricultural, and residential roofing needs in India. Request a free quote today.",
   alternates: {
-    canonical: "https://kpnroofingsheds.com/contact",
+    canonical: "https://kpnroofingsheds.com/contact/",
   },
 };
 

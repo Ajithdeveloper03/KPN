@@ -7,16 +7,32 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "src/app/services/agriculture-animal-husbandry-sheds/goat-farm-shed/page.tsx",
+    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
   },
   title: 'Goat Farm Shed Construction India | KPN Roofing Shed',
   description: 'KPN builds goat farm sheds across India with proper ventilation, durable roofing, and practical farm layouts. 10-year warranty. Get a free quote.',
-  keywords: 'goat farm shed construction India, goat shed manufacturers India',
+  keywords: 'Goat Farm Shed Builders India',
 };
 
 export default function GoatFarmShedPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d3436] font-sans selection:bg-[#d35400] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
+          "name": "Goat Farm Shed Construction India | KPN Roofing Shed",
+          "description": "KPN builds goat farm sheds across India with proper ventilation, durable roofing, and practical farm layouts. 10-year warranty. Get a free quote.",
+          "isPartOf": {
+                    "@id": "https://kpnroofingsheds.com/#website"
+          }
+})
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -74,7 +90,14 @@ export default function GoatFarmShedPage() {
               "@type": "Country",
               "name": "India"
             },
-            "serviceType": "Goat Farm Shed Construction"
+            "serviceType": "Goat Farm Shed Construction",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://kpnroofingsheds.com/contact/"
+            }
           })
         }}
       />
@@ -145,7 +168,7 @@ export default function GoatFarmShedPage() {
           <div className="flex items-center justify-center gap-2 text-white/80 font-medium text-sm md:text-base mb-10">
              <Link id="page-Link-130" href="/" className="hover:text-white transition-colors">Home</Link>
              <span>/</span>
-             <Link id="page-Link-131" href="/services" className="hover:text-white transition-colors">Services</Link>
+             <Link id="page-Link-131" href="/services/" className="hover:text-white transition-colors">Services</Link>
              <span>/</span>
              <span className="text-[#f39c12]">Goat Farm Shed</span>
           </div>
