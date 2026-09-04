@@ -141,13 +141,13 @@ export default function SportsTurfShedsPage() {
             {/* Right Side: Image Gallery */}
             <div className="w-full lg:w-1/2 flex items-center justify-center gap-2 md:gap-3 mt-16 lg:mt-0">
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/cricket-image-2.webp" alt="Sports Turf Shed" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/cricket-image-2.webp" alt="Exterior of a covered cricket turf shed beside a green field" fill sizes="100vw" className="object-cover" priority />
               </div>
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/images/services/sports-turf-main-banner.webp" alt="Badminton Court Shed India" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/sports-turf-main-banner.webp" alt="Covered multi-sport turf ground lit up at dusk" fill sizes="100vw" className="object-cover" priority />
               </div>
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/badminton-court-banner-image.webp" alt="Cricket Turf Construction India" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/badminton-court-banner-image.webp" alt="Three-court indoor badminton shed with green synthetic flooring" fill sizes="100vw" className="object-cover" priority />
               </div>
             </div>
 
@@ -237,9 +237,9 @@ export default function SportsTurfShedsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
               
               {/* Badminton */}
-              <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
+              <Link href="/services/sports-turf-sheds/badminton-court-shed/" className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative block">
                 <div className="relative w-full h-[300px] rounded-[1.5rem] overflow-hidden mb-10">
-                  <Image src="/images/services/cricket-image-1.webp" alt="Badminton Court Shed" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/cricket-image-1.webp" alt="Empty covered cricket practice pitch with artificial turf" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
                 <div className="px-6 flex justify-between items-end">
                   <div className="max-w-[85%] space-y-4">
@@ -250,13 +250,13 @@ export default function SportsTurfShedsPage() {
                     </p>
                   </div>
                 </div>
-                <QuoteButton className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
+                <span className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45">
                   <ArrowRight strokeWidth={2} size={20} />
-                </QuoteButton>
-              </div>
+                </span>
+              </Link>
               
               {/* Cricket */}
-              <div className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden flex flex-col justify-end">
+              <Link href="/services/sports-turf-sheds/cricket-turf-shed/" className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden flex flex-col justify-end">
                 <div className="px-6 max-w-[85%] space-y-4 mb-10">
                   <Trophy strokeWidth={1.2} size={42} className="text-[#062088] group-hover:text-[#111] transition-colors" />
                   <h3 className="text-2xl font-semibold text-[#111]">Cricket Turf Shed</h3>
@@ -265,12 +265,12 @@ export default function SportsTurfShedsPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/images/services/cricket-image-1.webp" alt="Cricket Turf Shed" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                  <Image src="/images/services/cricket-image-1.webp" alt="Empty covered cricket practice pitch with artificial turf" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <QuoteButton className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <span className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
-                </QuoteButton>
-              </div>
+                </span>
+              </Link>
 
             </div>
           </div>
@@ -343,7 +343,7 @@ export default function SportsTurfShedsPage() {
 
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/images/services/badminton-court-banner-image.webp" alt="KPN Shed Infrastructure" fill sizes="100vw" className="object-cover" />
+                  <Image src="/images/services/badminton-court-banner-image.webp" alt="Three-court indoor badminton shed with green synthetic flooring" fill sizes="100vw" className="object-cover" />
                 </div>
                 
                 <div className="relative -mt-16 mx-4 md:absolute md:mx-0 md:mt-0 md:right-auto md:-bottom-10 md:-left-12 lg:-left-20 bg-[#ffcc00] rounded-3xl p-6 md:p-10 shadow-2xl border border-[#ffcc00]/50 z-20 md:w-[480px]">
@@ -440,21 +440,14 @@ export default function SportsTurfShedsPage() {
 
         {/* ---------------- Interactive Accordion FAQ ---------------- */}
         <section className="bg-white py-6 lg:py-8 border-b border-slate-200 overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-20">
-            
-            <div className="w-full lg:w-5/12 flex flex-col">
-              <div className="mb-12">
-                <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
-                <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif font-medium lowercase italic">questions!</span>
-                </h2>
-              </div>
-              <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/images/services/cricket-image-2.webp" alt="FAQ Sports Turf Sheds" fill sizes="100vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
+          <div className="max-w-[1300px] mx-auto px-6">
+            <div className="mb-12 text-center">
+              <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
+              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
+                Frequently asked <br/> <span className="font-serif font-medium lowercase italic">questions!</span>
+              </h2>
             </div>
-            
-            <div className="w-full lg:w-7/12 space-y-4" itemScope itemType="https://schema.org/FAQPage">
+            <div className="w-full space-y-4" itemScope itemType="https://schema.org/FAQPage">
               {[
                 { q: "Does KPN Roofing Shed build badminton court sheds?", a: "Yes. KPN Roofing Shed designs and builds badminton court sheds engineered for weatherproof, all-season play. Every structure is planned with adequate roof height, structural clearance, and durable roofing materials to provide comfortable playing conditions." },
                 { q: "Does KPN Roofing Shed build cricket turf sheds?", a: "Yes. KPN Roofing Shed builds cricket turf sheds for practice nets and cricket turf facilities. The structures are designed with durable steel framing and weatherproof roofing to help keep the playing area usable throughout the year." },
@@ -482,7 +475,7 @@ export default function SportsTurfShedsPage() {
         {/* ---------------- High Impact CTA ---------------- */}
         <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/cricket-image-1.webp" alt="Sports Turf Sheds CTA" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/cricket-image-1.webp" alt="Empty covered cricket practice pitch with artificial turf" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

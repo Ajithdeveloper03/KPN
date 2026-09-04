@@ -9,7 +9,7 @@ export default function Preloader() {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      setLoading(false);
+      setTimeout(() => setLoading(false), 0);
       return;
     }
 
@@ -36,10 +36,11 @@ export default function Preloader() {
       <div className="relative animate-pulse flex flex-col items-center">
         <Image
           src="/images/logo.webp"
-          alt="KPN Roofing Shed Preloader"
+          alt="KPN Roofing Shed logo with peacock and house emblem"
           width={150}
           height={120}
           className="rounded-2xl shadow-xl mb-6"
+          style={{ width: "150px", height: "auto" }}
           priority
         />
         

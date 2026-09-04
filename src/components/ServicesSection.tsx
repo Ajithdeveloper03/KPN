@@ -12,7 +12,7 @@ const services = [
     title: "Industrial & Factory Shed Construction",
     desc: "Our industrial shed construction covers factories, warehouses, and godowns with heavy-gauge steel structures built for load-bearing equipment, racking, and vehicle movement. As factory shed contractors, we plan every structure around your production layout. Long spans and minimal columns give warehouse owners maximum usable floor space.",
     image: "/images/factory.webp",
-    alt: "Industrial factory warehouse shed construction by KPN",
+    alt: "Teal industrial factory shed with roller shutter doors and concrete plinth",
   },
   {
     category: "Agricultural",
@@ -20,7 +20,7 @@ const services = [
     title: "Agricultural & Animal Shed Solutions",
     desc: "KPN is a trusted name in agricultural sheds and animal shed solutions — goat, dairy, cattle, and poultry structures engineered for ventilation, drainage, and animal comfort. Our modern farm sheds are customizable in size and layout, from small farm setups to large commercial operations.",
     image: "/images/goat1.webp",
-    alt: "Agricultural farm animal shed solution by KPN",
+    alt: "Elevated goat farm shed with green-and-white cladding amid coconut palms",
   },
   {
     category: "Home Roofing",
@@ -28,7 +28,7 @@ const services = [
     title: "Home Roofing Sheds",
     desc: "Beyond farms and factories, we build terrace sheds, car parking shades, and other home shed structures. Our residential roofing sheds are built with the same durable, weatherproof roofing standards used across our large-scale industrial projects.",
     image: "/images/terrace.webp",
-    alt: "Home terrace parking shades roofing sheds by KPN",
+    alt: "Worker installing a red terrace roofing shed on a building",
   },
   {
     category: "Sports Turf",
@@ -36,7 +36,7 @@ const services = [
     title: "Sports Turf Shed Construction",
     desc: "We build all-season, weatherproof sports turf sheds including badminton courts and cricket turfs. Engineered with Apollo Brand Steel for wide, column-free spans, ensuring uninterrupted play and durable protection against harsh sun and monsoon rains.",
     image: "/images/services/sports-turf-main-banner.webp",
-    alt: "Badminton court and cricket turf sports shed by KPN",
+    alt: "Covered multi-sport turf ground lit up at dusk",
   }
 ];
 
@@ -70,7 +70,7 @@ export default function ServicesSection() {
       <div className="absolute inset-0 z-0 opacity-50">
         <Image
           src="/images/service-bg.webp"
-          alt="Services Background"
+          alt=""
           fill
           sizes="100vw"
           className="object-cover"
@@ -82,7 +82,7 @@ export default function ServicesSection() {
 
         {/* Header Section */}
         <div className="text-center mb-16" data-reveal="stagger">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#fecbc3] text-[#ee0000] font-bold text-sm tracking-wide mb-4 border border-[#00a3e0]/20">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#c21a00] text-[#3b0000] font-bold text-sm tracking-wide mb-4 border border-[#00a3e0]/20">
             <span className="w-2 h-2 rounded-full bg-[#ee0000]"></span>
            Services
           </div>

@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
 
           {/* Single Static Background Image */}
           <div className="absolute inset-0 hidden md:block">
-            <Image src="/images/services/factory4.webp" alt="Testimonials Background" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/factory4.webp" alt="Factory shed under construction with open steel column bays" fill sizes="100vw" className="object-cover" />
           </div>
 
           {/* Overlay */}

@@ -20,11 +20,12 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <Image
                 src="/images/logo.webp"
-                alt="KPN Roofing Shed Logo"
+                alt="KPN Roofing Shed logo with peacock and house emblem"
                 width={48}
                 height={48}
                 quality={60}
                 className="rounded-xl"
+                style={{ width: "48px", height: "auto" }}
               />
               <span className="text-xl font-extrabold text-white">KPN Roofing Shed</span>
             </div>
@@ -35,13 +36,13 @@ export default function Footer() {
 
           <div>
             <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Quick Links</h4>
-            <ul className="list-none p-0 m-0 flex flex-col gap-3">
-              <li><Link id="footer-Link-11" href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Home</Link></li>
-              <li><Link id="footer-Link-12" href="/about-us/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">About Us</Link></li>
-              <li><Link id="footer-Link-13" href="/corporate-social-responsibility/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Community</Link></li>
-              <li><Link id="footer-Link-14" href="/gallery/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Gallery</Link></li>
-              <li><Link id="footer-Link-15" href="/blog/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Blog</Link></li>
-              <li><Link id="footer-Link-16" href="/contact/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1.5">Contact Us</Link></li>
+            <ul className="list-none p-0 m-0 flex flex-col gap-2">
+              <li><Link id="footer-Link-11" href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Home</Link></li>
+              <li><Link id="footer-Link-12" href="/about-us/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">About Us</Link></li>
+              <li><Link id="footer-Link-13" href="/corporate-social-responsibility/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Community</Link></li>
+              <li><Link id="footer-Link-14" href="/gallery/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Gallery</Link></li>
+              <li><Link id="footer-Link-15" href="/blog/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Blog</Link></li>
+              <li><Link id="footer-Link-16" href="/contact/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Contact Us</Link></li>
             </ul>
           </div>
 

@@ -67,6 +67,49 @@ export default function HomeRoofingShedsPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does KPN build car parking sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN builds car parking sheds sized for single or multiple vehicles, engineered for weatherproof, durable coverage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a home roofing shed take to complete?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Timeline depends on the size of the terrace or parking area — smaller home roofing projects are typically completed faster than full farm or industrial sheds. Contact KPN for a project-specific timeline."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What warranty does KPN provide on home roofing sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN provides a 10-year guarantee, with free repair support for covered damage as per applicable warranty terms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN build home roofing sheds outside Tamil Nadu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN delivers home roofing projects pan-India."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <PageHero  
         title="Home Roofing Sheds" 
          bgImage="/images/terrace.webp" breadcrumbs={[
@@ -100,17 +143,17 @@ export default function HomeRoofingShedsPage() {
               
               {/* Image 1: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/car5.webp" alt="Terrace roofing sheds India" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/car5.webp" alt="Small car parking shed sheltering two cars against a boundary wall" fill sizes="100vw" className="object-cover" priority />
               </div>
               
               {/* Image 2: Long Height (Center) */}
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/images/services/car4.webp" alt="Home roofing shed construction" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/car4.webp" alt="Car parking shed sheltering three silver cars in a residential yard" fill sizes="100vw" className="object-cover" priority />
               </div>
               
               {/* Image 3: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/car4.webp" alt="Car parking shed contractors India" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/car4.webp" alt="Car parking shed sheltering three silver cars in a residential yard" fill sizes="100vw" className="object-cover" priority />
               </div>
 
             </div>
@@ -194,9 +237,9 @@ export default function HomeRoofingShedsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               
               {/* Terrace Roofing Shed */}
-              <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-6 pb-12 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative overflow-hidden">
+              <Link href="/services/home-roofing-sheds/terrace-roofing-shed/" className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-6 pb-12 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative overflow-hidden block">
                 <div className="relative w-full h-[320px] rounded-[1.5rem] overflow-hidden mb-10">
-                  <Image src="/images/services/car2.webp" alt="Terrace Roofing Sheds" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/services/car2.webp" alt="Large steel car parking shed with marked bays at a facility" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="px-4 flex justify-between items-end relative z-10">
                   <div className="max-w-[85%] space-y-4">
@@ -207,13 +250,13 @@ export default function HomeRoofingShedsPage() {
                     </p>
                   </div>
                 </div>
-                <Link id="page-Link-152" href="/services/home-roofing-sheds/terrace-roofing-shed/" className="absolute bottom-10 right-10 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <span className="absolute bottom-10 right-10 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
-                </Link>
-              </div>
+                </span>
+              </Link>
 
               {/* Car Parking Shed */}
-              <div className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-6 pb-12 border border-slate-200 shadow-sm group relative overflow-hidden flex flex-col-reverse md:flex-col">
+              <Link href="/services/home-roofing-sheds/car-parking-shed/" className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-6 pb-12 border border-slate-200 shadow-sm group relative overflow-hidden flex flex-col-reverse md:flex-col">
                 <div className="px-4 max-w-[85%] space-y-4 mb-10 mt-10 md:mt-0 relative z-10">
                   <Box strokeWidth={1.2} size={48} className="text-[#062088] group-hover:text-[#111] transition-colors" />
                   <h3 className="text-3xl font-semibold text-[#111]">Car Parking Shed</h3>
@@ -222,12 +265,12 @@ export default function HomeRoofingShedsPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[320px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/images/services/car5.webp" alt="Car Parking Sheds" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/services/car5.webp" alt="Small car parking shed sheltering two cars against a boundary wall" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-153" href="/services/home-roofing-sheds/car-parking-shed/" className="absolute bottom-10 right-10 md:top-10 md:bottom-auto w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <span className="absolute bottom-10 right-10 md:top-10 md:bottom-auto w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
-                </Link>
-              </div>
+                </span>
+              </Link>
 
             </div>
           </div>
@@ -305,7 +348,7 @@ export default function HomeRoofingShedsPage() {
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 {/* Image */}
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/images/services/car2.webp" alt="KPN Home Roofing" fill sizes="100vw" className="object-cover" />
+                  <Image src="/images/services/car2.webp" alt="Large steel car parking shed with marked bays at a facility" fill sizes="100vw" className="object-cover" />
                 </div>
                 
                 {/* The Floating Checklist Block */}
@@ -396,8 +439,8 @@ export default function HomeRoofingShedsPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              { name: "Terrace Roofing Shed", link: "/services/terrace-roofing-shed" },
-              { name: "Car Parking Shed", link: "/services/car-parking-shed" },
+              { name: "Terrace Roofing Shed", link: "/services/home-roofing-sheds/terrace-roofing-shed/" },
+              { name: "Car Parking Shed", link: "/services/home-roofing-sheds/car-parking-shed/" },
             ].map((shed, idx) => (
               <Link id="page-Link-154" key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
                 <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
@@ -409,22 +452,15 @@ export default function HomeRoofingShedsPage() {
 
         {/* ---------------- Interactive Accordion FAQ ---------------- */}
         <section className="bg-[#f8f9fc] py-6 lg:py-8 border-b border-slate-200 overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-20">
-            {/* Left Side: Typography & Image */}
-            <div className="w-full lg:w-5/12 flex flex-col">
-              <div className="mb-12">
-                <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
-                <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br/> <span className="font-serif font-medium lowercase italic">questions!</span>
-                </h2>
-              </div>
-              {/* Solid Image under the title */}
-              <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/images/services/car3.webp" alt="FAQ Home Roofing Sheds" fill sizes="100vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
+          <div className="max-w-[1300px] mx-auto px-6">
+            <div className="mb-12 text-center">
+              <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
+              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
+                Frequently asked <br/> <span className="font-serif font-medium lowercase italic">questions!</span>
+              </h2>
             </div>
-            {/* Right Side: Accordion */}
-            <div className="w-full lg:w-7/12 space-y-4" itemScope itemType="https://schema.org/FAQPage">
+            {/* Accordion */}
+            <div className="w-full space-y-4" itemScope itemType="https://schema.org/FAQPage">
               {[
                 { q: "Does KPN build car parking sheds?", a: "Yes. KPN builds car parking sheds sized for single or multiple vehicles, engineered for weatherproof, durable coverage." },
                 { q: "How long does a home roofing shed take to complete?", a: "Timeline depends on the size of the terrace or parking area — smaller home roofing projects are typically completed faster than full farm or industrial sheds. Contact KPN for a project-specific timeline." },
@@ -452,7 +488,7 @@ export default function HomeRoofingShedsPage() {
         <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/car5.webp" alt="Home Roofing Sheds CTA" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/car5.webp" alt="Small car parking shed sheltering two cars against a boundary wall" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

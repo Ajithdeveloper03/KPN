@@ -57,7 +57,7 @@ const statsCards = [
     title: "Award Winning",
     desc: "Best Entrepreneur Award by Tamilan Channel.",
     color: "#ffe600",
-    img: "/images/csr/image (3).webp"
+    img: "/images/csr/image-3.webp"
   }
 ];
 
@@ -108,12 +108,12 @@ export default function StatsSection() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/images/services/cricket-image-1.webp"
-          alt="Stats Background"
+          alt="Empty covered cricket practice pitch with artificial turf"
           fill
           quality={60}
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: 'center', position: 'fixed' }}
+          style={{ objectPosition: 'center' }}
         />
         <div className="absolute inset-0 bg-gray-100/90" />
       </div>

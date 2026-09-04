@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function AgricultureAnimalHusbandryPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] selection:bg-[#ffcc00] selection:text-[#111] flex flex-col font-sans">
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -95,7 +96,7 @@ export default function AgricultureAnimalHusbandryPage() {
                 "name": "How long does a farm shed take to complete?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A 1,440 sq.ft shed is completed in 20 days; a 2400 sq.ft shed takes about 1 month."
+                  "text": "A 1440 sq.ft shed is completed in 6 days; a 2400 sq.ft shed takes about 1 month."
                 }
               },
               {
@@ -104,6 +105,14 @@ export default function AgricultureAnimalHusbandryPage() {
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Yes. KPN delivers agricultural and animal shed projects pan-India, with strong demand from Maharashtra, Telangana, and Karnataka."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What flooring does KPN use in animal sheds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "KPN manufactures its own slatted floor mats in-house at its Coimbatore facility, using virgin raw material. The flooring comes with a 3-year replacement warranty and a 10-year guarantee, and helps with drainage, hygiene, and ventilation in the shed."
                 }
               }
             ]
@@ -143,17 +152,17 @@ export default function AgricultureAnimalHusbandryPage() {
               
               {/* Image 1: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/goat1.webp" alt="Goat Shed" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/goat1.webp" alt="Elevated goat farm shed with green-and-white cladding amid coconut palms" fill sizes="100vw" className="object-cover" priority />
               </div>
               
               {/* Image 2: Long Height (Center) */}
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/images/animal3.webp" alt="Dairy Shed" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/animal3.webp" alt="Animal shed under construction with blue roofing sheets and brick half-walls" fill sizes="100vw" className="object-cover" priority />
               </div>
               
               {/* Image 3: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/animal4.webp" alt="Poultry Shed" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/animal4.webp" alt="Green-and-white animal shed with mesh ventilation walls at dusk" fill sizes="100vw" className="object-cover" priority />
               </div>
 
             </div>
@@ -251,9 +260,9 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="space-y-6 lg:space-y-10">
               
               {/* Goat Shed - White Card */}
-              <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
+              <Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative block">
                 <div className="relative w-full h-[300px] rounded-[1.5rem] overflow-hidden mb-10">
-                  <Image src="/images/goat4.webp" alt="goat farm shed roofing India" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                  <Image src="/images/goat4.webp" alt="Blue elevated goat shed beside a maize field, KPN Roofing Shed branding visible" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
                 <div className="px-6 flex justify-between items-end">
                   <div className="max-w-[80%] space-y-4">
@@ -264,13 +273,13 @@ export default function AgricultureAnimalHusbandryPage() {
                     </p>
                   </div>
                 </div>
-                <Link id="page-Link-135" href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
+                <span className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45">
                   <ArrowRight strokeWidth={2} size={20} />
-                </Link>
-              </div>
+                </span>
+              </Link>
 
               {/* Poultry - Hover Yellow Card */}
-              <div className="bg-white hover:bg-[#ffcc00] transition-all duration-500 rounded-[2rem] p-10 pt-16 border border-slate-100 hover:border-[#ffcc00] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.2)] group relative overflow-hidden">
+              <Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="bg-white hover:bg-[#ffcc00] transition-all duration-500 rounded-[2rem] p-10 pt-16 border border-slate-100 hover:border-[#ffcc00] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.2)] group relative overflow-hidden block">
                 <div className="max-w-[80%] space-y-6 relative z-10 mb-16">
                   <Feather strokeWidth={1.2} size={50} className="text-[#111]" />
                   <h3 className="text-3xl font-semibold text-[#111]">Poultry Shed Manufacturers</h3>
@@ -279,12 +288,12 @@ export default function AgricultureAnimalHusbandryPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/images/animal1.webp" alt="poultry shed manufacturers" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                  <Image src="/images/animal1.webp" alt="Interior walkway of an animal shed with green slatted flooring and mesh pens" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-136" href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
+                <span className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center transition-all shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
-                </Link>
-              </div>
+                </span>
+              </Link>
 
             </div>
 
@@ -292,7 +301,7 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="space-y-6 lg:space-y-10 md:mt-24">
               
               {/* Dairy Shed - White Card */}
-              <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
+              <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative block">
                 <div className="max-w-[80%] space-y-6 mb-12">
                   <Droplets strokeWidth={1.2} size={42} className="text-[#00a3e0] group-hover:text-[#111] transition-colors" />
                   <h3 className="text-2xl font-semibold text-[#111]">Dairy Farm Shed Contractors</h3>
@@ -301,15 +310,15 @@ export default function AgricultureAnimalHusbandryPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[250px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/images/animal2.webp" alt="cow shed with milking area India" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                  <Image src="/images/animal2.webp" alt="Elevated cattle shed with a green-and-red slatted floor loading ramp" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-137" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <span className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#00a3e0] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
-                </Link>
-              </div>
+                </span>
+              </Link>
 
               {/* Cattle Shed - Light Gray Card */}
-              <div className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden">
+              <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden block">
                 <div className="px-6 max-w-[85%] space-y-4 mb-10">
                   <Box strokeWidth={1.2} size={42} className="text-[#062088] group-hover:text-[#111] transition-colors" />
                   <h3 className="text-2xl font-semibold text-[#111]">Cattle Shed Builders</h3>
@@ -318,12 +327,12 @@ export default function AgricultureAnimalHusbandryPage() {
                   </p>
                 </div>
                 <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                  <Image src="/images/animal5.webp" alt="cattle shed builders" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                  <Image src="/images/animal5.webp" alt="Front view of a green-and-white animal shed with mesh side walls" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                 </div>
-                <Link id="page-Link-138" href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                <span className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45 z-20">
                   <ArrowRight strokeWidth={2} size={20} />
-                </Link>
-              </div>
+                </span>
+              </Link>
             </div>
 
           </div>
@@ -331,7 +340,7 @@ export default function AgricultureAnimalHusbandryPage() {
           {/* Farm Infrastructure Solutions (Full Width Card) */}
           <div className="mt-8 lg:mt-12 bg-[#111] rounded-[2rem] p-10 md:p-16 shadow-lg relative overflow-hidden group">
             <div className="absolute inset-0 z-0">
-              <Image src="/images/animal6.webp" alt="Farm Infrastructure Background" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/images/animal6.webp" alt="Aerial view of an animal shed roof surrounded by coconut trees" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="absolute inset-0 z-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/70"></div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -374,7 +383,7 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
               {/* The "Laptop" replacement: A large crisp image of a shed */}
               <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                <Image src="/images/goat5.webp" alt="KPN Shed Infrastructure" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/goat5.webp" alt="Teal elevated goat shed on purple steel stilts with open flooring below" fill sizes="100vw" className="object-cover" />
               </div>
               
               {/* The Floating Checklist Block */}
@@ -468,13 +477,13 @@ export default function AgricultureAnimalHusbandryPage() {
             
             <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
               {[
-                { type: "Goat Farming", solution: "Goat Farm Shed", icon: <Tractor size={28} />, color: "#ee0000", bgLight: "#ffe6e6" },
-                { type: "Dairy Farming", solution: "Dairy / Cow Shed", icon: <Droplets size={28} />, color: "#00a3e0", bgLight: "#e6f7ff" },
-                { type: "Poultry Farming", solution: "Broiler / Layer Shed", icon: <Feather size={28} />, color: "#ffcc00", bgLight: "#fff9e6" },
-                { type: "Cattle Farming", solution: "Cattle Shed", icon: <Factory size={28} />, color: "#062088", bgLight: "#e6e9f3" },
-                { type: "Mixed Farming", solution: "Integrated Farm Infrastructure", icon: <Box size={28} />, color: "#475569", bgLight: "#f1f5f9" },
+                { type: "Goat Farming", solution: "Goat Farm Shed", icon: <Tractor size={28} />, color: "#ee0000", bgLight: "#ffe6e6", href: "/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" },
+                { type: "Dairy Farming", solution: "Dairy / Cow Shed", icon: <Droplets size={28} />, color: "#00a3e0", bgLight: "#e6f7ff", href: "/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" },
+                { type: "Poultry Farming", solution: "Broiler / Layer Shed", icon: <Feather size={28} />, color: "#ffcc00", bgLight: "#fff9e6", href: "/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" },
+                { type: "Cattle Farming", solution: "Cattle Shed", icon: <Factory size={28} />, color: "#062088", bgLight: "#e6e9f3", href: "/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" },
+                { type: "Mixed Farming", solution: "Integrated Farm Infrastructure", icon: <Box size={28} />, color: "#475569", bgLight: "#f1f5f9", href: "/contact/" },
               ].map((item, idx) => (
-                <div key={idx} className="flex flex-col md:flex-row items-center justify-between p-6 bg-white rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group gap-6 md:gap-0">
+                <Link href={item.href} key={idx} className="flex flex-col md:flex-row items-center justify-between p-6 bg-white rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group gap-6 md:gap-0 block">
                   
                   {/* Left: Farm Type */}
                   <div className="flex items-center gap-6 w-full md:w-5/12">
@@ -503,7 +512,7 @@ export default function AgricultureAnimalHusbandryPage() {
                     </div>
                   </div>
 
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -553,12 +562,12 @@ export default function AgricultureAnimalHusbandryPage() {
             <div className="w-full lg:w-1/2 relative flex items-center justify-center gap-4 sm:gap-6 lg:pl-8">
               <div className="w-1/2 relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-xl transform translate-y-8">
                 <div className="shiny-hover w-full h-full">
-                  <Image src="/images/mate1.webp" alt="Slatted Floor Mat Coimbatore" fill sizes="100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
+                  <Image src="/images/mate1.webp" alt="Slatted plastic flooring walkway inside an animal shed with red aisle and green pens" fill sizes="100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
                 </div>
               </div>
               <div className="w-1/2 relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl transform -translate-y-8">
                 <div className="shiny-hover w-full h-full">
-                  <Image src="/images/mate2.webp" alt="Floor Mat Detail" fill sizes="100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
+                  <Image src="/images/mate2.webp" alt="Close-up of KPN's in-house green slatted floor mat for animal sheds" fill sizes="100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
                 </div>
               </div>
             </div>
@@ -567,16 +576,16 @@ export default function AgricultureAnimalHusbandryPage() {
         </section>
         
         {/* ---------------- Explore by Shed Type ---------------- */}
-        {/* <section className="bg-white py-6 lg:py-8 max-w-[1300px] mx-auto px-6">
+        <section className="bg-white py-6 lg:py-8 max-w-[1300px] mx-auto px-6">
           <div className="mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#111] tracking-tight">Explore by <span className="font-serif font-medium text-[#ee0000] italic">Shed Type</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Goat Farm Shed", link: "/services/goat-farm-shed" },
-              { name: "Dairy Farm Shed", link: "/services/dairy-farm-shed" },
-              { name: "Poultry Shed", link: "/services/poultry-shed" },
-              { name: "Cow / Cattle Shed", link: "/services/cattle-shed" },
+              { name: "Goat Farm Shed", link: "/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" },
+              { name: "Dairy Farm Shed", link: "/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" },
+              { name: "Poultry Shed", link: "/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" },
+              { name: "Cow / Cattle Shed", link: "/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" },
             ].map((shed, idx) => (
               <Link id="page-Link-139" key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
                 <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
@@ -584,9 +593,7 @@ export default function AgricultureAnimalHusbandryPage() {
               </Link>
             ))}
           </div>
-        </section> */}
-
-        {/* ---------------- Interactive Accordion FAQ ---------------- */}
+        </section>
         <section className="bg-[#f8f9fc] py-6 lg:py-8 border-b border-slate-200 overflow-hidden">
           <div className="max-w-[1000px] mx-auto px-6">
             
@@ -627,7 +634,7 @@ export default function AgricultureAnimalHusbandryPage() {
         <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/goat6.webp" alt="Agriculture Sheds CTA" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/goat6.webp" alt="Blue elevated goat shed with mesh walls surrounded by coconut trees" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

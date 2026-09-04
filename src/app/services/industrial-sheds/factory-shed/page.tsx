@@ -101,12 +101,55 @@ export default function FactoryShedPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a factory shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A factory shed is a steel, PEB, or prefabricated industrial structure used for manufacturing, production, storage, workshops, and other industrial operations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which type of shed is suitable for a factory?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Steel and PEB factory sheds are suitable for many industrial applications because they can provide flexible layouts, wide clear-span areas, and scope for future expansion. The appropriate structure depends on the site, machinery, production requirements, and project design."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What height is suitable for a factory shed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A standard factory shed may have a roof height of around 20–30 feet, while high-clearance requirements may extend to approximately 30–35 feet. The final height depends on machinery, ventilation, lifting equipment, storage, and operational requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does KPN provide factory shed construction across India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. KPN Roofing Shed provides factory shed construction, industrial roofing, steel shed fabrication, and PEB shed installation services across India, subject to project requirements and site conditions."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* ---------------- 1. Hero Section ---------------- */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/services/factory7.webp" 
-            alt="Factory Shed — KPN" 
+            alt="Navy-blue factory shed with a roller shutter door and side entrance" 
             fill sizes="100vw" 
             className="object-cover" 
             priority
@@ -155,7 +198,7 @@ export default function FactoryShedPage() {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/images/services/factory6.webp" alt="Factory Shed India — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/factory6.webp" alt="Factory shed under construction with white plinth walls and blue sheeting" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#e67e22]/20 to-transparent"></div>
             </div>
           </div>
@@ -236,7 +279,7 @@ export default function FactoryShedPage() {
               <div className="lg:w-1/2 relative">
                  <div className="absolute inset-0 bg-[#3498db]/20 rounded-3xl transform rotate-2 scale-105"></div>
                  <div className="relative h-full min-h-[300px] rounded-3xl overflow-hidden shadow-xl">
-                   <Image src="/images/services/factory1.webp" alt="Factory Shed Applications" fill sizes="100vw" className="object-cover" />
+                   <Image src="/images/services/factory1.webp" alt="Factory shed with a roller shutter entrance and a parked motorbike" fill sizes="100vw" className="object-cover" />
                  </div>
               </div>
             </div>
@@ -379,7 +422,7 @@ export default function FactoryShedPage() {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/factory2.webp" alt="Factory Shed Compliance India — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/factory2.webp" alt="Aerial view of a warehouse and godown shed with trucks loading outside" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#d35400]/40 to-transparent"></div>
               <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[80%]">
                 <FileText className="text-[#d35400] mb-3" size={32} />
@@ -409,7 +452,7 @@ export default function FactoryShedPage() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image src="/images/services/factory4.webp" alt="Factory Shed — KPN" fill sizes="100vw" className="object-cover" />
+              <Image src="/images/services/factory4.webp" alt="Factory shed under construction with open steel column bays" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-bl from-[#3498db]/40 to-transparent"></div>
             </div>
           </div>
@@ -438,7 +481,7 @@ export default function FactoryShedPage() {
               
               {/* Center Image */}
               <div className="w-full lg:w-1/3 relative h-[400px] lg:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl z-0">
-                <Image src="/images/services/factory6.webp" alt="Why KPN" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/services/factory6.webp" alt="Factory shed under construction with white plinth walls and blue sheeting" fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-[#e67e22]/20 mix-blend-multiply"></div>
               </div>
               
@@ -491,7 +534,7 @@ export default function FactoryShedPage() {
         <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/services/factory8.webp" alt="Factory Shed — KPN" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/services/factory8.webp" alt="Chemical factory shed with process tanks and piping beneath the roof" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#d35400]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/60 z-10"></div>

@@ -121,7 +121,7 @@ export default function AboutUsPage() {
               <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 group">
                 <Image
                   src="/images/factory.webp"
-                  alt="KPN Roofing Shed Construction Site"
+                  alt="Teal industrial factory shed with roller shutter doors and concrete plinth"
                   fill sizes="100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -146,7 +146,7 @@ export default function AboutUsPage() {
                 <div className="relative w-full max-w-[400px] mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-[6px] border-white">
                   <Image
                     src="/images/founder.webp"
-                    alt="Mr. P. M. Punyamurthi Gobi - Founder of KPN Roofing Shed"
+                    alt="Mr. P.M. Puyamurthi (Gobi), Founder of KPN Roofing Shed"
                     fill sizes="100vw"
                     className="object-cover"
                   />
@@ -276,7 +276,7 @@ export default function AboutUsPage() {
               {/* Center Column: Image */}
               <div className="w-full order-1 lg:order-2" data-reveal="image">
                 <div className="relative w-full max-w-[450px] mx-auto aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-[#f8f9fa]">
-                  <Image src="/images/services/factory4.webp" alt="KPN Advantage Industrial Shed" fill sizes="100vw" className="object-cover" />
+                  <Image src="/images/services/factory4.webp" alt="Factory shed under construction with open steel column bays" fill sizes="100vw" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#004b87]/90 to-transparent flex items-end p-8">
                     <div className="text-white">
                       <div className="w-14 h-14 bg-[#ffcc00] text-[#111] rounded-2xl flex items-center justify-center mb-4">
@@ -411,7 +411,7 @@ export default function AboutUsPage() {
         {/* CTA Section */}
         <section className="py-6 lg:py-8 relative overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
-            <Image src="/images/goat2.webp" alt="Roofing Construction Site" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/goat2.webp" alt="Elevated goat shed under construction next to high-rise apartments" fill sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[#004b87]/95 mix-blend-multiply"></div>
           </div>
           <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-center">

@@ -76,42 +76,18 @@ export default function IndustrialShedPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What is a factory shed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A factory shed is a steel, PEB, or prefabricated industrial structure used for manufacturing, production, storage, workshops, and other industrial operations."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Which type of shed is suitable for a factory?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Steel and PEB factory sheds are suitable for many industrial applications because they can provide flexible layouts, wide clear-span areas, and scope for future expansion. The appropriate structure depends on the site, machinery, production requirements, and project design."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What height is suitable for a factory shed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A standard factory shed may have a roof height of around 20–30 feet, while high-clearance requirements may extend to approximately 30–35 feet. The final height depends on machinery, ventilation, lifting equipment, storage, and operational requirements."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does KPN provide factory shed construction across India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. KPN Roofing Shed provides factory shed construction, industrial roofing, steel shed fabrication, and PEB shed installation services across India, subject to project requirements and site conditions."
-                }
-              },
-              {
-                "@type": "Question",
                 "name": "How much warranty does KPN Roofing Shed offer on factory sheds?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "KPN provides a 10-year warranty on pipes and roofing sheets for all factory and industrial shed projects."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the payment structure for a factory shed project?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The payment plan is split into three stages: 50% at booking, 45% during processing, and the final 5% after work completion."
                 }
               },
               {
@@ -175,17 +151,17 @@ export default function IndustrialShedPage() {
 
               {/* Image 1: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/factory4.webp" alt="Industrial Shed — KPN" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/factory4.webp" alt="Factory shed under construction with open steel column bays" fill sizes="100vw" className="object-cover" priority />
               </div>
 
               {/* Image 2: Long Height (Center) */}
               <div className="relative w-1/3 h-[240px] sm:h-[300px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border-2 md:border-4 border-white">
-                <Image src="/images/factory (2).webp" alt="Industrial Shed — KPN" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/factory-2.webp" alt="Interior truss roof of an open cattle feeding shed with concrete troughs" fill sizes="100vw" className="object-cover" priority />
               </div>
 
               {/* Image 3: Medium Height */}
               <div className="relative w-1/3 h-[180px] sm:h-[220px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-                <Image src="/images/services/factory2.webp" alt="Industrial Shed — KPN" fill sizes="100vw" className="object-cover" priority />
+                <Image src="/images/services/factory2.webp" alt="Aerial view of a warehouse and godown shed with trucks loading outside" fill sizes="100vw" className="object-cover" priority />
               </div>
 
             </div>
@@ -255,7 +231,7 @@ export default function IndustrialShedPage() {
         {/* ---------------- What We Build (Table/Grid) ---------------- */}
         <section className="bg-white py-6 lg:py-8 border-b border-slate-200">
           <div className="max-w-[1300px] mx-auto px-6">
-            <div className="mb-12 text-center">
+            <div className="mb-12">
               <span className="px-5 py-2 rounded-full border border-slate-200 text-sm font-medium text-slate-600 tracking-wide uppercase mb-6 inline-block">
                 Our Expertise
               </span>
@@ -321,9 +297,9 @@ export default function IndustrialShedPage() {
               <div className="space-y-6 lg:space-y-10">
 
                 {/* Garment & Textile */}
-                <div className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative">
+                <Link href="/services/industrial-sheds/garment-factory-shed/" className="bg-white hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pb-10 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group relative block">
                   <div className="relative w-full h-[300px] rounded-[1.5rem] overflow-hidden mb-10">
-                    <Image src="/images/services/factory1.webp" alt="Garment and Textile unit shed interior" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                    <Image src="/images/services/factory1.webp" alt="Factory shed with a roller shutter entrance and a parked motorbike" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                   </div>
                   <div className="px-6 flex justify-between items-end">
                     <div className="max-w-[85%] space-y-4">
@@ -334,13 +310,13 @@ export default function IndustrialShedPage() {
                       </p>
                     </div>
                   </div>
-                  <Link id="page-Link-172" href="/services/industrial-sheds/garment-factory-shed/" className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45">
+                  <span className="absolute bottom-6 right-6 w-14 h-14 rounded-full bg-[#ee0000] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45">
                     <ArrowRight strokeWidth={2} size={20} />
-                  </Link>
-                </div>
+                  </span>
+                </Link>
 
                 {/* Chemical Unit */}
-                <div className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden">
+                <Link href="/contact/" className="bg-[#fafafa] hover:bg-[#ffcc00] transition-colors duration-500 rounded-[2rem] p-4 pt-10 border border-slate-200 shadow-sm group relative overflow-hidden block">
                   <div className="px-6 max-w-[85%] space-y-4 mb-10">
                     <Factory strokeWidth={1.2} size={42} className="text-[#062088] group-hover:text-[#111] transition-colors" />
                     <h3 className="text-2xl font-semibold text-[#111]">Chemical Unit Sheds</h3>
@@ -349,12 +325,12 @@ export default function IndustrialShedPage() {
                     </p>
                   </div>
                   <div className="relative w-full h-[280px] rounded-[1.5rem] overflow-hidden">
-                    <Image src="/images/factory.webp" alt="Chemical unit shed exterior photo" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                    <Image src="/images/factory.webp" alt="Teal industrial factory shed with roller shutter doors and concrete plinth" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                   </div>
-                  <Link id="page-Link-173" href="/contact/" className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg group-hover:-rotate-45 z-20">
+                  <span className="absolute top-8 right-8 w-14 h-14 rounded-full bg-[#062088] text-white flex items-center justify-center transition-transform shadow-lg group-hover:-rotate-45 z-20">
                     <ArrowRight strokeWidth={2} size={20} />
-                  </Link>
-                </div>
+                  </span>
+                </Link>
 
               </div>
 
@@ -362,7 +338,7 @@ export default function IndustrialShedPage() {
               <div className="space-y-6 lg:space-y-10 md:mt-24">
 
                 {/* Packaging & Warehouse Sheds */}
-                <div className="bg-white hover:bg-[#ffcc00] transition-all duration-500 rounded-[2rem] p-10 pt-16 border border-slate-100 hover:border-[#ffcc00] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.2)] group relative overflow-hidden">
+                <Link href="/services/industrial-sheds/warehouse-godown-shed/" className="bg-white hover:bg-[#ffcc00] transition-all duration-500 rounded-[2rem] p-10 pt-16 border border-slate-100 hover:border-[#ffcc00] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.2)] group relative overflow-hidden block">
                   <div className="max-w-[80%] space-y-6 relative z-10 mb-16">
                     <Warehouse strokeWidth={1.2} size={50} className="text-[#111]" />
                     <h3 className="text-3xl font-semibold text-[#111]">Packaging & Warehouse Sheds</h3>
@@ -371,12 +347,12 @@ export default function IndustrialShedPage() {
                     </p>
                   </div>
                   <div className="relative w-[120%] h-[350px] -ml-10 rounded-tr-[2rem] overflow-hidden">
-                    <Image src="/images/services/factory6.webp" alt="Warehouse shed with racking photo" fill sizes="100vw" className="object-cover transition-transform duration-700" />
+                    <Image src="/images/services/factory6.webp" alt="Factory shed under construction with white plinth walls and blue sheeting" fill sizes="100vw" className="object-cover transition-transform duration-700" />
                   </div>
-                  <Link id="page-Link-174" href="/services/industrial-sheds/warehouse-godown-shed/" className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center hover:scale-110 transition-all shadow-lg group-hover:-rotate-45 z-20">
+                  <span className="absolute top-10 right-10 w-14 h-14 rounded-full bg-[#111] group-hover:bg-white text-white group-hover:text-[#111] flex items-center justify-center transition-all shadow-lg group-hover:-rotate-45 z-20">
                     <ArrowRight strokeWidth={2} size={20} />
-                  </Link>
-                </div>
+                  </span>
+                </Link>
               </div>
 
             </div>
@@ -455,7 +431,7 @@ export default function IndustrialShedPage() {
               <div className="w-full lg:w-7/12 relative mt-16 lg:mt-0 mb-12 md:mb-0">
                 {/* Image */}
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
-                  <Image src="/images/services/factory2.webp" alt="KPN Shed Infrastructure" fill sizes="100vw" className="object-cover" />
+                  <Image src="/images/services/factory2.webp" alt="Aerial view of a warehouse and godown shed with trucks loading outside" fill sizes="100vw" className="object-cover" />
                 </div>
 
                 {/* The Floating Checklist Block */}
@@ -538,7 +514,7 @@ export default function IndustrialShedPage() {
             {/* Service Coverage Banner */}
             <div className="bg-[#062088] rounded-[2rem] p-10 md:p-16 shadow-lg relative overflow-hidden text-center max-w-4xl mx-auto">
               <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply">
-                <Image src="/images/services/factory2.webp" alt="Service Coverage Background" fill sizes="100vw" className="object-cover" />
+                <Image src="/images/services/factory2.webp" alt="Aerial view of a warehouse and godown shed with trucks loading outside" fill sizes="100vw" className="object-cover" />
               </div>
               <div className="relative z-10">
                 <MapPin size={48} className="mx-auto text-[#ffcc00] mb-6" />
@@ -558,9 +534,9 @@ export default function IndustrialShedPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { name: "Factory Shed", link: "/services/factory-shed" },
-              { name: "Garment Factory Shed", link: "/services/garment-factory-shed" },
-              { name: "Warehouse & Godown Shed", link: "/services/warehouse-shed" },
+              { name: "Factory Shed", link: "/services/industrial-sheds/factory-shed/" },
+              { name: "Garment Factory Shed", link: "/services/industrial-sheds/garment-factory-shed/" },
+              { name: "Warehouse & Godown Shed", link: "/services/industrial-sheds/warehouse-godown-shed/" },
             ].map((shed, idx) => (
               <Link id="page-Link-175" key={idx} href={shed.link} className="flex items-center justify-between p-6 bg-[#f8f9fc] rounded-2xl border border-slate-100 hover:bg-[#ffcc00] hover:border-[#ffcc00] transition-colors group shadow-sm hover:shadow-md">
                 <span className="font-semibold text-lg text-[#111]">{shed.name}</span>
@@ -572,24 +548,15 @@ export default function IndustrialShedPage() {
 
         {/* ---------------- Interactive Accordion FAQ ---------------- */}
         <section className="bg-[#f8f9fc] py-6 lg:py-8 border-b border-slate-200 overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-20">
-
-            {/* Left Side: Typography & Image */}
-            <div className="w-full lg:w-5/12 flex flex-col">
-              <div className="mb-12">
-                <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
-                <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
-                  Frequently asked <br /> <span className="font-serif font-medium lowercase italic">questions!</span>
-                </h2>
-              </div>
-              {/* Solid Image under the title */}
-              <div className="relative w-full h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-lg mt-auto">
-                <Image src="/images/services/factory4.webp" alt="FAQ Industrial Sheds" fill sizes="100vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
+          <div className="max-w-[1300px] mx-auto px-6">
+            <div className="mb-12 text-center">
+              <span className="text-slate-500 font-medium tracking-wide uppercase text-sm block mb-6">Our faq&apos;s</span>
+              <h2 className="text-4xl md:text-5xl font-semibold text-[#111] tracking-tight leading-[1.1]">
+                Frequently asked <br /> <span className="font-serif font-medium lowercase italic">questions!</span>
+              </h2>
             </div>
-
-            {/* Right Side: Accordion */}
-            <div className="w-full lg:w-7/12 space-y-4" itemScope itemType="https://schema.org/FAQPage">
+            {/* Accordion */}
+            <div className="w-full space-y-4" itemScope itemType="https://schema.org/FAQPage">
               {[
                 { q: "How much warranty does KPN Roofing Shed offer on factory sheds?", a: "KPN provides a 10-year warranty on pipes and roofing sheets for all factory and industrial shed projects." },
                 { q: "What is the payment structure for a factory shed project?", a: "The payment plan is split into three stages: 50% at booking, 45% during processing, and the final 5% after work completion." },
@@ -619,7 +586,7 @@ export default function IndustrialShedPage() {
         <section className="py-6 lg:py-8 text-center text-white relative overflow-hidden">
           {/* Background Image & Overlays */}
           <div className="absolute inset-0 z-0">
-            <Image src="/images/factory.webp" alt="Industrial Sheds CTA" fill sizes="100vw" className="object-cover" />
+            <Image src="/images/factory.webp" alt="Teal industrial factory shed with roller shutter doors and concrete plinth" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-[#062088]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>

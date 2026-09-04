@@ -119,7 +119,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src={isNightMode ? "/images/night-bg.webp" : "/images/hero-bg.png"}
-          alt="KPN Hero Background"
+          alt=""
           fill
           quality={60}
           sizes="100vw"

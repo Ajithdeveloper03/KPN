@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import QuoteModal from "@/components/QuoteModal";
 
 import type { Metadata } from 'next';
 import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
@@ -81,7 +82,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/images/logo.webp" sizes="any" type="image/webp" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.webp" />
-        <link rel="preload" href="/images/hero-bg.png" as="image" fetchpriority="high" />
+        <link rel="preload" href="/images/hero-bg.png" as="image" fetchPriority="high" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FHPZGLQSQQ"
           strategy="afterInteractive"
@@ -151,6 +152,7 @@ export default function RootLayout({ children }) {
           <main id="main-content">{children}</main>
           <Footer />
           <ScrollToTop />
+          <QuoteModal />
         </LenisScrollProvider>
       </body>
     </html>

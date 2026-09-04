@@ -1,5 +1,5 @@
-
-import React from "react";
+import React from "react";
+import Link from "next/link";
 import type { Metadata } from 'next';
 import HeroSection from "@/components/HeroSection";
 import dynamic from 'next/dynamic';
@@ -14,7 +14,6 @@ const AreasWeServeSection = dynamic(() => import("@/components/AreasWeServeSecti
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const CTASection = dynamic(() => import("@/components/CTASection"));
 const ScrollToTop = dynamic(() => import("@/components/ScrollToTop"));
-const QuoteModal = dynamic(() => import("@/components/QuoteModal"));
 
 import { faqs } from "@/data/faqs";
 
@@ -136,6 +135,73 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       
+      {/* SEO Contextual Links for Animal Husbandry Sheds */}
+      <section className="bg-slate-50 py-12 md:py-16 border-y border-slate-200">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1e2229]">Expert Animal Husbandry Shed Construction</h2>
+            <p className="text-slate-600 font-medium text-lg mt-4 max-w-2xl mx-auto">Discover our specialized infrastructure solutions designed for herd health, ventilation, and structural durability across India.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Dairy Shed */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col text-center hover:shadow-lg transition-shadow">
+              <h3 className="text-xl md:text-2xl font-bold text-[#1e2229] mb-4">
+                <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="hover:text-[#ee0000] transition-colors">
+                  Dairy Farm Sheds
+                </Link>
+              </h3>
+              <p className="text-slate-600 font-medium text-base mb-6 flex-grow">
+                We design and construct ventilated cow and dairy farm sheds based on herd size, feeding requirements, drainage and future expansion.
+              </p>
+              <Link 
+                href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/"
+                className="inline-block bg-white text-[#ee0000] border-2 border-[#ee0000] hover:bg-[#ee0000] hover:text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+
+            {/* Goat Shed */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col text-center hover:shadow-lg transition-shadow">
+              <h3 className="text-xl md:text-2xl font-bold text-[#1e2229] mb-4">
+                <Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="hover:text-[#ee0000] transition-colors">
+                  Goat Farm Sheds
+                </Link>
+              </h3>
+              <p className="text-slate-600 font-medium text-base mb-6 flex-grow">
+                Elevated slatted-floor goat farm sheds engineered for moisture management, disease prevention, and high-density flock rearing.
+              </p>
+              <Link 
+                href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/"
+                className="inline-block bg-white text-[#ee0000] border-2 border-[#ee0000] hover:bg-[#ee0000] hover:text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+
+            {/* Poultry Shed */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col text-center hover:shadow-lg transition-shadow">
+              <h3 className="text-xl md:text-2xl font-bold text-[#1e2229] mb-4">
+                <Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="hover:text-[#ee0000] transition-colors">
+                  Poultry Farm Sheds
+                </Link>
+              </h3>
+              <p className="text-slate-600 font-medium text-base mb-6 flex-grow">
+                Custom layer and broiler sheds focused on east-west orientation, airflow optimization, and deep litter or cage system layouts.
+              </p>
+              <Link 
+                href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/"
+                className="inline-block bg-white text-[#ee0000] border-2 border-[#ee0000] hover:bg-[#ee0000] hover:text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <StatsSection />
       <TestimonialsSection />
       <ComparisonSection />
@@ -146,7 +212,6 @@ export default function Home() {
       <CTASection />
       
       <ScrollToTop />
-      <QuoteModal />
     </>
   );
 }

@@ -37,11 +37,12 @@ export default function Header() {
         <Link id="header-Link-35" href="/" className="flex items-center gap-3 no-underline">
           <Image
             src="/images/logo.webp"
-            alt="KPN Roofing Shed Logo"
+            alt="KPN Roofing Shed logo with peacock and house emblem"
             width={92}
             height={72}
             quality={60}
             className="rounded-xl shadow-lg"
+            style={{ width: "92px", height: "auto" }}
             priority
           />
         </Link>
@@ -71,7 +72,7 @@ export default function Header() {
                   {/* Column 1 */}
                   <div className="flex flex-col gap-6">
                     <Link id="header-Link-39" href="/services/agriculture-animal-husbandry-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/goat1.webp" alt="Agriculture" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/goat1.webp" alt="Elevated goat farm shed with green-and-white cladding amid coconut palms" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Agriculture & Animal Husbandry</h4>
@@ -87,7 +88,7 @@ export default function Header() {
                   {/* Column 2 */}
                   <div className="flex flex-col gap-6">
                     <Link id="header-Link-43" href="/services/industrial-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/factory.webp" alt="Industrial Shed" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/factory.webp" alt="Teal industrial factory shed with roller shutter doors and concrete plinth" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Industrial<br/>Shed</h4>
@@ -103,7 +104,7 @@ export default function Header() {
                   {/* Column 3 */}
                   <div className="flex flex-col gap-6">
                     <Link id="header-Link-47" href="/services/home-roofing-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/terrace.webp" alt="Home Roofing" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/terrace.webp" alt="Worker installing a red terrace roofing shed on a building" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Home Roofing<br/>Sheds</h4>
@@ -118,7 +119,7 @@ export default function Header() {
                   {/* Column 4 */}
                   <div className="flex flex-col gap-6">
                     <Link id="header-Link-50" href="/services/sports-turf-sheds/" className="relative block w-full aspect-square rounded-2xl overflow-hidden shadow-md group/title">
-                      <Image src="/images/services/sports-turf-main-banner.webp" alt="Sports Turf" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
+                      <Image src="/images/services/sports-turf-main-banner.webp" alt="Covered multi-sport turf ground lit up at dusk" fill quality={60} sizes="(max-width: 768px) 100vw, 250px" className="object-cover group-hover/title:scale-110 transition-transform duration-700" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 group-hover/title:bg-black/50 transition-colors duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
                         <h4 className="text-white font-extrabold text-lg tracking-wide drop-shadow-md leading-snug">Sports<br/>Turf</h4>

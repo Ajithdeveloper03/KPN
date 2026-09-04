@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { X, ZoomIn, ZoomOut } from "lucide-react";
 
 
 import PageHero from "@/components/PageHero";
@@ -16,7 +17,7 @@ const galleryItems = [
   { id: 13, title: "Livestock Shade Structure", category: "Agriculture & Animal Husbandry", img: "/images/animal4.webp", height: "h-72" },
   { id: 14, title: "Modern Green House", category: "Agriculture & Animal Husbandry", img: "/images/goat4.webp", height: "h-80" },
   { id: 15, title: "Farm Equipment Shed", category: "Agriculture & Animal Husbandry", img: "/images/animal6.webp", height: "h-80" },
-  { id: 17, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/images/terrace (2).webp", height: "h-96" },
+  { id: 17, title: "Residential Workshop", category: "Home Roofing Sheds", img: "/images/terrace-2.webp", height: "h-96" },
   { id: 18, title: "Garden Studio Shed", category: "Home Roofing Sheds", img: "/images/terrace3.webp", height: "h-72" },
 
   // Other Images (Car Parking)
@@ -31,7 +32,7 @@ const galleryItems = [
   { id: 2, title: "Large Manufacturing Plant", category: "Industrial Shed", img: "/images/services/factory3.webp", height: "h-[28rem]" },
   { id: 3, title: "Garment Manufacturing Unit", category: "Industrial Shed", img: "/images/services/factory2.webp", height: "h-80" },
   { id: 4, title: "Logistics Center", category: "Industrial Shed", img: "/images/services/factory4.webp", height: "h-72" },
-  { id: 5, title: "Automobile Factory", category: "Industrial Shed", img: "/images/factory (2).webp", height: "h-[28rem]" },
+  { id: 5, title: "Automobile Factory", category: "Industrial Shed", img: "/images/factory-2.webp", height: "h-[28rem]" },
   { id: 6, title: "Steel Plant Warehouse", category: "Industrial Shed", img: "/images/services/factory6.webp", height: "h-96" },
   { id: 7, title: "Assembly Line Shed", category: "Industrial Shed", img: "/images/services/factory7.webp", height: "h-72" },
   { id: 8, title: "Commercial Storage", category: "Industrial Shed", img: "/images/services/factory8.webp", height: "h-96" },
@@ -47,11 +48,18 @@ const galleryItems = [
 
 export default function GalleryPage() {
   const [visibleCount, setVisibleCount] = useState(8);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [zoom, setZoom] = useState(1);
 
   const visibleItems = galleryItems.slice(0, visibleCount);
 
   const handleLoadMore = () => {
     setVisibleCount(prev => prev + 8);
+  };
+
+  const handleClose = () => {
+    setSelectedImage(null);
+    setZoom(1);
   };
 
   return (
@@ -115,6 +123,7 @@ export default function GalleryPage() {
               key={item.id}
               className={`relative rounded-3xl overflow-hidden group break-inside-avoid shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.height}`}
               style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => setSelectedImage(item.img)}
             >
               <Image
                 src={item.img}
@@ -139,7 +148,48 @@ export default function GalleryPage() {
         )}
       </main>
 
+      {/* Lightbox / Zoom Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={handleClose}
+        >
+          <button className="absolute top-4 right-4 text-white z-[210] bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+            onClick={(e) => { e.stopPropagation(); handleClose(); }}
+          >
+            <X size={24} />
+          </button>
 
+          <div className="absolute bottom-24 sm:bottom-6 flex gap-4 z-[210]">
+            <button className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
+              onClick={(e) => { e.stopPropagation(); setZoom(z => Math.max(0.5, z - 0.25)); }}
+            >
+              <ZoomOut size={24} />
+            </button>
+            <button className="text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
+              onClick={(e) => { e.stopPropagation(); setZoom(z => Math.min(3, z + 0.25)); }}
+            >
+              <ZoomIn size={24} />
+            </button>
+          </div>
+
+          <div
+            className="relative w-full h-full flex items-center justify-center overflow-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div
+              style={{ transform: `scale(${zoom})`, transition: 'transform 0.2s ease-out' }}
+              className="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center"
+            >
+              <img
+                src={selectedImage}
+                alt="Zoomed"
+                className="max-w-full max-h-[90vh] object-contain rounded-xl select-none"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -24,22 +24,22 @@ export default function AboutSection() {
       {/* Desktop Exact Placement Layout */}
       <div className="hidden lg:block relative w-full max-w-[1600px] mx-auto min-h-[700px] xl:min-h-[800px] z-10">
         <div onClick={() => setSelectedImage("/images/factory.webp")} data-reveal="image" className="absolute left-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <Image src="/images/factory.webp" fill quality={60} sizes="250px" alt="About 1" className="object-cover" loading="lazy" />
+          <Image src="/images/factory.webp" fill quality={60} sizes="250px" alt="Teal industrial factory shed with roller shutter doors and concrete plinth" className="object-cover" loading="lazy" />
         </div>
         <div onClick={() => setSelectedImage("/images/goat1.webp")} data-reveal="image" className="absolute left-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <Image src="/images/goat1.webp" fill quality={60} sizes="250px" alt="About 2" className="object-cover" loading="lazy" />
+          <Image src="/images/goat1.webp" fill quality={60} sizes="250px" alt="Elevated goat farm shed with green-and-white cladding amid coconut palms" className="object-cover" loading="lazy" />
         </div>
         <div onClick={() => setSelectedImage("/images/terrace.webp")} data-reveal="image" className="absolute left-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <Image src="/images/terrace.webp" fill quality={60} sizes="250px" alt="About 3" className="object-cover" loading="lazy" />
+          <Image src="/images/terrace.webp" fill quality={60} sizes="250px" alt="Worker installing a red terrace roofing shed on a building" className="object-cover" loading="lazy" />
         </div>
         <div onClick={() => setSelectedImage("/images/animal1.webp")} data-reveal="image" className="absolute right-[34%] top-[3%] w-[15%] aspect-square rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <Image src="/images/animal1.webp" fill quality={60} sizes="250px" alt="About 4" className="object-cover" loading="lazy" />
+          <Image src="/images/animal1.webp" fill quality={60} sizes="250px" alt="Interior walkway of an animal shed with green slatted flooring and mesh pens" className="object-cover" loading="lazy" />
         </div>
         <div onClick={() => setSelectedImage("/images/goat3.webp")} data-reveal="image" className="absolute right-[17.5%] top-[10%] w-[15%] aspect-[4/5] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <Image src="/images/goat3.webp" fill quality={60} sizes="250px" alt="About 5" className="object-cover" loading="lazy" />
+          <Image src="/images/goat3.webp" fill quality={60} sizes="250px" alt="Two-storey elevated goat shed with a slatted-floor loading ramp" className="object-cover" loading="lazy" />
         </div>
         <div onClick={() => setSelectedImage("/images/mate1.webp")} data-reveal="image" className="absolute right-[1%] top-[45%] w-[15%] aspect-[3/4] rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden shiny-hover hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <Image src="/images/mate1.webp" fill quality={60} sizes="250px" alt="About 6" className="object-cover" loading="lazy" />
+          <Image src="/images/mate1.webp" fill quality={60} sizes="250px" alt="Slatted plastic flooring walkway inside an animal shed with red aisle and green pens" className="object-cover" loading="lazy" />
         </div>
 
         {/* Central Text Content */}

@@ -25,7 +25,7 @@ export default function AreasWeServeSection() {
           <div className="relative w-full h-[280px] sm:h-[350px] lg:h-full min-h-[350px] rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1" data-reveal="image">
             <Image
               src="/images/services/factory3.webp"
-              alt="Shed Installation Across South India"
+              alt="Interior of a warehouse shed with a truck parked for loading"
               style={{ objectFit: "cover" }}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

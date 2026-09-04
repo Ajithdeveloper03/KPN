@@ -1,11 +1,12 @@
-Options -MultiViews
+gOptions -MultiViews
 Options +FollowSymLinks
 DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-
+  RewriteCond %{HTTP_HOST} ^www\.kpnroofingsheds\.com [NC]
+  RewriteRule ^(.*)$ https://kpnroofingsheds.com/$1 [R=301,L]
   # 1. If it's a real file (like JS, CSS, images), serve it directly
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]

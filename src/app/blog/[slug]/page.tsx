@@ -49,14 +49,14 @@ export default async function BlogDetailsPage({
       content: `
         <h2 id="introduction" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">1</span>Introduction to Roofing Sheds</h2>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">Choosing the right roofing shed is critical for the long-term success of your industrial, agricultural, or residential project. A well-built shed provides protection, durability, and functional value.</p>
-        <img src="/images/services/factory3.webp" alt="Roofing Shed Introduction" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
+        <img src="/images/services/factory3.webp" alt="Interior of a warehouse shed with a truck parked for loading" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
         
         <h2 id="materials" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">2</span>Choosing the Right Materials</h2>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">Steel is the undisputed king of modern shed construction. Using high-quality materials like Apollo steel ensures structural integrity against heavy winds and storms.</p>
         
         <h3 id="roofing-sheets" class="text-xl md:text-2xl font-bold text-[#111] mt-8 mb-4">Types of Roofing Sheets</h3>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">From color-coated galvalume sheets to polycarbonate sheets for natural light, the roof cladding determines heat resistance and lifespan.</p>
-        <img src="/images/animal2.webp" alt="Roofing Materials" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
+        <img src="/images/animal2.webp" alt="Elevated cattle shed with a green-and-red slatted floor loading ramp" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
         
         <h2 id="ventilation" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">3</span>The Importance of Ventilation</h2>
         <p class="text-[17px] leading-[1.8] text-slate-600 mb-6 font-medium">Proper airflow prevents moisture buildup and heat accumulation, which is especially important for livestock sheds and industrial manufacturing units.</p>
@@ -66,7 +66,7 @@ export default async function BlogDetailsPage({
           <li class="flex items-start gap-3"><span class="text-[#ee0000] mt-1 font-bold">✓</span><span class="text-[17px] leading-[1.7] text-slate-700 font-medium"><strong>Ridge vents:</strong> Utilize natural thermal lift to ensure consistent airflow along the entire roofline.</span></li>
           <li class="flex items-start gap-3"><span class="text-[#ee0000] mt-1 font-bold">✓</span><span class="text-[17px] leading-[1.7] text-slate-700 font-medium"><strong>Side mesh:</strong> Essential for cross ventilation, particularly in agricultural environments like poultry and goat farms.</span></li>
         </ul>
-        <img src="/images/goat2.webp" alt="Ventilation in Sheds" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
+        <img src="/images/goat2.webp" alt="Elevated goat shed under construction next to high-rise apartments" class="w-full max-w-[800px] h-auto object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] my-10" />
 
         <h2 id="faqs" class="text-2xl md:text-3xl font-extrabold text-[#111] mt-12 mb-6 flex items-center gap-3"><span class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#ee0000]/10 text-[#ee0000] text-lg shrink-0">4</span>Frequently Asked Questions</h2>
         <div id="faq-mount-point"></div>
