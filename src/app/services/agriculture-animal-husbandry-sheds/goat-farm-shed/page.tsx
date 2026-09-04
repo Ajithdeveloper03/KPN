@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
   },
-  title: 'Goat Farm Shed Builders India | KPN Roofing Shed',
-  description: 'Custom goat shed construction across Tamil Nadu and North India, engineered for herd health with elevated slatted flooring and proper ventilation.',
+  title: 'Goat Farm Shed Builders India | KPN Roofing Sheds',
+  description: 'Goat farm shed builders in India — elevated slatted flooring, cross-ventilation design & in-house flooring with warranty. Get a custom quote in 24–48 hrs.',
   keywords: 'Goat Farm Shed Builders India',
 };
 

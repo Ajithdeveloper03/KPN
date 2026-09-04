@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
   },
-  title: 'Poultry Shed Manufacturers India | KPN Roofing Shed',
-  description: 'Poultry shed manufacturers across India. Custom ventilation-first broiler and layer sheds built around airflow, orientation, and bird density. Get a free quote.',
+  title: 'Poultry Shed Manufacturers India | KPN Roofing Sheds',
+  description: 'Poultry shed manufacturers across India — East-West orientation, curtain-drop walls & deep litter/cage layout planning. Design quote in 24–48 hrs.',
   keywords: 'Poultry Shed Manufacturers India, Farm Infrastructure Solutions India',
 };
 

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/",
   },
-  title: 'Dairy Farm Shed Contractors India | KPN Roofing Shed',
-  description: 'Custom cow and dairy shed construction across Tamil Nadu and North India, designed around herd comfort and milking workflow.',
+  title: 'Dairy Farm Shed Contractors India | KPN Roofing Sheds',
+  description: 'Dairy shed contractors across India — high-ridge roofline for airflow, non-slip flooring & milking parlour-integrated layouts. Custom design in 24–48 hrs.',
   keywords: 'Dairy Farm Shed Contractors India, Cow Shed Solutions India, Cattle Shed Builders India',
 };
 
