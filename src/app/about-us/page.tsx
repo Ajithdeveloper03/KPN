@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "About KPN Roofing Shed — Trusted Roofing Since 2016 | KPN",
   description: "Learn about KPN Roofing Shed — a roofing shed construction business with 13+ years of experience building durable sheds for homes, farms, and industries across India.",
   alternates: {
-    canonical: "https://kpnroofingsheds.com/about-us/",
+    canonical: "https://www.kpnroofingsheds.com/about-us/",
   },
 };
 
@@ -52,21 +52,21 @@ export default function AboutUsPage() {
             "@graph": [
               {
                 "@type": "AboutPage",
-                "@id": "https://kpnroofingsheds.com/about-us/#aboutpage",
-                "url": "https://kpnroofingsheds.com/about-us/",
+                "@id": "https://www.kpnroofingsheds.com/about-us/#aboutpage",
+                "url": "https://www.kpnroofingsheds.com/about-us/",
                 "name": "About KPN Roofing Shed",
                 "description": "Learn about KPN Roofing Shed, a roofing shed construction company providing industrial, agricultural, residential, animal husbandry and sports turf shed solutions across India.",
                 "isPartOf": {
                   "@type": "WebSite",
-                  "@id": "https://kpnroofingsheds.com/#website"
+                  "@id": "https://www.kpnroofingsheds.com/#website"
                 },
                 "about": {
                   "@type": "Organization",
-                  "@id": "https://kpnroofingsheds.com/#organization"
+                  "@id": "https://www.kpnroofingsheds.com/#organization"
                 },
                 "publisher": {
                   "@type": "Organization",
-                  "@id": "https://kpnroofingsheds.com/#organization"
+                  "@id": "https://www.kpnroofingsheds.com/#organization"
                 },
                 "inLanguage": "en-IN"
               },

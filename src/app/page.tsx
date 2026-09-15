@@ -1,4 +1,5 @@
-import React from "react";
+
+import React from "react";
 import Link from "next/link";
 import type { Metadata } from 'next';
 import HeroSection from "@/components/HeroSection";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   description: "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds. Get a free quote today!",
   keywords: "Roofing Shed Construction Company India, Best Roofing Shed Contractors India, Steel Structure Company India",
   alternates: {
-    canonical: "https://kpnroofingsheds.com/",
+    canonical: "https://www.kpnroofingsheds.com/",
   },
 };
 
@@ -35,12 +36,12 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://kpnroofingsheds.com/#webpage",
-            "url": "https://kpnroofingsheds.com/",
+            "@id": "https://www.kpnroofingsheds.com/#webpage",
+            "url": "https://www.kpnroofingsheds.com/",
             "name": "Roofing Shed Construction in India | KPN Roofing Shed",
             "description": "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds. Get a free quote today!",
             "isPartOf": {
-              "@id": "https://kpnroofingsheds.com/#website"
+              "@id": "https://www.kpnroofingsheds.com/#website"
             }
           })
         }}
@@ -54,13 +55,13 @@ export default function Home() {
               "LocalBusiness",
               "RoofingContractor"
             ],
-            "@id": "https://kpnroofingsheds.com/#localbusiness",
+            "@id": "https://www.kpnroofingsheds.com/#localbusiness",
             "name": "KPN Roofing Shed",
-            "url": "https://kpnroofingsheds.com/",
-            "image": "https://kpnroofingsheds.com/images/logo.webp",
+            "url": "https://www.kpnroofingsheds.com/",
+            "image": "https://www.kpnroofingsheds.com/images/logo.webp",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
             "telephone": "+91-9788770786",
@@ -135,7 +136,16 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       
-      {/* SEO Contextual Links for Animal Husbandry Sheds */}
+     
+
+      <StatsSection />
+      <TestimonialsSection />
+      <ComparisonSection />
+      <ProcessSection />
+      <AreasWeServeSection />
+      <FAQSection />
+      {/* <IntegrationSection /> */}
+       {/* SEO Contextual Links for Animal Husbandry Sheds */}
       <section className="bg-slate-50 py-12 md:py-16 border-y border-slate-200">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-10">
@@ -158,7 +168,7 @@ export default function Home() {
                 href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/"
                 className="inline-block bg-white text-[#ee0000] border-2 border-[#ee0000] hover:bg-[#ee0000] hover:text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300"
               >
-                Learn More
+                Explore Cow Dairy Farm Sheds
               </Link>
             </div>
 
@@ -176,7 +186,7 @@ export default function Home() {
                 href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/"
                 className="inline-block bg-white text-[#ee0000] border-2 border-[#ee0000] hover:bg-[#ee0000] hover:text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300"
               >
-                Learn More
+                Explore Goat Farm Sheds
               </Link>
             </div>
 
@@ -194,21 +204,13 @@ export default function Home() {
                 href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/"
                 className="inline-block bg-white text-[#ee0000] border-2 border-[#ee0000] hover:bg-[#ee0000] hover:text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300"
               >
-                Learn More
+                Explore Poultry Farm Sheds
               </Link>
             </div>
 
           </div>
         </div>
       </section>
-
-      <StatsSection />
-      <TestimonialsSection />
-      <ComparisonSection />
-      <ProcessSection />
-      <AreasWeServeSection />
-      <FAQSection />
-      {/* <IntegrationSection /> */}
       <CTASection />
       
       <ScrollToTop />

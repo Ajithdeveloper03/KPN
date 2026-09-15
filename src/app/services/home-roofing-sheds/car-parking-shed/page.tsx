@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
+    canonical: "https://www.kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
   },
   title: 'Car Parking Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds single & multi-bay car parking sheds across India for homes, apartments & offices. In-house engineers, weather-proof design & 10-year guarantee. Get a quote.',
@@ -23,12 +23,12 @@ export default function CarParkingShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/#webpage",
-          "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
+          "@id": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
           "name": "Car Parking Shed Contractors India | KPN Roofing Shed",
           "description": "KPN builds single & multi-bay car parking sheds across India for homes, apartments & offices. In-house engineers, weather-proof design & 10-year guarantee. Get a quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -44,25 +44,25 @@ export default function CarParkingShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kpnroofingsheds.com/"
+                "item": "https://www.kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://kpnroofingsheds.com/services/"
+                "item": "https://www.kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Home Roofing Sheds",
-                "item": "https://kpnroofingsheds.com/services/home-roofing-sheds/"
+                "item": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Car Parking Shed",
-                "item": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/"
+                "item": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/"
               }
             ]
           })
@@ -75,15 +75,15 @@ export default function CarParkingShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/#service",
             "name": "Car Parking Shed",
             "description": "Durable car parking shed construction solutions designed to protect vehicles from sunlight, rain and changing weather conditions.",
-            "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
+            "url": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/car-parking-shed/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/"
+              "url": "https://www.kpnroofingsheds.com/"
             },
             "areaServed": {
               "@type": "Country",
@@ -95,7 +95,7 @@ export default function CarParkingShedPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}

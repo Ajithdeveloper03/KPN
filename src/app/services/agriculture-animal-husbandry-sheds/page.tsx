@@ -8,7 +8,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
+    canonical: "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
   },
   title: 'Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed',
   description: 'KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 13+ yrs experience, 20-day completion. Get a free quote.',
@@ -25,12 +25,12 @@ export default function AgricultureAnimalHusbandryPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/#webpage",
-          "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
+          "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
           "name": "Agriculture & Animal Husbandry India | Goat, Dairy, Poultry & Cow Sheds — KPN Roofing Shed",
           "description": "KPN builds animal & agricultural sheds across India — goat, dairy, poultry, cow, and cattle sheds. 13+ yrs experience, 20-day completion. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -42,16 +42,16 @@ export default function AgricultureAnimalHusbandryPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/#service",
             "name": "Agriculture & Animal Husbandry Sheds",
             "description": "Agriculture and animal husbandry shed construction solutions for farms, livestock, cattle, poultry and other agricultural requirements.",
-            "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
+            "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -63,7 +63,7 @@ export default function AgricultureAnimalHusbandryPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}

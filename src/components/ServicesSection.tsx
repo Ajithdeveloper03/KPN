@@ -82,7 +82,7 @@ export default function ServicesSection() {
 
         {/* Header Section */}
         <div className="text-center mb-16" data-reveal="stagger">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#c21a00] text-[#3b0000] font-bold text-sm tracking-wide mb-4 border border-[#00a3e0]/20">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#c21a00] text-[#ffbdb3] font-bold text-sm tracking-wide mb-4 border border-[#00a3e0]/20">
             <span className="w-2 h-2 rounded-full bg-[#ee0000]"></span>
            Services
           </div>

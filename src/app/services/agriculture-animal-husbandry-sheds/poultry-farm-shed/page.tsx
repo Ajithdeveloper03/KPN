@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+    canonical: "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
   },
   title: 'Poultry Shed Manufacturers India | KPN Roofing Sheds',
   description: 'Poultry shed manufacturers across India — East-West orientation, curtain-drop walls & deep litter/cage layout planning. Design quote in 24–48 hrs.',
@@ -23,12 +23,12 @@ export default function PoultryFarmShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#webpage",
-            "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+            "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#webpage",
+            "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
             "name": "Poultry Shed Manufacturers India | KPN Roofing Shed",
             "description": "Poultry shed manufacturers across India. Custom ventilation-first broiler and layer sheds built around airflow, orientation, and bird density. Get a free quote.",
             "isPartOf": {
-              "@id": "https://kpnroofingsheds.com/#website"
+              "@id": "https://www.kpnroofingsheds.com/#website"
             }
           })
         }}
@@ -44,25 +44,25 @@ export default function PoultryFarmShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kpnroofingsheds.com/"
+                "item": "https://www.kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://kpnroofingsheds.com/services/"
+                "item": "https://www.kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Agriculture & Animal Husbandry Sheds",
-                "item": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/"
+                "item": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Poultry Farm Shed",
-                "item": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/"
+                "item": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/"
               }
             ]
           })
@@ -74,16 +74,16 @@ export default function PoultryFarmShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#service",
             "name": "Poultry Farm Shed",
             "description": "Poultry shed construction solutions designed for proper ventilation, protection and efficient poultry farming operations across India.",
-            "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+            "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -95,7 +95,7 @@ export default function PoultryFarmShedPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}
@@ -394,7 +394,7 @@ export default function PoultryFarmShedPage() {
         {/* ---------------- Related Sheds (Internal Linking) ---------------- */}
         <section className="py-6 lg:py-12 bg-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Explore More Animal Husbandry Sheds</h3>
+            <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Explore More <Link href="/services/agriculture-animal-husbandry-sheds/" className="text-[#d35400] hover:underline">Agriculture & Animal Husbandry Sheds</Link></h3>
             <p className="text-gray-600 font-medium mb-6">
               Expanding your agricultural operations? If you are also venturing into dairy or goat farming, we specialize in constructing high-quality <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="text-[#d35400] hover:underline">Cow & Dairy Farm Sheds</Link> customized for herd size and feeding requirements. We also build elevated and well-ventilated <Link href="/services/agriculture-animal-husbandry-sheds/goat-farm-shed/" className="text-[#d35400] hover:underline">Goat Farm Sheds</Link> for optimal herd health.
             </p>

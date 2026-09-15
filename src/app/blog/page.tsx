@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Blog | KPN Roofing Shed",
   description: "Expert advice, project showcases, and industry trends to help you make informed decisions about your next roofing shed project.",
   alternates: {
-    canonical: "https://kpnroofingsheds.com/blog/",
+    canonical: "https://www.kpnroofingsheds.com/blog/",
   },
 };
 export default function BlogArchivePage() {
@@ -36,12 +36,12 @@ export default function BlogArchivePage() {
             "@context": "https://schema.org",
             "@type": "Blog",
             "name": "KPN Roofing Shed Blog",
-            "url": "https://kpnroofingsheds.com/blog/",
+            "url": "https://www.kpnroofingsheds.com/blog/",
             "description": "Expert advice, project showcases, and industry trends to help you make informed decisions about your next roofing shed project.",
             "blogPost": posts.map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
-              "image": "https://kpnroofingsheds.com" + post.image,
+              "image": "https://www.kpnroofingsheds.com" + post.image,
               "datePublished": post.created_at,
               "author": {
                 "@type": "Organization",

@@ -8,7 +8,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/home-roofing-sheds/",
+    canonical: "https://www.kpnroofingsheds.com/services/home-roofing-sheds/",
   },
   title: 'Home Roofing Sheds India | Terrace & Car Parking Sheds',
   description: 'KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
@@ -24,12 +24,12 @@ export default function HomeRoofingShedsPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/#webpage",
-          "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/",
+          "@id": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/",
           "name": "Home Roofing Sheds India | Terrace & Car Parking Sheds",
           "description": "KPN builds terrace roofing sheds and car parking sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -41,16 +41,16 @@ export default function HomeRoofingShedsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/#service",
             "name": "Home Roofing Sheds",
             "description": "Home roofing shed construction solutions for residential properties, including terrace roofing, house extensions and outdoor covered spaces.",
-            "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/",
+            "url": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -62,7 +62,7 @@ export default function HomeRoofingShedsPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}

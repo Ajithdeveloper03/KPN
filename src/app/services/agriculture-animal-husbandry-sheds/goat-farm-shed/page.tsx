@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
+    canonical: "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
   },
   title: 'Goat Farm Shed Builders India | KPN Roofing Sheds',
   description: 'Goat farm shed builders in India — elevated slatted flooring, cross-ventilation design & in-house flooring with warranty. Get a custom quote in 24–48 hrs.',
@@ -24,12 +24,12 @@ export default function GoatFarmShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/#webpage",
-          "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
+          "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
           "name": "Goat Farm Shed Builders India | KPN Roofing Shed",
           "description": "Custom goat shed construction across Tamil Nadu and North India, engineered for herd health with elevated slatted flooring and proper ventilation.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -45,25 +45,25 @@ export default function GoatFarmShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kpnroofingsheds.com/"
+                "item": "https://www.kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://kpnroofingsheds.com/services/"
+                "item": "https://www.kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Agriculture & Animal Husbandry Sheds",
-                "item": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/"
+                "item": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Goat Farm Shed",
-                "item": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/"
+                "item": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/"
               }
             ]
           })
@@ -76,16 +76,16 @@ export default function GoatFarmShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/#service",
             "name": "Goat Farm Shed Builders India",
             "description": "Custom goat shed construction across Tamil Nadu and North India, engineered for herd health, elevated slatted flooring, and proper ventilation.",
-            "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
+            "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/goat-farm-shed/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -97,7 +97,7 @@ export default function GoatFarmShedPage() {
               "price": "599",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}
@@ -474,7 +474,7 @@ export default function GoatFarmShedPage() {
         {/* ---------------- Related Sheds (Internal Linking) ---------------- */}
         <section className="py-6 lg:py-12 bg-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Explore More Animal Husbandry Sheds</h3>
+            <h3 className="text-2xl font-bold text-[#2d3436] mb-4">Explore More <Link href="/services/agriculture-animal-husbandry-sheds/" className="text-[#d35400] hover:underline">Agriculture & Animal Husbandry Sheds</Link></h3>
             <p className="text-gray-600 font-medium mb-6">
               Expanding your farm? If you are also looking into dairy farming, we specialize in constructing high-quality <Link href="/services/agriculture-animal-husbandry-sheds/cow-dairy-farm-shed/" className="text-[#d35400] hover:underline">Cow & Dairy Farm Sheds</Link> customized for herd size and feeding requirements. We also build advanced <Link href="/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/" className="text-[#d35400] hover:underline">Poultry Farm Sheds</Link> for broiler and layer operations.
             </p>

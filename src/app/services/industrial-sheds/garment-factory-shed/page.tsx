@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/",
+    canonical: "https://www.kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/",
   },
   title: 'Garment & Textile Factory Shed Construction India | KPN Roofing Shed',
   description: 'KPN builds garment & textile factory sheds across India with proper ventilation, natural lighting and a 10-year warranty. Get a free quote.',
@@ -23,12 +23,12 @@ export default function GarmentFactoryShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/#webpage",
-          "url": "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/",
+          "@id": "https://www.kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/",
           "name": "Garment & Textile Factory Shed Construction India | KPN Roofing Shed",
           "description": "KPN builds garment & textile factory sheds across India with proper ventilation, natural lighting and a 10-year warranty. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -44,25 +44,25 @@ export default function GarmentFactoryShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kpnroofingsheds.com/"
+                "item": "https://www.kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://kpnroofingsheds.com/services/"
+                "item": "https://www.kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Industrial Sheds",
-                "item": "https://kpnroofingsheds.com/services/industrial-sheds/"
+                "item": "https://www.kpnroofingsheds.com/services/industrial-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Garment Factory Shed",
-                "item": "https://kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/"
+                "item": "https://www.kpnroofingsheds.com/services/industrial-sheds/garment-factory-shed/"
               }
             ]
           })

@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
+    canonical: "https://www.kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
   },
   title: 'Factory Shed Construction India | Industrial Shed Contractors | KPN',
   description: 'KPN builds factory sheds across India with steel and PEB structures, durable roofing, and in-house engineering. 10-year warranty. Get a free quote.',
@@ -23,12 +23,12 @@ export default function FactoryShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/#webpage",
-          "url": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
+          "@id": "https://www.kpnroofingsheds.com/services/industrial-sheds/factory-shed/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
           "name": "Factory Shed Construction India | Industrial Shed Contractors | KPN",
           "description": "KPN builds factory sheds across India with steel and PEB structures, durable roofing, and in-house engineering. 10-year warranty. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -44,25 +44,25 @@ export default function FactoryShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kpnroofingsheds.com/"
+                "item": "https://www.kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://kpnroofingsheds.com/services/"
+                "item": "https://www.kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Industrial Sheds",
-                "item": "https://kpnroofingsheds.com/services/industrial-sheds/"
+                "item": "https://www.kpnroofingsheds.com/services/industrial-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Factory Shed",
-                "item": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/"
+                "item": "https://www.kpnroofingsheds.com/services/industrial-sheds/factory-shed/"
               }
             ]
           })
@@ -75,16 +75,16 @@ export default function FactoryShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/industrial-sheds/factory-shed/#service",
             "name": "Factory Shed",
             "description": "Durable factory shed construction solutions designed for manufacturing units, industrial facilities and production operations.",
-            "url": "https://kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
+            "url": "https://www.kpnroofingsheds.com/services/industrial-sheds/factory-shed/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -96,7 +96,7 @@ export default function FactoryShedPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}

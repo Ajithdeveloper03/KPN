@@ -8,7 +8,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/",
+    canonical: "https://www.kpnroofingsheds.com/services/industrial-sheds/",
   },
   title: 'Industrial Shed Construction India | KPN Roofing Shed',
   description: 'KPN builds industrial sheds across India with heavy-gauge steel structures. In-house engineers, 13+ yrs experience, 10-year warranty. Get a free quote.',
@@ -24,12 +24,12 @@ export default function IndustrialShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/#webpage",
-          "url": "https://kpnroofingsheds.com/services/industrial-sheds/",
+          "@id": "https://www.kpnroofingsheds.com/services/industrial-sheds/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/industrial-sheds/",
           "name": "Industrial Shed Construction India | KPN Roofing Shed",
           "description": "KPN builds industrial sheds across India with heavy-gauge steel structures. In-house engineers, 13+ yrs experience, 10-year warranty. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -41,16 +41,16 @@ export default function IndustrialShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/industrial-sheds/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/industrial-sheds/#service",
             "name": "Industrial Sheds",
             "description": "Industrial shed construction solutions for factories, warehouses, manufacturing units and commercial requirements.",
-            "url": "https://kpnroofingsheds.com/services/industrial-sheds/",
+            "url": "https://www.kpnroofingsheds.com/services/industrial-sheds/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -62,7 +62,7 @@ export default function IndustrialShedPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}

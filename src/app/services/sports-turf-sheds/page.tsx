@@ -8,7 +8,7 @@ import QuoteButton from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://kpnroofingsheds.com/services/sports-turf-sheds/",
+    canonical: "https://www.kpnroofingsheds.com/services/sports-turf-sheds/",
   },
   title: 'Sports Turf Sheds India | Badminton & Cricket Turf Sheds | KPN',
   description: 'KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.',
@@ -24,12 +24,12 @@ export default function SportsTurfShedsPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/#webpage",
-          "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/",
+          "@id": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/#webpage",
+          "url": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/",
           "name": "Sports Turf Sheds India | Badminton & Cricket Turf Sheds | KPN",
           "description": "KPN builds badminton court sheds and cricket turf sheds across India. Durable, weatherproof structures backed by 13+ years of experience. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://kpnroofingsheds.com/#website"
+                    "@id": "https://www.kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -41,16 +41,16 @@ export default function SportsTurfShedsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/#service",
+            "@id": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/#service",
             "name": "Sports Turf Sheds",
             "description": "Sports turf shed construction solutions designed to provide durable covered spaces for sports facilities, training areas and recreational activities.",
-            "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/",
+            "url": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://kpnroofingsheds.com/#organization",
+              "@id": "https://www.kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://kpnroofingsheds.com/",
-              "logo": "https://kpnroofingsheds.com/images/logo.webp"
+              "url": "https://www.kpnroofingsheds.com/",
+              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -62,7 +62,7 @@ export default function SportsTurfShedsPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://kpnroofingsheds.com/contact/"
+              "url": "https://www.kpnroofingsheds.com/contact/"
             }
           })
         }}
