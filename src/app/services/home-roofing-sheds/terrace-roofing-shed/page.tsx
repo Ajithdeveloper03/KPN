@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/",
+    canonical: "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/",
   },
   title: 'Terrace Roofing Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds terrace roofing sheds across India with durable roofing materials, in-house engineers, and a 10-year guarantee. Get a free quote.',
@@ -23,12 +23,12 @@ export default function TerraceRoofingShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/#webpage",
-          "url": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/",
+          "@id": "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/",
           "name": "Terrace Roofing Shed Contractors India | KPN Roofing Shed",
           "description": "KPN builds terrace roofing sheds across India with durable roofing materials, in-house engineers, and a 10-year guarantee. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://www.kpnroofingsheds.com/#website"
+                    "@id": "https://kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -44,25 +44,25 @@ export default function TerraceRoofingShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.kpnroofingsheds.com/"
+                "item": "https://kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://www.kpnroofingsheds.com/services/"
+                "item": "https://kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Home Roofing Sheds",
-                "item": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/"
+                "item": "https://kpnroofingsheds.com/services/home-roofing-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Terrace Roofing Shed",
-                "item": "https://www.kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/"
+                "item": "https://kpnroofingsheds.com/services/home-roofing-sheds/terrace-roofing-shed/"
               }
             ]
           })

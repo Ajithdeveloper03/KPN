@@ -21,7 +21,7 @@ export default function PageHero({ title, breadcrumbs, bgImage = "/images/night-
     "@type": "BreadcrumbList",
     "itemListElement": breadcrumbs.map((crumb, idx) => {
       // Ensure trailing slash unless it's root or an anchor
-      let itemUrl = `https://www.kpnroofingsheds.com${crumb.href}`;
+      let itemUrl = `https://kpnroofingsheds.com${crumb.href}`;
       if (!itemUrl.endsWith('/') && !itemUrl.includes('#')) {
         itemUrl += '/';
       }

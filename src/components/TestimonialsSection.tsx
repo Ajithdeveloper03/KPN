@@ -173,7 +173,7 @@ export default function TestimonialsSection() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "@id": "https://www.kpnroofingsheds.com/#localbusiness",
+            "@id": "https://kpnroofingsheds.com/#localbusiness",
             "name": "KPN Roofing Shed",
             "aggregateRating": {
               "@type": "AggregateRating",

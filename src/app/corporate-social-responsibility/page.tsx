@@ -8,7 +8,7 @@ import CSRGallery from "@/components/CSRGallery";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.kpnroofingsheds.com/corporate-social-responsibility/",
+    canonical: "https://kpnroofingsheds.com/corporate-social-responsibility/",
   },
   title: "Corporate Social Responsibility (CSR) | KPN Roofing Shed",
   description: "KPN Roofing Shed supports students, athletes, sports participation, and traditional arts through CSR initiatives that encourage talent and community development.",
@@ -25,14 +25,14 @@ export default function CSRPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.kpnroofingsheds.com/corporate-social-responsibility/#webpage",
-            "url": "https://www.kpnroofingsheds.com/corporate-social-responsibility/",
+            "@id": "https://kpnroofingsheds.com/corporate-social-responsibility/#webpage",
+            "url": "https://kpnroofingsheds.com/corporate-social-responsibility/",
             "name": "Corporate Social Responsibility (CSR) | KPN Roofing Shed",
             "description": "Learn about KPN Roofing Shed's Corporate Social Responsibility initiatives supporting students, athletes, sports participation, traditional arts, and community activities.",
             "isPartOf": {
               "@type": "WebSite",
-              "@id": "https://www.kpnroofingsheds.com/#website",
-              "url": "https://www.kpnroofingsheds.com/",
+              "@id": "https://kpnroofingsheds.com/#website",
+              "url": "https://kpnroofingsheds.com/",
               "name": "KPN Roofing Shed"
             },
             "about": {
@@ -41,9 +41,9 @@ export default function CSRPage() {
             },
             "mainEntity": {
               "@type": "Organization",
-              "@id": "https://www.kpnroofingsheds.com/#organization",
+              "@id": "https://kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://www.kpnroofingsheds.com/"
+              "url": "https://kpnroofingsheds.com/"
             }
           })
         }}

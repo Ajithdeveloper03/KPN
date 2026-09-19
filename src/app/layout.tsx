@@ -24,7 +24,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.kpnroofingsheds.com"),
+  metadataBase: new URL("https://kpnroofingsheds.com"),
   title: {
     default: "Roofing Shed Construction in India | KPN Roofing Shed",
     template: "%s | KPN Roofing Shed"
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roofing Shed Construction in India | KPN Roofing Shed",
     description: "KPN Roofing Shed builds industrial, agricultural & home sheds pan-India. 13+ yrs, 1000+ projects, award-winning team. Get a free quote today.",
-    url: "https://www.kpnroofingsheds.com",
+    url: "https://kpnroofingsheds.com",
     siteName: "KPN Roofing Shed",
     images: [
       {
@@ -103,20 +103,20 @@ export default function RootLayout({ children }) {
               "@graph": [
                 {
                   "@type": "WebSite",
-                  "@id": "https://www.kpnroofingsheds.com/#website",
-                  "url": "https://www.kpnroofingsheds.com/",
+                  "@id": "https://kpnroofingsheds.com/#website",
+                  "url": "https://kpnroofingsheds.com/",
                   "name": "Kpn Roofing Shed",
                   "description": "Top-rated roofing shed construction in India. We specialize in industrial, commercial, and residential roofing sheds.",
                   "publisher": {
-                    "@id": "https://www.kpnroofingsheds.com/#organization"
+                    "@id": "https://kpnroofingsheds.com/#organization"
                   }
                 },
                 {
                   "@type": "Organization",
-                  "@id": "https://www.kpnroofingsheds.com/#organization",
+                  "@id": "https://kpnroofingsheds.com/#organization",
                   "name": "KPN Roofing Shed",
-                  "url": "https://www.kpnroofingsheds.com/",
-                  "logo": "https://www.kpnroofingsheds.com/images/logo.webp",
+                  "url": "https://kpnroofingsheds.com/",
+                  "logo": "https://kpnroofingsheds.com/images/logo.webp",
                   "description": "KPN Roofing Shed provides roofing shed construction solutions for industrial, agricultural, residential, warehouse, factory, animal husbandry and sports turf applications across India.",
                   "telephone": "+91-9788770786",
                   "email": "kpnroofingsheds@gmail.com",

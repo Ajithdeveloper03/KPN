@@ -3,19 +3,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 export default function Footer() {
   const pathname = usePathname();
   if (pathname && pathname.startsWith('/admin')) return null;
-
   return (
     <>
       <footer className="relative bg-[#121316ea] border-t border-white/10 pt-16 pb-8 overflow-hidden">
-      
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#121316] to-transparent pointer-events-none" />
-
         <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_2fr_1.5fr] gap-10 md:gap-12 mb-12">
-
           <div>
             <div className="flex items-center gap-3 mb-5">
               <Image
@@ -23,9 +18,7 @@ export default function Footer() {
                 alt="KPN Roofing Shed logo with peacock and house emblem"
                 width={48}
                 height={48}
-                quality={60}
                 className="rounded-xl"
-                style={{ width: "48px", height: "auto" }}
               />
               <span className="text-xl font-extrabold text-white">KPN Roofing Shed</span>
             </div>
@@ -33,16 +26,16 @@ export default function Footer() {
               India&apos;s leading roofing shed contractors with over 13+ years of experience. We specialize in engineering durable, weatherproof, and custom-designed structures for industrial warehouses, factory sheds, agricultural animal houses, and premium sports turf arenas across the nation. Backed by in-house engineering and a 10-year guarantee.
             </p>
           </div>
-
           <div>
-            <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Quick Links</h4>
-            <ul className="list-none p-0 m-0 flex flex-col gap-2">
-              <li><Link id="footer-Link-11" href="/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Home</Link></li>
-              <li><Link id="footer-Link-12" href="/about-us/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">About Us</Link></li>
-              <li><Link id="footer-Link-13" href="/corporate-social-responsibility/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Community</Link></li>
-              <li><Link id="footer-Link-14" href="/gallery/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Gallery</Link></li>
-              <li><Link id="footer-Link-15" href="/blog/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Blog</Link></li>
-              <li><Link id="footer-Link-16" href="/contact/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Contact Us</Link></li>
+            <h4 className="text-white font-extrabold text-base uppercase tracking-wider mb-5">Locations</h4>
+            <ul className="list-none p-0 m-0 flex flex-col gap-3">
+              <li><Link id="footer-Link-10" href="/shed-construction-company-tamil-nadu/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Tamil Nadu</Link></li>
+              <li><Link id="footer-Link-11" href="/roofing-shed-contractors-bangalore-karnataka/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Bangalore</Link></li>
+              <li><Link id="footer-Link-12" href="/shed-builders-hyderabad-telangana/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Hyderabad / Telangana</Link></li>
+              <li><Link id="footer-Link-13" href="/shed-builders-madhya-pradesh/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Madhya Pradesh</Link></li>
+              <li><Link id="footer-Link-14" href="/shed-builders-maharashtra/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Maharashtra</Link></li>
+              <li><Link id="footer-Link-15" href="/shed-contractors-rajasthan/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Rajasthan</Link></li>
+              <li><Link id="footer-Link-16" href="/shed-construction-services-up/" className="text-slate-300 no-underline font-medium hover:text-[#00a3e0] transition-colors inline-block py-1">Uttar Pradesh</Link></li>
             </ul>
           </div>
 
@@ -94,9 +87,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
       </footer>
-
       <div className="fixed bottom-0 left-0 right-0 z-[200] bg-white border-t border-slate-200 shadow-lg md:hidden">
         <div className="grid grid-cols-2">
           <a id="footer-a-33" href="tel:+919788770786" className="flex items-center justify-center gap-2 py-4 bg-[#004b87] text-white font-bold text-sm no-underline">

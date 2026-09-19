@@ -7,7 +7,7 @@ import { ArrowRight, Settings } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.kpnroofingsheds.com/services/",
+    canonical: "https://kpnroofingsheds.com/services/",
   },
   title: 'Our Services | KPN Roofing Shed',
   description: 'Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.',
@@ -49,12 +49,12 @@ export default function ServicesPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://www.kpnroofingsheds.com/services/#webpage",
-          "url": "https://www.kpnroofingsheds.com/services/",
+          "@id": "https://kpnroofingsheds.com/services/#webpage",
+          "url": "https://kpnroofingsheds.com/services/",
           "name": "Our Services | KPN Roofing Shed",
           "description": "Explore the range of roofing shed services provided by KPN Roofing Shed, including industrial, agriculture, home, and sports turf sheds.",
           "isPartOf": {
-                    "@id": "https://www.kpnroofingsheds.com/#website"
+                    "@id": "https://kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             "itemListElement": servicesList.map((service, index) => ({
               "@type": "ListItem",
               "position": index + 1,
-              "url": `https://www.kpnroofingsheds.com${service.href}`,
+              "url": `https://kpnroofingsheds.com${service.href}`,
               "name": service.title,
               "description": service.desc
             }))

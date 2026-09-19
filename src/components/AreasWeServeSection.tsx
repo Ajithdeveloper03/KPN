@@ -39,7 +39,7 @@ export default function AreasWeServeSection() {
 
           <div className="order-1 lg:order-2">
             <div className="flex flex-wrap gap-3">
-              {["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Uttar Pradesh", "Pan-India"].map((r) => (
+              {["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Madhya Pradesh", "Rajasthan", "Pan-India"].map((r) => (
                 <span
                   key={r}
                   className={`px-4 md:px-6 py-2 md:py-3 rounded-full border font-bold text-base md:text-lg transition-colors duration-200 ${

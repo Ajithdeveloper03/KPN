@@ -70,12 +70,12 @@ export default function GalleryPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://www.kpnroofingsheds.com/gallery/#webpage",
-          "url": "https://www.kpnroofingsheds.com/gallery/",
+          "@id": "https://kpnroofingsheds.com/gallery/#webpage",
+          "url": "https://kpnroofingsheds.com/gallery/",
           "name": "Agricultural Storage Shed",
           "description": "KPN Roofing Shed Services",
           "isPartOf": {
-                    "@id": "https://www.kpnroofingsheds.com/#website"
+                    "@id": "https://kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -87,11 +87,11 @@ export default function GalleryPage() {
             "@context": "https://schema.org",
             "@type": "ImageGallery",
             "name": "KPN Roofing Shed Projects Gallery",
-            "url": "https://www.kpnroofingsheds.com/gallery",
+            "url": "https://kpnroofingsheds.com/gallery",
             "about": "Explore our extensive portfolio of premium roofing sheds, ranging from massive industrial complexes to bespoke residential structures.",
             "image": galleryItems.map(item => ({
               "@type": "ImageObject",
-              "contentUrl": `https://www.kpnroofingsheds.com${item.img}`,
+              "contentUrl": `https://kpnroofingsheds.com${item.img}`,
               "caption": item.title,
               "name": item.title
             }))

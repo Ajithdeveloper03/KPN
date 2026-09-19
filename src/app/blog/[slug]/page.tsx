@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: `${title} | KPN Roofing Shed`,
     description: "Read expert insights on roofing shed construction, industrial sheds, and agricultural sheds from KPN Roofing Shed.",
     alternates: {
-      canonical: `https://www.kpnroofingsheds.com/blog/${slug}/`,
+      canonical: `https://kpnroofingsheds.com/blog/${slug}/`,
     },
   };
 }
@@ -107,7 +107,7 @@ export default async function BlogDetailsPage({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": post.title,
-            "image": "https://www.kpnroofingsheds.com" + post.image,
+            "image": "https://kpnroofingsheds.com" + post.image,
             "author": {
               "@type": "Organization",
               "name": post.author
@@ -117,7 +117,7 @@ export default async function BlogDetailsPage({
               "name": "KPN Roofing Shed",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.kpnroofingsheds.com/images/logo.webp"
+                "url": "https://kpnroofingsheds.com/images/logo.webp"
               }
             },
             "datePublished": post.created_at

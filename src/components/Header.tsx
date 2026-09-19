@@ -38,11 +38,9 @@ export default function Header() {
           <Image
             src="/images/logo.webp"
             alt="KPN Roofing Shed logo with peacock and house emblem"
-            width={92}
-            height={72}
-            quality={60}
-            className="rounded-xl shadow-lg"
-            style={{ width: "92px", height: "auto" }}
+            width={72}
+            height={56}
+            className="rounded-xl shadow-sm"
             priority
           />
         </Link>

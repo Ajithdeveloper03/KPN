@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/",
+    canonical: "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/",
   },
   title: 'Warehouse & Godown Shed Construction India | KPN Roofing Shed',
   description: 'KPN builds warehouse and godown sheds across India with clear-span layouts, weatherproof roofing and durable steel structures. Get a free quote.',
@@ -23,12 +23,12 @@ export default function WarehouseGodownShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://www.kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/#webpage",
-          "url": "https://www.kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/",
+          "@id": "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/",
           "name": "Warehouse & Godown Shed Construction India | KPN Roofing Shed",
           "description": "KPN builds warehouse and godown sheds across India with clear-span layouts, weatherproof roofing and durable steel structures. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://www.kpnroofingsheds.com/#website"
+                    "@id": "https://kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -44,25 +44,25 @@ export default function WarehouseGodownShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.kpnroofingsheds.com/"
+                "item": "https://kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://www.kpnroofingsheds.com/services/"
+                "item": "https://kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Industrial Sheds",
-                "item": "https://www.kpnroofingsheds.com/services/industrial-sheds/"
+                "item": "https://kpnroofingsheds.com/services/industrial-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Warehouse & Godown Shed",
-                "item": "https://www.kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/"
+                "item": "https://kpnroofingsheds.com/services/industrial-sheds/warehouse-godown-shed/"
               }
             ]
           })

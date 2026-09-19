@@ -40,7 +40,6 @@ export default function Preloader() {
           width={150}
           height={120}
           className="rounded-2xl shadow-xl mb-6"
-          style={{ width: "150px", height: "auto" }}
           priority
         />
         

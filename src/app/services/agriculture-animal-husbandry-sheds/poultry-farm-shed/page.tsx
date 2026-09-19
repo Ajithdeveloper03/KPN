@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+    canonical: "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
   },
   title: 'Poultry Shed Manufacturers India | KPN Roofing Sheds',
   description: 'Poultry shed manufacturers across India — East-West orientation, curtain-drop walls & deep litter/cage layout planning. Design quote in 24–48 hrs.',
@@ -23,12 +23,12 @@ export default function PoultryFarmShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#webpage",
-            "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+            "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#webpage",
+            "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
             "name": "Poultry Shed Manufacturers India | KPN Roofing Shed",
             "description": "Poultry shed manufacturers across India. Custom ventilation-first broiler and layer sheds built around airflow, orientation, and bird density. Get a free quote.",
             "isPartOf": {
-              "@id": "https://www.kpnroofingsheds.com/#website"
+              "@id": "https://kpnroofingsheds.com/#website"
             }
           })
         }}
@@ -44,25 +44,25 @@ export default function PoultryFarmShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.kpnroofingsheds.com/"
+                "item": "https://kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://www.kpnroofingsheds.com/services/"
+                "item": "https://kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Agriculture & Animal Husbandry Sheds",
-                "item": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/"
+                "item": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Poultry Farm Shed",
-                "item": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/"
+                "item": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/"
               }
             ]
           })
@@ -74,16 +74,16 @@ export default function PoultryFarmShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#service",
+            "@id": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/#service",
             "name": "Poultry Farm Shed",
             "description": "Poultry shed construction solutions designed for proper ventilation, protection and efficient poultry farming operations across India.",
-            "url": "https://www.kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
+            "url": "https://kpnroofingsheds.com/services/agriculture-animal-husbandry-sheds/poultry-farm-shed/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://www.kpnroofingsheds.com/#organization",
+              "@id": "https://kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://www.kpnroofingsheds.com/",
-              "logo": "https://www.kpnroofingsheds.com/images/logo.webp"
+              "url": "https://kpnroofingsheds.com/",
+              "logo": "https://kpnroofingsheds.com/images/logo.webp"
             },
             "areaServed": {
               "@type": "Country",
@@ -95,7 +95,7 @@ export default function PoultryFarmShedPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://www.kpnroofingsheds.com/contact/"
+              "url": "https://kpnroofingsheds.com/contact/"
             }
           })
         }}

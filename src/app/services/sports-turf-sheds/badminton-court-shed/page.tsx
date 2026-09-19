@@ -7,7 +7,7 @@ import QuoteButton from "@/components/QuoteButton";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
+    canonical: "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
   },
   title: 'Badminton Court Shed Contractors India | KPN Roofing Shed',
   description: 'KPN builds badminton court sheds pan-India with Apollo Brand Steel, in-house engineers, and a 10-year guarantee. Get a free quote.',
@@ -23,12 +23,12 @@ export default function BadmintonCourtShedPage() {
           __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/#webpage",
-          "url": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
+          "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/#webpage",
+          "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
           "name": "Badminton Court Shed Contractors India | KPN Roofing Shed",
           "description": "KPN builds badminton court sheds pan-India with Apollo Brand Steel, in-house engineers, and a 10-year guarantee. Get a free quote.",
           "isPartOf": {
-                    "@id": "https://www.kpnroofingsheds.com/#website"
+                    "@id": "https://kpnroofingsheds.com/#website"
           }
 })
         }}
@@ -44,25 +44,25 @@ export default function BadmintonCourtShedPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.kpnroofingsheds.com/"
+                "item": "https://kpnroofingsheds.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://www.kpnroofingsheds.com/services/"
+                "item": "https://kpnroofingsheds.com/services/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Sports Turf Sheds",
-                "item": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/"
+                "item": "https://kpnroofingsheds.com/services/sports-turf-sheds/"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Badminton Court Shed",
-                "item": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/"
+                "item": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/"
               }
             ]
           })
@@ -75,15 +75,15 @@ export default function BadmintonCourtShedPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/#service",
+            "@id": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/#service",
             "name": "Badminton Court Shed",
             "description": "Badminton court shed construction solutions designed to provide a durable, spacious and weather-protected environment for indoor and covered badminton courts.",
-            "url": "https://www.kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
+            "url": "https://kpnroofingsheds.com/services/sports-turf-sheds/badminton-court-shed/",
             "provider": {
               "@type": "Organization",
-              "@id": "https://www.kpnroofingsheds.com/#organization",
+              "@id": "https://kpnroofingsheds.com/#organization",
               "name": "KPN Roofing Shed",
-              "url": "https://www.kpnroofingsheds.com/"
+              "url": "https://kpnroofingsheds.com/"
             },
             "areaServed": {
               "@type": "Country",
@@ -95,7 +95,7 @@ export default function BadmintonCourtShedPage() {
               "price": "0",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock",
-              "url": "https://www.kpnroofingsheds.com/contact/"
+              "url": "https://kpnroofingsheds.com/contact/"
             }
           })
         }}

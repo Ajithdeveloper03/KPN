@@ -64,21 +64,21 @@ export default function ContactPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "@id": "https://www.kpnroofingsheds.com/contact/#contactpage",
-            "url": "https://www.kpnroofingsheds.com/contact/",
+            "@id": "https://kpnroofingsheds.com/contact/#contactpage",
+            "url": "https://kpnroofingsheds.com/contact/",
             "name": "Contact KPN Roofing Shed",
             "description": "Contact KPN Roofing Shed for industrial, agricultural, home roofing, animal husbandry and sports turf shed construction services across India.",
             "isPartOf": {
               "@type": "WebSite",
-              "@id": "https://www.kpnroofingsheds.com/#website"
+              "@id": "https://kpnroofingsheds.com/#website"
             },
             "about": {
               "@type": "Organization",
-              "@id": "https://www.kpnroofingsheds.com/#organization"
+              "@id": "https://kpnroofingsheds.com/#organization"
             },
             "publisher": {
               "@type": "Organization",
-              "@id": "https://www.kpnroofingsheds.com/#organization"
+              "@id": "https://kpnroofingsheds.com/#organization"
             },
             "inLanguage": "en-IN"
           })
